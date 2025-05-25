@@ -1,0 +1,57 @@
+
+instruction reg 
+
+05:00 ram going to be holding program
+
+
+18:00 continuous assignment is relavent 
+
+18:40 appendix b you can see connections bus retreive data like bus or matrix
+    then you can have dataout
+
+20:00 need to write data to specific register then read it
+   - need two A and B.
+   - say do write to reg 1 but there are two output so if you read reg b 
+      - unless. . data a = 1 and data b = 
+
+22:00 first load data from memory to register
+TB : WRITE SOMETHING TO REGISTER
+   : 
+   LATER DATA WILL COME OUT OF DATA MEMORY OR ALU.
+
+26:00 talking about memory matrix ** took a pixture with phone
+
+~30:00 what kind of test bench to develop
+
+31:00 always change at falling edge
+   always read at rising edge
+
+/*Course Project - week8 status check
+
+We talked about data memory (RAM) design and testing on Tuesday, and the demo example
+
+Download demo example is shared on Canvas.
+
+You are required to work together with your project partner starting this week on the design and testing for the remaining 
+parts of the Datapath, as we discussed in class. In particular, during Thursday (May 22)'s class, we 
+will work on design and testing of the register file, which contributes 2 points to the total (100 points) of your project. 
+Rubrics for the assessment of course project is attached.
+
+To help you finish the design and testing of register file, please follow the hints given below:
+
+1. decide the portlist of the register file (check page 8 of the pdf file DataPath)
+
+2. understand the difference between RAM and register file - notice that (1) register file has two 
+outputs - Data A and Data B, which means you need to feed the module with addresses of both 
+register A and register B; (2) all the 16 registers have no data at the beginning - the 
+testbench should first initialize a specific register by writing data to it; 
+then read this register to see if the data has been correctly assigned. 
+
+3. timing of read and write operations (of the register file) is very similar as that of RAM.
+
+4. In ModelSim, you can check the contents of register file (same for RAM) by click on menu view -> memory list as I illustrated during Tuesday's class.
+
+Please submit (one submission per group) your design and testing of the register file by midnight Saturday May 24. 
+Hopefully you can use Thursday's class time (as well as lab session in the afternoon) to have it done by the end of day. 
+Then your group can move on to the design and testing of the remaining parts of processor's datapath as listed in the project timeline
+.*/
