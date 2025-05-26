@@ -87,7 +87,7 @@ module DataMemory (
 	defparam
 		altsyncram_component.clock_enable_input_a = "BYPASS",
 		altsyncram_component.clock_enable_output_a = "BYPASS",
-		altsyncram_component.init_file = "D.mif",
+		altsyncram_component.init_file = "../../Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/D.mif",
 		altsyncram_component.intended_device_family = "Cyclone IV E",
 		altsyncram_component.lpm_hint = "ENABLE_RUNTIME_MOD=NO",
 		altsyncram_component.lpm_type = "altsyncram",

@@ -75,9 +75,9 @@ endmodule
 module RegisterFile_tb;
 // - - - port list - - - //
 // params
-   localparam int data_bits = 16;                    // width of data in bits
-   localparam int reg_count = 16;                      // how many registers are in the register file
-   localparam int reg_addr_width = $clog2(reg_count);  // the bit length of register memory addresses
+   localparam int data_bits = 16,                      // width of data in bits
+   localparam int reg_count = 16,                      // how many registers are in the register file
+   localparam int reg_addr_width = $clog2(reg_count)  // the bit length of register memory addresses
    
 // input / output portlist
 /*      input                         Clk, Write_En,   

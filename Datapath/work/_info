@@ -1,0 +1,134 @@
+m255
+K4
+z2
+!s11f MIXED_VERSIONS
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath
+vDataMemory
+Z1 !s110 1748216104
+!i10b 1
+!s100 Y[Ac01;iOGj3ADjgi=Vhh1
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IOVSg`;;fbBBm?:il9CnAP1
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1748209983
+8DataMemory.v
+FDataMemory.v
+!i122 13
+L0 40 66
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1748216103.000000
+!s107 DataMemory.v|
+!s90 -reportprogress|300|DataMemory.v|
+!i113 1
+Z6 tCvgOpt 0
+n@data@memory
+vDMemReg
+Z7 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+R1
+!i10b 1
+!s100 ]C`W>@Qgea49ZOA_g@]9f0
+R2
+I8z?9gFcQN6f[==]1mVDz72
+R3
+S1
+R0
+Z8 w1748216097
+Z9 8DMemReg.sv
+Z10 FDMemReg.sv
+!i122 14
+L0 8 67
+R4
+r1
+!s85 0
+31
+Z11 !s108 1748216104.000000
+!s107 DMemReg.sv|
+Z12 !s90 -reportprogress|300|DMemReg.sv|
+!i113 1
+R6
+n@d@mem@reg
+vDMemReg_tb
+R7
+R1
+!i10b 1
+!s100 C[VMME[<XPZJWU?`?UJb@0
+R2
+I5nJ?3]ikooJ0k7H4FTVgJ0
+R3
+S1
+R0
+R8
+R9
+R10
+!i122 14
+L0 78 41
+R4
+r1
+!s85 0
+31
+R11
+Z13 !s107 DMemReg.sv|
+R12
+!i113 1
+R6
+n@d@mem@reg_tb
+vRegisterFile
+R7
+Z14 !s110 1748216103
+!i10b 1
+!s100 `5j1^YB]Xz`UeQCbPVNch2
+R2
+I8XkV6I7^A7`VTVLdz0ZAD3
+R3
+S1
+R0
+Z15 w1748215959
+Z16 8RegisterFile.sv
+Z17 FRegisterFile.sv
+!i122 12
+L0 37 36
+R4
+r1
+!s85 0
+31
+R5
+Z18 !s107 RegisterFile.sv|
+Z19 !s90 -reportprogress|300|RegisterFile.sv|
+!i113 1
+R6
+n@register@file
+vRegisterFile_tb
+R7
+R14
+!i10b 1
+!s100 _hE1Y3Z_i=hNf1GQJ;V>h0
+R2
+IIU6E0k`T_9GE5bR<hP9Hd3
+R3
+S1
+R0
+R15
+R16
+R17
+!i122 12
+L0 75 35
+R4
+r1
+!s85 0
+31
+R5
+R18
+R19
+!i113 1
+R6
+n@register@file_tb

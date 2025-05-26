@@ -1,0 +1,3585 @@
+# Reading pref.tcl
+ls
+# .git                                   Project_template.docx  
+# 05-22-2025-notes.txt                   Project_timeline.pdf   
+# Datapath                               README.md              
+# Launch_ModelSim.bat                    testProcessor.sv       
+# Processor2025_Datapath.pdf             transcript             
+# ProjectAssignment_SimpleProcessor.pdf                         
+cd Datapath
+do r
+# Cannot open macro file: r
+do runrtl.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./RegisterFile.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:43:05 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegisterFile.sv 
+# -- Compiling module RegisterFile
+# -- Compiling module RegisterFile_tb
+# 
+# Top level modules:
+# 	RegisterFile_tb
+# End time: 16:43:05 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DataMemory.v"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:43:05 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./DataMemory.v 
+# -- Compiling module DataMemory
+# 
+# Top level modules:
+# 	DataMemory
+# End time: 16:43:05 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DMemReg.v"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:43:06 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./DMemReg.v 
+# ** Error: (vlog-7) Failed to open design unit file "./DMemReg.v" in read mode.
+# No such file or directory. (errno = ENOENT)
+# End time: 16:43:06 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./runrtl.do line 18
+# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -work work +acc "./DMemReg.v""
+do runrtl.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./RegisterFile.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:43:35 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegisterFile.sv 
+# -- Compiling module RegisterFile
+# -- Compiling module RegisterFile_tb
+# 
+# Top level modules:
+# 	RegisterFile_tb
+# End time: 16:43:35 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DataMemory.v"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:43:35 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./DataMemory.v 
+# -- Compiling module DataMemory
+# 
+# Top level modules:
+# 	DataMemory
+# End time: 16:43:35 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DMemReg.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:43:35 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./DMemReg.sv 
+# -- Compiling module DMemReg
+# -- Compiling module DMemReg_tb
+# 
+# Top level modules:
+# 	DMemReg_tb
+# End time: 16:43:35 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# 
+# Call vsim to invoke simulator
+#     Make sure the last item on the line is the name of the
+#     testbench module you want to execute.
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc" -fsmdebug  DMemReg_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" -fsmdebug DMemReg_tb 
+# Start time: 16:43:35 on May 25,2025
+# Loading sv_std.std
+# Loading work.DMemReg_tb
+# Loading work.DMemReg
+# Loading work.DataMemory
+# Loading altera_mf_ver.altsyncram
+# Loading work.RegisterFile
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'data'. The port definition is at: ./DataMemory.v(43).
+#    Time: 0 ps  Iteration: 0  Instance: /DMemReg_tb/DUT/unit0 File: ./DMemReg.sv Line: 42
+# 
+# Source the wave do file
+#     This should be the file that sets up the signal window for
+#     the module you are testing.
+# do wave.do
+# onerror {resume}
+# quietly WaveActivateNextPane {} 0
+# add wave -noupdate /DMemReg/D_Addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/D_Addr'.
+# Executing ONERROR command at macro ./wave.do line 3
+# add wave -noupdate /DMemReg/D_wr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/D_wr'.
+# Executing ONERROR command at macro ./wave.do line 4
+# add wave -noupdate /DMemReg/RF_W_en
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_W_en'.
+# Executing ONERROR command at macro ./wave.do line 5
+# add wave -noupdate /DMemReg/Clk
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/Clk'.
+# Executing ONERROR command at macro ./wave.do line 6
+# add wave -noupdate /DMemReg/RF_W_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_W_addr'.
+# Executing ONERROR command at macro ./wave.do line 7
+# add wave -noupdate /DMemReg/RF_Ra_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_Ra_addr'.
+# Executing ONERROR command at macro ./wave.do line 8
+# add wave -noupdate /DMemReg/RF_Rb_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_Rb_addr'.
+# Executing ONERROR command at macro ./wave.do line 9
+# add wave -noupdate /DMemReg/A
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/A'.
+# Executing ONERROR command at macro ./wave.do line 10
+# add wave -noupdate /DMemReg/B
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/B'.
+# Executing ONERROR command at macro ./wave.do line 11
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {0 ps} 0}
+# quietly wave cursor active 0
+# configure wave -namecolwidth 150
+# configure wave -valuecolwidth 100
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 0
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# configure wave -gridoffset 0
+# configure wave -gridperiod 1
+# configure wave -griddelta 40
+# configure wave -timeline 0
+# configure wave -timelineunits ps
+# update
+# WaveRestoreZoom {0 ps} {1 ns}
+# 
+# Set the window types
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# 
+# Run the simulation
+# run -all
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "../../Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/D.mif" for reading.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/verilog/src/altera_mf.v(264)
+#    Time: 0 ps  Iteration: 0  Instance: /DMemReg_tb/DUT/unit0/altsyncram_component/m_default/altsyncram_inst
+# ERROR: cannot read ../../Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/D.mif.
+# ** Warning: (vsim-7) Failed to open readmem file "../../Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/D.ver" in read mode.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/verilog/src/altera_mf.v(48977)
+#    Time: 0 ps  Iteration: 0  Instance: /DMemReg_tb/DUT/unit0/altsyncram_component/m_default/altsyncram_inst
+# ** Error: oops
+#    Time: 40 ps  Scope: DMemReg_tb File: ./DMemReg.sv Line: 114
+# ** Note: $stop    : ./DMemReg.sv(115)
+#    Time: 40 ps  Iteration: 0  Instance: /DMemReg_tb
+# Break in Module DMemReg_tb at ./DMemReg.sv line 115
+# 
+# View the entire wave display
+# wave zoomfull
+# 0 ps
+# 42 ps
+# 
+# End
+# Error opening C:/Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/altera/verilog/src/altera_mf.v
+# Path name 'C:/Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/altera/verilog/src/altera_mf.v' doesn't exist.
+# A time value could not be extracted from the current line
+do runrtl.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# Error 31: Unable to unlink file "C:/Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/rtl_work/_lib.qdb".
+# Error 133: Unable to remove directory "C:/Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/rtl_work".
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./RegisterFile.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:47:58 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegisterFile.sv 
+# -- Compiling module RegisterFile
+# -- Compiling module RegisterFile_tb
+# 
+# Top level modules:
+# 	RegisterFile_tb
+# End time: 16:47:59 on May 25,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DataMemory.v"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:47:59 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./DataMemory.v 
+# -- Compiling module DataMemory
+# 
+# Top level modules:
+# 	DataMemory
+# End time: 16:47:59 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DMemReg.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:47:59 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./DMemReg.sv 
+# -- Compiling module DMemReg
+# -- Compiling module DMemReg_tb
+# 
+# Top level modules:
+# 	DMemReg_tb
+# End time: 16:47:59 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# 
+# Call vsim to invoke simulator
+#     Make sure the last item on the line is the name of the
+#     testbench module you want to execute.
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc" -fsmdebug  DMemReg_tb
+# End time: 16:48:00 on May 25,2025, Elapsed time: 0:04:25
+# Errors: 1, Warnings: 3
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" -fsmdebug DMemReg_tb 
+# Start time: 16:48:00 on May 25,2025
+# Loading sv_std.std
+# Loading work.DMemReg_tb
+# Loading work.DMemReg
+# Loading work.DataMemory
+# Loading altera_mf_ver.altsyncram
+# Loading work.RegisterFile
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'data'. The port definition is at: ./DataMemory.v(43).
+#    Time: 0 ps  Iteration: 0  Instance: /DMemReg_tb/DUT/unit0 File: ./DMemReg.sv Line: 42
+# 
+# Source the wave do file
+#     This should be the file that sets up the signal window for
+#     the module you are testing.
+# do wave.do
+# onerror {resume}
+# quietly WaveActivateNextPane {} 0
+# add wave -noupdate /DMemReg/D_Addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/D_Addr'.
+# Executing ONERROR command at macro ./wave.do line 3
+# add wave -noupdate /DMemReg/D_wr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/D_wr'.
+# Executing ONERROR command at macro ./wave.do line 4
+# add wave -noupdate /DMemReg/RF_W_en
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_W_en'.
+# Executing ONERROR command at macro ./wave.do line 5
+# add wave -noupdate /DMemReg/Clk
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/Clk'.
+# Executing ONERROR command at macro ./wave.do line 6
+# add wave -noupdate /DMemReg/RF_W_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_W_addr'.
+# Executing ONERROR command at macro ./wave.do line 7
+# add wave -noupdate /DMemReg/RF_Ra_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_Ra_addr'.
+# Executing ONERROR command at macro ./wave.do line 8
+# add wave -noupdate /DMemReg/RF_Rb_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_Rb_addr'.
+# Executing ONERROR command at macro ./wave.do line 9
+# add wave -noupdate /DMemReg/A
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/A'.
+# Executing ONERROR command at macro ./wave.do line 10
+# add wave -noupdate /DMemReg/B
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/B'.
+# Executing ONERROR command at macro ./wave.do line 11
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {0 ps} 0}
+# quietly wave cursor active 0
+# configure wave -namecolwidth 150
+# configure wave -valuecolwidth 100
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 0
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# configure wave -gridoffset 0
+# configure wave -gridperiod 1
+# configure wave -griddelta 40
+# configure wave -timeline 0
+# configure wave -timelineunits ps
+# update
+# WaveRestoreZoom {0 ps} {1 ns}
+# 
+# Set the window types
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# 
+# Run the simulation
+# run -all
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "../../Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/D.mif" for reading.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/verilog/src/altera_mf.v(264)
+#    Time: 0 ps  Iteration: 0  Instance: /DMemReg_tb/DUT/unit0/altsyncram_component/m_default/altsyncram_inst
+# ERROR: cannot read ../../Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/D.mif.
+# ** Warning: (vsim-7) Failed to open readmem file "../../Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/D.ver" in read mode.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/verilog/src/altera_mf.v(48977)
+#    Time: 0 ps  Iteration: 0  Instance: /DMemReg_tb/DUT/unit0/altsyncram_component/m_default/altsyncram_inst
+# ** Error: oops
+#    Time: 40 ps  Scope: DMemReg_tb File: ./DMemReg.sv Line: 114
+# ** Note: $stop    : ./DMemReg.sv(115)
+#    Time: 40 ps  Iteration: 0  Instance: /DMemReg_tb
+# Break in Module DMemReg_tb at ./DMemReg.sv line 115
+# 
+# View the entire wave display
+# wave zoomfull
+# 0 ps
+# 42 ps
+# 
+# End
+do runrtl.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./RegisterFile.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:48:55 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegisterFile.sv 
+# -- Compiling module RegisterFile
+# -- Compiling module RegisterFile_tb
+# 
+# Top level modules:
+# 	RegisterFile_tb
+# End time: 16:48:55 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DataMemory.v"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:48:55 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./DataMemory.v 
+# -- Compiling module DataMemory
+# 
+# Top level modules:
+# 	DataMemory
+# End time: 16:48:55 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DMemReg.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:48:55 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./DMemReg.sv 
+# -- Compiling module DMemReg
+# -- Compiling module DMemReg_tb
+# 
+# Top level modules:
+# 	DMemReg_tb
+# End time: 16:48:55 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# 
+# Call vsim to invoke simulator
+#     Make sure the last item on the line is the name of the
+#     testbench module you want to execute.
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc" -fsmdebug  DMemReg_tb
+# End time: 16:48:56 on May 25,2025, Elapsed time: 0:00:56
+# Errors: 1, Warnings: 3
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" -fsmdebug DMemReg_tb 
+# Start time: 16:48:56 on May 25,2025
+# Loading sv_std.std
+# Loading work.DMemReg_tb
+# Loading work.DMemReg
+# Loading work.DataMemory
+# Loading altera_mf_ver.altsyncram
+# Loading work.RegisterFile
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'data'. The port definition is at: ./DataMemory.v(43).
+#    Time: 0 ps  Iteration: 0  Instance: /DMemReg_tb/DUT/unit0 File: ./DMemReg.sv Line: 42
+# 
+# Source the wave do file
+#     This should be the file that sets up the signal window for
+#     the module you are testing.
+# do wave.do
+# onerror {resume}
+# quietly WaveActivateNextPane {} 0
+# add wave -noupdate /DMemReg/D_Addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/D_Addr'.
+# Executing ONERROR command at macro ./wave.do line 3
+# add wave -noupdate /DMemReg/D_wr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/D_wr'.
+# Executing ONERROR command at macro ./wave.do line 4
+# add wave -noupdate /DMemReg/RF_W_en
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_W_en'.
+# Executing ONERROR command at macro ./wave.do line 5
+# add wave -noupdate /DMemReg/Clk
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/Clk'.
+# Executing ONERROR command at macro ./wave.do line 6
+# add wave -noupdate /DMemReg/RF_W_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_W_addr'.
+# Executing ONERROR command at macro ./wave.do line 7
+# add wave -noupdate /DMemReg/RF_Ra_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_Ra_addr'.
+# Executing ONERROR command at macro ./wave.do line 8
+# add wave -noupdate /DMemReg/RF_Rb_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_Rb_addr'.
+# Executing ONERROR command at macro ./wave.do line 9
+# add wave -noupdate /DMemReg/A
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/A'.
+# Executing ONERROR command at macro ./wave.do line 10
+# add wave -noupdate /DMemReg/B
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/B'.
+# Executing ONERROR command at macro ./wave.do line 11
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {0 ps} 0}
+# quietly wave cursor active 0
+# configure wave -namecolwidth 150
+# configure wave -valuecolwidth 100
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 0
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# configure wave -gridoffset 0
+# configure wave -gridperiod 1
+# configure wave -griddelta 40
+# configure wave -timeline 0
+# configure wave -timelineunits ps
+# update
+# WaveRestoreZoom {0 ps} {1 ns}
+# 
+# Set the window types
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# 
+# Run the simulation
+# run -all
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "../../Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/D.mif" for reading.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/verilog/src/altera_mf.v(264)
+#    Time: 0 ps  Iteration: 0  Instance: /DMemReg_tb/DUT/unit0/altsyncram_component/m_default/altsyncram_inst
+# ERROR: cannot read ../../Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/D.mif.
+# ** Warning: (vsim-7) Failed to open readmem file "../../Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/D.ver" in read mode.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/verilog/src/altera_mf.v(48977)
+#    Time: 0 ps  Iteration: 0  Instance: /DMemReg_tb/DUT/unit0/altsyncram_component/m_default/altsyncram_inst
+# ** Error: oops
+#    Time: 40 ps  Scope: DMemReg_tb File: ./DMemReg.sv Line: 114
+# ** Note: $stop    : ./DMemReg.sv(115)
+#    Time: 40 ps  Iteration: 0  Instance: /DMemReg_tb
+# Break in Module DMemReg_tb at ./DMemReg.sv line 115
+# 
+# View the entire wave display
+# wave zoomfull
+# 0 ps
+# 42 ps
+# 
+# End
+do runrtl.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./RegisterFile.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:49:45 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegisterFile.sv 
+# -- Compiling module RegisterFile
+# -- Compiling module RegisterFile_tb
+# 
+# Top level modules:
+# 	RegisterFile_tb
+# End time: 16:49:45 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DataMemory.v"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:49:45 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./DataMemory.v 
+# -- Compiling module DataMemory
+# 
+# Top level modules:
+# 	DataMemory
+# End time: 16:49:45 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DMemReg.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:49:45 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./DMemReg.sv 
+# -- Compiling module DMemReg
+# -- Compiling module DMemReg_tb
+# 
+# Top level modules:
+# 	DMemReg_tb
+# End time: 16:49:45 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# 
+# Call vsim to invoke simulator
+#     Make sure the last item on the line is the name of the
+#     testbench module you want to execute.
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc" -fsmdebug  DMemReg_tb
+# End time: 16:49:47 on May 25,2025, Elapsed time: 0:00:51
+# Errors: 1, Warnings: 3
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" -fsmdebug DMemReg_tb 
+# Start time: 16:49:48 on May 25,2025
+# Loading sv_std.std
+# Loading work.DMemReg_tb
+# Loading work.DMemReg
+# Loading work.DataMemory
+# Loading altera_mf_ver.altsyncram
+# Loading work.RegisterFile
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'data'. The port definition is at: ./DataMemory.v(43).
+#    Time: 0 ps  Iteration: 0  Instance: /DMemReg_tb/DUT/unit0 File: ./DMemReg.sv Line: 42
+# 
+# Source the wave do file
+#     This should be the file that sets up the signal window for
+#     the module you are testing.
+# do wave.do
+# onerror {resume}
+# quietly WaveActivateNextPane {} 0
+# add wave -noupdate /DMemReg/D_Addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/D_Addr'.
+# Executing ONERROR command at macro ./wave.do line 3
+# add wave -noupdate /DMemReg/D_wr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/D_wr'.
+# Executing ONERROR command at macro ./wave.do line 4
+# add wave -noupdate /DMemReg/RF_W_en
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_W_en'.
+# Executing ONERROR command at macro ./wave.do line 5
+# add wave -noupdate /DMemReg/Clk
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/Clk'.
+# Executing ONERROR command at macro ./wave.do line 6
+# add wave -noupdate /DMemReg/RF_W_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_W_addr'.
+# Executing ONERROR command at macro ./wave.do line 7
+# add wave -noupdate /DMemReg/RF_Ra_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_Ra_addr'.
+# Executing ONERROR command at macro ./wave.do line 8
+# add wave -noupdate /DMemReg/RF_Rb_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_Rb_addr'.
+# Executing ONERROR command at macro ./wave.do line 9
+# add wave -noupdate /DMemReg/A
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/A'.
+# Executing ONERROR command at macro ./wave.do line 10
+# add wave -noupdate /DMemReg/B
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/B'.
+# Executing ONERROR command at macro ./wave.do line 11
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {0 ps} 0}
+# quietly wave cursor active 0
+# configure wave -namecolwidth 150
+# configure wave -valuecolwidth 100
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 0
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# configure wave -gridoffset 0
+# configure wave -gridperiod 1
+# configure wave -griddelta 40
+# configure wave -timeline 0
+# configure wave -timelineunits ps
+# update
+# WaveRestoreZoom {0 ps} {1 ns}
+# 
+# Set the window types
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# 
+# Run the simulation
+# run -all
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "../../Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/D.mif" for reading.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/verilog/src/altera_mf.v(264)
+#    Time: 0 ps  Iteration: 0  Instance: /DMemReg_tb/DUT/unit0/altsyncram_component/m_default/altsyncram_inst
+# ERROR: cannot read ../../Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/D.mif.
+# ** Warning: (vsim-7) Failed to open readmem file "../../Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/D.ver" in read mode.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/verilog/src/altera_mf.v(48977)
+#    Time: 0 ps  Iteration: 0  Instance: /DMemReg_tb/DUT/unit0/altsyncram_component/m_default/altsyncram_inst
+# ** Error: oops
+#    Time: 40 ps  Scope: DMemReg_tb File: ./DMemReg.sv Line: 114
+# ** Note: $stop    : ./DMemReg.sv(116)
+#    Time: 60 ps  Iteration: 0  Instance: /DMemReg_tb
+# Break in Module DMemReg_tb at ./DMemReg.sv line 116
+# 
+# View the entire wave display
+# wave zoomfull
+# 0 ps
+# 63 ps
+# 
+# End
+do runrtl.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./RegisterFile.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:49:59 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegisterFile.sv 
+# -- Compiling module RegisterFile
+# -- Compiling module RegisterFile_tb
+# 
+# Top level modules:
+# 	RegisterFile_tb
+# End time: 16:49:59 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DataMemory.v"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:49:59 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./DataMemory.v 
+# -- Compiling module DataMemory
+# 
+# Top level modules:
+# 	DataMemory
+# End time: 16:49:59 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DMemReg.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:49:59 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./DMemReg.sv 
+# -- Compiling module DMemReg
+# -- Compiling module DMemReg_tb
+# 
+# Top level modules:
+# 	DMemReg_tb
+# End time: 16:50:00 on May 25,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# 
+# Call vsim to invoke simulator
+#     Make sure the last item on the line is the name of the
+#     testbench module you want to execute.
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc" -fsmdebug  DMemReg_tb
+# End time: 16:50:02 on May 25,2025, Elapsed time: 0:00:14
+# Errors: 1, Warnings: 3
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" -fsmdebug DMemReg_tb 
+# Start time: 16:50:02 on May 25,2025
+# Loading sv_std.std
+# Loading work.DMemReg_tb
+# Loading work.DMemReg
+# Loading work.DataMemory
+# Loading altera_mf_ver.altsyncram
+# Loading work.RegisterFile
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'data'. The port definition is at: ./DataMemory.v(43).
+#    Time: 0 ps  Iteration: 0  Instance: /DMemReg_tb/DUT/unit0 File: ./DMemReg.sv Line: 42
+# 
+# Source the wave do file
+#     This should be the file that sets up the signal window for
+#     the module you are testing.
+# do wave.do
+# onerror {resume}
+# quietly WaveActivateNextPane {} 0
+# add wave -noupdate /DMemReg/D_Addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/D_Addr'.
+# Executing ONERROR command at macro ./wave.do line 3
+# add wave -noupdate /DMemReg/D_wr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/D_wr'.
+# Executing ONERROR command at macro ./wave.do line 4
+# add wave -noupdate /DMemReg/RF_W_en
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_W_en'.
+# Executing ONERROR command at macro ./wave.do line 5
+# add wave -noupdate /DMemReg/Clk
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/Clk'.
+# Executing ONERROR command at macro ./wave.do line 6
+# add wave -noupdate /DMemReg/RF_W_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_W_addr'.
+# Executing ONERROR command at macro ./wave.do line 7
+# add wave -noupdate /DMemReg/RF_Ra_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_Ra_addr'.
+# Executing ONERROR command at macro ./wave.do line 8
+# add wave -noupdate /DMemReg/RF_Rb_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_Rb_addr'.
+# Executing ONERROR command at macro ./wave.do line 9
+# add wave -noupdate /DMemReg/A
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/A'.
+# Executing ONERROR command at macro ./wave.do line 10
+# add wave -noupdate /DMemReg/B
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/B'.
+# Executing ONERROR command at macro ./wave.do line 11
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {0 ps} 0}
+# quietly wave cursor active 0
+# configure wave -namecolwidth 150
+# configure wave -valuecolwidth 100
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 0
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# configure wave -gridoffset 0
+# configure wave -gridperiod 1
+# configure wave -griddelta 40
+# configure wave -timeline 0
+# configure wave -timelineunits ps
+# update
+# WaveRestoreZoom {0 ps} {1 ns}
+# 
+# Set the window types
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# 
+# Run the simulation
+# run -all
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "../../Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/D.mif" for reading.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/verilog/src/altera_mf.v(264)
+#    Time: 0 ps  Iteration: 0  Instance: /DMemReg_tb/DUT/unit0/altsyncram_component/m_default/altsyncram_inst
+# ERROR: cannot read ../../Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/D.mif.
+# ** Warning: (vsim-7) Failed to open readmem file "../../Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/D.ver" in read mode.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/verilog/src/altera_mf.v(48977)
+#    Time: 0 ps  Iteration: 0  Instance: /DMemReg_tb/DUT/unit0/altsyncram_component/m_default/altsyncram_inst
+# the data at location   0is     x
+# ** Error: oops
+#    Time: 40 ps  Scope: DMemReg_tb File: ./DMemReg.sv Line: 115
+# ** Note: $stop    : ./DMemReg.sv(117)
+#    Time: 60 ps  Iteration: 0  Instance: /DMemReg_tb
+# Break in Module DMemReg_tb at ./DMemReg.sv line 117
+# 
+# View the entire wave display
+# wave zoomfull
+# 0 ps
+# 63 ps
+# 
+# End
+do runrtl.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./RegisterFile.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:50:32 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegisterFile.sv 
+# -- Compiling module RegisterFile
+# -- Compiling module RegisterFile_tb
+# 
+# Top level modules:
+# 	RegisterFile_tb
+# End time: 16:50:32 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DataMemory.v"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:50:32 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./DataMemory.v 
+# -- Compiling module DataMemory
+# 
+# Top level modules:
+# 	DataMemory
+# End time: 16:50:32 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DMemReg.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:50:32 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./DMemReg.sv 
+# -- Compiling module DMemReg
+# -- Compiling module DMemReg_tb
+# 
+# Top level modules:
+# 	DMemReg_tb
+# End time: 16:50:32 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# 
+# Call vsim to invoke simulator
+#     Make sure the last item on the line is the name of the
+#     testbench module you want to execute.
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc" -fsmdebug  DMemReg_tb
+# End time: 16:50:35 on May 25,2025, Elapsed time: 0:00:33
+# Errors: 1, Warnings: 3
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" -fsmdebug DMemReg_tb 
+# Start time: 16:50:35 on May 25,2025
+# Loading sv_std.std
+# Loading work.DMemReg_tb
+# Loading work.DMemReg
+# Loading work.DataMemory
+# Loading altera_mf_ver.altsyncram
+# Loading work.RegisterFile
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'data'. The port definition is at: ./DataMemory.v(43).
+#    Time: 0 ps  Iteration: 0  Instance: /DMemReg_tb/DUT/unit0 File: ./DMemReg.sv Line: 42
+# 
+# Source the wave do file
+#     This should be the file that sets up the signal window for
+#     the module you are testing.
+# do wave.do
+# onerror {resume}
+# quietly WaveActivateNextPane {} 0
+# add wave -noupdate /DMemReg/D_Addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/D_Addr'.
+# Executing ONERROR command at macro ./wave.do line 3
+# add wave -noupdate /DMemReg/D_wr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/D_wr'.
+# Executing ONERROR command at macro ./wave.do line 4
+# add wave -noupdate /DMemReg/RF_W_en
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_W_en'.
+# Executing ONERROR command at macro ./wave.do line 5
+# add wave -noupdate /DMemReg/Clk
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/Clk'.
+# Executing ONERROR command at macro ./wave.do line 6
+# add wave -noupdate /DMemReg/RF_W_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_W_addr'.
+# Executing ONERROR command at macro ./wave.do line 7
+# add wave -noupdate /DMemReg/RF_Ra_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_Ra_addr'.
+# Executing ONERROR command at macro ./wave.do line 8
+# add wave -noupdate /DMemReg/RF_Rb_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_Rb_addr'.
+# Executing ONERROR command at macro ./wave.do line 9
+# add wave -noupdate /DMemReg/A
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/A'.
+# Executing ONERROR command at macro ./wave.do line 10
+# add wave -noupdate /DMemReg/B
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/B'.
+# Executing ONERROR command at macro ./wave.do line 11
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {0 ps} 0}
+# quietly wave cursor active 0
+# configure wave -namecolwidth 150
+# configure wave -valuecolwidth 100
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 0
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# configure wave -gridoffset 0
+# configure wave -gridperiod 1
+# configure wave -griddelta 40
+# configure wave -timeline 0
+# configure wave -timelineunits ps
+# update
+# WaveRestoreZoom {0 ps} {1 ns}
+# 
+# Set the window types
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# 
+# Run the simulation
+# run -all
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "../../Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/D.mif" for reading.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/verilog/src/altera_mf.v(264)
+#    Time: 0 ps  Iteration: 0  Instance: /DMemReg_tb/DUT/unit0/altsyncram_component/m_default/altsyncram_inst
+# ERROR: cannot read ../../Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/D.mif.
+# ** Warning: (vsim-7) Failed to open readmem file "../../Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/D.ver" in read mode.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/verilog/src/altera_mf.v(48977)
+#    Time: 0 ps  Iteration: 0  Instance: /DMemReg_tb/DUT/unit0/altsyncram_component/m_default/altsyncram_inst
+# the data at location   0is     x
+# ** Error: oops
+#    Time: 40 ps  Scope: DMemReg_tb File: ./DMemReg.sv Line: 115
+# ** Note: $stop    : ./DMemReg.sv(117)
+#    Time: 60 ps  Iteration: 0  Instance: /DMemReg_tb
+# Break in Module DMemReg_tb at ./DMemReg.sv line 117
+# 
+# View the entire wave display
+# wave zoomfull
+# 0 ps
+# 63 ps
+# 
+# End
+mem load -filltype value -filldata 123 -fillradix symbolic /DMemReg_tb/DUT/unit0/altsyncram_component/m_default/altsyncram_inst/mem_data(28)
+# (vsim-3657) Illegal character '2' for radix 'binary' found in fill pattern "123".
+mem load -filltype value -filldata 0000000000000011 -fillradix symbolic /DMemReg_tb/DUT/unit0/altsyncram_component/m_default/altsyncram_inst/mem_data(28)
+do runrtl.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./RegisterFile.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:56:11 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegisterFile.sv 
+# -- Compiling module RegisterFile
+# -- Compiling module RegisterFile_tb
+# 
+# Top level modules:
+# 	RegisterFile_tb
+# End time: 16:56:11 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DataMemory.v"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:56:11 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./DataMemory.v 
+# -- Compiling module DataMemory
+# 
+# Top level modules:
+# 	DataMemory
+# End time: 16:56:11 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DMemReg.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:56:11 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./DMemReg.sv 
+# -- Compiling module DMemReg
+# -- Compiling module DMemReg_tb
+# 
+# Top level modules:
+# 	DMemReg_tb
+# End time: 16:56:11 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# 
+# Call vsim to invoke simulator
+#     Make sure the last item on the line is the name of the
+#     testbench module you want to execute.
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc" -fsmdebug  DMemReg_tb
+# End time: 16:56:13 on May 25,2025, Elapsed time: 0:05:38
+# Errors: 1, Warnings: 3
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" -fsmdebug DMemReg_tb 
+# Start time: 16:56:13 on May 25,2025
+# Loading sv_std.std
+# Loading work.DMemReg_tb
+# Loading work.DMemReg
+# Loading work.DataMemory
+# Loading altera_mf_ver.altsyncram
+# Loading work.RegisterFile
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'data'. The port definition is at: ./DataMemory.v(43).
+#    Time: 0 ps  Iteration: 0  Instance: /DMemReg_tb/DUT/unit0 File: ./DMemReg.sv Line: 42
+# 
+# Source the wave do file
+#     This should be the file that sets up the signal window for
+#     the module you are testing.
+# do wave.do
+# onerror {resume}
+# quietly WaveActivateNextPane {} 0
+# add wave -noupdate /DMemReg/D_Addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/D_Addr'.
+# Executing ONERROR command at macro ./wave.do line 3
+# add wave -noupdate /DMemReg/D_wr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/D_wr'.
+# Executing ONERROR command at macro ./wave.do line 4
+# add wave -noupdate /DMemReg/RF_W_en
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_W_en'.
+# Executing ONERROR command at macro ./wave.do line 5
+# add wave -noupdate /DMemReg/Clk
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/Clk'.
+# Executing ONERROR command at macro ./wave.do line 6
+# add wave -noupdate /DMemReg/RF_W_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_W_addr'.
+# Executing ONERROR command at macro ./wave.do line 7
+# add wave -noupdate /DMemReg/RF_Ra_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_Ra_addr'.
+# Executing ONERROR command at macro ./wave.do line 8
+# add wave -noupdate /DMemReg/RF_Rb_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_Rb_addr'.
+# Executing ONERROR command at macro ./wave.do line 9
+# add wave -noupdate /DMemReg/A
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/A'.
+# Executing ONERROR command at macro ./wave.do line 10
+# add wave -noupdate /DMemReg/B
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/B'.
+# Executing ONERROR command at macro ./wave.do line 11
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {0 ps} 0}
+# quietly wave cursor active 0
+# configure wave -namecolwidth 150
+# configure wave -valuecolwidth 100
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 0
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# configure wave -gridoffset 0
+# configure wave -gridperiod 1
+# configure wave -griddelta 40
+# configure wave -timeline 0
+# configure wave -timelineunits ps
+# update
+# WaveRestoreZoom {0 ps} {1 ns}
+# 
+# Set the window types
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# 
+# Run the simulation
+# run -all
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "../../Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/D.mif" for reading.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/verilog/src/altera_mf.v(264)
+#    Time: 0 ps  Iteration: 0  Instance: /DMemReg_tb/DUT/unit0/altsyncram_component/m_default/altsyncram_inst
+# ERROR: cannot read ../../Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/D.mif.
+# ** Warning: (vsim-7) Failed to open readmem file "../../Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/D.ver" in read mode.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/verilog/src/altera_mf.v(48977)
+#    Time: 0 ps  Iteration: 0  Instance: /DMemReg_tb/DUT/unit0/altsyncram_component/m_default/altsyncram_inst
+# the data at location   0is     x
+# ** Error: oops
+#    Time: 40 ps  Scope: DMemReg_tb File: ./DMemReg.sv Line: 115
+# ** Note: $stop    : ./DMemReg.sv(117)
+#    Time: 60 ps  Iteration: 0  Instance: /DMemReg_tb
+# Break in Module DMemReg_tb at ./DMemReg.sv line 117
+# 
+# View the entire wave display
+# wave zoomfull
+# 0 ps
+# 63 ps
+# 
+# End
+do runrtl.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./RegisterFile.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:59:16 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegisterFile.sv 
+# -- Compiling module RegisterFile
+# -- Compiling module RegisterFile_tb
+# 
+# Top level modules:
+# 	RegisterFile_tb
+# End time: 16:59:16 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DataMemory.v"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:59:16 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./DataMemory.v 
+# -- Compiling module DataMemory
+# 
+# Top level modules:
+# 	DataMemory
+# End time: 16:59:17 on May 25,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DMemReg.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:59:17 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./DMemReg.sv 
+# -- Compiling module DMemReg
+# -- Compiling module DMemReg_tb
+# 
+# Top level modules:
+# 	DMemReg_tb
+# End time: 16:59:17 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# 
+# Call vsim to invoke simulator
+#     Make sure the last item on the line is the name of the
+#     testbench module you want to execute.
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc" -fsmdebug  DMemReg_tb
+# End time: 16:59:19 on May 25,2025, Elapsed time: 0:03:06
+# Errors: 1, Warnings: 3
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" -fsmdebug DMemReg_tb 
+# Start time: 16:59:19 on May 25,2025
+# Loading sv_std.std
+# Loading work.DMemReg_tb
+# Loading work.DMemReg
+# Loading work.DataMemory
+# Loading altera_mf_ver.altsyncram
+# Loading work.RegisterFile
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'data'. The port definition is at: ./DataMemory.v(43).
+#    Time: 0 ps  Iteration: 0  Instance: /DMemReg_tb/DUT/unit0 File: ./DMemReg.sv Line: 42
+# 
+# Source the wave do file
+#     This should be the file that sets up the signal window for
+#     the module you are testing.
+# do wave.do
+# onerror {resume}
+# quietly WaveActivateNextPane {} 0
+# add wave -noupdate /DMemReg/D_Addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/D_Addr'.
+# Executing ONERROR command at macro ./wave.do line 3
+# add wave -noupdate /DMemReg/D_wr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/D_wr'.
+# Executing ONERROR command at macro ./wave.do line 4
+# add wave -noupdate /DMemReg/RF_W_en
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_W_en'.
+# Executing ONERROR command at macro ./wave.do line 5
+# add wave -noupdate /DMemReg/Clk
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/Clk'.
+# Executing ONERROR command at macro ./wave.do line 6
+# add wave -noupdate /DMemReg/RF_W_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_W_addr'.
+# Executing ONERROR command at macro ./wave.do line 7
+# add wave -noupdate /DMemReg/RF_Ra_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_Ra_addr'.
+# Executing ONERROR command at macro ./wave.do line 8
+# add wave -noupdate /DMemReg/RF_Rb_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_Rb_addr'.
+# Executing ONERROR command at macro ./wave.do line 9
+# add wave -noupdate /DMemReg/A
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/A'.
+# Executing ONERROR command at macro ./wave.do line 10
+# add wave -noupdate /DMemReg/B
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/B'.
+# Executing ONERROR command at macro ./wave.do line 11
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {0 ps} 0}
+# quietly wave cursor active 0
+# configure wave -namecolwidth 150
+# configure wave -valuecolwidth 100
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 0
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# configure wave -gridoffset 0
+# configure wave -gridperiod 1
+# configure wave -griddelta 40
+# configure wave -timeline 0
+# configure wave -timelineunits ps
+# update
+# WaveRestoreZoom {0 ps} {1 ns}
+# 
+# Set the window types
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# 
+# Run the simulation
+# run -all
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "../../Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/D.mif" for reading.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/verilog/src/altera_mf.v(264)
+#    Time: 0 ps  Iteration: 0  Instance: /DMemReg_tb/DUT/unit0/altsyncram_component/m_default/altsyncram_inst
+# ERROR: cannot read ../../Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/D.mif.
+# ** Warning: (vsim-7) Failed to open readmem file "../../Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/D.ver" in read mode.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/verilog/src/altera_mf.v(48977)
+#    Time: 0 ps  Iteration: 0  Instance: /DMemReg_tb/DUT/unit0/altsyncram_component/m_default/altsyncram_inst
+# the data at location   0is     x
+# ** Error: oops
+#    Time: 120 ps  Scope: DMemReg_tb File: ./DMemReg.sv Line: 115
+# ** Note: $stop    : ./DMemReg.sv(117)
+#    Time: 140 ps  Iteration: 0  Instance: /DMemReg_tb
+# Break in Module DMemReg_tb at ./DMemReg.sv line 117
+# 
+# View the entire wave display
+# wave zoomfull
+# 0 ps
+# 147 ps
+# 
+# End
+do runrtl.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./RegisterFile.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:01:48 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegisterFile.sv 
+# -- Compiling module RegisterFile
+# -- Compiling module RegisterFile_tb
+# 
+# Top level modules:
+# 	RegisterFile_tb
+# End time: 17:01:48 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DataMemory.v"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:01:48 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./DataMemory.v 
+# -- Compiling module DataMemory
+# 
+# Top level modules:
+# 	DataMemory
+# End time: 17:01:48 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DMemReg.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:01:48 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./DMemReg.sv 
+# -- Compiling module DMemReg
+# -- Compiling module DMemReg_tb
+# 
+# Top level modules:
+# 	DMemReg_tb
+# End time: 17:01:48 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# 
+# Call vsim to invoke simulator
+#     Make sure the last item on the line is the name of the
+#     testbench module you want to execute.
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc" -fsmdebug  DMemReg_tb
+# End time: 17:01:50 on May 25,2025, Elapsed time: 0:02:31
+# Errors: 1, Warnings: 3
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" -fsmdebug DMemReg_tb 
+# Start time: 17:01:50 on May 25,2025
+# Loading sv_std.std
+# Loading work.DMemReg_tb
+# Loading work.DMemReg
+# Loading work.DataMemory
+# Loading altera_mf_ver.altsyncram
+# Loading work.RegisterFile
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'data'. The port definition is at: ./DataMemory.v(43).
+#    Time: 0 ps  Iteration: 0  Instance: /DMemReg_tb/DUT/unit0 File: ./DMemReg.sv Line: 42
+# 
+# Source the wave do file
+#     This should be the file that sets up the signal window for
+#     the module you are testing.
+# do wave.do
+# onerror {resume}
+# quietly WaveActivateNextPane {} 0
+# add wave -noupdate /DMemReg/D_Addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/D_Addr'.
+# Executing ONERROR command at macro ./wave.do line 3
+# add wave -noupdate /DMemReg/D_wr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/D_wr'.
+# Executing ONERROR command at macro ./wave.do line 4
+# add wave -noupdate /DMemReg/RF_W_en
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_W_en'.
+# Executing ONERROR command at macro ./wave.do line 5
+# add wave -noupdate /DMemReg/Clk
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/Clk'.
+# Executing ONERROR command at macro ./wave.do line 6
+# add wave -noupdate /DMemReg/RF_W_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_W_addr'.
+# Executing ONERROR command at macro ./wave.do line 7
+# add wave -noupdate /DMemReg/RF_Ra_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_Ra_addr'.
+# Executing ONERROR command at macro ./wave.do line 8
+# add wave -noupdate /DMemReg/RF_Rb_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_Rb_addr'.
+# Executing ONERROR command at macro ./wave.do line 9
+# add wave -noupdate /DMemReg/A
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/A'.
+# Executing ONERROR command at macro ./wave.do line 10
+# add wave -noupdate /DMemReg/B
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/B'.
+# Executing ONERROR command at macro ./wave.do line 11
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {0 ps} 0}
+# quietly wave cursor active 0
+# configure wave -namecolwidth 150
+# configure wave -valuecolwidth 100
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 0
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# configure wave -gridoffset 0
+# configure wave -gridperiod 1
+# configure wave -griddelta 40
+# configure wave -timeline 0
+# configure wave -timelineunits ps
+# update
+# WaveRestoreZoom {0 ps} {1 ns}
+# 
+# Set the window types
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# 
+# Run the simulation
+# run -all
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "../../Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/D.mif" for reading.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/verilog/src/altera_mf.v(264)
+#    Time: 0 ps  Iteration: 0  Instance: /DMemReg_tb/DUT/unit0/altsyncram_component/m_default/altsyncram_inst
+# ERROR: cannot read ../../Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/D.mif.
+# ** Warning: (vsim-7) Failed to open readmem file "../../Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/D.ver" in read mode.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/verilog/src/altera_mf.v(48977)
+#    Time: 0 ps  Iteration: 0  Instance: /DMemReg_tb/DUT/unit0/altsyncram_component/m_default/altsyncram_inst
+# the data at location   0is     0
+# ** Error: oops
+#    Time: 140 ps  Scope: DMemReg_tb File: ./DMemReg.sv Line: 116
+# ** Note: $stop    : ./DMemReg.sv(118)
+#    Time: 160 ps  Iteration: 0  Instance: /DMemReg_tb
+# Break in Module DMemReg_tb at ./DMemReg.sv line 118
+# 
+# View the entire wave display
+# wave zoomfull
+# 0 ps
+# 168 ps
+# 
+# End
+do runrtl.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./RegisterFile.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:06:03 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegisterFile.sv 
+# -- Compiling module RegisterFile
+# -- Compiling module RegisterFile_tb
+# 
+# Top level modules:
+# 	RegisterFile_tb
+# End time: 17:06:03 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DataMemory.v"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:06:03 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./DataMemory.v 
+# -- Compiling module DataMemory
+# 
+# Top level modules:
+# 	DataMemory
+# End time: 17:06:03 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DMemReg.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:06:03 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./DMemReg.sv 
+# -- Compiling module DMemReg
+# -- Compiling module DMemReg_tb
+# ** Error: (vlog-13069) ./DMemReg.sv(114): near "Clk": syntax error, unexpected IDENTIFIER, expecting or or ')' or ','.
+# End time: 17:06:03 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./runrtl.do line 18
+# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -work work +acc "./DMemReg.sv""
+do runrtl.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./RegisterFile.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:06:19 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegisterFile.sv 
+# -- Compiling module RegisterFile
+# -- Compiling module RegisterFile_tb
+# 
+# Top level modules:
+# 	RegisterFile_tb
+# End time: 17:06:19 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DataMemory.v"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:06:19 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./DataMemory.v 
+# -- Compiling module DataMemory
+# 
+# Top level modules:
+# 	DataMemory
+# End time: 17:06:19 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DMemReg.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:06:19 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./DMemReg.sv 
+# -- Compiling module DMemReg
+# -- Compiling module DMemReg_tb
+# ** Error: (vlog-13069) ./DMemReg.sv(114): near "Clk": syntax error, unexpected IDENTIFIER, expecting or or ')' or ','.
+# End time: 17:06:19 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./runrtl.do line 18
+# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -work work +acc "./DMemReg.sv""
+do runrtl.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./RegisterFile.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:06:47 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegisterFile.sv 
+# -- Compiling module RegisterFile
+# -- Compiling module RegisterFile_tb
+# 
+# Top level modules:
+# 	RegisterFile_tb
+# End time: 17:06:48 on May 25,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DataMemory.v"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:06:48 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./DataMemory.v 
+# -- Compiling module DataMemory
+# 
+# Top level modules:
+# 	DataMemory
+# End time: 17:06:48 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DMemReg.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:06:48 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./DMemReg.sv 
+# -- Compiling module DMemReg
+# -- Compiling module DMemReg_tb
+# 
+# Top level modules:
+# 	DMemReg_tb
+# End time: 17:06:48 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# 
+# Call vsim to invoke simulator
+#     Make sure the last item on the line is the name of the
+#     testbench module you want to execute.
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc" -fsmdebug  DMemReg_tb
+# End time: 17:06:49 on May 25,2025, Elapsed time: 0:04:59
+# Errors: 3, Warnings: 3
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" -fsmdebug DMemReg_tb 
+# Start time: 17:06:49 on May 25,2025
+# Loading sv_std.std
+# Loading work.DMemReg_tb
+# Loading work.DMemReg
+# Loading work.DataMemory
+# Loading altera_mf_ver.altsyncram
+# Loading work.RegisterFile
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'data'. The port definition is at: ./DataMemory.v(43).
+#    Time: 0 ps  Iteration: 0  Instance: /DMemReg_tb/DUT/unit0 File: ./DMemReg.sv Line: 42
+# 
+# Source the wave do file
+#     This should be the file that sets up the signal window for
+#     the module you are testing.
+# do wave.do
+# onerror {resume}
+# quietly WaveActivateNextPane {} 0
+# add wave -noupdate /DMemReg/D_Addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/D_Addr'.
+# Executing ONERROR command at macro ./wave.do line 3
+# add wave -noupdate /DMemReg/D_wr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/D_wr'.
+# Executing ONERROR command at macro ./wave.do line 4
+# add wave -noupdate /DMemReg/RF_W_en
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_W_en'.
+# Executing ONERROR command at macro ./wave.do line 5
+# add wave -noupdate /DMemReg/Clk
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/Clk'.
+# Executing ONERROR command at macro ./wave.do line 6
+# add wave -noupdate /DMemReg/RF_W_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_W_addr'.
+# Executing ONERROR command at macro ./wave.do line 7
+# add wave -noupdate /DMemReg/RF_Ra_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_Ra_addr'.
+# Executing ONERROR command at macro ./wave.do line 8
+# add wave -noupdate /DMemReg/RF_Rb_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_Rb_addr'.
+# Executing ONERROR command at macro ./wave.do line 9
+# add wave -noupdate /DMemReg/A
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/A'.
+# Executing ONERROR command at macro ./wave.do line 10
+# add wave -noupdate /DMemReg/B
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/B'.
+# Executing ONERROR command at macro ./wave.do line 11
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {0 ps} 0}
+# quietly wave cursor active 0
+# configure wave -namecolwidth 150
+# configure wave -valuecolwidth 100
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 0
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# configure wave -gridoffset 0
+# configure wave -gridperiod 1
+# configure wave -griddelta 40
+# configure wave -timeline 0
+# configure wave -timelineunits ps
+# update
+# WaveRestoreZoom {0 ps} {1 ns}
+# 
+# Set the window types
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# 
+# Run the simulation
+# run -all
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "../../Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/D.mif" for reading.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/verilog/src/altera_mf.v(264)
+#    Time: 0 ps  Iteration: 0  Instance: /DMemReg_tb/DUT/unit0/altsyncram_component/m_default/altsyncram_inst
+# ERROR: cannot read ../../Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/D.mif.
+# ** Warning: (vsim-7) Failed to open readmem file "../../Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/D.ver" in read mode.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/verilog/src/altera_mf.v(48977)
+#    Time: 0 ps  Iteration: 0  Instance: /DMemReg_tb/DUT/unit0/altsyncram_component/m_default/altsyncram_inst
+# the data at location   0is     0
+# ** Error: oops.. we got     0
+#    Time: 90 ps  Scope: DMemReg_tb File: ./DMemReg.sv Line: 128
+# ** Note: $stop    : ./DMemReg.sv(130)
+#    Time: 110 ps  Iteration: 0  Instance: /DMemReg_tb
+# Break in Module DMemReg_tb at ./DMemReg.sv line 130
+# 
+# View the entire wave display
+# wave zoomfull
+# 0 ps
+# 116 ps
+# 
+# End
+mem load -filltype value -filldata 0000000000000011 -fillradix symbolic /DMemReg_tb/DUT/unit0/altsyncram_component/m_default/altsyncram_inst/mem_data(0)
+do runrtl.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./RegisterFile.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:08:05 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegisterFile.sv 
+# -- Compiling module RegisterFile
+# -- Compiling module RegisterFile_tb
+# 
+# Top level modules:
+# 	RegisterFile_tb
+# End time: 17:08:05 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DataMemory.v"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:08:05 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./DataMemory.v 
+# -- Compiling module DataMemory
+# 
+# Top level modules:
+# 	DataMemory
+# End time: 17:08:05 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DMemReg.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:08:05 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./DMemReg.sv 
+# -- Compiling module DMemReg
+# -- Compiling module DMemReg_tb
+# 
+# Top level modules:
+# 	DMemReg_tb
+# End time: 17:08:05 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# 
+# Call vsim to invoke simulator
+#     Make sure the last item on the line is the name of the
+#     testbench module you want to execute.
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc" -fsmdebug  DMemReg_tb
+# End time: 17:08:07 on May 25,2025, Elapsed time: 0:01:18
+# Errors: 1, Warnings: 3
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" -fsmdebug DMemReg_tb 
+# Start time: 17:08:07 on May 25,2025
+# Loading sv_std.std
+# Loading work.DMemReg_tb
+# Loading work.DMemReg
+# Loading work.DataMemory
+# Loading altera_mf_ver.altsyncram
+# Loading work.RegisterFile
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'data'. The port definition is at: ./DataMemory.v(43).
+#    Time: 0 ps  Iteration: 0  Instance: /DMemReg_tb/DUT/unit0 File: ./DMemReg.sv Line: 42
+# 
+# Source the wave do file
+#     This should be the file that sets up the signal window for
+#     the module you are testing.
+# do wave.do
+# onerror {resume}
+# quietly WaveActivateNextPane {} 0
+# add wave -noupdate /DMemReg/D_Addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/D_Addr'.
+# Executing ONERROR command at macro ./wave.do line 3
+# add wave -noupdate /DMemReg/D_wr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/D_wr'.
+# Executing ONERROR command at macro ./wave.do line 4
+# add wave -noupdate /DMemReg/RF_W_en
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_W_en'.
+# Executing ONERROR command at macro ./wave.do line 5
+# add wave -noupdate /DMemReg/Clk
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/Clk'.
+# Executing ONERROR command at macro ./wave.do line 6
+# add wave -noupdate /DMemReg/RF_W_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_W_addr'.
+# Executing ONERROR command at macro ./wave.do line 7
+# add wave -noupdate /DMemReg/RF_Ra_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_Ra_addr'.
+# Executing ONERROR command at macro ./wave.do line 8
+# add wave -noupdate /DMemReg/RF_Rb_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_Rb_addr'.
+# Executing ONERROR command at macro ./wave.do line 9
+# add wave -noupdate /DMemReg/A
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/A'.
+# Executing ONERROR command at macro ./wave.do line 10
+# add wave -noupdate /DMemReg/B
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/B'.
+# Executing ONERROR command at macro ./wave.do line 11
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {0 ps} 0}
+# quietly wave cursor active 0
+# configure wave -namecolwidth 150
+# configure wave -valuecolwidth 100
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 0
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# configure wave -gridoffset 0
+# configure wave -gridperiod 1
+# configure wave -griddelta 40
+# configure wave -timeline 0
+# configure wave -timelineunits ps
+# update
+# WaveRestoreZoom {0 ps} {1 ns}
+# 
+# Set the window types
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# 
+# Run the simulation
+# run -all
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "../../Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/D.mif" for reading.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/verilog/src/altera_mf.v(264)
+#    Time: 0 ps  Iteration: 0  Instance: /DMemReg_tb/DUT/unit0/altsyncram_component/m_default/altsyncram_inst
+# ERROR: cannot read ../../Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/D.mif.
+# ** Warning: (vsim-7) Failed to open readmem file "../../Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/D.ver" in read mode.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/verilog/src/altera_mf.v(48977)
+#    Time: 0 ps  Iteration: 0  Instance: /DMemReg_tb/DUT/unit0/altsyncram_component/m_default/altsyncram_inst
+# the data at location   0is     0
+# ** Error: oops.. we got     0
+#    Time: 90 ps  Scope: DMemReg_tb File: ./DMemReg.sv Line: 128
+# ** Note: $stop    : ./DMemReg.sv(130)
+#    Time: 110 ps  Iteration: 0  Instance: /DMemReg_tb
+# Break in Module DMemReg_tb at ./DMemReg.sv line 130
+# 
+# View the entire wave display
+# wave zoomfull
+# 0 ps
+# 116 ps
+# 
+# End
+do runrtl.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./RegisterFile.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:10:18 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegisterFile.sv 
+# -- Compiling module RegisterFile
+# -- Compiling module RegisterFile_tb
+# 
+# Top level modules:
+# 	RegisterFile_tb
+# End time: 17:10:18 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DataMemory.v"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:10:19 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./DataMemory.v 
+# -- Compiling module DataMemory
+# 
+# Top level modules:
+# 	DataMemory
+# End time: 17:10:19 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DMemReg.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:10:19 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./DMemReg.sv 
+# -- Compiling module DMemReg
+# -- Compiling module DMemReg_tb
+# 
+# Top level modules:
+# 	DMemReg_tb
+# End time: 17:10:19 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# 
+# Call vsim to invoke simulator
+#     Make sure the last item on the line is the name of the
+#     testbench module you want to execute.
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc" -fsmdebug  DMemReg_tb
+# End time: 17:10:21 on May 25,2025, Elapsed time: 0:02:14
+# Errors: 1, Warnings: 3
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" -fsmdebug DMemReg_tb 
+# Start time: 17:10:21 on May 25,2025
+# Loading sv_std.std
+# Loading work.DMemReg_tb
+# Loading work.DMemReg
+# Loading work.DataMemory
+# Loading altera_mf_ver.altsyncram
+# Loading work.RegisterFile
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'data'. The port definition is at: ./DataMemory.v(43).
+#    Time: 0 ps  Iteration: 0  Instance: /DMemReg_tb/DUT/unit0 File: ./DMemReg.sv Line: 42
+# 
+# Source the wave do file
+#     This should be the file that sets up the signal window for
+#     the module you are testing.
+# do wave.do
+# onerror {resume}
+# quietly WaveActivateNextPane {} 0
+# add wave -noupdate /DMemReg/D_Addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/D_Addr'.
+# Executing ONERROR command at macro ./wave.do line 3
+# add wave -noupdate /DMemReg/D_wr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/D_wr'.
+# Executing ONERROR command at macro ./wave.do line 4
+# add wave -noupdate /DMemReg/RF_W_en
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_W_en'.
+# Executing ONERROR command at macro ./wave.do line 5
+# add wave -noupdate /DMemReg/Clk
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/Clk'.
+# Executing ONERROR command at macro ./wave.do line 6
+# add wave -noupdate /DMemReg/RF_W_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_W_addr'.
+# Executing ONERROR command at macro ./wave.do line 7
+# add wave -noupdate /DMemReg/RF_Ra_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_Ra_addr'.
+# Executing ONERROR command at macro ./wave.do line 8
+# add wave -noupdate /DMemReg/RF_Rb_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_Rb_addr'.
+# Executing ONERROR command at macro ./wave.do line 9
+# add wave -noupdate /DMemReg/A
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/A'.
+# Executing ONERROR command at macro ./wave.do line 10
+# add wave -noupdate /DMemReg/B
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/B'.
+# Executing ONERROR command at macro ./wave.do line 11
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {0 ps} 0}
+# quietly wave cursor active 0
+# configure wave -namecolwidth 150
+# configure wave -valuecolwidth 100
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 0
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# configure wave -gridoffset 0
+# configure wave -gridperiod 1
+# configure wave -griddelta 40
+# configure wave -timeline 0
+# configure wave -timelineunits ps
+# update
+# WaveRestoreZoom {0 ps} {1 ns}
+# 
+# Set the window types
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# 
+# Run the simulation
+# run -all
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "../../Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/D.mif" for reading.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/verilog/src/altera_mf.v(264)
+#    Time: 0 ps  Iteration: 0  Instance: /DMemReg_tb/DUT/unit0/altsyncram_component/m_default/altsyncram_inst
+# ERROR: cannot read ../../Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/D.mif.
+# ** Warning: (vsim-7) Failed to open readmem file "../../Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/D.ver" in read mode.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/verilog/src/altera_mf.v(48977)
+#    Time: 0 ps  Iteration: 0  Instance: /DMemReg_tb/DUT/unit0/altsyncram_component/m_default/altsyncram_inst
+# the data at location   0is     0
+# ** Error: oops.. we got     0
+#    Time: 90 ps  Scope: DMemReg_tb File: ./DMemReg.sv Line: 128
+# ** Note: $stop    : ./DMemReg.sv(130)
+#    Time: 110 ps  Iteration: 0  Instance: /DMemReg_tb
+# Break in Module DMemReg_tb at ./DMemReg.sv line 130
+# 
+# View the entire wave display
+# wave zoomfull
+# 0 ps
+# 116 ps
+# 
+# End
+do runrtl.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./RegisterFile.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:10:30 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegisterFile.sv 
+# -- Compiling module RegisterFile
+# -- Compiling module RegisterFile_tb
+# 
+# Top level modules:
+# 	RegisterFile_tb
+# End time: 17:10:30 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DataMemory.v"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:10:30 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./DataMemory.v 
+# -- Compiling module DataMemory
+# 
+# Top level modules:
+# 	DataMemory
+# End time: 17:10:30 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DMemReg.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:10:30 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./DMemReg.sv 
+# -- Compiling module DMemReg
+# -- Compiling module DMemReg_tb
+# 
+# Top level modules:
+# 	DMemReg_tb
+# End time: 17:10:30 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# 
+# Call vsim to invoke simulator
+#     Make sure the last item on the line is the name of the
+#     testbench module you want to execute.
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc" -fsmdebug  DMemReg_tb
+# End time: 17:10:31 on May 25,2025, Elapsed time: 0:00:10
+# Errors: 1, Warnings: 3
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" -fsmdebug DMemReg_tb 
+# Start time: 17:10:31 on May 25,2025
+# Loading sv_std.std
+# Loading work.DMemReg_tb
+# Loading work.DMemReg
+# Loading work.DataMemory
+# Loading altera_mf_ver.altsyncram
+# Loading work.RegisterFile
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'data'. The port definition is at: ./DataMemory.v(43).
+#    Time: 0 ps  Iteration: 0  Instance: /DMemReg_tb/DUT/unit0 File: ./DMemReg.sv Line: 42
+# 
+# Source the wave do file
+#     This should be the file that sets up the signal window for
+#     the module you are testing.
+# do wave.do
+# onerror {resume}
+# quietly WaveActivateNextPane {} 0
+# add wave -noupdate /DMemReg/D_Addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/D_Addr'.
+# Executing ONERROR command at macro ./wave.do line 3
+# add wave -noupdate /DMemReg/D_wr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/D_wr'.
+# Executing ONERROR command at macro ./wave.do line 4
+# add wave -noupdate /DMemReg/RF_W_en
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_W_en'.
+# Executing ONERROR command at macro ./wave.do line 5
+# add wave -noupdate /DMemReg/Clk
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/Clk'.
+# Executing ONERROR command at macro ./wave.do line 6
+# add wave -noupdate /DMemReg/RF_W_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_W_addr'.
+# Executing ONERROR command at macro ./wave.do line 7
+# add wave -noupdate /DMemReg/RF_Ra_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_Ra_addr'.
+# Executing ONERROR command at macro ./wave.do line 8
+# add wave -noupdate /DMemReg/RF_Rb_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_Rb_addr'.
+# Executing ONERROR command at macro ./wave.do line 9
+# add wave -noupdate /DMemReg/A
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/A'.
+# Executing ONERROR command at macro ./wave.do line 10
+# add wave -noupdate /DMemReg/B
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/B'.
+# Executing ONERROR command at macro ./wave.do line 11
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {0 ps} 0}
+# quietly wave cursor active 0
+# configure wave -namecolwidth 150
+# configure wave -valuecolwidth 100
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 0
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# configure wave -gridoffset 0
+# configure wave -gridperiod 1
+# configure wave -griddelta 40
+# configure wave -timeline 0
+# configure wave -timelineunits ps
+# update
+# WaveRestoreZoom {0 ps} {1 ns}
+# 
+# Set the window types
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# 
+# Run the simulation
+# run -all
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "../../Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/D.mif" for reading.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/verilog/src/altera_mf.v(264)
+#    Time: 0 ps  Iteration: 0  Instance: /DMemReg_tb/DUT/unit0/altsyncram_component/m_default/altsyncram_inst
+# ERROR: cannot read ../../Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/D.mif.
+# ** Warning: (vsim-7) Failed to open readmem file "../../Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/D.ver" in read mode.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/verilog/src/altera_mf.v(48977)
+#    Time: 0 ps  Iteration: 0  Instance: /DMemReg_tb/DUT/unit0/altsyncram_component/m_default/altsyncram_inst
+# the data at location   0is     0
+# ** Error: oops.. we got     0
+#    Time: 90 ps  Scope: DMemReg_tb File: ./DMemReg.sv Line: 128
+# ** Note: $stop    : ./DMemReg.sv(130)
+#    Time: 110 ps  Iteration: 0  Instance: /DMemReg_tb
+# Break in Module DMemReg_tb at ./DMemReg.sv line 130
+# 
+# View the entire wave display
+# wave zoomfull
+# 0 ps
+# 116 ps
+# 
+# End
+do runrtl.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./RegisterFile.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:10:44 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegisterFile.sv 
+# -- Compiling module RegisterFile
+# -- Compiling module RegisterFile_tb
+# 
+# Top level modules:
+# 	RegisterFile_tb
+# End time: 17:10:44 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DataMemory.v"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:10:45 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./DataMemory.v 
+# -- Compiling module DataMemory
+# 
+# Top level modules:
+# 	DataMemory
+# End time: 17:10:45 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DMemReg.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:10:45 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./DMemReg.sv 
+# -- Compiling module DMemReg
+# -- Compiling module DMemReg_tb
+# 
+# Top level modules:
+# 	DMemReg_tb
+# End time: 17:10:45 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# 
+# Call vsim to invoke simulator
+#     Make sure the last item on the line is the name of the
+#     testbench module you want to execute.
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc" -fsmdebug  DMemReg_tb
+# End time: 17:10:46 on May 25,2025, Elapsed time: 0:00:15
+# Errors: 1, Warnings: 3
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" -fsmdebug DMemReg_tb 
+# Start time: 17:10:46 on May 25,2025
+# Loading sv_std.std
+# Loading work.DMemReg_tb
+# Loading work.DMemReg
+# Loading work.DataMemory
+# Loading altera_mf_ver.altsyncram
+# Loading work.RegisterFile
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'data'. The port definition is at: ./DataMemory.v(43).
+#    Time: 0 ps  Iteration: 0  Instance: /DMemReg_tb/DUT/unit0 File: ./DMemReg.sv Line: 42
+# 
+# Source the wave do file
+#     This should be the file that sets up the signal window for
+#     the module you are testing.
+# do wave.do
+# onerror {resume}
+# quietly WaveActivateNextPane {} 0
+# add wave -noupdate /DMemReg/D_Addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/D_Addr'.
+# Executing ONERROR command at macro ./wave.do line 3
+# add wave -noupdate /DMemReg/D_wr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/D_wr'.
+# Executing ONERROR command at macro ./wave.do line 4
+# add wave -noupdate /DMemReg/RF_W_en
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_W_en'.
+# Executing ONERROR command at macro ./wave.do line 5
+# add wave -noupdate /DMemReg/Clk
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/Clk'.
+# Executing ONERROR command at macro ./wave.do line 6
+# add wave -noupdate /DMemReg/RF_W_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_W_addr'.
+# Executing ONERROR command at macro ./wave.do line 7
+# add wave -noupdate /DMemReg/RF_Ra_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_Ra_addr'.
+# Executing ONERROR command at macro ./wave.do line 8
+# add wave -noupdate /DMemReg/RF_Rb_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_Rb_addr'.
+# Executing ONERROR command at macro ./wave.do line 9
+# add wave -noupdate /DMemReg/A
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/A'.
+# Executing ONERROR command at macro ./wave.do line 10
+# add wave -noupdate /DMemReg/B
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/B'.
+# Executing ONERROR command at macro ./wave.do line 11
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {0 ps} 0}
+# quietly wave cursor active 0
+# configure wave -namecolwidth 150
+# configure wave -valuecolwidth 100
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 0
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# configure wave -gridoffset 0
+# configure wave -gridperiod 1
+# configure wave -griddelta 40
+# configure wave -timeline 0
+# configure wave -timelineunits ps
+# update
+# WaveRestoreZoom {0 ps} {1 ns}
+# 
+# Set the window types
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# 
+# Run the simulation
+# run -all
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "../../Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/D.mif" for reading.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/verilog/src/altera_mf.v(264)
+#    Time: 0 ps  Iteration: 0  Instance: /DMemReg_tb/DUT/unit0/altsyncram_component/m_default/altsyncram_inst
+# ERROR: cannot read ../../Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/D.mif.
+# ** Warning: (vsim-7) Failed to open readmem file "../../Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/D.ver" in read mode.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/verilog/src/altera_mf.v(48977)
+#    Time: 0 ps  Iteration: 0  Instance: /DMemReg_tb/DUT/unit0/altsyncram_component/m_default/altsyncram_inst
+# the data at location   0is     0
+# ** Error: oops.. we got     0
+#    Time: 90 ps  Scope: DMemReg_tb File: ./DMemReg.sv Line: 128
+# ** Note: $stop    : ./DMemReg.sv(130)
+#    Time: 110 ps  Iteration: 0  Instance: /DMemReg_tb
+# Break in Module DMemReg_tb at ./DMemReg.sv line 130
+# 
+# View the entire wave display
+# wave zoomfull
+# 0 ps
+# 116 ps
+# 
+# End
+do runrtl.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./RegisterFile.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:11:02 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegisterFile.sv 
+# -- Compiling module RegisterFile
+# -- Compiling module RegisterFile_tb
+# 
+# Top level modules:
+# 	RegisterFile_tb
+# End time: 17:11:02 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DataMemory.v"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:11:02 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./DataMemory.v 
+# -- Compiling module DataMemory
+# 
+# Top level modules:
+# 	DataMemory
+# End time: 17:11:02 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DMemReg.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:11:02 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./DMemReg.sv 
+# -- Compiling module DMemReg
+# -- Compiling module DMemReg_tb
+# 
+# Top level modules:
+# 	DMemReg_tb
+# End time: 17:11:02 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# 
+# Call vsim to invoke simulator
+#     Make sure the last item on the line is the name of the
+#     testbench module you want to execute.
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc" -fsmdebug  DMemReg_tb
+# End time: 17:11:03 on May 25,2025, Elapsed time: 0:00:17
+# Errors: 1, Warnings: 3
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" -fsmdebug DMemReg_tb 
+# Start time: 17:11:03 on May 25,2025
+# Loading sv_std.std
+# Loading work.DMemReg_tb
+# Loading work.DMemReg
+# Loading work.DataMemory
+# Loading altera_mf_ver.altsyncram
+# Loading work.RegisterFile
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (1) for port 'data'. The port definition is at: ./DataMemory.v(43).
+#    Time: 0 ps  Iteration: 0  Instance: /DMemReg_tb/DUT/unit0 File: ./DMemReg.sv Line: 42
+# 
+# Source the wave do file
+#     This should be the file that sets up the signal window for
+#     the module you are testing.
+# do wave.do
+# onerror {resume}
+# quietly WaveActivateNextPane {} 0
+# add wave -noupdate /DMemReg/D_Addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/D_Addr'.
+# Executing ONERROR command at macro ./wave.do line 3
+# add wave -noupdate /DMemReg/D_wr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/D_wr'.
+# Executing ONERROR command at macro ./wave.do line 4
+# add wave -noupdate /DMemReg/RF_W_en
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_W_en'.
+# Executing ONERROR command at macro ./wave.do line 5
+# add wave -noupdate /DMemReg/Clk
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/Clk'.
+# Executing ONERROR command at macro ./wave.do line 6
+# add wave -noupdate /DMemReg/RF_W_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_W_addr'.
+# Executing ONERROR command at macro ./wave.do line 7
+# add wave -noupdate /DMemReg/RF_Ra_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_Ra_addr'.
+# Executing ONERROR command at macro ./wave.do line 8
+# add wave -noupdate /DMemReg/RF_Rb_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_Rb_addr'.
+# Executing ONERROR command at macro ./wave.do line 9
+# add wave -noupdate /DMemReg/A
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/A'.
+# Executing ONERROR command at macro ./wave.do line 10
+# add wave -noupdate /DMemReg/B
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/B'.
+# Executing ONERROR command at macro ./wave.do line 11
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {0 ps} 0}
+# quietly wave cursor active 0
+# configure wave -namecolwidth 150
+# configure wave -valuecolwidth 100
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 0
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# configure wave -gridoffset 0
+# configure wave -gridperiod 1
+# configure wave -griddelta 40
+# configure wave -timeline 0
+# configure wave -timelineunits ps
+# update
+# WaveRestoreZoom {0 ps} {1 ns}
+# 
+# Set the window types
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# 
+# Run the simulation
+# run -all
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "../../Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/D.mif" for reading.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/verilog/src/altera_mf.v(264)
+#    Time: 0 ps  Iteration: 0  Instance: /DMemReg_tb/DUT/unit0/altsyncram_component/m_default/altsyncram_inst
+# ERROR: cannot read ../../Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/D.mif.
+# ** Warning: (vsim-7) Failed to open readmem file "../../Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/D.ver" in read mode.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/verilog/src/altera_mf.v(48977)
+#    Time: 0 ps  Iteration: 0  Instance: /DMemReg_tb/DUT/unit0/altsyncram_component/m_default/altsyncram_inst
+# the data at location   0is     0
+# ** Error: oops.. we got     0
+#    Time: 90 ps  Scope: DMemReg_tb File: ./DMemReg.sv Line: 128
+# ** Note: $stop    : ./DMemReg.sv(130)
+#    Time: 110 ps  Iteration: 0  Instance: /DMemReg_tb
+# Break in Module DMemReg_tb at ./DMemReg.sv line 130
+# 
+# View the entire wave display
+# wave zoomfull
+# 0 ps
+# 116 ps
+# 
+# End
+do runrtl.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./RegisterFile.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:25:40 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegisterFile.sv 
+# -- Compiling module RegisterFile
+# -- Compiling module RegisterFile_tb
+# 
+# Top level modules:
+# 	RegisterFile_tb
+# End time: 17:25:40 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DataMemory.v"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:25:41 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./DataMemory.v 
+# -- Compiling module DataMemory
+# 
+# Top level modules:
+# 	DataMemory
+# End time: 17:25:41 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DMemReg.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:25:41 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./DMemReg.sv 
+# -- Compiling module DMemReg
+# -- Compiling module DMemReg_tb
+# 
+# Top level modules:
+# 	DMemReg_tb
+# End time: 17:25:41 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# 
+# Call vsim to invoke simulator
+#     Make sure the last item on the line is the name of the
+#     testbench module you want to execute.
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc" -fsmdebug  DMemReg_tb
+# End time: 17:25:46 on May 25,2025, Elapsed time: 0:14:43
+# Errors: 1, Warnings: 3
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" -fsmdebug DMemReg_tb 
+# Start time: 17:25:46 on May 25,2025
+# Loading sv_std.std
+# Loading work.DMemReg_tb
+# Loading work.DMemReg
+# Loading work.DataMemory
+# Loading altera_mf_ver.altsyncram
+# Loading work.RegisterFile
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# 
+# Source the wave do file
+#     This should be the file that sets up the signal window for
+#     the module you are testing.
+# do wave.do
+# onerror {resume}
+# quietly WaveActivateNextPane {} 0
+# add wave -noupdate /DMemReg/D_Addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/D_Addr'.
+# Executing ONERROR command at macro ./wave.do line 3
+# add wave -noupdate /DMemReg/D_wr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/D_wr'.
+# Executing ONERROR command at macro ./wave.do line 4
+# add wave -noupdate /DMemReg/RF_W_en
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_W_en'.
+# Executing ONERROR command at macro ./wave.do line 5
+# add wave -noupdate /DMemReg/Clk
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/Clk'.
+# Executing ONERROR command at macro ./wave.do line 6
+# add wave -noupdate /DMemReg/RF_W_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_W_addr'.
+# Executing ONERROR command at macro ./wave.do line 7
+# add wave -noupdate /DMemReg/RF_Ra_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_Ra_addr'.
+# Executing ONERROR command at macro ./wave.do line 8
+# add wave -noupdate /DMemReg/RF_Rb_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_Rb_addr'.
+# Executing ONERROR command at macro ./wave.do line 9
+# add wave -noupdate /DMemReg/A
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/A'.
+# Executing ONERROR command at macro ./wave.do line 10
+# add wave -noupdate /DMemReg/B
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/B'.
+# Executing ONERROR command at macro ./wave.do line 11
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {0 ps} 0}
+# quietly wave cursor active 0
+# configure wave -namecolwidth 150
+# configure wave -valuecolwidth 100
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 0
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# configure wave -gridoffset 0
+# configure wave -gridperiod 1
+# configure wave -griddelta 40
+# configure wave -timeline 0
+# configure wave -timelineunits ps
+# update
+# WaveRestoreZoom {0 ps} {1 ns}
+# 
+# Set the window types
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# 
+# Run the simulation
+# run -all
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "../../Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/D.mif" for reading.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/verilog/src/altera_mf.v(264)
+#    Time: 0 ps  Iteration: 0  Instance: /DMemReg_tb/DUT/unit0/altsyncram_component/m_default/altsyncram_inst
+# ERROR: cannot read ../../Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/D.mif.
+# ** Warning: (vsim-7) Failed to open readmem file "../../Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/D.ver" in read mode.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/verilog/src/altera_mf.v(48977)
+#    Time: 0 ps  Iteration: 0  Instance: /DMemReg_tb/DUT/unit0/altsyncram_component/m_default/altsyncram_inst
+# the data at location   0is     0
+# ** Error: oops.. we got     0
+#    Time: 90 ps  Scope: DMemReg_tb File: ./DMemReg.sv Line: 140
+# ** Note: $stop    : ./DMemReg.sv(142)
+#    Time: 110 ps  Iteration: 0  Instance: /DMemReg_tb
+# Break in Module DMemReg_tb at ./DMemReg.sv line 142
+# 
+# View the entire wave display
+# wave zoomfull
+# 0 ps
+# 116 ps
+# 
+# End
+do runrtl.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./RegisterFile.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:27:08 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegisterFile.sv 
+# -- Compiling module RegisterFile
+# -- Compiling module RegisterFile_tb
+# 
+# Top level modules:
+# 	RegisterFile_tb
+# End time: 17:27:08 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DataMemory.v"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:27:08 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./DataMemory.v 
+# -- Compiling module DataMemory
+# 
+# Top level modules:
+# 	DataMemory
+# End time: 17:27:08 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DMemReg.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:27:08 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./DMemReg.sv 
+# -- Compiling module DMemReg
+# -- Compiling module DMemReg_tb
+# 
+# Top level modules:
+# 	DMemReg_tb
+# End time: 17:27:08 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# 
+# Call vsim to invoke simulator
+#     Make sure the last item on the line is the name of the
+#     testbench module you want to execute.
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc" -fsmdebug  DMemReg_tb
+# End time: 17:27:10 on May 25,2025, Elapsed time: 0:01:24
+# Errors: 1, Warnings: 2
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" -fsmdebug DMemReg_tb 
+# Start time: 17:27:10 on May 25,2025
+# Loading sv_std.std
+# Loading work.DMemReg_tb
+# Loading work.DMemReg
+# Loading work.DataMemory
+# Loading altera_mf_ver.altsyncram
+# Loading work.RegisterFile
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# 
+# Source the wave do file
+#     This should be the file that sets up the signal window for
+#     the module you are testing.
+# do wave.do
+# onerror {resume}
+# quietly WaveActivateNextPane {} 0
+# add wave -noupdate /DMemReg/D_Addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/D_Addr'.
+# Executing ONERROR command at macro ./wave.do line 3
+# add wave -noupdate /DMemReg/D_wr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/D_wr'.
+# Executing ONERROR command at macro ./wave.do line 4
+# add wave -noupdate /DMemReg/RF_W_en
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_W_en'.
+# Executing ONERROR command at macro ./wave.do line 5
+# add wave -noupdate /DMemReg/Clk
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/Clk'.
+# Executing ONERROR command at macro ./wave.do line 6
+# add wave -noupdate /DMemReg/RF_W_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_W_addr'.
+# Executing ONERROR command at macro ./wave.do line 7
+# add wave -noupdate /DMemReg/RF_Ra_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_Ra_addr'.
+# Executing ONERROR command at macro ./wave.do line 8
+# add wave -noupdate /DMemReg/RF_Rb_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_Rb_addr'.
+# Executing ONERROR command at macro ./wave.do line 9
+# add wave -noupdate /DMemReg/A
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/A'.
+# Executing ONERROR command at macro ./wave.do line 10
+# add wave -noupdate /DMemReg/B
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/B'.
+# Executing ONERROR command at macro ./wave.do line 11
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {0 ps} 0}
+# quietly wave cursor active 0
+# configure wave -namecolwidth 150
+# configure wave -valuecolwidth 100
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 0
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# configure wave -gridoffset 0
+# configure wave -gridperiod 1
+# configure wave -griddelta 40
+# configure wave -timeline 0
+# configure wave -timelineunits ps
+# update
+# WaveRestoreZoom {0 ps} {1 ns}
+# 
+# Set the window types
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# 
+# Run the simulation
+# run -all
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "../../Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/D.mif" for reading.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/verilog/src/altera_mf.v(264)
+#    Time: 0 ps  Iteration: 0  Instance: /DMemReg_tb/DUT/unit0/altsyncram_component/m_default/altsyncram_inst
+# ERROR: cannot read ../../Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/D.mif.
+# ** Warning: (vsim-7) Failed to open readmem file "../../Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/D.ver" in read mode.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/verilog/src/altera_mf.v(48977)
+#    Time: 0 ps  Iteration: 0  Instance: /DMemReg_tb/DUT/unit0/altsyncram_component/m_default/altsyncram_inst
+# the data at location   0is     0
+# ** Error: oops.. we got     0
+#    Time: 90 ps  Scope: DMemReg_tb File: ./DMemReg.sv Line: 140
+# the data at location   0is     0
+# ** Error: oops.. we got     0
+#    Time: 90 ps  Scope: DMemReg_tb File: ./DMemReg.sv Line: 142
+# ** Note: $stop    : ./DMemReg.sv(144)
+#    Time: 110 ps  Iteration: 0  Instance: /DMemReg_tb
+# Break in Module DMemReg_tb at ./DMemReg.sv line 144
+# 
+# View the entire wave display
+# wave zoomfull
+# 0 ps
+# 116 ps
+# 
+# End
+# A time value could not be extracted from the current line
+do runrtl.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./RegisterFile.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:31:25 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegisterFile.sv 
+# -- Compiling module RegisterFile
+# -- Compiling module RegisterFile_tb
+# 
+# Top level modules:
+# 	RegisterFile_tb
+# End time: 17:31:25 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DataMemory.v"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:31:25 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./DataMemory.v 
+# -- Compiling module DataMemory
+# 
+# Top level modules:
+# 	DataMemory
+# End time: 17:31:25 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DMemReg.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:31:25 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./DMemReg.sv 
+# -- Compiling module DMemReg
+# -- Compiling module DMemReg_tb
+# 
+# Top level modules:
+# 	DMemReg_tb
+# End time: 17:31:25 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# 
+# Call vsim to invoke simulator
+#     Make sure the last item on the line is the name of the
+#     testbench module you want to execute.
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc" -fsmdebug  DMemReg_tb
+# End time: 17:31:27 on May 25,2025, Elapsed time: 0:04:17
+# Errors: 2, Warnings: 2
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" -fsmdebug DMemReg_tb 
+# Start time: 17:31:27 on May 25,2025
+# Loading sv_std.std
+# Loading work.DMemReg_tb
+# Loading work.DMemReg
+# Loading work.DataMemory
+# Loading altera_mf_ver.altsyncram
+# Loading work.RegisterFile
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# 
+# Source the wave do file
+#     This should be the file that sets up the signal window for
+#     the module you are testing.
+# do wave.do
+# onerror {resume}
+# quietly WaveActivateNextPane {} 0
+# add wave -noupdate /DMemReg/D_Addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/D_Addr'.
+# Executing ONERROR command at macro ./wave.do line 3
+# add wave -noupdate /DMemReg/D_wr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/D_wr'.
+# Executing ONERROR command at macro ./wave.do line 4
+# add wave -noupdate /DMemReg/RF_W_en
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_W_en'.
+# Executing ONERROR command at macro ./wave.do line 5
+# add wave -noupdate /DMemReg/Clk
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/Clk'.
+# Executing ONERROR command at macro ./wave.do line 6
+# add wave -noupdate /DMemReg/RF_W_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_W_addr'.
+# Executing ONERROR command at macro ./wave.do line 7
+# add wave -noupdate /DMemReg/RF_Ra_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_Ra_addr'.
+# Executing ONERROR command at macro ./wave.do line 8
+# add wave -noupdate /DMemReg/RF_Rb_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_Rb_addr'.
+# Executing ONERROR command at macro ./wave.do line 9
+# add wave -noupdate /DMemReg/A
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/A'.
+# Executing ONERROR command at macro ./wave.do line 10
+# add wave -noupdate /DMemReg/B
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/B'.
+# Executing ONERROR command at macro ./wave.do line 11
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {0 ps} 0}
+# quietly wave cursor active 0
+# configure wave -namecolwidth 150
+# configure wave -valuecolwidth 100
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 0
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# configure wave -gridoffset 0
+# configure wave -gridperiod 1
+# configure wave -griddelta 40
+# configure wave -timeline 0
+# configure wave -timelineunits ps
+# update
+# WaveRestoreZoom {0 ps} {1 ns}
+# 
+# Set the window types
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# 
+# Run the simulation
+# run -all
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "../../Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/D.mif" for reading.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/verilog/src/altera_mf.v(264)
+#    Time: 0 ps  Iteration: 0  Instance: /DMemReg_tb/DUT/unit0/altsyncram_component/m_default/altsyncram_inst
+# ERROR: cannot read ../../Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/D.mif.
+# ** Warning: (vsim-7) Failed to open readmem file "../../Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/D.ver" in read mode.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/verilog/src/altera_mf.v(48977)
+#    Time: 0 ps  Iteration: 0  Instance: /DMemReg_tb/DUT/unit0/altsyncram_component/m_default/altsyncram_inst
+# the data at location   0is     0
+# ** Error: oops.. we got     0
+#    Time: 70 ps  Scope: DMemReg_tb File: ./DMemReg.sv Line: 140
+# the data at location   0is     0
+# ** Error: oops.. we got     0
+#    Time: 70 ps  Scope: DMemReg_tb File: ./DMemReg.sv Line: 142
+# ** Note: $stop    : ./DMemReg.sv(145)
+#    Time: 90 ps  Iteration: 0  Instance: /DMemReg_tb
+# Break in Module DMemReg_tb at ./DMemReg.sv line 145
+# 
+# View the entire wave display
+# wave zoomfull
+# 0 ps
+# 95 ps
+# 
+# End
+do runrtl.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./RegisterFile.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:34:01 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegisterFile.sv 
+# -- Compiling module RegisterFile
+# -- Compiling module RegisterFile_tb
+# 
+# Top level modules:
+# 	RegisterFile_tb
+# End time: 17:34:01 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DataMemory.v"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:34:01 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./DataMemory.v 
+# -- Compiling module DataMemory
+# 
+# Top level modules:
+# 	DataMemory
+# End time: 17:34:01 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DMemReg.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:34:01 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./DMemReg.sv 
+# -- Compiling module DMemReg
+# -- Compiling module DMemReg_tb
+# 
+# Top level modules:
+# 	DMemReg_tb
+# End time: 17:34:01 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# 
+# Call vsim to invoke simulator
+#     Make sure the last item on the line is the name of the
+#     testbench module you want to execute.
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc" -fsmdebug  DMemReg_tb
+# End time: 17:34:03 on May 25,2025, Elapsed time: 0:02:36
+# Errors: 2, Warnings: 2
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" -fsmdebug DMemReg_tb 
+# Start time: 17:34:03 on May 25,2025
+# Loading sv_std.std
+# Loading work.DMemReg_tb
+# Loading work.DMemReg
+# Loading work.DataMemory
+# Loading altera_mf_ver.altsyncram
+# Loading work.RegisterFile
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# 
+# Source the wave do file
+#     This should be the file that sets up the signal window for
+#     the module you are testing.
+# do wave.do
+# onerror {resume}
+# quietly WaveActivateNextPane {} 0
+# add wave -noupdate /DMemReg/D_Addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/D_Addr'.
+# Executing ONERROR command at macro ./wave.do line 3
+# add wave -noupdate /DMemReg/D_wr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/D_wr'.
+# Executing ONERROR command at macro ./wave.do line 4
+# add wave -noupdate /DMemReg/RF_W_en
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_W_en'.
+# Executing ONERROR command at macro ./wave.do line 5
+# add wave -noupdate /DMemReg/Clk
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/Clk'.
+# Executing ONERROR command at macro ./wave.do line 6
+# add wave -noupdate /DMemReg/RF_W_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_W_addr'.
+# Executing ONERROR command at macro ./wave.do line 7
+# add wave -noupdate /DMemReg/RF_Ra_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_Ra_addr'.
+# Executing ONERROR command at macro ./wave.do line 8
+# add wave -noupdate /DMemReg/RF_Rb_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_Rb_addr'.
+# Executing ONERROR command at macro ./wave.do line 9
+# add wave -noupdate /DMemReg/A
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/A'.
+# Executing ONERROR command at macro ./wave.do line 10
+# add wave -noupdate /DMemReg/B
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/B'.
+# Executing ONERROR command at macro ./wave.do line 11
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {0 ps} 0}
+# quietly wave cursor active 0
+# configure wave -namecolwidth 150
+# configure wave -valuecolwidth 100
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 0
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# configure wave -gridoffset 0
+# configure wave -gridperiod 1
+# configure wave -griddelta 40
+# configure wave -timeline 0
+# configure wave -timelineunits ps
+# update
+# WaveRestoreZoom {0 ps} {1 ns}
+# 
+# Set the window types
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# 
+# Run the simulation
+# run -all
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "../../Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/D.mif" for reading.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/verilog/src/altera_mf.v(264)
+#    Time: 0 ps  Iteration: 0  Instance: /DMemReg_tb/DUT/unit0/altsyncram_component/m_default/altsyncram_inst
+# ERROR: cannot read ../../Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/D.mif.
+# ** Warning: (vsim-7) Failed to open readmem file "../../Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/D.ver" in read mode.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/verilog/src/altera_mf.v(48977)
+#    Time: 0 ps  Iteration: 0  Instance: /DMemReg_tb/DUT/unit0/altsyncram_component/m_default/altsyncram_inst
+# Register B (should be 123):     0
+# ** Error: LOAD failed: got     0, expected 123
+#    Time: 50 ps  Scope: DMemReg_tb File: ./DMemReg.sv Line: 117
+# ** Note: $stop    : ./DMemReg.sv(119)
+#    Time: 50 ps  Iteration: 1  Instance: /DMemReg_tb
+# Break in Module DMemReg_tb at ./DMemReg.sv line 119
+# 
+# View the entire wave display
+# wave zoomfull
+# 0 ps
+# 53 ps
+# 
+# End
+dir D.*
+#  Volume in drive C has no label.
+#  Volume Serial Number is AA3B-9AA0
+# 
+#  Directory of C:\Users\rod\Documents\2025_spring_classes\Processor-Project\Datapath
+# 
+# 05/25/2025  05:25 PM             1,059 D.mif
+#                1 File(s)          1,059 bytes
+#                0 Dir(s)  522,527,170,560 bytes free
+
+ls
+# ALU.sv           Datapath.sv                 _DataMemory.v  
+# D.mif            Dtest                       altera_mf      
+# DMemReg.sv       Launch_ModelSim.bat         modelsim.ini   
+# DMemReg.sv.bak   Mux_2_to1.sv                rtl_work       
+# DRAM.png         Processor2025_Datapath.pdf  runrtl.do      
+# DataMemory.qip   RegisterFile.sv             vsim.wlf       
+# DataMemory.v     RegisterFile.sv.bak         wave.do        
+# DataMemory_bb.v  _D.mif                      work           
+do runrtl.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./RegisterFile.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:41:25 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegisterFile.sv 
+# -- Compiling module RegisterFile
+# -- Compiling module RegisterFile_tb
+# 
+# Top level modules:
+# 	RegisterFile_tb
+# End time: 17:41:25 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DataMemory.v"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:41:25 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./DataMemory.v 
+# -- Compiling module DataMemory
+# ** Error: (vlog-13069) ./DataMemory.v(90): near "(": syntax error, unexpected '(', expecting '='.
+# End time: 17:41:25 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./runrtl.do line 17
+# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -work work +acc "./DataMemory.v""
+run -step
+# Error opening C:/Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/altera/verilog/src/altera_mf.v
+# Path name 'C:/Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/altera/verilog/src/altera_mf.v' doesn't exist.
+run -step
+# Error opening C:/Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/altera/verilog/src/altera_mf.v
+# Path name 'C:/Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/altera/verilog/src/altera_mf.v' doesn't exist.
+run -step
+# Error opening C:/Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/altera/verilog/src/altera_mf.v
+# Path name 'C:/Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/altera/verilog/src/altera_mf.v' doesn't exist.
+do runrtl.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./RegisterFile.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:42:00 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegisterFile.sv 
+# -- Compiling module RegisterFile
+# -- Compiling module RegisterFile_tb
+# 
+# Top level modules:
+# 	RegisterFile_tb
+# End time: 17:42:00 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DataMemory.v"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:42:00 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./DataMemory.v 
+# -- Compiling module DataMemory
+# 
+# Top level modules:
+# 	DataMemory
+# End time: 17:42:00 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DMemReg.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:42:00 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./DMemReg.sv 
+# -- Compiling module DMemReg
+# -- Compiling module DMemReg_tb
+# 
+# Top level modules:
+# 	DMemReg_tb
+# End time: 17:42:01 on May 25,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# 
+# Call vsim to invoke simulator
+#     Make sure the last item on the line is the name of the
+#     testbench module you want to execute.
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc" -fsmdebug  DMemReg_tb
+# End time: 17:42:02 on May 25,2025, Elapsed time: 0:07:59
+# Errors: 2, Warnings: 2
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" -fsmdebug DMemReg_tb 
+# Start time: 17:42:02 on May 25,2025
+# Loading sv_std.std
+# Loading work.DMemReg_tb
+# Loading work.DMemReg
+# Loading work.DataMemory
+# Loading altera_mf_ver.altsyncram
+# Loading work.RegisterFile
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# 
+# Source the wave do file
+#     This should be the file that sets up the signal window for
+#     the module you are testing.
+# do wave.do
+# onerror {resume}
+# quietly WaveActivateNextPane {} 0
+# add wave -noupdate /DMemReg/D_Addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/D_Addr'.
+# Executing ONERROR command at macro ./wave.do line 3
+# add wave -noupdate /DMemReg/D_wr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/D_wr'.
+# Executing ONERROR command at macro ./wave.do line 4
+# add wave -noupdate /DMemReg/RF_W_en
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_W_en'.
+# Executing ONERROR command at macro ./wave.do line 5
+# add wave -noupdate /DMemReg/Clk
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/Clk'.
+# Executing ONERROR command at macro ./wave.do line 6
+# add wave -noupdate /DMemReg/RF_W_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_W_addr'.
+# Executing ONERROR command at macro ./wave.do line 7
+# add wave -noupdate /DMemReg/RF_Ra_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_Ra_addr'.
+# Executing ONERROR command at macro ./wave.do line 8
+# add wave -noupdate /DMemReg/RF_Rb_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_Rb_addr'.
+# Executing ONERROR command at macro ./wave.do line 9
+# add wave -noupdate /DMemReg/A
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/A'.
+# Executing ONERROR command at macro ./wave.do line 10
+# add wave -noupdate /DMemReg/B
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/B'.
+# Executing ONERROR command at macro ./wave.do line 11
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {0 ps} 0}
+# quietly wave cursor active 0
+# configure wave -namecolwidth 150
+# configure wave -valuecolwidth 100
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 0
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# configure wave -gridoffset 0
+# configure wave -gridperiod 1
+# configure wave -griddelta 40
+# configure wave -timeline 0
+# configure wave -timelineunits ps
+# update
+# WaveRestoreZoom {0 ps} {1 ns}
+# 
+# Set the window types
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# 
+# Run the simulation
+# run -all
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "../Processor-Project/Datapath/D.mif" for reading.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/verilog/src/altera_mf.v(264)
+#    Time: 0 ps  Iteration: 0  Instance: /DMemReg_tb/DUT/unit0/altsyncram_component/m_default/altsyncram_inst
+# ERROR: cannot read ../Processor-Project/Datapath/D.mif.
+# ** Warning: (vsim-7) Failed to open readmem file "../Processor-Project/Datapath/D.ver" in read mode.
+# No such file or directory. (errno = ENOENT)    : $MODEL_TECH/../altera/verilog/src/altera_mf.v(48977)
+#    Time: 0 ps  Iteration: 0  Instance: /DMemReg_tb/DUT/unit0/altsyncram_component/m_default/altsyncram_inst
+# Register B (should be 123):     0
+# ** Error: LOAD failed: got     0, expected 123
+#    Time: 50 ps  Scope: DMemReg_tb File: ./DMemReg.sv Line: 117
+# ** Note: $stop    : ./DMemReg.sv(119)
+#    Time: 50 ps  Iteration: 1  Instance: /DMemReg_tb
+# Break in Module DMemReg_tb at ./DMemReg.sv line 119
+# 
+# View the entire wave display
+# wave zoomfull
+# 0 ps
+# 53 ps
+# 
+# End
+do runrtl.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# Error 31: Unable to unlink file "C:/Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/rtl_work/_lib1_0.qpg".
+# Error 31: Unable to unlink file "C:/Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/rtl_work/_lib1_0.qtl".
+# Error 133: Unable to remove directory "C:/Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/rtl_work".
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./RegisterFile.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:43:12 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegisterFile.sv 
+# -- Compiling module RegisterFile
+# -- Compiling module RegisterFile_tb
+# 
+# Top level modules:
+# 	RegisterFile_tb
+# End time: 17:43:12 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DataMemory.v"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:43:12 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./DataMemory.v 
+# -- Compiling module DataMemory
+# 
+# Top level modules:
+# 	DataMemory
+# End time: 17:43:12 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DMemReg.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:43:12 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./DMemReg.sv 
+# -- Compiling module DMemReg
+# -- Compiling module DMemReg_tb
+# 
+# Top level modules:
+# 	DMemReg_tb
+# End time: 17:43:12 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# 
+# Call vsim to invoke simulator
+#     Make sure the last item on the line is the name of the
+#     testbench module you want to execute.
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc" -fsmdebug  DMemReg_tb
+# End time: 17:43:15 on May 25,2025, Elapsed time: 0:01:13
+# Errors: 1, Warnings: 2
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" -fsmdebug DMemReg_tb 
+# Start time: 17:43:15 on May 25,2025
+# Loading sv_std.std
+# Loading work.DMemReg_tb
+# Loading work.DMemReg
+# Loading work.DataMemory
+# Loading altera_mf_ver.altsyncram
+# Loading work.RegisterFile
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# 
+# Source the wave do file
+#     This should be the file that sets up the signal window for
+#     the module you are testing.
+# do wave.do
+# onerror {resume}
+# quietly WaveActivateNextPane {} 0
+# add wave -noupdate /DMemReg/D_Addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/D_Addr'.
+# Executing ONERROR command at macro ./wave.do line 3
+# add wave -noupdate /DMemReg/D_wr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/D_wr'.
+# Executing ONERROR command at macro ./wave.do line 4
+# add wave -noupdate /DMemReg/RF_W_en
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_W_en'.
+# Executing ONERROR command at macro ./wave.do line 5
+# add wave -noupdate /DMemReg/Clk
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/Clk'.
+# Executing ONERROR command at macro ./wave.do line 6
+# add wave -noupdate /DMemReg/RF_W_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_W_addr'.
+# Executing ONERROR command at macro ./wave.do line 7
+# add wave -noupdate /DMemReg/RF_Ra_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_Ra_addr'.
+# Executing ONERROR command at macro ./wave.do line 8
+# add wave -noupdate /DMemReg/RF_Rb_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_Rb_addr'.
+# Executing ONERROR command at macro ./wave.do line 9
+# add wave -noupdate /DMemReg/A
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/A'.
+# Executing ONERROR command at macro ./wave.do line 10
+# add wave -noupdate /DMemReg/B
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/B'.
+# Executing ONERROR command at macro ./wave.do line 11
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {0 ps} 0}
+# quietly wave cursor active 0
+# configure wave -namecolwidth 150
+# configure wave -valuecolwidth 100
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 0
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# configure wave -gridoffset 0
+# configure wave -gridperiod 1
+# configure wave -griddelta 40
+# configure wave -timeline 0
+# configure wave -timelineunits ps
+# update
+# WaveRestoreZoom {0 ps} {1 ns}
+# 
+# Set the window types
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# 
+# Run the simulation
+# run -all
+# Register B (should be 123):     3
+# ** Error: LOAD failed: got     3, expected 123
+#    Time: 50 ps  Scope: DMemReg_tb File: ./DMemReg.sv Line: 117
+# ** Note: $stop    : ./DMemReg.sv(119)
+#    Time: 50 ps  Iteration: 1  Instance: /DMemReg_tb
+# Break in Module DMemReg_tb at ./DMemReg.sv line 119
+# 
+# View the entire wave display
+# wave zoomfull
+# 0 ps
+# 53 ps
+# 
+# End
+do runrtl.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./RegisterFile.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:44:14 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegisterFile.sv 
+# -- Compiling module RegisterFile
+# -- Compiling module RegisterFile_tb
+# 
+# Top level modules:
+# 	RegisterFile_tb
+# End time: 17:44:14 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DataMemory.v"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:44:14 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./DataMemory.v 
+# -- Compiling module DataMemory
+# 
+# Top level modules:
+# 	DataMemory
+# End time: 17:44:15 on May 25,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DMemReg.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:44:15 on May 25,2025
+# vlog -reportprogress 300 -work work "+acc" ./DMemReg.sv 
+# -- Compiling module DMemReg
+# -- Compiling module DMemReg_tb
+# 
+# Top level modules:
+# 	DMemReg_tb
+# End time: 17:44:15 on May 25,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# 
+# Call vsim to invoke simulator
+#     Make sure the last item on the line is the name of the
+#     testbench module you want to execute.
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc" -fsmdebug  DMemReg_tb
+# End time: 17:44:16 on May 25,2025, Elapsed time: 0:01:01
+# Errors: 1, Warnings: 0
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" -fsmdebug DMemReg_tb 
+# Start time: 17:44:16 on May 25,2025
+# Loading sv_std.std
+# Loading work.DMemReg_tb
+# Loading work.DMemReg
+# Loading work.DataMemory
+# Loading altera_mf_ver.altsyncram
+# Loading work.RegisterFile
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# 
+# Source the wave do file
+#     This should be the file that sets up the signal window for
+#     the module you are testing.
+# do wave.do
+# onerror {resume}
+# quietly WaveActivateNextPane {} 0
+# add wave -noupdate /DMemReg/D_Addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/D_Addr'.
+# Executing ONERROR command at macro ./wave.do line 3
+# add wave -noupdate /DMemReg/D_wr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/D_wr'.
+# Executing ONERROR command at macro ./wave.do line 4
+# add wave -noupdate /DMemReg/RF_W_en
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_W_en'.
+# Executing ONERROR command at macro ./wave.do line 5
+# add wave -noupdate /DMemReg/Clk
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/Clk'.
+# Executing ONERROR command at macro ./wave.do line 6
+# add wave -noupdate /DMemReg/RF_W_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_W_addr'.
+# Executing ONERROR command at macro ./wave.do line 7
+# add wave -noupdate /DMemReg/RF_Ra_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_Ra_addr'.
+# Executing ONERROR command at macro ./wave.do line 8
+# add wave -noupdate /DMemReg/RF_Rb_addr
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/RF_Rb_addr'.
+# Executing ONERROR command at macro ./wave.do line 9
+# add wave -noupdate /DMemReg/A
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/A'.
+# Executing ONERROR command at macro ./wave.do line 10
+# add wave -noupdate /DMemReg/B
+# ** UI-Msg: (vish-4014) No objects found matching '/DMemReg/B'.
+# Executing ONERROR command at macro ./wave.do line 11
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {0 ps} 0}
+# quietly wave cursor active 0
+# configure wave -namecolwidth 150
+# configure wave -valuecolwidth 100
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 0
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# configure wave -gridoffset 0
+# configure wave -gridperiod 1
+# configure wave -griddelta 40
+# configure wave -timeline 0
+# configure wave -timelineunits ps
+# update
+# WaveRestoreZoom {0 ps} {1 ns}
+# 
+# Set the window types
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# 
+# Run the simulation
+# run -all
+# Register B (should be 123):   123
+# ** Note: $stop    : ./DMemReg.sv(119)
+#    Time: 50 ps  Iteration: 1  Instance: /DMemReg_tb
+# Break in Module DMemReg_tb at ./DMemReg.sv line 119
+# 
+# View the entire wave display
+# wave zoomfull
+# 0 ps
+# 53 ps
+# 
+# End

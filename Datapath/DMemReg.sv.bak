@@ -3,7 +3,7 @@
 // 05-01-2025
 // Week 5, Lab4 Folder Part1
 // this module will 16 bit input A and B Sel 3 bit, output Q 3-bit
-`timescale 1 ps / 1 ps
+
 
 module  DMemReg//#(
     //parameters
@@ -24,9 +24,7 @@ module  DMemReg//#(
     output [15:0]A, B    // A and B data output
 );
 
-logic [15:0] R_data, W_data; //output from the DRAM 
-
-assign W_data = A; 
+logic [15:0] R_data; //output from the DRAM 
 // FIXME : GOES TO MUX.. we can temporarily just connect directly to the RegFile
 
 // instantiate the Dmem
@@ -85,39 +83,38 @@ module  DMemReg_tb();
 
    DMemReg DUT (D_Addr, D_wr, RF_W_en, Clk, RF_W_addr, RF_Ra_addr, RF_Rb_addr, A, B);
 
-   // Clock generation
    always begin
       Clk=1'b0; #10;
       Clk=1'b1; #10;
    end
 
    initial begin
-      // Initialize all signals
-      D_Addr = 0;
-      D_wr = 0;
-      RF_W_en = 0;
-      RF_W_addr = 0;
-      RF_Ra_addr = 0;
-      RF_Rb_addr = 0;
-      #25;
+      #3;   // offset so we don't go on the edge of the clock
 
-      // --- LOAD OPERATION TEST ---
-      // 1. Set up for load: DataMemory address 0, write to reg 0, read reg 0
-      D_Addr = 8'd0;
-      RF_W_addr = 4'd0;
-      RF_Rb_addr = 4'd0;
-      D_wr = 1'b0; // Not writing to memory
-      RF_W_en = 1'b1; // Enable register file write
 
-      @(posedge Clk); // Wait for register file to latch data
-      RF_W_en = 1'b0; // Disable write after latching
 
-      @(posedge Clk); // Wait for data to propagate
-      $display("Register B (should be 123): %d", B);
-      assert(B == 16'd123) else $error("LOAD failed: got %d, expected 123", B);
+// LOAD OPERATION from memory to register file
 
-      $stop;
-   end
+   // initialize D-Addr as 8'd0 // this is an arbitrary address for the data memory
+      @(negedge Clk) D_Addr=8'd0; // set the data address to 0 on the negative edge of the clock
+// this is when we are STORE NOT LOAD      // D_wr=1'b1; // set the data write enable to 1, meaning we are writing to the data memory
+// the variable RF_W_en is set to 1, meaning we are writing to the register file
+   // which means the operation is a LOAD operation, not a STORE operation
+
+// since we are doing the load operation, 
+   D_wr=1'b0;
+   RF_W_en=1'b1; // register file write enable is 1, meaning we are writing to the register file
+
+   // initialize some data in r_data  16-bit
+   D_Addr = 8'd0; // set the data address to 0
+   RF_Rb_addr = 4'b0; // set the read address for register B to 1
+   // R_data = 16'd123; //set r_data to 123
+   // add clock cycle to write the data to the register file
+   #20; // wait for one clock cycle
+   assert(Rb_data==16'd123) else ($error("oops"));
+$stop;
+   end 
+
 endmodule
 
 /* code graveyard 
