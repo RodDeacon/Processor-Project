@@ -24,9 +24,10 @@ module  DMemReg//#(
     output [15:0]A, B    // A and B data output
 );
 
-logic [15:0] R_data, W_data; //output from the DRAM 
+logic [15:0] R_data, W_data_RF, W_data_DM; //output from the DRAM
 
-assign W_data = A; 
+assign W_data_DM = A; 
+assign W_data_RF = R_data;
 // FIXME : GOES TO MUX.. we can temporarily just connect directly to the RegFile
 
 // instantiate the Dmem
@@ -41,22 +42,23 @@ assign W_data = A;
 	input	[15:0]  data;
 	input	  wren;
 	output	[15:0]  q;*/
-DataMemory unit0 (D_Addr, Clk, W_data, D_wr, R_data);
+DataMemory unit_DM (D_Addr, 
+                  Clk, 
+                  W_data_DM, 
+                  D_wr, 
+                  R_data
+);
 
 // instantiate the RF
-/*module RegisterFile #
-   (// params
-      parameter int data_bits = 16,                      // width of data in bits
-      parameter int reg_count = 16,                      // how many registers are in the register file
-      parameter int reg_addr_width = $clog2(reg_count))  // the bit length of register memory addresses
-   (// input / output portlist                      // write data default 16 bits 
-      input                         Clk, Write_En,   
-      input [reg_addr_width-1:0]    Write_Addr, Read_A_Addr, Read_B_Addr,   // read reg a, b, and write addresses default 4 bits
-      input [data_bits-1:0]         Write_Data,                            // write en and clk both 1 bit (pos edge clk)
-      output [data_bits-1:0]        A_Data, B_Data);   */
-RegisterFile unit1(Clk, RF_W_en, 
-                  RF_W_addr, RF_Ra_addr, RF_Rb_addr, 
-                  R_data, A, B);
+RegisterFile unit_RF (Clk, 
+                  RF_W_en, 
+                  RF_W_addr, 
+                  RF_Ra_addr, 
+                  RF_Rb_addr, 
+                  W_data_RF, 
+                  A, 
+                  B
+);
 
 
 // localparam
@@ -109,12 +111,46 @@ module  DMemReg_tb();
       D_wr = 1'b0; // Not writing to memory
       RF_W_en = 1'b1; // Enable register file write
 
-      @(posedge Clk); // Wait for register file to latch data
+      @(posedge Clk) #1; // Wait for register file to latch data + delay
       RF_W_en = 1'b0; // Disable write after latching
 
-      @(posedge Clk); // Wait for data to propagate
+      @(posedge Clk) #1; // Wait for data to propagate + delay
       $display("Register B (should be 123): %d", B);
       assert(B == 16'd123) else $error("LOAD failed: got %d, expected 123", B);
+
+
+      // --- STORE OPERATION TEST ---
+      
+    // PREPARE TO STORE DATA IN MEMORY
+
+      // Set the data to be stored in memory
+      // enable write to register file 
+      RF_W_en = 1'b1; // Enable register file write
+      // have write address (2) RF[2] = 222
+      RF_W_addr = 4'd2;
+      // and write data
+      DUT.W_data_RF = 16'd222; 
+      @(negedge Clk) #1; // Wait for clock edge to store data
+      @(posedge Clk) #1; // Wait for data to propagate
+
+      // now that the RF[2] = 222, we can test if we can store it in the memory
+      
+
+    // store to memory
+
+      D_wr = 1'b0;      // disable data's ability to write to register file 
+      RF_W_en = 1'b1;   // Enable register file write to store the data in memory
+
+      // Ra stores data to the memory
+      // R[2], data in the address is 222
+      RF_Ra_addr = 4'd2;
+      // use dot operator to store value at the Ra_data so that we can test if it passes to the W-data input of the RAM (DataMemory)
+      D_Addr = 8'd9; // Address to store data
+
+      @(negedge Clk) #1; // Wait for clock edge to store data
+      @(posedge Clk) #1; // Wait for data to propagate
+      $display("Data stored at address %d (should be 222): %d", D_Addr, DUT.unit_DM.data);
+
 
       $stop;
    end
