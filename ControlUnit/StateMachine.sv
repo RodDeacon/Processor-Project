@@ -104,9 +104,16 @@ State CurrentState, NextState;
       // halt
          Halt     : NextState = Halt;
       // init
-         Init     : NextState = Fetch;
+         Init     : begin 
+            PC_clr = 1;
+            NextState = Fetch;
+         end 
       // fetch
-         Fetch    : NextState = Decode;
+         Fetch    : begin 
+            PC_up = 1;
+            IR_ld = 1;
+            NextState = Decode;
+         end 
       // decode
          Decode:  case(IR[3:0]) // check the first four bits of the instruction register addrress 
             _noop    : NextState = Noop;     // 0 noop
