@@ -7515,3 +7515,7 @@ do runRom.do
 # The input address is xx
 # 
 # The output instruction is xxxx
+# Break key hit
+# Break in Module DROM_tb at ./DROM_tb.sv line 23
+# End time: 11:24:15 on Jun 01,2025, Elapsed time: 1:50:24
+# Errors: 1, Warnings: 0

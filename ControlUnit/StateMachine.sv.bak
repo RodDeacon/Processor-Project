@@ -215,72 +215,48 @@ endfunction
       Clk = 0; #10;
       Clk = 1; #10;
    end
-   
-    
+
    // testbench logic
    initial begin
-      inst _counter;  
-      State _state;
       Clk = 0; // clk 0
       
       // test all instructions except for load
-     
+      inst _counter;
       for (int i = 0; i < 6; i ++) begin
-         _counter = inst'(i); // instruction variable. this will track expected instruction by using i
-         _state   = State'(i);   // state variable. This will track the expected State by using i
+         _counter = inst'(i); // this will assign the currnet i as enum
          // reset the FSM: 
-         @(negedge Clk) #1;
-         DUT.CurrentState = State'(Init); // 
-         DUT._inst = inst'(i); 
-
+      @(negedge Clk) #1;
+      DUT.CurrentState = State'(Init); // 
+      DUT._inst = inst'(i); 
          $display("Resetting to Init to test %s.\nCurrentState = %s",inst_to_string(_counter), state_to_string(DUT.CurrentState)); 
-         // wait 3 to get to get expected
+      // wait 3 to get to load A
          repeat (3) @(posedge Clk) #1;
-         assert (DUT.CurrentState == _state) $display("Success! The Expected state was %s and was %s!", inst_to_string(_counter), state_to_string(DUT.CurrentState)); 
+         assert (DUT.CurrentState == Load_A)
+            $display("Success! The Expected state was %s and was %s!", inst_to_string(_counter), state_to_string(DUT.CurrentState)); 
             else   $error("The expected state was %s. It was actually %s.", inst_to_string(_counter), state_to_string(DUT.CurrentState));
-       
-         if (_counter == _load) begin // if the expected instruction == load, do this  aswell.
-            // wait 1 to get to load B
-            @(posedge Clk) #1;
-            // assert for current state
-            assert (DUT.CurrentState == Load_B)
-            $display("Success! The Expected state was Load_B and was %s!", state_to_string(DUT.CurrentState)); 
-            else   $error("The expected state was Load_B. It was actually %s.", state_to_string(DUT.CurrentState));
-               // TODO: assert for all variables which are being changed..
-         end
+   
+
       end
 
-
-      $stop;
-   end
-   // monitor
-   initial begin
-      $monitor("");
-   end
-
-endmodule
-
-
-
-      // // test load
-      //    // reset the FSM: 
-      // @(negedge Clk) #1;
-      // DUT.CurrentState = State'(Init); // 
-      // DUT._inst = inst'('d2); 
-      //    $display("Resetting to Init to test load.\nCurrentState = %s",state_to_string(DUT.CurrentState)); 
-      // // wait 3 to get to load A
-      //    repeat (3) @(posedge Clk) #1;
-      //    assert (DUT.CurrentState == Load_A)
-      //       $display("Success! The Expected state was Load_A and was %s!", state_to_string(DUT.CurrentState)); 
-      //       else   $error("The expected state was Load_A. It was actually %s.", state_to_string(DUT.CurrentState));
-      //  // wait 1 to get to load B
-      //    @(posedge Clk) #1;
-      //    // assert for current state
-      //    assert (DUT.CurrentState == Load_B)
-      //       $display("Success! The Expected state was Load_B and was %s!", state_to_string(DUT.CurrentState)); 
-      //       else   $error("The expected state was Load_B. It was actually %s.", state_to_string(DUT.CurrentState));
+      // test load
+         // reset the FSM: 
+      @(negedge Clk) #1;
+      DUT.CurrentState = State'(Init); // 
+      DUT._inst = inst'('d2); 
+         $display("Resetting to Init to test load.\nCurrentState = %s",state_to_string(DUT.CurrentState)); 
+      // wait 3 to get to load A
+         repeat (3) @(posedge Clk) #1;
+         assert (DUT.CurrentState == Load_A)
+            $display("Success! The Expected state was Load_A and was %s!", state_to_string(DUT.CurrentState)); 
+            else   $error("The expected state was Load_A. It was actually %s.", state_to_string(DUT.CurrentState));
+       // wait 1 to get to load B
+         @(posedge Clk) #1;
+         // assert for current state
+         assert (DUT.CurrentState == Load_B)
+            $display("Success! The Expected state was Load_B and was %s!", state_to_string(DUT.CurrentState)); 
+            else   $error("The expected state was Load_B. It was actually %s.", state_to_string(DUT.CurrentState));
          
-
+         // TODO: assert for all variables which are being changed..
          
 
 
@@ -376,3 +352,12 @@ endmodule
       // // test sub
 
       // // test halt
+
+      $stop;
+   end
+   // monitor
+   initial begin
+      $monitor("");
+   end
+
+endmodule

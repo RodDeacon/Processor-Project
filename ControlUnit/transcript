@@ -1,0 +1,1146 @@
+# Reading pref.tcl
+do runStateMachine.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./StateDefs.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:11:30 on Jun 01,2025
+# vlog -reportprogress 300 -work work "+acc" ./StateDefs.sv 
+# -- Compiling package StateDefs
+# 
+# Top level modules:
+# 	--none--
+# End time: 12:11:30 on Jun 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./StateMachine.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:11:30 on Jun 01,2025
+# vlog -reportprogress 300 -work work "+acc" ./StateMachine.sv 
+# ** Error: ./StateMachine.sv(225): Illegal declaration after the statement near line '221'.  Declarations must precede statements.  Look for stray semicolons.
+# ** Error: ./StateMachine.sv(225): (vlog-2730) Undefined variable: 'i'.
+# ** Error: (vlog-13069) ./StateMachine.sv(225): near ")": syntax error, unexpected ')', expecting ';'.
+# ** Error: (vlog-13069) ./StateMachine.sv(243): near "@": syntax error, unexpected '@'.
+# ** Error: (vlog-13069) ./StateMachine.sv(244): near "=": syntax error, unexpected '=', expecting IDENTIFIER or TYPE_IDENTIFIER or NETTYPE_IDENTIFIER.
+# ** Error: (vlog-13069) ./StateMachine.sv(245): near "=": syntax error, unexpected '=', expecting IDENTIFIER or TYPE_IDENTIFIER or NETTYPE_IDENTIFIER.
+# ** Error: ./StateMachine.sv(246): (vlog-13161) unexpected '$display', expecting elaboration system task $fatal/$error/$warning/$info.
+# ** Error: (vlog-13069) ./StateMachine.sv(248): near "repeat": syntax error, unexpected repeat.
+# ** Error: ./StateMachine.sv(356): (vlog-13161) unexpected '$stop', expecting elaboration system task $fatal/$error/$warning/$info.
+# ** Error: (vlog-13069) ./StateMachine.sv(357): near "end": syntax error, unexpected end.
+# End time: 12:11:30 on Jun 01,2025, Elapsed time: 0:00:00
+# Errors: 10, Warnings: 0
+# ** Error: C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./runStateMachine.do line 17
+# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -work work +acc "./StateMachine.sv""
+do runStateMachine.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./StateDefs.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:13:22 on Jun 01,2025
+# vlog -reportprogress 300 -work work "+acc" ./StateDefs.sv 
+# -- Compiling package StateDefs
+# 
+# Top level modules:
+# 	--none--
+# End time: 12:13:23 on Jun 01,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./StateMachine.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:13:23 on Jun 01,2025
+# vlog -reportprogress 300 -work work "+acc" ./StateMachine.sv 
+# ** Error: ./StateMachine.sv(225): Illegal declaration after the statement near line '221'.  Declarations must precede statements.  Look for stray semicolons.
+# ** Error: ./StateMachine.sv(225): (vlog-2730) Undefined variable: 'i'.
+# ** Error: (vlog-13069) ./StateMachine.sv(225): near ")": syntax error, unexpected ')', expecting ';'.
+# ** Error: (vlog-13069) ./StateMachine.sv(242): near "@": syntax error, unexpected '@'.
+# ** Error: (vlog-13069) ./StateMachine.sv(243): near "=": syntax error, unexpected '=', expecting IDENTIFIER or TYPE_IDENTIFIER or NETTYPE_IDENTIFIER.
+# ** Error: (vlog-13069) ./StateMachine.sv(244): near "=": syntax error, unexpected '=', expecting IDENTIFIER or TYPE_IDENTIFIER or NETTYPE_IDENTIFIER.
+# ** Error: ./StateMachine.sv(245): (vlog-13161) unexpected '$display', expecting elaboration system task $fatal/$error/$warning/$info.
+# ** Error: (vlog-13069) ./StateMachine.sv(247): near "repeat": syntax error, unexpected repeat.
+# ** Error: ./StateMachine.sv(355): (vlog-13161) unexpected '$stop', expecting elaboration system task $fatal/$error/$warning/$info.
+# ** Error: (vlog-13069) ./StateMachine.sv(356): near "end": syntax error, unexpected end.
+# End time: 12:13:23 on Jun 01,2025, Elapsed time: 0:00:00
+# Errors: 10, Warnings: 0
+# ** Error: C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./runStateMachine.do line 17
+# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -work work +acc "./StateMachine.sv""
+do runStateMachine.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./StateDefs.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:14:14 on Jun 01,2025
+# vlog -reportprogress 300 -work work "+acc" ./StateDefs.sv 
+# -- Compiling package StateDefs
+# 
+# Top level modules:
+# 	--none--
+# End time: 12:14:14 on Jun 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./StateMachine.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:14:14 on Jun 01,2025
+# vlog -reportprogress 300 -work work "+acc" ./StateMachine.sv 
+# ** Error: ./StateMachine.sv(226): Illegal declaration after the statement near line '221'.  Declarations must precede statements.  Look for stray semicolons.
+# ** Error: (vlog-13069) ./StateMachine.sv(226): near ")": syntax error, unexpected ')', expecting ';'.
+# ** Error: (vlog-13069) ./StateMachine.sv(243): near "@": syntax error, unexpected '@'.
+# ** Error: (vlog-13069) ./StateMachine.sv(244): near "=": syntax error, unexpected '=', expecting IDENTIFIER or TYPE_IDENTIFIER or NETTYPE_IDENTIFIER.
+# ** Error: (vlog-13069) ./StateMachine.sv(245): near "=": syntax error, unexpected '=', expecting IDENTIFIER or TYPE_IDENTIFIER or NETTYPE_IDENTIFIER.
+# ** Error: ./StateMachine.sv(246): (vlog-13161) unexpected '$display', expecting elaboration system task $fatal/$error/$warning/$info.
+# ** Error: (vlog-13069) ./StateMachine.sv(248): near "repeat": syntax error, unexpected repeat.
+# ** Error: ./StateMachine.sv(356): (vlog-13161) unexpected '$stop', expecting elaboration system task $fatal/$error/$warning/$info.
+# ** Error: (vlog-13069) ./StateMachine.sv(357): near "end": syntax error, unexpected end.
+# End time: 12:14:14 on Jun 01,2025, Elapsed time: 0:00:00
+# Errors: 9, Warnings: 0
+# ** Error: C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./runStateMachine.do line 17
+# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -work work +acc "./StateMachine.sv""
+do runStateMachine.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./StateDefs.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:14:20 on Jun 01,2025
+# vlog -reportprogress 300 -work work "+acc" ./StateDefs.sv 
+# -- Compiling package StateDefs
+# 
+# Top level modules:
+# 	--none--
+# End time: 12:14:20 on Jun 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./StateMachine.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:14:20 on Jun 01,2025
+# vlog -reportprogress 300 -work work "+acc" ./StateMachine.sv 
+# ** Error: ./StateMachine.sv(226): Illegal declaration after the statement near line '221'.  Declarations must precede statements.  Look for stray semicolons.
+# ** Error: (vlog-13069) ./StateMachine.sv(226): near ")": syntax error, unexpected ')', expecting ';'.
+# ** Error: (vlog-13069) ./StateMachine.sv(243): near "@": syntax error, unexpected '@'.
+# ** Error: (vlog-13069) ./StateMachine.sv(244): near "=": syntax error, unexpected '=', expecting IDENTIFIER or TYPE_IDENTIFIER or NETTYPE_IDENTIFIER.
+# ** Error: (vlog-13069) ./StateMachine.sv(245): near "=": syntax error, unexpected '=', expecting IDENTIFIER or TYPE_IDENTIFIER or NETTYPE_IDENTIFIER.
+# ** Error: ./StateMachine.sv(246): (vlog-13161) unexpected '$display', expecting elaboration system task $fatal/$error/$warning/$info.
+# ** Error: (vlog-13069) ./StateMachine.sv(248): near "repeat": syntax error, unexpected repeat.
+# ** Error: ./StateMachine.sv(356): (vlog-13161) unexpected '$stop', expecting elaboration system task $fatal/$error/$warning/$info.
+# ** Error: (vlog-13069) ./StateMachine.sv(357): near "end": syntax error, unexpected end.
+# End time: 12:14:20 on Jun 01,2025, Elapsed time: 0:00:00
+# Errors: 9, Warnings: 0
+# ** Error: C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./runStateMachine.do line 17
+# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -work work +acc "./StateMachine.sv""
+do runStateMachine.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./StateDefs.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:16:04 on Jun 01,2025
+# vlog -reportprogress 300 -work work "+acc" ./StateDefs.sv 
+# -- Compiling package StateDefs
+# 
+# Top level modules:
+# 	--none--
+# End time: 12:16:05 on Jun 01,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./StateMachine.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:16:05 on Jun 01,2025
+# vlog -reportprogress 300 -work work "+acc" ./StateMachine.sv 
+# -- Compiling package StateMachine_sv_unit
+# -- Importing package StateDefs
+# -- Compiling module StateMachine
+# -- Compiling module StateMachine_tb
+# 
+# Top level modules:
+# 	StateMachine_tb
+# End time: 12:16:05 on Jun 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# 
+# Call vsim to invoke simulator
+#     Make sure the last item on the line is the name of the
+#     testbench module you want to execute.
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc" -fsmdebug  StateMachine_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" -fsmdebug StateMachine_tb 
+# Start time: 12:16:05 on Jun 01,2025
+# Loading sv_std.std
+# Loading work.StateDefs
+# Loading work.StateMachine_sv_unit
+# Loading work.StateMachine_tb
+# Loading work.StateMachine
+# 
+# Source the wave do file
+#     This should be the file that sets up the signal window for
+#     the module you are testing.
+# do StateMachine_wave.do
+# onerror {resume}
+# quietly WaveActivateNextPane {} 0
+# add wave -noupdate /StateMachine_tb/Clk
+# add wave -noupdate /StateMachine_tb/IR
+# add wave -noupdate /StateMachine_tb/D_wr
+# ** UI-Msg: (vish-4014) No objects found matching '/StateMachine_tb/D_wr'.
+# Executing ONERROR command at macro ./StateMachine_wave.do line 5
+# add wave -noupdate /StateMachine_tb/RF_s
+# add wave -noupdate /StateMachine_tb/RF_W_en
+# add wave -noupdate /StateMachine_tb/PC_clr
+# add wave -noupdate /StateMachine_tb/IR_ld
+# add wave -noupdate /StateMachine_tb/PC_up
+# add wave -noupdate /StateMachine_tb/D_Addr
+# add wave -noupdate /StateMachine_tb/RF_W_addr
+# add wave -noupdate /StateMachine_tb/RF_Ra_addr
+# add wave -noupdate /StateMachine_tb/RF_Rb_addr
+# add wave -noupdate /StateMachine_tb/Alu_s0
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {0 ps} 0}
+# quietly wave cursor active 0
+# configure wave -namecolwidth 150
+# configure wave -valuecolwidth 100
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 0
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# configure wave -gridoffset 0
+# configure wave -gridperiod 1
+# configure wave -griddelta 40
+# configure wave -timeline 0
+# configure wave -timelineunits ps
+# update
+# WaveRestoreZoom {0 ps} {1 ns}
+# 
+# Set the window types
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# 
+# Run the simulation
+# run -all
+# 
+# Resetting to Init to test Noop.
+# CurrentState = Init
+# ** Error: The expected state was Noop. It was actually Noop.
+#    Time: 71 ps  Scope: StateMachine_tb File: ./StateMachine.sv Line: 237
+# Resetting to Init to test Store.
+# CurrentState = Init
+# ** Error: The expected state was Store. It was actually Store.
+#    Time: 131 ps  Scope: StateMachine_tb File: ./StateMachine.sv Line: 237
+# Resetting to Init to test Load.
+# CurrentState = Init
+# Success! The Expected state was Load and was Load_A!
+# Resetting to Init to test Add.
+# CurrentState = Init
+# ** Error: The expected state was Add. It was actually Add.
+#    Time: 251 ps  Scope: StateMachine_tb File: ./StateMachine.sv Line: 237
+# Resetting to Init to test Sub.
+# CurrentState = Init
+# ** Error: The expected state was Sub. It was actually Sub.
+#    Time: 311 ps  Scope: StateMachine_tb File: ./StateMachine.sv Line: 237
+# Resetting to Init to test Halt.
+# CurrentState = Init
+# ** Error: The expected state was Halt. It was actually Halt.
+#    Time: 371 ps  Scope: StateMachine_tb File: ./StateMachine.sv Line: 237
+# Resetting to Init to test load.
+# CurrentState = Init
+# Success! The Expected state was Load_A and was Load_A!
+# Success! The Expected state was Load_B and was Load_B!
+# ** Note: $stop    : ./StateMachine.sv(357)
+#    Time: 451 ps  Iteration: 0  Instance: /StateMachine_tb
+# Break in Module StateMachine_tb at ./StateMachine.sv line 357
+# 
+# View the entire wave display
+# wave zoomfull
+# 0 ps
+# 474 ps
+# 
+# End
+do runStateMachine.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./StateDefs.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:23:49 on Jun 01,2025
+# vlog -reportprogress 300 -work work "+acc" ./StateDefs.sv 
+# -- Compiling package StateDefs
+# 
+# Top level modules:
+# 	--none--
+# End time: 12:23:49 on Jun 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./StateMachine.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:23:49 on Jun 01,2025
+# vlog -reportprogress 300 -work work "+acc" ./StateMachine.sv 
+# ** Error: (vlog-13069) ./StateMachine.sv(239): near ")": syntax error, unexpected ')'.
+# End time: 12:23:49 on Jun 01,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./runStateMachine.do line 17
+# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -work work +acc "./StateMachine.sv""
+do runStateMachine.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# Error 31: Unable to unlink file "C:/Users/rod/Documents/2025_spring_classes/Processor-Project/ControlUnit/rtl_work/_lib.qdb".
+# Error 133: Unable to remove directory "C:/Users/rod/Documents/2025_spring_classes/Processor-Project/ControlUnit/rtl_work".
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./StateDefs.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:24:19 on Jun 01,2025
+# vlog -reportprogress 300 -work work "+acc" ./StateDefs.sv 
+# -- Compiling package StateDefs
+# 
+# Top level modules:
+# 	--none--
+# End time: 12:24:19 on Jun 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./StateMachine.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:24:19 on Jun 01,2025
+# vlog -reportprogress 300 -work work "+acc" ./StateMachine.sv 
+# ** Error: (vlog-13069) ./StateMachine.sv(239): near ")": syntax error, unexpected ')'.
+# End time: 12:24:19 on Jun 01,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./runStateMachine.do line 17
+# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -work work +acc "./StateMachine.sv""
+do runStateMachine.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# Error 31: Unable to unlink file "C:/Users/rod/Documents/2025_spring_classes/Processor-Project/ControlUnit/rtl_work/_lib.qdb".
+# Error 133: Unable to remove directory "C:/Users/rod/Documents/2025_spring_classes/Processor-Project/ControlUnit/rtl_work".
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./StateDefs.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:24:29 on Jun 01,2025
+# vlog -reportprogress 300 -work work "+acc" ./StateDefs.sv 
+# -- Compiling package StateDefs
+# 
+# Top level modules:
+# 	--none--
+# End time: 12:24:29 on Jun 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./StateMachine.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:24:29 on Jun 01,2025
+# vlog -reportprogress 300 -work work "+acc" ./StateMachine.sv 
+# -- Compiling package StateMachine_sv_unit
+# -- Importing package StateDefs
+# -- Compiling module StateMachine
+# -- Compiling module StateMachine_tb
+# 
+# Top level modules:
+# 	StateMachine_tb
+# End time: 12:24:29 on Jun 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# 
+# Call vsim to invoke simulator
+#     Make sure the last item on the line is the name of the
+#     testbench module you want to execute.
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc" -fsmdebug  StateMachine_tb
+# End time: 12:24:29 on Jun 01,2025, Elapsed time: 0:08:24
+# Errors: 7, Warnings: 0
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" -fsmdebug StateMachine_tb 
+# Start time: 12:24:29 on Jun 01,2025
+# Loading sv_std.std
+# Loading work.StateDefs
+# Loading work.StateMachine_sv_unit
+# Loading work.StateMachine_tb
+# Loading work.StateMachine
+# 
+# Source the wave do file
+#     This should be the file that sets up the signal window for
+#     the module you are testing.
+# do StateMachine_wave.do
+# onerror {resume}
+# quietly WaveActivateNextPane {} 0
+# add wave -noupdate /StateMachine_tb/Clk
+# add wave -noupdate /StateMachine_tb/IR
+# add wave -noupdate /StateMachine_tb/D_wr
+# ** UI-Msg: (vish-4014) No objects found matching '/StateMachine_tb/D_wr'.
+# Executing ONERROR command at macro ./StateMachine_wave.do line 5
+# add wave -noupdate /StateMachine_tb/RF_s
+# add wave -noupdate /StateMachine_tb/RF_W_en
+# add wave -noupdate /StateMachine_tb/PC_clr
+# add wave -noupdate /StateMachine_tb/IR_ld
+# add wave -noupdate /StateMachine_tb/PC_up
+# add wave -noupdate /StateMachine_tb/D_Addr
+# add wave -noupdate /StateMachine_tb/RF_W_addr
+# add wave -noupdate /StateMachine_tb/RF_Ra_addr
+# add wave -noupdate /StateMachine_tb/RF_Rb_addr
+# add wave -noupdate /StateMachine_tb/Alu_s0
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {0 ps} 0}
+# quietly wave cursor active 0
+# configure wave -namecolwidth 150
+# configure wave -valuecolwidth 100
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 0
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# configure wave -gridoffset 0
+# configure wave -gridperiod 1
+# configure wave -griddelta 40
+# configure wave -timeline 0
+# configure wave -timelineunits ps
+# update
+# WaveRestoreZoom {0 ps} {1 ns}
+# 
+# Set the window types
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# 
+# Run the simulation
+# run -all
+# 
+# Resetting to Init to test Noop.
+# CurrentState = Init
+# Success! The Expected state was Noop and was Noop!
+# Resetting to Init to test Store.
+# CurrentState = Init
+# Success! The Expected state was Store and was Store!
+# Resetting to Init to test Load.
+# CurrentState = Init
+# Success! The Expected state was Load and was Load_A!
+# Success! The Expected state was Load_B and was Load_B!
+# Resetting to Init to test Add.
+# CurrentState = Init
+# ** Error: The expected state was Add. It was actually Add.
+#    Time: 271 ps  Scope: StateMachine_tb File: ./StateMachine.sv Line: 240
+# Resetting to Init to test Sub.
+# CurrentState = Init
+# ** Error: The expected state was Sub. It was actually Sub.
+#    Time: 331 ps  Scope: StateMachine_tb File: ./StateMachine.sv Line: 240
+# Resetting to Init to test Halt.
+# CurrentState = Init
+# ** Error: The expected state was Halt. It was actually Halt.
+#    Time: 391 ps  Scope: StateMachine_tb File: ./StateMachine.sv Line: 240
+# Resetting to Init to test load.
+# CurrentState = Init
+# Success! The Expected state was Load_A and was Load_A!
+# Success! The Expected state was Load_B and was Load_B!
+# ** Note: $stop    : ./StateMachine.sv(375)
+#    Time: 471 ps  Iteration: 0  Instance: /StateMachine_tb
+# Break in Module StateMachine_tb at ./StateMachine.sv line 375
+# 
+# View the entire wave display
+# wave zoomfull
+# 0 ps
+# 495 ps
+# 
+# End
+# A time value could not be extracted from the current line
+do runStateMachine.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./StateDefs.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:25:55 on Jun 01,2025
+# vlog -reportprogress 300 -work work "+acc" ./StateDefs.sv 
+# -- Compiling package StateDefs
+# 
+# Top level modules:
+# 	--none--
+# End time: 12:25:56 on Jun 01,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./StateMachine.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:25:56 on Jun 01,2025
+# vlog -reportprogress 300 -work work "+acc" ./StateMachine.sv 
+# -- Compiling package StateMachine_sv_unit
+# -- Importing package StateDefs
+# -- Compiling module StateMachine
+# -- Compiling module StateMachine_tb
+# 
+# Top level modules:
+# 	StateMachine_tb
+# End time: 12:25:56 on Jun 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# 
+# Call vsim to invoke simulator
+#     Make sure the last item on the line is the name of the
+#     testbench module you want to execute.
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc" -fsmdebug  StateMachine_tb
+# End time: 12:25:57 on Jun 01,2025, Elapsed time: 0:01:28
+# Errors: 3, Warnings: 0
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" -fsmdebug StateMachine_tb 
+# Start time: 12:25:57 on Jun 01,2025
+# Loading sv_std.std
+# Loading work.StateDefs
+# Loading work.StateMachine_sv_unit
+# Loading work.StateMachine_tb
+# Loading work.StateMachine
+# 
+# Source the wave do file
+#     This should be the file that sets up the signal window for
+#     the module you are testing.
+# do StateMachine_wave.do
+# onerror {resume}
+# quietly WaveActivateNextPane {} 0
+# add wave -noupdate /StateMachine_tb/Clk
+# add wave -noupdate /StateMachine_tb/IR
+# add wave -noupdate /StateMachine_tb/D_wr
+# ** UI-Msg: (vish-4014) No objects found matching '/StateMachine_tb/D_wr'.
+# Executing ONERROR command at macro ./StateMachine_wave.do line 5
+# add wave -noupdate /StateMachine_tb/RF_s
+# add wave -noupdate /StateMachine_tb/RF_W_en
+# add wave -noupdate /StateMachine_tb/PC_clr
+# add wave -noupdate /StateMachine_tb/IR_ld
+# add wave -noupdate /StateMachine_tb/PC_up
+# add wave -noupdate /StateMachine_tb/D_Addr
+# add wave -noupdate /StateMachine_tb/RF_W_addr
+# add wave -noupdate /StateMachine_tb/RF_Ra_addr
+# add wave -noupdate /StateMachine_tb/RF_Rb_addr
+# add wave -noupdate /StateMachine_tb/Alu_s0
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {0 ps} 0}
+# quietly wave cursor active 0
+# configure wave -namecolwidth 150
+# configure wave -valuecolwidth 100
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 0
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# configure wave -gridoffset 0
+# configure wave -gridperiod 1
+# configure wave -griddelta 40
+# configure wave -timeline 0
+# configure wave -timelineunits ps
+# update
+# WaveRestoreZoom {0 ps} {1 ns}
+# 
+# Set the window types
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# 
+# Run the simulation
+# run -all
+# 
+# Resetting to Init to test Noop.
+# CurrentState = Init
+# Success! The Expected state was Noop and was Noop!
+# Resetting to Init to test Store.
+# CurrentState = Init
+# Success! The Expected state was Store and was Store!
+# Resetting to Init to test load.
+# CurrentState = Init
+# Success! The Expected state was Load_A and was Load_A!
+# Success! The Expected state was Load_B and was Load_B!
+# Resetting to Init to test Add.
+# CurrentState = Init
+# ** Error: The expected state was Add. It was actually Add.
+#    Time: 271 ps  Scope: StateMachine_tb File: ./StateMachine.sv Line: 240
+# Resetting to Init to test Sub.
+# CurrentState = Init
+# ** Error: The expected state was Sub. It was actually Sub.
+#    Time: 331 ps  Scope: StateMachine_tb File: ./StateMachine.sv Line: 240
+# Resetting to Init to test Halt.
+# CurrentState = Init
+# ** Error: The expected state was Halt. It was actually Halt.
+#    Time: 391 ps  Scope: StateMachine_tb File: ./StateMachine.sv Line: 240
+# Resetting to Init to test load.
+# CurrentState = Init
+# Success! The Expected state was Load_A and was Load_A!
+# Success! The Expected state was Load_B and was Load_B!
+# ** Note: $stop    : ./StateMachine.sv(375)
+#    Time: 471 ps  Iteration: 0  Instance: /StateMachine_tb
+# Break in Module StateMachine_tb at ./StateMachine.sv line 375
+# 
+# View the entire wave display
+# wave zoomfull
+# 0 ps
+# 495 ps
+# 
+# End
+do runStateMachine.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./StateDefs.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:29:01 on Jun 01,2025
+# vlog -reportprogress 300 -work work "+acc" ./StateDefs.sv 
+# -- Compiling package StateDefs
+# ** Error: ./StateDefs.sv(10): (vlog-13002) Enum member 'Add' does not have unique value.
+# End time: 12:29:01 on Jun 01,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./runStateMachine.do line 16
+# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -work work +acc "./StateDefs.sv""
+do runStateMachine.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# Error 31: Unable to unlink file "C:/Users/rod/Documents/2025_spring_classes/Processor-Project/ControlUnit/rtl_work/_lib.qdb".
+# Error 133: Unable to remove directory "C:/Users/rod/Documents/2025_spring_classes/Processor-Project/ControlUnit/rtl_work".
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./StateDefs.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:29:28 on Jun 01,2025
+# vlog -reportprogress 300 -work work "+acc" ./StateDefs.sv 
+# -- Compiling package StateDefs
+# 
+# Top level modules:
+# 	--none--
+# End time: 12:29:28 on Jun 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./StateMachine.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:29:28 on Jun 01,2025
+# vlog -reportprogress 300 -work work "+acc" ./StateMachine.sv 
+# -- Compiling package StateMachine_sv_unit
+# -- Importing package StateDefs
+# -- Compiling module StateMachine
+# -- Compiling module StateMachine_tb
+# 
+# Top level modules:
+# 	StateMachine_tb
+# End time: 12:29:28 on Jun 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# 
+# Call vsim to invoke simulator
+#     Make sure the last item on the line is the name of the
+#     testbench module you want to execute.
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc" -fsmdebug  StateMachine_tb
+# End time: 12:29:29 on Jun 01,2025, Elapsed time: 0:03:32
+# Errors: 4, Warnings: 0
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" -fsmdebug StateMachine_tb 
+# Start time: 12:29:29 on Jun 01,2025
+# Loading sv_std.std
+# Loading work.StateDefs
+# Loading work.StateMachine_sv_unit
+# Loading work.StateMachine_tb
+# Loading work.StateMachine
+# 
+# Source the wave do file
+#     This should be the file that sets up the signal window for
+#     the module you are testing.
+# do StateMachine_wave.do
+# onerror {resume}
+# quietly WaveActivateNextPane {} 0
+# add wave -noupdate /StateMachine_tb/Clk
+# add wave -noupdate /StateMachine_tb/IR
+# add wave -noupdate /StateMachine_tb/D_wr
+# ** UI-Msg: (vish-4014) No objects found matching '/StateMachine_tb/D_wr'.
+# Executing ONERROR command at macro ./StateMachine_wave.do line 5
+# add wave -noupdate /StateMachine_tb/RF_s
+# add wave -noupdate /StateMachine_tb/RF_W_en
+# add wave -noupdate /StateMachine_tb/PC_clr
+# add wave -noupdate /StateMachine_tb/IR_ld
+# add wave -noupdate /StateMachine_tb/PC_up
+# add wave -noupdate /StateMachine_tb/D_Addr
+# add wave -noupdate /StateMachine_tb/RF_W_addr
+# add wave -noupdate /StateMachine_tb/RF_Ra_addr
+# add wave -noupdate /StateMachine_tb/RF_Rb_addr
+# add wave -noupdate /StateMachine_tb/Alu_s0
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {0 ps} 0}
+# quietly wave cursor active 0
+# configure wave -namecolwidth 150
+# configure wave -valuecolwidth 100
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 0
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# configure wave -gridoffset 0
+# configure wave -gridperiod 1
+# configure wave -griddelta 40
+# configure wave -timeline 0
+# configure wave -timelineunits ps
+# update
+# WaveRestoreZoom {0 ps} {1 ns}
+# 
+# Set the window types
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# 
+# Run the simulation
+# run -all
+# 
+# Resetting to Init to test Noop.
+# CurrentState = Init
+# Success! The Expected state was Noop and was Noop!
+# Resetting to Init to test Store.
+# CurrentState = Init
+# Success! The Expected state was Store and was Store!
+# Resetting to Init to test load.
+# CurrentState = Init
+# Success! The Expected state was Load_A and was Load_A!
+# Success! The Expected state was Load_B and was Load_B!
+# Resetting to Init to test Add.
+# CurrentState = Init
+# Success! The Expected state was Add and was Add!
+# Resetting to Init to test Sub.
+# CurrentState = Init
+# Success! The Expected state was Sub and was Sub!
+# Resetting to Init to test Halt.
+# CurrentState = Init
+# Success! The Expected state was Halt and was Halt!
+# Resetting to Init to test load.
+# CurrentState = Init
+# Success! The Expected state was Load_A and was Load_A!
+# Success! The Expected state was Load_B and was Load_B!
+# ** Note: $stop    : ./StateMachine.sv(375)
+#    Time: 471 ps  Iteration: 0  Instance: /StateMachine_tb
+# Break in Module StateMachine_tb at ./StateMachine.sv line 375
+# 
+# View the entire wave display
+# wave zoomfull
+# 0 ps
+# 495 ps
+# 
+# End
+do runStateMachine.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./StateDefs.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:31:44 on Jun 01,2025
+# vlog -reportprogress 300 -work work "+acc" ./StateDefs.sv 
+# -- Compiling package StateDefs
+# 
+# Top level modules:
+# 	--none--
+# End time: 12:31:44 on Jun 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./StateMachine.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:31:44 on Jun 01,2025
+# vlog -reportprogress 300 -work work "+acc" ./StateMachine.sv 
+# -- Compiling package StateMachine_sv_unit
+# -- Importing package StateDefs
+# -- Compiling module StateMachine
+# -- Compiling module StateMachine_tb
+# 
+# Top level modules:
+# 	StateMachine_tb
+# End time: 12:31:44 on Jun 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# 
+# Call vsim to invoke simulator
+#     Make sure the last item on the line is the name of the
+#     testbench module you want to execute.
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc" -fsmdebug  StateMachine_tb
+# End time: 12:31:47 on Jun 01,2025, Elapsed time: 0:02:18
+# Errors: 0, Warnings: 0
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" -fsmdebug StateMachine_tb 
+# Start time: 12:31:47 on Jun 01,2025
+# Loading sv_std.std
+# Loading work.StateDefs
+# Loading work.StateMachine_sv_unit
+# Loading work.StateMachine_tb
+# Loading work.StateMachine
+# 
+# Source the wave do file
+#     This should be the file that sets up the signal window for
+#     the module you are testing.
+# do StateMachine_wave.do
+# onerror {resume}
+# quietly WaveActivateNextPane {} 0
+# add wave -noupdate /StateMachine_tb/Clk
+# add wave -noupdate /StateMachine_tb/IR
+# add wave -noupdate /StateMachine_tb/D_wr
+# ** UI-Msg: (vish-4014) No objects found matching '/StateMachine_tb/D_wr'.
+# Executing ONERROR command at macro ./StateMachine_wave.do line 5
+# add wave -noupdate /StateMachine_tb/RF_s
+# add wave -noupdate /StateMachine_tb/RF_W_en
+# add wave -noupdate /StateMachine_tb/PC_clr
+# add wave -noupdate /StateMachine_tb/IR_ld
+# add wave -noupdate /StateMachine_tb/PC_up
+# add wave -noupdate /StateMachine_tb/D_Addr
+# add wave -noupdate /StateMachine_tb/RF_W_addr
+# add wave -noupdate /StateMachine_tb/RF_Ra_addr
+# add wave -noupdate /StateMachine_tb/RF_Rb_addr
+# add wave -noupdate /StateMachine_tb/Alu_s0
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {0 ps} 0}
+# quietly wave cursor active 0
+# configure wave -namecolwidth 150
+# configure wave -valuecolwidth 100
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 0
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# configure wave -gridoffset 0
+# configure wave -gridperiod 1
+# configure wave -griddelta 40
+# configure wave -timeline 0
+# configure wave -timelineunits ps
+# update
+# WaveRestoreZoom {0 ps} {1 ns}
+# 
+# Set the window types
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# 
+# Run the simulation
+# run -all
+# 
+# Resetting to Init to test Noop.
+# CurrentState = Init
+# Success! The Expected state was Noop and was Noop!
+# Resetting to Init to test Store.
+# CurrentState = Init
+# Success! The Expected state was Store and was Store!
+# Resetting to Init to test Load.
+# CurrentState = Init
+# Success! The Expected state was Load and was Load_A!
+# Success! The Expected state was Load_B and was Load_B!
+# Resetting to Init to test Add.
+# CurrentState = Init
+# Success! The Expected state was Add and was Add!
+# Resetting to Init to test Sub.
+# CurrentState = Init
+# Success! The Expected state was Sub and was Sub!
+# Resetting to Init to test Halt.
+# CurrentState = Init
+# Success! The Expected state was Halt and was Halt!
+# ** Note: $stop    : ./StateMachine.sv(375)
+#    Time: 391 ps  Iteration: 0  Instance: /StateMachine_tb
+# Break in Module StateMachine_tb at ./StateMachine.sv line 375
+# 
+# View the entire wave display
+# wave zoomfull
+# 0 ps
+# 411 ps
+# 
+# End
+do runStateMachine.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./StateDefs.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:33:03 on Jun 01,2025
+# vlog -reportprogress 300 -work work "+acc" ./StateDefs.sv 
+# -- Compiling package StateDefs
+# 
+# Top level modules:
+# 	--none--
+# End time: 12:33:03 on Jun 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./StateMachine.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:33:03 on Jun 01,2025
+# vlog -reportprogress 300 -work work "+acc" ./StateMachine.sv 
+# -- Compiling package StateMachine_sv_unit
+# -- Importing package StateDefs
+# -- Compiling module StateMachine
+# -- Compiling module StateMachine_tb
+# 
+# Top level modules:
+# 	StateMachine_tb
+# End time: 12:33:03 on Jun 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# 
+# Call vsim to invoke simulator
+#     Make sure the last item on the line is the name of the
+#     testbench module you want to execute.
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc" -fsmdebug  StateMachine_tb
+# End time: 12:33:06 on Jun 01,2025, Elapsed time: 0:01:19
+# Errors: 0, Warnings: 0
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" -fsmdebug StateMachine_tb 
+# Start time: 12:33:06 on Jun 01,2025
+# Loading sv_std.std
+# Loading work.StateDefs
+# Loading work.StateMachine_sv_unit
+# Loading work.StateMachine_tb
+# Loading work.StateMachine
+# 
+# Source the wave do file
+#     This should be the file that sets up the signal window for
+#     the module you are testing.
+# do StateMachine_wave.do
+# onerror {resume}
+# quietly WaveActivateNextPane {} 0
+# add wave -noupdate /StateMachine_tb/Clk
+# add wave -noupdate /StateMachine_tb/IR
+# add wave -noupdate /StateMachine_tb/D_wr
+# ** UI-Msg: (vish-4014) No objects found matching '/StateMachine_tb/D_wr'.
+# Executing ONERROR command at macro ./StateMachine_wave.do line 5
+# add wave -noupdate /StateMachine_tb/RF_s
+# add wave -noupdate /StateMachine_tb/RF_W_en
+# add wave -noupdate /StateMachine_tb/PC_clr
+# add wave -noupdate /StateMachine_tb/IR_ld
+# add wave -noupdate /StateMachine_tb/PC_up
+# add wave -noupdate /StateMachine_tb/D_Addr
+# add wave -noupdate /StateMachine_tb/RF_W_addr
+# add wave -noupdate /StateMachine_tb/RF_Ra_addr
+# add wave -noupdate /StateMachine_tb/RF_Rb_addr
+# add wave -noupdate /StateMachine_tb/Alu_s0
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {0 ps} 0}
+# quietly wave cursor active 0
+# configure wave -namecolwidth 150
+# configure wave -valuecolwidth 100
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 0
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# configure wave -gridoffset 0
+# configure wave -gridperiod 1
+# configure wave -griddelta 40
+# configure wave -timeline 0
+# configure wave -timelineunits ps
+# update
+# WaveRestoreZoom {0 ps} {1 ns}
+# 
+# Set the window types
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# 
+# Run the simulation
+# run -all
+# 
+# Resetting to Init to test Noop.
+# CurrentState = Init
+# Success! The Expected state was Noop and was Noop!
+# Resetting to Init to test Store.
+# CurrentState = Init
+# Success! The Expected state was Store and was Store!
+# Resetting to Init to test Load.
+# CurrentState = Init
+# Success! The Expected state was Load and was Load_A!
+# Success! The Expected state was Load_B and was Load_B!
+# Resetting to Init to test Add.
+# CurrentState = Init
+# Success! The Expected state was Add and was Add!
+# Resetting to Init to test Sub.
+# CurrentState = Init
+# Success! The Expected state was Sub and was Sub!
+# Resetting to Init to test Halt.
+# CurrentState = Init
+# Success! The Expected state was Halt and was Halt!
+# ** Note: $stop    : ./StateMachine.sv(254)
+#    Time: 391 ps  Iteration: 0  Instance: /StateMachine_tb
+# Break in Module StateMachine_tb at ./StateMachine.sv line 254
+# 
+# View the entire wave display
+# wave zoomfull
+# 0 ps
+# 411 ps
+# 
+# End
