@@ -1,0 +1,61 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/rod/Documents/2025_spring_classes/Processor-Project/ControlUnit
+vDROM_tb
+DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z1 !s110 1748795653
+!i10b 1
+!s100 <e=M`VanWHSDMoOG<k1>l3
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I;GOhM>Ao;`g2>XE[7UhFB3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1748795650
+8./DROM_tb.sv
+F./DROM_tb.sv
+!i122 1
+L0 8 36
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1748795653.000000
+!s107 ./DROM_tb.sv|
+!s90 -reportprogress|300|-work|work|+acc|./DROM_tb.sv|
+!i113 1
+Z6 o-work work +acc
+Z7 tCvgOpt 0
+n@d@r@o@m_tb
+vInstMemory
+R1
+!i10b 1
+!s100 z`OOQic4a>PSK:1VPgoz31
+R2
+IgB:D37j@TbzdoH`cRT8WS1
+R3
+R0
+w1748792933
+8./InstMemory.v
+F./InstMemory.v
+!i122 0
+L0 40 61
+R4
+r1
+!s85 0
+31
+R5
+!s107 ./InstMemory.v|
+!s90 -reportprogress|300|-work|work|+acc|./InstMemory.v|
+!i113 1
+R6
+R7
+n@inst@memory

@@ -15,9 +15,10 @@ module DataPath#(// params
    input [2:0] Alu_s0
 );
 // localparam
-logic [15:0] R_data, W_data_mux, A, B, W_data_D, Mux0;
+logic [15:0] R_data, W_data_mux, A, B, W_data_D, Mux0, ALU_out;
 
 assign W_data_D = A;
+assign Mux0 = ALU_out;
 
 // assignments
 // instantiate modules
@@ -43,7 +44,7 @@ assign W_data_D = A;
 
     // instantiate alu
 
-    ALU unit_ALU (A, B, Alu_s0, Mux0); // also include params in the future
+    ALU unit_ALU (A, B, Alu_s0, ALU_out); // also include params in the future
 
    
 
@@ -81,15 +82,6 @@ module DataPath_tb();
          @(negedge Clk) #1;
          RF_s = 1'd1;
 
-         
-
-         // LETS GET THIS MODULE
-         // FROM THE OTHER ONE
-
-
-
-
-
    // test the REGISTERFILE AND THE DMEM 
       // Initialize all signals
       D_Addr = 0;
@@ -110,7 +102,6 @@ module DataPath_tb();
 
       @(posedge Clk) #1; // Wait for register file to latch data + delay
       RF_W_en = 1'b0; // Disable write after latching
-// DUT.Ra_data 
       @(posedge Clk) #1; // Wait for data to propagate + delay
       $display("Register B (should be 123): %d", DUT.B);
       assert(DUT.B == 16'd123) else $error("LOAD failed: got %d, expected 123", DUT.B);
@@ -121,27 +112,9 @@ module DataPath_tb();
       $display("w_in_rf = %d",DUT.unit_RF.Write_Data);       
 
       // --- STORE OPERATION TEST ---
-      
-   //  // PREPARE TO STORE DATA IN MEMORY
-
-   //    // Set the data to be stored in memory
-   //    // enable write to register file 
-   //    RF_W_en = 1'b1; // Enable register file write
-   //    // have write address (2) RF[2] = 222
-   //    RF_W_addr = 4'd2;
-   //    // and write data
-   //   DUT.Ra_data = 16'd222; 
-   //    // DUT.Mux0 = 16'd222;
-   //    RF_s = 0; 
-   //    @(negedge Clk) #1; // Wait for clock edge to store data
-   //    @(posedge Clk) #1; // Wait for data to propagate
-
-   //    // now that the RF[2] = 222, we can test if we can store it in the memory
-      
       @(negedge Clk) #1; // Wait for clock edge to store data
 
     // store to memory
-
       D_wr = 1'b1;      // disable data's ability to write to register file 
       RF_W_en = 1'b1;   // Enable register file write to store the data in memory
 
@@ -160,23 +133,37 @@ module DataPath_tb();
       $display("The input of the Ram is : %d", DUT.W_data_D);
       $display("Ra_data is : ", DUT.unit_RF.A_Data);
 
-      // D_wr = 1'b0;      // disable data's ability to write to register file 
-      // RF_W_en = 1'b1;   // Enable register file write to store the data in memory
 
-      // // Ra stores data to the memory
-      // // R[2], data in the address is 222
-      // RF_Ra_addr = 4'd2;
-      // // use dot operator to store value at the Ra_data so that we can test if it passes to the W-data input of the RAM (DataMemory)
-      // D_Addr = 8'd9; // Address to store data
+      // TEST ALU 
+       //test selec1 of MUX
+         @(negedge Clk) #1;
+         RF_s = 1'd0;
 
-      // @(negedge Clk) #1; // Wait for clock edge to store data
-      // @(posedge Clk) #1; // Wait for data to propagate
-      // $display("Data stored at address %d (should be 222): %d", D_Addr, DUT.unit_DM.data);
+          // test add R[1] + R[2] (222 + 123)
+         // set proper value for ALU for addition (3)        
+         @(negedge Clk) #1;
+         RF_W_en = 0; #1;
+         Alu_s0 = 3'd1;
+         
+         // wait some time
+         @(posedge Clk) #1;
+         // ensure that Q == alu out(internal output of alu) == W_data
+         assert(Mux0 == 64) $display("yay, it worked. Q should be 345. Q == %d", Mux0); /// expected value
+            else $error("waa waa not working Q should be 345 but it is %d", Mux0);
+         assert((Mux0 == DUT.unit_ALU.ALU_out) && (Mux0 == DUT.W_data_mux)) $display("The output q is eqaul to W_data, Q = %d, W_Data = %d ", Mux0, DUT.W_data);
+            else $error("sadge.. it doesnt work :(");
 
-      // //test select 0 of MUX
-      //    @(negedge Clk) #1;
-      //    RF_s = 1'd0;
 
+      // test subtract R[1] - R[2] (222 - 123)
+         // set proper value for ALU for subtraction (4)
+         Alu_s0 = 3'd2;
+         // wait some time
+         @(posedge Clk) #1;
+         // ensure that Q == alu out(internal output of alu) == W_data
+         assert(Mux0 == 30) $display("yay, it worked Q should be 99. Q == %d", Mux0); /// expected value
+            else $error("waa waa not working Q should be 99 but it is %d", Mux0);
+         assert((Mux0 == DUT.unit_ALU.ALU_out) && (Mux0 == DUT.W_data_mux)) $display("The output q is eqaul to W_data, Q = %d, W_Data = %d ", Mux0, DUT.W_data);
+            else $error("sadge.. it doesnt work :(");
 
       $stop;
    end
@@ -280,6 +267,40 @@ endmodule
       @(posedge Clk) #1; // Wait for data to propagate
       $display("Data stored at address %d (should be 222): %d", D_Addr, DUT.unit_DM.data);
 
+
+       //  // PREPARE TO STORE DATA IN MEMORY
+
+   //    // Set the data to be stored in memory
+   //    // enable write to register file 
+   //    RF_W_en = 1'b1; // Enable register file write
+   //    // have write address (2) RF[2] = 222
+   //    RF_W_addr = 4'd2;
+   //    // and write data
+   //   DUT.Ra_data = 16'd222; 
+   //    // DUT.Mux0 = 16'd222;
+   //    RF_s = 0; 
+   //    @(negedge Clk) #1; // Wait for clock edge to store data
+   //    @(posedge Clk) #1; // Wait for data to propagate
+
+   //    // now that the RF[2] = 222, we can test if we can store it in the memory
+
+         // D_wr = 1'b0;      // disable data's ability to write to register file 
+      // RF_W_en = 1'b1;   // Enable register file write to store the data in memory
+
+      // // Ra stores data to the memory
+      // // R[2], data in the address is 222
+      // RF_Ra_addr = 4'd2;
+      // // use dot operator to store value at the Ra_data so that we can test if it passes to the W-data input of the RAM (DataMemory)
+      // D_Addr = 8'd9; // Address to store data
+
+      // @(negedge Clk) #1; // Wait for clock edge to store data
+      // @(posedge Clk) #1; // Wait for data to propagate
+      // $display("Data stored at address %d (should be 222): %d", D_Addr, DUT.unit_DM.data);
+
+      // //test select 0 of MUX
+      //    @(negedge Clk) #1;
+      //    RF_s = 1'd0;
+      
 
       $stop;
    end*/

@@ -7185,3 +7185,333 @@ do runDataPath.do
 # End
 run -step
 # Next activity is in 9 ps.
+ls
+# ALU.sv            Dtest                       modelsim.ini    
+# D.mif             Launch_ModelSim.bat         rtl_work        
+# D.ver             Mux_2_to_1.sv               runDataPath.do  
+# DMemReg.sv        Processor2025_Datapath.pdf  runRegAlu.do    
+# DMemReg.sv.bak    RegAlu.sv                   runrtl.do       
+# DRAM.png          RegAlu.sv.bak               transcript      
+# DataMemory.qip    RegAlu_wave.do              vsim.wlf        
+# DataMemory.v      RegisterFile.sv             wave.do         
+# DataMemory_bb.v   RegisterFile.sv.bak         work            
+# DataPath.sv       altera_mf                                   
+# DataPath_wave.do  greybox_tmp                                 
+cd ..
+# Cannot change directory while a simulation is in progress.
+# Use the "quit -sim" command to unload the design first.
+ls
+# ALU.sv            Dtest                       modelsim.ini    
+# D.mif             Launch_ModelSim.bat         rtl_work        
+# D.ver             Mux_2_to_1.sv               runDataPath.do  
+# DMemReg.sv        Processor2025_Datapath.pdf  runRegAlu.do    
+# DMemReg.sv.bak    RegAlu.sv                   runrtl.do       
+# DRAM.png          RegAlu.sv.bak               transcript      
+# DataMemory.qip    RegAlu_wave.do              vsim.wlf        
+# DataMemory.v      RegisterFile.sv             wave.do         
+# DataMemory_bb.v   RegisterFile.sv.bak         work            
+# DataPath.sv       altera_mf                                   
+# DataPath_wave.do  greybox_tmp                                 
+quit -sim
+# End time: 09:29:59 on Jun 01,2025, Elapsed time: 13:03:01
+# Errors: 0, Warnings: 0
+l
+# ambiguous command name "l": label labelframe langOf lappend lassign lattice_edition layout lcompare lconcat ldelete lecho left library_image light_green_class_image lindex linsert linux_edition list listbox live_item_image llength lmap lmember load loadTreeClassBindings loadValueClassBindings local log logDebug logError logFatal logStuff logTiming logTrace logWarng log_diagnostic_msg log_nlview lost_file_image lower lrange lremove lrepeat lreplace lreverse lrmdups lrmdups2 ls lscopecompare lsearch lset lshift lsort lsublist ltTime lteTime luniq
+ls
+# ALU.sv            Dtest                       modelsim.ini    
+# D.mif             Launch_ModelSim.bat         rtl_work        
+# D.ver             Mux_2_to_1.sv               runDataPath.do  
+# DMemReg.sv        Processor2025_Datapath.pdf  runRegAlu.do    
+# DMemReg.sv.bak    RegAlu.sv                   runrtl.do       
+# DRAM.png          RegAlu.sv.bak               transcript      
+# DataMemory.qip    RegAlu_wave.do              vsim.wlf        
+# DataMemory.v      RegisterFile.sv             wave.do         
+# DataMemory_bb.v   RegisterFile.sv.bak         work            
+# DataPath.sv       altera_mf                                   
+# DataPath_wave.do  greybox_tmp                                 
+cd ..
+# reading C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini
+ls
+# .git                                   Project_template.docx  
+# 05-22-2025-notes.txt                   Project_timeline.pdf   
+# ControlUnit                            README.md              
+# DATA_FROM_CHAT.odt                     enum_crash_course.odt  
+# Datapath                               garbage                
+# Launch_ModelSim.bat                    testProcessor.sv       
+# Processor2025_Datapath.pdf             transcript             
+# ProjectAssignment_SimpleProcessor.pdf                         
+cd ControlUnit
+ls
+# A.mif           InstMemory_bb.v                
+# ControlUnit.sv  InstMemory_inst.v              
+# DROM_tb.sv      PC.sv                          
+# DROM_wave.do    Processor2025_ControlUnit.pdf  
+# IR.sv           StageThree.sv                  
+# InstMemory.qip  StateMachine.sv                
+# InstMemory.v    runrtl.do                      
+do runRom.do
+# turn on verbage
+# transcript on
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./InstMemory.v"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:30:26 on Jun 01,2025
+# vlog -reportprogress 300 -work work "+acc" ./InstMemory.v 
+# -- Compiling module InstMemory
+# 
+# Top level modules:
+# 	InstMemory
+# End time: 09:30:26 on Jun 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DROM_tb.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:30:26 on Jun 01,2025
+# vlog -reportprogress 300 -work work "+acc" ./DROM_tb.sv 
+# -- Compiling module DROM_tb
+# 
+# Top level modules:
+# 	DROM_tb
+# End time: 09:30:26 on Jun 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# 
+# Call vsim to invoke simulator
+#     Make sure the last item on the line is the name of the
+#     testbench module you want to execute.
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc" -fsmdebug  DROM_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" -fsmdebug DROM_tb 
+# Start time: 09:30:26 on Jun 01,2025
+# Loading sv_std.std
+# Loading work.DROM_tb
+# Loading work.InstMemory
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# 
+# Source the wave do file
+#     This should be the file that sets up the signal window for
+#     the module you are testing.
+# do DROM_wave.do
+# onerror {resume}
+# quietly WaveActivateNextPane {} 0
+# add wave -noupdate /DROM_tb/address
+# add wave -noupdate /DROM_tb/clock
+# add wave -noupdate /DROM_tb/q
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {0 ps} 0}
+# quietly wave cursor active 0
+# configure wave -namecolwidth 150
+# configure wave -valuecolwidth 100
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 0
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# configure wave -gridoffset 0
+# configure wave -gridperiod 1
+# configure wave -griddelta 40
+# configure wave -timeline 0
+# configure wave -timelineunits ps
+# update
+# WaveRestoreZoom {0 ps} {1 ns}
+# 
+# Set the window types
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# 
+# Run the simulation
+# run -all
+# 
+# View the entire wave display
+# wave zoomfull
+# 0 ps
+# 1 ns
+# 
+# End
+do runRom.do
+# turn on verbage
+# transcript on
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./InstMemory.v"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:33:49 on Jun 01,2025
+# vlog -reportprogress 300 -work work "+acc" ./InstMemory.v 
+# -- Compiling module InstMemory
+# 
+# Top level modules:
+# 	InstMemory
+# End time: 09:33:49 on Jun 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DROM_tb.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:33:49 on Jun 01,2025
+# vlog -reportprogress 300 -work work "+acc" ./DROM_tb.sv 
+# -- Compiling module DROM_tb
+# 
+# Top level modules:
+# 	DROM_tb
+# End time: 09:33:49 on Jun 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# 
+# Call vsim to invoke simulator
+#     Make sure the last item on the line is the name of the
+#     testbench module you want to execute.
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc" -fsmdebug  DROM_tb
+# End time: 09:33:51 on Jun 01,2025, Elapsed time: 0:03:25
+# Errors: 0, Warnings: 0
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" -fsmdebug DROM_tb 
+# Start time: 09:33:51 on Jun 01,2025
+# Loading sv_std.std
+# Loading work.DROM_tb
+# Loading work.InstMemory
+# ** Error (suppressible): (vsim-3009) [TSCALE] - Module 'DROM_tb' does not have a timeunit/timeprecision specification in effect, but other modules do.
+#    Time: 0 ps  Iteration: 0  Instance: /DROM_tb/DUT File: ./InstMemory.v
+# Loading altera_mf_ver.altsyncram
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./runRom.do PAUSED at line 23
+ls
+# A.mif            InstMemory_inst.v              
+# A.ver            PC.sv                          
+# ControlUnit.sv   Processor2025_ControlUnit.pdf  
+# DROM_tb.sv       StageThree.sv                  
+# DROM_wave.do     StateMachine.sv                
+# IR.sv            modelsim.ini                   
+# InstMemory.qip   rtl_work                       
+# InstMemory.v     runROM.do                      
+# InstMemory_bb.v  vsim.wlf                       
+do runRom.do
+# turn on verbage
+# transcript on
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./InstMemory.v"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:34:13 on Jun 01,2025
+# vlog -reportprogress 300 -work work "+acc" ./InstMemory.v 
+# -- Compiling module InstMemory
+# 
+# Top level modules:
+# 	InstMemory
+# End time: 09:34:13 on Jun 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DROM_tb.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 09:34:13 on Jun 01,2025
+# vlog -reportprogress 300 -work work "+acc" ./DROM_tb.sv 
+# -- Compiling module DROM_tb
+# 
+# Top level modules:
+# 	DROM_tb
+# End time: 09:34:13 on Jun 01,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# 
+# Call vsim to invoke simulator
+#     Make sure the last item on the line is the name of the
+#     testbench module you want to execute.
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc" -fsmdebug  DROM_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" -fsmdebug DROM_tb 
+# Start time: 09:33:51 on Jun 01,2025
+# Loading sv_std.std
+# Loading work.DROM_tb
+# Loading work.InstMemory
+# Loading altera_mf_ver.altsyncram
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# 
+# Source the wave do file
+#     This should be the file that sets up the signal window for
+#     the module you are testing.
+# do DROM_wave.do
+# onerror {resume}
+# quietly WaveActivateNextPane {} 0
+# add wave -noupdate /DROM_tb/address
+# add wave -noupdate /DROM_tb/clock
+# add wave -noupdate /DROM_tb/q
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {0 ps} 0}
+# quietly wave cursor active 0
+# configure wave -namecolwidth 150
+# configure wave -valuecolwidth 100
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 0
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# configure wave -gridoffset 0
+# configure wave -gridperiod 1
+# configure wave -griddelta 40
+# configure wave -timeline 0
+# configure wave -timelineunits ps
+# update
+# WaveRestoreZoom {0 ps} {1 ns}
+# 
+# Set the window types
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# 
+# Run the simulation
+# run -all
+# The input address is xx
+# 
+# The output instruction is xxxx
