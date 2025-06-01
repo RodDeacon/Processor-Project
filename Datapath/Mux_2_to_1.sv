@@ -4,16 +4,18 @@
 // this module is two to 1 multiplexer. If s = 0, output m is equal to input x
 // if s = 1. output m is equal to input y.
 
-module Mux_2_to1(m, x,s,y);
-    input x,y,s;
-    output m;
+module Mux_2_to_1(m, x,s,y);
+    input s;
+    input [15:0] x,y;
+    output [15:0] m;
 
-    assign m = ((x & ~s) | (s & y));
+assign m = s ? y : x;
+
 endmodule
 
 // test bench
 
-module Mux_2_to1_tb;
+module Mux_2_to_1_tb;
     logic x,s,y; // input
     logic m; // output
 
