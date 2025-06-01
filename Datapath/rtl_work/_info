@@ -11,7 +11,7 @@ cModel Technology
 Z0 dC:/Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath
 vALU
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1748740332
+Z2 !s110 1748742759
 !i10b 1
 !s100 Dzfc4Z2g^>f5<eaIDIJ3_3
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -28,7 +28,7 @@ Z8 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z9 !s108 1748740332.000000
+Z9 !s108 1748742759.000000
 Z10 !s107 ./ALU.sv|
 Z11 !s90 -reportprogress|300|-work|work|+acc|./ALU.sv|
 !i113 1
@@ -71,7 +71,7 @@ I`EzQl8=7US[^G6GL[aWDi2
 R4
 S1
 R0
-Z14 w1748740330
+Z14 w1748742756
 Z15 8./RegAlu.sv
 Z16 F./RegAlu.sv
 !i122 2
@@ -91,9 +91,9 @@ vRegAlu_tb
 R1
 R2
 !i10b 1
-!s100 G^DgXOI9H^fQbO:AzzU<00
+!s100 5^<gZVnfmVD8koziZke0U3
 R3
-IoA;@1[>kX43A35D[J29K]1
+I^VXE?8QD7cgfPP2^A57SA2
 R4
 S1
 R0
@@ -101,7 +101,7 @@ R14
 R15
 R16
 !i122 2
-L0 43 97
+L0 43 129
 R8
 r1
 !s85 0
@@ -123,7 +123,7 @@ IE]FooaLPaQ2Y>Y73?3Mok0
 R4
 S1
 R0
-Z19 w1748215959
+Z19 w1748740855
 Z20 8./RegisterFile.sv
 Z21 F./RegisterFile.sv
 !i122 0

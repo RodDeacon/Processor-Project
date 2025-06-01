@@ -48,8 +48,6 @@ module RegAlu_tb();
    logic [2:0] Alu_s0;
    logic [15:0] Q;
 
-    logic [15:0] A, B, W_data;
-
    // instantiation
    /*
     input [3:0] RF_W_addr, RF_Ra_addr, RF_Rb_addr,
@@ -68,7 +66,7 @@ module RegAlu_tb();
       Clk = 1; #10;
    end
 
-
+   
    // Testbench for RegAlu
    initial begin
 
@@ -77,7 +75,7 @@ module RegAlu_tb();
       RF_W_en = 1;
    // assign a data
       //   assign W_data = 47
-      W_data = 16'd47;
+      DUT.W_data = 16'd47;
       //    assign W_addr = R[1]
       RF_Ra_addr = 4'd1;
       //    assign RF_Ra_addr
@@ -85,15 +83,12 @@ module RegAlu_tb();
       // wait a clock cycle
       @(posedge Clk) #1;
       // Ra_data should be == W_data
-      assert(DUT.unit_RF.B_Data == W_data) $dislpay("Ra_data (should be 47): %d", DUT.unit_RF.A_Data);
+      assert(DUT.unit_RF.A_Data == DUT.W_data) $display("Ra_data (should be 47): %d", DUT.unit_RF.A_Data);
          else $error("FAILED: got %d, expected 47", DUT.unit_RF.A_Data);
-      
 
-      @(negedge Clk) #1;
-      RF_W_en = 1;
    // assign b data
       //   assign W_data
-      W_data = 16'd17;
+      DUT.W_data = 16'd17;
       //    assign W_addr
       RF_Rb_addr = 4'd2;
       //    assign Rb_addr
@@ -102,30 +97,58 @@ module RegAlu_tb();
       // wait a clock cycle
       @(posedge Clk) #1;
       // Rb_add should be == W_data
-      assert(DUT.unit_RF.B_Data == W_data) $display("Rb_data (should be 17): %d", DUT.unit_RF.B_Data);
+      assert(DUT.unit_RF.B_Data == DUT.W_data) $display("Rb_data (should be 17): %d", DUT.unit_RF.B_Data);
             else $error("FAILED: got %d, expected 17", DUT.unit_RF.B_Data);
 
+
+      
+
+/*
+      case (Sel)
+//   if Sel == 0 the output is 0
+         0 : Q = 16'd0;
+//   if Sel == 1 the output is A + B
+         1 : Q = A + B;
+//   if Sel == 2 the output is A – B
+         2 : Q = A - B;
+//   if Sel == 3 the output is A (pass-through)
+         3 : Q = A;
+//   if Sel == 4 the output is A ^ B
+         4 : Q = A ^ B;
+//   if Sel == 5 the output is A | B
+         5 : Q = A | B;
+//   if Sel == 6 the output is A & B
+         6 : Q = A & B;
+//   if Sel == 7 the output is A + 1;
+         7 : Q = A + 16'd1;
+      endcase
+*/
+
+
       // test add R[1] + R[2] (47 + 17)
-         // set proper value for ALU for addition (3)
-         Alu_s0 = 1'd3;
+         // set proper value for ALU for addition (3)        
+         @(negedge Clk) #1;
+         RF_W_en = 0; #1;
+         Alu_s0 = 3'd1;
+         
          // wait some time
-         repeat(5) @(posedge Clk) #1;
+         @(posedge Clk) #1;
          // ensure that Q == alu out(internal output of alu) == W_data
-         assert(Q == 64) $display("yay, it worked Q == %d", Q); /// expected value
+         assert(Q == 64) $display("yay, it worked. Q should be 64. Q == %d", Q); /// expected value
             else $error("waa waa not working Q should be 64 but it is %d", Q);
-         assert((Q == DUT.unit_ALU.Q) && (Q == W_data)) $display("Works, Q = %b, W_Data = %b ", Q, RF_W_addr);
+         assert((Q == DUT.unit_ALU.Q) && (Q == DUT.W_data)) $display("The output q is eqaul to W_data, Q = %d, W_Data = %d ", Q, DUT.W_data);
             else $error("sadge.. it doesnt work :(");
 
 
       // test subtract R[1] - R[2] (47 - 17)
          // set proper value for ALU for subtraction (4)
-         Alu_s0 = 1'd4;
+         Alu_s0 = 3'd2;
          // wait some time
-         repeat(5) @(posedge Clk) #1;
+         @(posedge Clk) #1;
          // ensure that Q == alu out(internal output of alu) == W_data
-         assert(Q == 30) $display("yay, it worked Q == %d", Q); /// expected value
+         assert(Q == 30) $display("yay, it worked Q should be 30. Q == %d", Q); /// expected value
             else $error("waa waa not working Q should be 30 but it is %d", Q);
-         assert((Q == DUT.unit_ALU.Q) && (Q == W_data)) $display("Works, Q = %b, W_Data = %b ", Q, RF_W_addr);
+         assert((Q == DUT.unit_ALU.Q) && (Q == DUT.W_data)) $display("The output q is eqaul to W_data, Q = %d, W_Data = %d ", Q, DUT.W_data);
             else $error("sadge.. it doesnt work :(");
 
          // ensure that Q == alu out(internal output of alu) == W_data
@@ -135,5 +158,14 @@ module RegAlu_tb();
    
    end
    // $monitor("At time %t: RegAlu outputs...", $time);
+
+   // always begin
+   //    $display($time, "A = %d, B = %d, Q = %d", DUT.A, DUT.B, Q);
+   // end
+
+   initial begin
+      $monitor("A = %d, B = %d", DUT.unit_RF.A_Data, DUT.unit_RF.B_Data);
+
+   end
 
    endmodule
