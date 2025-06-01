@@ -1,0 +1,1284 @@
+# Reading pref.tcl
+do runRegAlu.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./RegisterFile.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:57:19 on May 31,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegisterFile.sv 
+# -- Compiling module RegisterFile
+# -- Compiling module RegisterFile_tb
+# 
+# Top level modules:
+# 	RegisterFile_tb
+# End time: 17:57:19 on May 31,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./ALU.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:57:19 on May 31,2025
+# vlog -reportprogress 300 -work work "+acc" ./ALU.sv 
+# -- Compiling module ALU
+# -- Compiling module ALU_tb
+# 
+# Top level modules:
+# 	ALU_tb
+# End time: 17:57:20 on May 31,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./RegAlu.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:57:20 on May 31,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegAlu.sv 
+# -- Compiling module RegAlu
+# ** Error: (vlog-13038) ./RegAlu.sv(12): near ")": Missing port in ansi port list.
+# End time: 17:57:20 on May 31,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./runRegAlu.do line 18
+# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -work work +acc "./RegAlu.sv""
+do runRegAlu.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./RegisterFile.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:57:29 on May 31,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegisterFile.sv 
+# -- Compiling module RegisterFile
+# -- Compiling module RegisterFile_tb
+# 
+# Top level modules:
+# 	RegisterFile_tb
+# End time: 17:57:29 on May 31,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./ALU.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:57:29 on May 31,2025
+# vlog -reportprogress 300 -work work "+acc" ./ALU.sv 
+# -- Compiling module ALU
+# -- Compiling module ALU_tb
+# 
+# Top level modules:
+# 	ALU_tb
+# End time: 17:57:29 on May 31,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./RegAlu.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:57:29 on May 31,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegAlu.sv 
+# -- Compiling module RegAlu
+# -- Compiling module RegAlu_tb
+# ** Error: ./RegAlu.sv(78): (vlog-2730) Undefined variable: 'W_data'.
+# ** Error: ./RegAlu.sv(80): (vlog-2730) Undefined variable: 'Ra_addr'.
+# ** Error: ./RegAlu.sv(82): (vlog-2730) Undefined variable: 'W_addr'.
+# ** Error: ./RegAlu.sv(96): (vlog-2730) Undefined variable: 'Rb_addr'.
+# ** Error: ./RegAlu.sv(108): (vlog-2730) Undefined variable: 'Alu_s0'.
+# ** Error: (vlog-13069) ./RegAlu.sv(135): near "0": syntax error, unexpected INTEGER NUMBER.
+# End time: 17:57:29 on May 31,2025, Elapsed time: 0:00:00
+# Errors: 6, Warnings: 0
+# ** Error: C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./runRegAlu.do line 18
+# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -work work +acc "./RegAlu.sv""
+do runRegAlu.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./RegisterFile.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:59:20 on May 31,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegisterFile.sv 
+# -- Compiling module RegisterFile
+# -- Compiling module RegisterFile_tb
+# 
+# Top level modules:
+# 	RegisterFile_tb
+# End time: 17:59:20 on May 31,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./ALU.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:59:20 on May 31,2025
+# vlog -reportprogress 300 -work work "+acc" ./ALU.sv 
+# -- Compiling module ALU
+# -- Compiling module ALU_tb
+# 
+# Top level modules:
+# 	ALU_tb
+# End time: 17:59:20 on May 31,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./RegAlu.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:59:20 on May 31,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegAlu.sv 
+# -- Compiling module RegAlu
+# -- Compiling module RegAlu_tb
+# ** Error: ./RegAlu.sv(84): (vlog-2730) Undefined variable: 'W_addr'.
+# ** Error: ./RegAlu.sv(110): (vlog-2730) Undefined variable: 'Alu_s0'.
+# ** Error: (vlog-13069) ./RegAlu.sv(137): near "0": syntax error, unexpected INTEGER NUMBER.
+# End time: 17:59:20 on May 31,2025, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+# ** Error: C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./runRegAlu.do line 18
+# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -work work +acc "./RegAlu.sv""
+do runRegAlu.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./RegisterFile.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:59:34 on May 31,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegisterFile.sv 
+# -- Compiling module RegisterFile
+# -- Compiling module RegisterFile_tb
+# 
+# Top level modules:
+# 	RegisterFile_tb
+# End time: 17:59:34 on May 31,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./ALU.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:59:35 on May 31,2025
+# vlog -reportprogress 300 -work work "+acc" ./ALU.sv 
+# -- Compiling module ALU
+# -- Compiling module ALU_tb
+# 
+# Top level modules:
+# 	ALU_tb
+# End time: 17:59:35 on May 31,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./RegAlu.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:59:35 on May 31,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegAlu.sv 
+# -- Compiling module RegAlu
+# -- Compiling module RegAlu_tb
+# ** Error: ./RegAlu.sv(110): (vlog-2730) Undefined variable: 'Alu_s0'.
+# ** Error: (vlog-13069) ./RegAlu.sv(137): near "0": syntax error, unexpected INTEGER NUMBER.
+# End time: 17:59:35 on May 31,2025, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# ** Error: C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./runRegAlu.do line 18
+# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -work work +acc "./RegAlu.sv""
+do runRegAlu.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./RegisterFile.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:59:52 on May 31,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegisterFile.sv 
+# -- Compiling module RegisterFile
+# -- Compiling module RegisterFile_tb
+# 
+# Top level modules:
+# 	RegisterFile_tb
+# End time: 17:59:52 on May 31,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./ALU.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:59:52 on May 31,2025
+# vlog -reportprogress 300 -work work "+acc" ./ALU.sv 
+# -- Compiling module ALU
+# -- Compiling module ALU_tb
+# 
+# Top level modules:
+# 	ALU_tb
+# End time: 17:59:53 on May 31,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./RegAlu.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 17:59:53 on May 31,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegAlu.sv 
+# -- Compiling module RegAlu
+# -- Compiling module RegAlu_tb
+# ** Error: (vlog-13069) ./RegAlu.sv(137): near "0": syntax error, unexpected INTEGER NUMBER.
+# End time: 17:59:53 on May 31,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./runRegAlu.do line 18
+# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -work work +acc "./RegAlu.sv""
+do runRegAlu.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./RegisterFile.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:00:07 on May 31,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegisterFile.sv 
+# -- Compiling module RegisterFile
+# -- Compiling module RegisterFile_tb
+# 
+# Top level modules:
+# 	RegisterFile_tb
+# End time: 18:00:07 on May 31,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./ALU.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:00:07 on May 31,2025
+# vlog -reportprogress 300 -work work "+acc" ./ALU.sv 
+# -- Compiling module ALU
+# -- Compiling module ALU_tb
+# 
+# Top level modules:
+# 	ALU_tb
+# End time: 18:00:07 on May 31,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./RegAlu.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:00:07 on May 31,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegAlu.sv 
+# -- Compiling module RegAlu
+# -- Compiling module RegAlu_tb
+# ** Error: ./RegAlu.sv(88): (vlog-2730) Undefined variable: 'Ra_data'.
+# ./RegAlu.sv(139): Verilog Compiler exiting
+# End time: 18:00:07 on May 31,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./runRegAlu.do line 18
+# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -work work +acc "./RegAlu.sv""
+do runRegAlu.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./RegisterFile.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:00:55 on May 31,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegisterFile.sv 
+# -- Compiling module RegisterFile
+# -- Compiling module RegisterFile_tb
+# 
+# Top level modules:
+# 	RegisterFile_tb
+# End time: 18:00:55 on May 31,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./ALU.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:00:55 on May 31,2025
+# vlog -reportprogress 300 -work work "+acc" ./ALU.sv 
+# -- Compiling module ALU
+# -- Compiling module ALU_tb
+# 
+# Top level modules:
+# 	ALU_tb
+# End time: 18:00:55 on May 31,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./RegAlu.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:00:55 on May 31,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegAlu.sv 
+# -- Compiling module RegAlu
+# -- Compiling module RegAlu_tb
+# ** Error: ./RegAlu.sv(88): (vlog-2730) Undefined variable: 'RF_Ra_data'.
+# ./RegAlu.sv(139): Verilog Compiler exiting
+# End time: 18:00:55 on May 31,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./runRegAlu.do line 18
+# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -work work +acc "./RegAlu.sv""
+do runRegAlu.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./RegisterFile.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:02:45 on May 31,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegisterFile.sv 
+# -- Compiling module RegisterFile
+# -- Compiling module RegisterFile_tb
+# 
+# Top level modules:
+# 	RegisterFile_tb
+# End time: 18:02:45 on May 31,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./ALU.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:02:45 on May 31,2025
+# vlog -reportprogress 300 -work work "+acc" ./ALU.sv 
+# -- Compiling module ALU
+# -- Compiling module ALU_tb
+# 
+# Top level modules:
+# 	ALU_tb
+# End time: 18:02:45 on May 31,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./RegAlu.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:02:45 on May 31,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegAlu.sv 
+# -- Compiling module RegAlu
+# -- Compiling module RegAlu_tb
+# ** Error: ./RegAlu.sv(105): (vlog-2730) Undefined variable: 'RF_W_data'.
+# ./RegAlu.sv(139): Verilog Compiler exiting
+# End time: 18:02:45 on May 31,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./runRegAlu.do line 18
+# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -work work +acc "./RegAlu.sv""
+do runRegAlu.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./RegisterFile.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:03:14 on May 31,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegisterFile.sv 
+# -- Compiling module RegisterFile
+# -- Compiling module RegisterFile_tb
+# 
+# Top level modules:
+# 	RegisterFile_tb
+# End time: 18:03:14 on May 31,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./ALU.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:03:14 on May 31,2025
+# vlog -reportprogress 300 -work work "+acc" ./ALU.sv 
+# -- Compiling module ALU
+# -- Compiling module ALU_tb
+# 
+# Top level modules:
+# 	ALU_tb
+# End time: 18:03:14 on May 31,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./RegAlu.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:03:14 on May 31,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegAlu.sv 
+# -- Compiling module RegAlu
+# -- Compiling module RegAlu_tb
+# ** Error: ./RegAlu.sv(105): (vlog-2730) Undefined variable: 'RF_W_data'.
+# ./RegAlu.sv(139): Verilog Compiler exiting
+# End time: 18:03:14 on May 31,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./runRegAlu.do line 18
+# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -work work +acc "./RegAlu.sv""
+do runRegAlu.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./RegisterFile.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:04:31 on May 31,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegisterFile.sv 
+# -- Compiling module RegisterFile
+# -- Compiling module RegisterFile_tb
+# 
+# Top level modules:
+# 	RegisterFile_tb
+# End time: 18:04:31 on May 31,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./ALU.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:04:31 on May 31,2025
+# vlog -reportprogress 300 -work work "+acc" ./ALU.sv 
+# -- Compiling module ALU
+# -- Compiling module ALU_tb
+# 
+# Top level modules:
+# 	ALU_tb
+# End time: 18:04:31 on May 31,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./RegAlu.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:04:31 on May 31,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegAlu.sv 
+# -- Compiling module RegAlu
+# -- Compiling module RegAlu_tb
+# 
+# Top level modules:
+# 	RegAlu_tb
+# End time: 18:04:32 on May 31,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# 
+# Call vsim to invoke simulator
+#     Make sure the last item on the line is the name of the
+#     testbench module you want to execute.
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc" -fsmdebug  RegAlu_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" -fsmdebug RegAlu_tb 
+# Start time: 18:04:32 on May 31,2025
+# Loading sv_std.std
+# Loading work.RegAlu_tb
+# Loading work.RegAlu
+# Loading work.RegisterFile
+# Loading work.ALU
+# ** Error: (vsim-3033) Instantiation of 'monitor' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /RegAlu_tb File: ./RegAlu.sv Line: 137
+#         Searched libraries:
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/220model
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/sgate
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera_mf
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera_lnsim
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/cycloneive
+#             C:/Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/rtl_work
+#             C:/Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/rtl_work
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./runRegAlu.do PAUSED at line 24
+do runRegAlu.do
+# turn on verbage
+# transcript on
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./RegisterFile.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:04:57 on May 31,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegisterFile.sv 
+# -- Compiling module RegisterFile
+# -- Compiling module RegisterFile_tb
+# 
+# Top level modules:
+# 	RegisterFile_tb
+# End time: 18:04:57 on May 31,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./ALU.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:04:57 on May 31,2025
+# vlog -reportprogress 300 -work work "+acc" ./ALU.sv 
+# -- Compiling module ALU
+# -- Compiling module ALU_tb
+# 
+# Top level modules:
+# 	ALU_tb
+# End time: 18:04:57 on May 31,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./RegAlu.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:04:57 on May 31,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegAlu.sv 
+# -- Compiling module RegAlu
+# -- Compiling module RegAlu_tb
+# 
+# Top level modules:
+# 	RegAlu_tb
+# End time: 18:04:57 on May 31,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# 
+# Call vsim to invoke simulator
+#     Make sure the last item on the line is the name of the
+#     testbench module you want to execute.
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc" -fsmdebug  RegAlu_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" -fsmdebug RegAlu_tb 
+# Start time: 18:04:32 on May 31,2025
+# Loading sv_std.std
+# Loading work.RegAlu_tb
+# Loading work.RegAlu
+# Loading work.RegisterFile
+# Loading work.ALU
+# ** Error: (vsim-3043) Unresolved reference to 'W_addr'.
+#    Time: 0 ps  Iteration: 0  Instance: /RegAlu_tb File: ./RegAlu.sv Line: 116
+# ** Error: (vsim-3043) Unresolved reference to 'dislpay'.
+#    Time: 0 ps  Iteration: 0  Instance: /RegAlu_tb File: ./RegAlu.sv Line: 105
+# ** Fatal: (vsim-3365) Too many port connections. Expected 7, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /RegAlu_tb/DUT File: ./RegAlu.sv Line: 62
+# FATAL ERROR while loading design
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./runRegAlu.do PAUSED at line 24
+do runRegAlu.do
+# turn on verbage
+# transcript on
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./RegisterFile.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:05:54 on May 31,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegisterFile.sv 
+# -- Compiling module RegisterFile
+# -- Compiling module RegisterFile_tb
+# 
+# Top level modules:
+# 	RegisterFile_tb
+# End time: 18:05:54 on May 31,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./ALU.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:05:54 on May 31,2025
+# vlog -reportprogress 300 -work work "+acc" ./ALU.sv 
+# -- Compiling module ALU
+# -- Compiling module ALU_tb
+# 
+# Top level modules:
+# 	ALU_tb
+# End time: 18:05:54 on May 31,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./RegAlu.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:05:54 on May 31,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegAlu.sv 
+# -- Compiling module RegAlu
+# -- Compiling module RegAlu_tb
+# 
+# Top level modules:
+# 	RegAlu_tb
+# End time: 18:05:54 on May 31,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# 
+# Call vsim to invoke simulator
+#     Make sure the last item on the line is the name of the
+#     testbench module you want to execute.
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc" -fsmdebug  RegAlu_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" -fsmdebug RegAlu_tb 
+# Start time: 18:04:32 on May 31,2025
+# Loading sv_std.std
+# Loading work.RegAlu_tb
+# Loading work.RegAlu
+# Loading work.RegisterFile
+# Loading work.ALU
+# ** Error: (vsim-3043) Unresolved reference to 'W_addr'.
+#    Time: 0 ps  Iteration: 0  Instance: /RegAlu_tb File: ./RegAlu.sv Line: 116
+# ** Error: (vsim-3043) Unresolved reference to 'dislpay'.
+#    Time: 0 ps  Iteration: 0  Instance: /RegAlu_tb File: ./RegAlu.sv Line: 105
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'unit_ALU'.  Expected 4, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /RegAlu_tb/DUT/unit_ALU File: ./RegAlu.sv Line: 28
+# ** Warning: (vsim-3015) [PCDPC] - Port size (3) does not match connection size (1) for port 'Sel'. The port definition is at: ./ALU.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /RegAlu_tb/DUT/unit_ALU File: ./RegAlu.sv Line: 28
+# ** Warning: (vsim-3722) ./RegAlu.sv(28): [TFMPC] - Missing connection for port 'Q'.
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./runRegAlu.do PAUSED at line 24
+# Error opening C:/Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/(vsim-3015) [PCDPC] - Port size (3) does not match connection size 
+# Path name 'C:/Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/(vsim-3015) [PCDPC] - Port size (3) does not match connection size ' doesn't exist.
+do runRegAlu.do
+# turn on verbage
+# transcript on
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./RegisterFile.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:07:34 on May 31,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegisterFile.sv 
+# -- Compiling module RegisterFile
+# -- Compiling module RegisterFile_tb
+# 
+# Top level modules:
+# 	RegisterFile_tb
+# End time: 18:07:34 on May 31,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./ALU.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:07:34 on May 31,2025
+# vlog -reportprogress 300 -work work "+acc" ./ALU.sv 
+# -- Compiling module ALU
+# -- Compiling module ALU_tb
+# 
+# Top level modules:
+# 	ALU_tb
+# End time: 18:07:34 on May 31,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./RegAlu.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:07:34 on May 31,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegAlu.sv 
+# -- Compiling module RegAlu
+# -- Compiling module RegAlu_tb
+# 
+# Top level modules:
+# 	RegAlu_tb
+# End time: 18:07:34 on May 31,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# 
+# Call vsim to invoke simulator
+#     Make sure the last item on the line is the name of the
+#     testbench module you want to execute.
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc" -fsmdebug  RegAlu_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" -fsmdebug RegAlu_tb 
+# Start time: 18:04:32 on May 31,2025
+# Loading sv_std.std
+# Loading work.RegAlu_tb
+# Loading work.RegAlu
+# Loading work.RegisterFile
+# Loading work.ALU
+# ** Error: (vsim-3043) Unresolved reference to 'W_addr'.
+#    Time: 0 ps  Iteration: 0  Instance: /RegAlu_tb File: ./RegAlu.sv Line: 116
+# ** Error: (vsim-3043) Unresolved reference to 'dislpay'.
+#    Time: 0 ps  Iteration: 0  Instance: /RegAlu_tb File: ./RegAlu.sv Line: 105
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'unit_ALU'.  Expected 4, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /RegAlu_tb/DUT/unit_ALU File: ./RegAlu.sv Line: 28
+# ** Warning: (vsim-3722) ./RegAlu.sv(28): [TFMPC] - Missing connection for port 'Q'.
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./runRegAlu.do PAUSED at line 24
+do runRegAlu.do
+# turn on verbage
+# transcript on
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./RegisterFile.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:08:10 on May 31,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegisterFile.sv 
+# -- Compiling module RegisterFile
+# -- Compiling module RegisterFile_tb
+# 
+# Top level modules:
+# 	RegisterFile_tb
+# End time: 18:08:10 on May 31,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./ALU.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:08:11 on May 31,2025
+# vlog -reportprogress 300 -work work "+acc" ./ALU.sv 
+# -- Compiling module ALU
+# -- Compiling module ALU_tb
+# 
+# Top level modules:
+# 	ALU_tb
+# End time: 18:08:11 on May 31,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./RegAlu.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:08:11 on May 31,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegAlu.sv 
+# -- Compiling module RegAlu
+# -- Compiling module RegAlu_tb
+# 
+# Top level modules:
+# 	RegAlu_tb
+# End time: 18:08:11 on May 31,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# 
+# Call vsim to invoke simulator
+#     Make sure the last item on the line is the name of the
+#     testbench module you want to execute.
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc" -fsmdebug  RegAlu_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" -fsmdebug RegAlu_tb 
+# Start time: 18:04:32 on May 31,2025
+# Loading sv_std.std
+# Loading work.RegAlu_tb
+# Loading work.RegAlu
+# Loading work.RegisterFile
+# Loading work.ALU
+# ** Error: (vsim-3043) Unresolved reference to 'W_addr'.
+#    Time: 0 ps  Iteration: 0  Instance: /RegAlu_tb File: ./RegAlu.sv Line: 116
+# ** Error: (vsim-3043) Unresolved reference to 'dislpay'.
+#    Time: 0 ps  Iteration: 0  Instance: /RegAlu_tb File: ./RegAlu.sv Line: 105
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'unit_ALU'.  Expected 4, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /RegAlu_tb/DUT/unit_ALU File: ./RegAlu.sv Line: 28
+# ** Warning: (vsim-3722) ./RegAlu.sv(28): [TFMPC] - Missing connection for port 'Q'.
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./runRegAlu.do PAUSED at line 24
+do runRegAlu.do
+# turn on verbage
+# transcript on
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./RegisterFile.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:09:27 on May 31,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegisterFile.sv 
+# -- Compiling module RegisterFile
+# -- Compiling module RegisterFile_tb
+# 
+# Top level modules:
+# 	RegisterFile_tb
+# End time: 18:09:27 on May 31,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./ALU.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:09:28 on May 31,2025
+# vlog -reportprogress 300 -work work "+acc" ./ALU.sv 
+# -- Compiling module ALU
+# -- Compiling module ALU_tb
+# 
+# Top level modules:
+# 	ALU_tb
+# End time: 18:09:28 on May 31,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./RegAlu.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:09:28 on May 31,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegAlu.sv 
+# -- Compiling module RegAlu
+# -- Compiling module RegAlu_tb
+# ** Error: ./RegAlu.sv(136): (vlog-13161) unexpected '$stop', expecting elaboration system task $fatal/$error/$warning/$info.
+# End time: 18:09:28 on May 31,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./runRegAlu.do line 18
+# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -work work +acc "./RegAlu.sv""
+do runRegAlu.do
+# turn on verbage
+# transcript on
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./RegisterFile.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:09:42 on May 31,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegisterFile.sv 
+# -- Compiling module RegisterFile
+# -- Compiling module RegisterFile_tb
+# 
+# Top level modules:
+# 	RegisterFile_tb
+# End time: 18:09:42 on May 31,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./ALU.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:09:42 on May 31,2025
+# vlog -reportprogress 300 -work work "+acc" ./ALU.sv 
+# -- Compiling module ALU
+# -- Compiling module ALU_tb
+# 
+# Top level modules:
+# 	ALU_tb
+# End time: 18:09:42 on May 31,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./RegAlu.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:09:42 on May 31,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegAlu.sv 
+# -- Compiling module RegAlu
+# -- Compiling module RegAlu_tb
+# 
+# Top level modules:
+# 	RegAlu_tb
+# End time: 18:09:42 on May 31,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# 
+# Call vsim to invoke simulator
+#     Make sure the last item on the line is the name of the
+#     testbench module you want to execute.
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc" -fsmdebug  RegAlu_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" -fsmdebug RegAlu_tb 
+# Start time: 18:04:32 on May 31,2025
+# Loading sv_std.std
+# Loading work.RegAlu_tb
+# Loading work.RegAlu
+# Loading work.RegisterFile
+# Loading work.ALU
+# ** Error: (vsim-3043) Unresolved reference to 'W_addr'.
+#    Time: 0 ps  Iteration: 0  Instance: /RegAlu_tb File: ./RegAlu.sv Line: 128
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'unit_ALU'.  Expected 4, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /RegAlu_tb/DUT/unit_ALU File: ./RegAlu.sv Line: 28
+# ** Warning: (vsim-3722) ./RegAlu.sv(28): [TFMPC] - Missing connection for port 'Q'.
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./runRegAlu.do PAUSED at line 24
+do runRegAlu.do
+# turn on verbage
+# transcript on
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./RegisterFile.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:10:55 on May 31,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegisterFile.sv 
+# -- Compiling module RegisterFile
+# -- Compiling module RegisterFile_tb
+# 
+# Top level modules:
+# 	RegisterFile_tb
+# End time: 18:10:55 on May 31,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./ALU.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:10:55 on May 31,2025
+# vlog -reportprogress 300 -work work "+acc" ./ALU.sv 
+# -- Compiling module ALU
+# -- Compiling module ALU_tb
+# 
+# Top level modules:
+# 	ALU_tb
+# End time: 18:10:55 on May 31,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./RegAlu.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:10:55 on May 31,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegAlu.sv 
+# -- Compiling module RegAlu
+# -- Compiling module RegAlu_tb
+# 
+# Top level modules:
+# 	RegAlu_tb
+# End time: 18:10:55 on May 31,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# 
+# Call vsim to invoke simulator
+#     Make sure the last item on the line is the name of the
+#     testbench module you want to execute.
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc" -fsmdebug  RegAlu_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" -fsmdebug RegAlu_tb 
+# Start time: 18:04:32 on May 31,2025
+# Loading sv_std.std
+# Loading work.RegAlu_tb
+# Loading work.RegAlu
+# Loading work.RegisterFile
+# Loading work.ALU
+# ** Error: (vsim-3043) Unresolved reference to 'W_addr'.
+#    Time: 0 ps  Iteration: 0  Instance: /RegAlu_tb File: ./RegAlu.sv Line: 128
+# ** Warning: (vsim-3015) [PCDPC] - Port size (16) does not match connection size (3) for port 'Q'. The port definition is at: ./ALU.sv(7).
+#    Time: 0 ps  Iteration: 0  Instance: /RegAlu_tb/DUT/unit_ALU File: ./RegAlu.sv Line: 28
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./runRegAlu.do PAUSED at line 24
+# Error opening C:/Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/(vsim-3015) [PCDPC] - Port size (16) does not match connection size 
+# Path name 'C:/Users/rod/Documents/2025_spring_classes/Processor-Project/Datapath/(vsim-3015) [PCDPC] - Port size (16) does not match connection size ' doesn't exist.
+do runRegAlu.do
+# turn on verbage
+# transcript on
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./RegisterFile.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:11:48 on May 31,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegisterFile.sv 
+# -- Compiling module RegisterFile
+# -- Compiling module RegisterFile_tb
+# 
+# Top level modules:
+# 	RegisterFile_tb
+# End time: 18:11:48 on May 31,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./ALU.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:11:48 on May 31,2025
+# vlog -reportprogress 300 -work work "+acc" ./ALU.sv 
+# -- Compiling module ALU
+# -- Compiling module ALU_tb
+# 
+# Top level modules:
+# 	ALU_tb
+# End time: 18:11:48 on May 31,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./RegAlu.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:11:48 on May 31,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegAlu.sv 
+# -- Compiling module RegAlu
+# -- Compiling module RegAlu_tb
+# 
+# Top level modules:
+# 	RegAlu_tb
+# End time: 18:11:48 on May 31,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# 
+# Call vsim to invoke simulator
+#     Make sure the last item on the line is the name of the
+#     testbench module you want to execute.
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc" -fsmdebug  RegAlu_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" -fsmdebug RegAlu_tb 
+# Start time: 18:04:32 on May 31,2025
+# Loading sv_std.std
+# Loading work.RegAlu_tb
+# Loading work.RegAlu
+# Loading work.RegisterFile
+# Loading work.ALU
+# ** Error: (vsim-3043) Unresolved reference to 'W_addr'.
+#    Time: 0 ps  Iteration: 0  Instance: /RegAlu_tb File: ./RegAlu.sv Line: 128
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./runRegAlu.do PAUSED at line 24
+do runRegAlu.do
+# turn on verbage
+# transcript on
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./RegisterFile.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:12:12 on May 31,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegisterFile.sv 
+# -- Compiling module RegisterFile
+# -- Compiling module RegisterFile_tb
+# 
+# Top level modules:
+# 	RegisterFile_tb
+# End time: 18:12:12 on May 31,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./ALU.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:12:12 on May 31,2025
+# vlog -reportprogress 300 -work work "+acc" ./ALU.sv 
+# -- Compiling module ALU
+# -- Compiling module ALU_tb
+# 
+# Top level modules:
+# 	ALU_tb
+# End time: 18:12:12 on May 31,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./RegAlu.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:12:12 on May 31,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegAlu.sv 
+# -- Compiling module RegAlu
+# -- Compiling module RegAlu_tb
+# 
+# Top level modules:
+# 	RegAlu_tb
+# End time: 18:12:12 on May 31,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# 
+# Call vsim to invoke simulator
+#     Make sure the last item on the line is the name of the
+#     testbench module you want to execute.
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc" -fsmdebug  RegAlu_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" -fsmdebug RegAlu_tb 
+# Start time: 18:04:32 on May 31,2025
+# Loading sv_std.std
+# Loading work.RegAlu_tb
+# Loading work.RegAlu
+# Loading work.RegisterFile
+# Loading work.ALU
+# ** Warning: (vsim-PLI-3003) [TOFD] - System task or function '$dislpay' is not defined.
+#    Time: 0 ps  Iteration: 0  Region: /RegAlu_tb/#ublk#193203730#73 File: ./RegAlu.sv Line: 88
+# 
+# Source the wave do file
+#     This should be the file that sets up the signal window for
+#     the module you are testing.
+# do RegAlu_wave.do
+# onerror {resume}
+# quietly WaveActivateNextPane {} 0
+# add wave -noupdate /RegAlu_tb/RF_W_addr
+# add wave -noupdate /RegAlu_tb/RF_Ra_addr
+# add wave -noupdate /RegAlu_tb/RF_Rb_addr
+# add wave -noupdate /RegAlu_tb/RF_W_en
+# add wave -noupdate /RegAlu_tb/Clk
+# add wave -noupdate /RegAlu_tb/ALU_s0
+# ** UI-Msg: (vish-4014) No objects found matching '/RegAlu_tb/ALU_s0'.
+# Executing ONERROR command at macro ./RegAlu_wave.do line 8
+# add wave -noupdate /RegAlu_tb/Q
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {0 ps} 0}
+# quietly wave cursor active 0
+# configure wave -namecolwidth 150
+# configure wave -valuecolwidth 100
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 0
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# configure wave -gridoffset 0
+# configure wave -gridperiod 1
+# configure wave -griddelta 40
+# configure wave -timeline 0
+# configure wave -timelineunits ps
+# update
+# WaveRestoreZoom {0 ps} {1 ns}
+# 
+# Set the window types
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# 
+# Run the simulation
+# run -all
+# ** Error: FAILED: got     x, expected 47
+#    Time: 31 ps  Scope: RegAlu_tb File: ./RegAlu.sv Line: 89
+# ** Error: FAILED: got     x, expected 17
+#    Time: 51 ps  Scope: RegAlu_tb File: ./RegAlu.sv Line: 106
+# ** Error: waa waa not working Q should be 64 but it is     x
+#    Time: 151 ps  Scope: RegAlu_tb File: ./RegAlu.sv Line: 115
+# ** Error: sadge.. it doesnt work :(
+#    Time: 151 ps  Scope: RegAlu_tb File: ./RegAlu.sv Line: 117
+# ** Error: waa waa not working Q should be 30 but it is     0
+#    Time: 251 ps  Scope: RegAlu_tb File: ./RegAlu.sv Line: 127
+# ** Error: sadge.. it doesnt work :(
+#    Time: 251 ps  Scope: RegAlu_tb File: ./RegAlu.sv Line: 129
+# ** Note: $stop    : ./RegAlu.sv(133)
+#    Time: 251 ps  Iteration: 0  Instance: /RegAlu_tb
+# Break in Module RegAlu_tb at ./RegAlu.sv line 133
+# 
+# View the entire wave display
+# wave zoomfull
+# 0 ps
+# 264 ps
+# 
+# End
