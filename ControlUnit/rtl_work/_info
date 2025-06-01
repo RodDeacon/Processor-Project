@@ -9,112 +9,183 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Users/rod/Documents/2025_spring_classes/Processor-Project/ControlUnit
-XStateDefs
-Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1748806383
+vInstMemory
+Z1 !s110 1748817812
 !i10b 1
-!s100 n[_EAbkTR[iP_0WkZA:Sl0
-!s11b Dg1SIo80bB@j0V0VzS_@n1
-IZ@RP2>f[@d75_OM8E8_4h0
-VZ@RP2>f[@d75_OM8E8_4h0
-S1
+!s100 z`OOQic4a>PSK:1VPgoz31
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IgB:D37j@TbzdoH`cRT8WS1
+Z3 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1748806163
-8./StateDefs.sv
-F./StateDefs.sv
-!i122 0
-L0 3 0
-Z3 OV;L;2020.1;71
-r1
-!s85 0
-31
-Z4 !s108 1748806383.000000
-!s107 ./StateDefs.sv|
-!s90 -reportprogress|300|-work|work|+acc|./StateDefs.sv|
-!i113 1
-Z5 o-work work +acc
-Z6 tCvgOpt 0
-n@state@defs
-vStateMachine
-R1
-Z7 DXx4 work 9 StateDefs 0 22 Z@RP2>f[@d75_OM8E8_4h0
-Z8 DXx4 work 20 StateMachine_sv_unit 0 22 RJ_dh`=D@_nScPb<gY6bX3
-R2
-Z9 VDg1SIo80bB@j0V0VzS_@n1
-r1
-!s85 0
-!i10b 1
-!s100 =X>oU:g<S;dbd:c8h=BdP2
-IVNNeAQCjk6gi4l1l^FYSA1
-Z10 !s105 StateMachine_sv_unit
-S1
-R0
-Z11 w1748806379
-Z12 8./StateMachine.sv
-Z13 F./StateMachine.sv
+w1748792933
+8./InstMemory.v
+F./InstMemory.v
 !i122 1
-L0 27 133
-R3
-31
-R4
-!s107 ./StateMachine.sv|
-Z14 !s90 -reportprogress|300|-work|work|+acc|./StateMachine.sv|
-!i113 1
-R5
-R6
-n@state@machine
-XStateMachine_sv_unit
-R1
-R7
-R2
-VRJ_dh`=D@_nScPb<gY6bX3
+L0 40 61
+Z4 OV;L;2020.1;71
 r1
 !s85 0
+31
+Z5 !s108 1748817812.000000
+!s107 ./InstMemory.v|
+!s90 -reportprogress|300|-work|work|+acc|./InstMemory.v|
+!i113 1
+Z6 o-work work +acc
+Z7 tCvgOpt 0
+n@inst@memory
+vIR
+Z8 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+R1
 !i10b 1
-!s100 UO:OdQVSWIRVG0K[bOTdz2
-IRJ_dh`=D@_nScPb<gY6bX3
-!i103 1
+!s100 >ULk;[_YoZB04=fP3noiP1
+R2
+IV3=lcTh]dI>Eh:GAI_>f@1
+R3
 S1
 R0
-R11
-R12
-R13
-!i122 1
-L0 23 0
-R3
-31
+Z9 w1748812302
+Z10 8./IR.sv
+Z11 F./IR.sv
+!i122 2
+L0 14 14
 R4
-Z15 !s107 ./StateMachine.sv|
-R14
-!i113 1
+r1
+!s85 0
+31
 R5
+Z12 !s107 ./IR.sv|
+Z13 !s90 -reportprogress|300|-work|work|+acc|./IR.sv|
+!i113 1
 R6
-n@state@machine_sv_unit
-vStateMachine_tb
-R1
 R7
+n@i@r
+vIR_tb
 R8
-R2
-R9
-r1
-!s85 0
+R1
 !i10b 1
-!s100 Y?3[4hMWP7jbC7eSHT`hm1
-IXB9d:cJmYF=2MU:_^=^3e3
-R10
+!s100 <g6J@5hb^a=o`aEHIhfzU2
+R2
+I9F_M1<UY_L0n5nOYK411j2
+R3
 S1
 R0
+R9
+R10
 R11
+!i122 2
+L0 30 44
+R4
+r1
+!s85 0
+31
+R5
 R12
 R13
-!i122 1
-L0 162 100
-R3
-31
-R4
-R15
-R14
 !i113 1
-R5
 R6
-n@state@machine_tb
+R7
+n@i@r_tb
+vPC
+R8
+R1
+!i10b 1
+!s100 4hDl=]=3m1V0lQAoLL[QI1
+R2
+I=mhfC6[T>lS03:;J9UEg22
+R3
+S1
+R0
+Z14 w1748811290
+Z15 8./PC.sv
+Z16 F./PC.sv
+!i122 0
+L0 13 47
+R4
+r1
+!s85 0
+31
+R5
+Z17 !s107 ./PC.sv|
+Z18 !s90 -reportprogress|300|-work|work|+acc|./PC.sv|
+!i113 1
+R6
+R7
+n@p@c
+vPC_IR_ROM
+R8
+R1
+!i10b 1
+!s100 Ub==PPc`F`MWUGi>ZbK?c1
+R2
+IE<Xh[WT]Dzm=SSLSDXOf32
+R3
+S1
+R0
+Z19 w1748817809
+Z20 8./PC_IR_ROM.sv
+Z21 F./PC_IR_ROM.sv
+!i122 3
+L0 8 20
+R4
+r1
+!s85 0
+31
+R5
+!s107 ./PC_IR_ROM.sv|
+Z22 !s90 -reportprogress|300|-work|work|+acc|./PC_IR_ROM.sv|
+!i113 1
+R6
+R7
+n@p@c_@i@r_@r@o@m
+vPC_IR_ROM_tb
+R8
+R1
+!i10b 1
+!s100 V0?2Fn1@CkME>H2Ad^LAZ0
+R2
+I>ii6XDdCocSDF[PfHdk2P0
+R3
+S1
+R0
+R19
+R20
+R21
+!i122 3
+L0 31 71
+R4
+r1
+!s85 0
+31
+R5
+Z23 !s107 ./PC_IR_ROM.sv|
+R22
+!i113 1
+R6
+R7
+n@p@c_@i@r_@r@o@m_tb
+vPC_tb
+R8
+R1
+!i10b 1
+!s100 ?5S7;G0fMM0@6<Ah9?4QW2
+R2
+I68Y3TTB?S8BzO;@CAFIe<1
+R3
+S1
+R0
+R14
+R15
+R16
+!i122 0
+L0 62 64
+R4
+r1
+!s85 0
+31
+R5
+R17
+R18
+!i113 1
+R6
+R7
+n@p@c_tb

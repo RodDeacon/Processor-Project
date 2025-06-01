@@ -1,0 +1,249 @@
+// TCES330 Spring 2025 University of Washington Tacoma Dr. Jie Sheng
+// Rodney Deacon & Mahri Yalkapova
+// 06-01-2025
+// Week 9, Project Folder ControlUnit
+// // this module will implement Register and ALU operations
+
+/* PC is purely a counter 
+◦ Required input signals: Clock, Clr, Up
+◦ Required output signal: address (7-bit) to 
+access instruction memory  
+◦ Notice here Clr is active high – from FSM*/
+
+module PC (input Clk, Clr, Up, // up is enable
+            output logic [6:0] mem_addr); // output memory location which next instruction can be found
+
+ // always block logic for flipflip
+   always_ff @(posedge Clk) begin
+      if (Clr == 0) begin // clear all 
+         mem_addr <= 0;
+      end else if (Up == 1) begin // else if , enabled, count up 
+         // Q WILL BE A VALUE BETWEEN 0 AND 9 BY DEFAULT (0 and mod_num-1)
+         mem_addr<= (mem_addr+1)%7;     // non-blocking assignments between 0 and mod_num-1
+
+      end else begin // else; clearn is not asserted, en is not high, Q remains the same as it was before.
+         mem_addr <= mem_addr;
+      end
+   end
+/*   // continuous assignments
+   assign QN = ~Q;
+
+   // always block logic for flipflip
+   always_ff @(posedge Clk) begin
+      if (ClrN == 0) begin // clear all 
+         Q <= 0;
+      end else if (En == 1) begin // else if , enabled, count up 
+         // Q WILL BE A VALUE BETWEEN 0 AND 9 BY DEFAULT (0 and mod_num-1)
+         Q <= (Q+1)%mod_num;     // non-blocking assignments between 0 and mod_num-1
+
+      end else begin // else; clearn is not asserted, en is not high, Q remains the same as it was before.
+         Q <= Q;
+      end
+   end
+*/
+
+// localparams
+
+// wires / logic
+
+// assignments
+
+// instantiations
+
+// combinational logic
+
+// procedural logic
+
+endmodule
+
+// test bench
+module PC_tb;
+
+// localparams
+
+// wires / logic
+logic Clk, Clr, Up;
+logic [6:0] mem_addr; 
+
+// instantiation
+   PC DUT(Clr, Up, mem_addr);
+
+   // clock
+   always begin
+      Clk = 0; #10;
+      Clk = 1; #10;
+   end
+
+   // testbench logic
+   initial begin
+      Clk = 0;
+      Up = 1;
+      Clr = 1; #1; Clr = 0; #1;// reset
+
+ // test counting up
+      repeat (20) @(posedge Clk) #1;  
+      
+      assert (mem_addr == 'd19) $display("Success! mem_addr = %h", mem_addr);
+      else   $error("The mem_addr should be 19, but it is %h.",mem_addr);
+      
+
+
+// try counting with Up disabled      
+      // reset
+      Clr = 1; #1; Clr = 0; #1;
+
+      @(negedge Clk) #1;            
+      Up = 0;
+      repeat (20) @(posedge Clk) #1; 
+
+      assert (mem_addr == 'd19) $display("Success! mem_addr = %h", mem_addr);
+      else   $error("The mem_addr should be 19, but it is %h.",mem_addr);
+      
+// try counting with clr enabled
+      @(negedge Clk) #1;               // test reset
+      Clr = 1; #1; 
+      repeat (20) @(posedge Clk) #1;          
+      
+      assert (mem_addr == 'b0) $display("Success! mem_addr = %h", mem_addr);
+      else   $error("The mem_addr should be 0, but it is %h.",mem_addr);
+
+      $stop;
+   end
+   // monitor
+   initial begin
+      $monitor($realtime, " mem_addr = %h",mem_addr);
+   end
+
+
+endmodule
+
+/*module CounterMod10 #( // parameter for what modulo to roll over on (default is 10)
+      parameter int mod_num = 10)
+      ( // port directions
+         input En, Clk, ClrN, 
+         output logic [$clog2(mod_num)-1:0]Q, QN); // this will ensure the correct amount of bits are assigned based on the parameter
+
+   // continuous assignments
+   assign QN = ~Q;
+
+   // always block logic for flipflip
+   always_ff @(posedge Clk) begin
+      if (ClrN == 0) begin // clear all 
+         Q <= 0;
+      end else if (En == 1) begin // else if , enabled, count up 
+         // Q WILL BE A VALUE BETWEEN 0 AND 9 BY DEFAULT (0 and mod_num-1)
+         Q <= (Q+1)%mod_num;     // non-blocking assignments between 0 and mod_num-1
+
+      end else begin // else; clearn is not asserted, en is not high, Q remains the same as it was before.
+         Q <= Q;
+      end
+   end
+
+endmodule
+
+// test bench for CounterMod10 module
+module CounterMod10_tb;
+// localparam
+   localparam int mod_num = 10; // modulo number to use for counter.. (default is 10 which gives a rolling counter from 0 to 9)
+   localparam int num_count = 18; // number of times to test the counter
+
+// logic signals
+   logic En, Clk, ClrN;
+   logic [$clog2(mod_num)-1:0]Q, QN;
+
+// DUT INSTANTIATION
+   CounterMod10 #(.mod_num(mod_num)) DUT(En, Clk, ClrN, Q, QN);
+
+// clk
+   always begin
+      Clk = 1'b0; #10;
+      Clk = 1'b1; #10;
+   end
+   
+// tb logic
+   initial begin
+      En = 1;     // enable count
+      ClrN = 0;   // clear all
+      #20;        // wait a clock cycle
+      ClrN = 1;   // deactive clearn
+      #1; // timing offset
+
+   // test ClrN ability
+      $display("\nTest En low");
+      En = 0; #20; // disable En and wait a clock cycle 
+      $display("Time: %0t, Q: %b, QN: %b", $time, Q, QN);#20;// display and wait one clock cycle
+      assert(Q == 0) else $error("Q should be 0. ClrN is asserted!");
+      $display("Time: %0t, Q: %b, QN: %b", $time, Q, QN);#20;// display and wait one clock cycle
+      assert(Q == 0) else $error("Q should be 0. ClrN is asserted!");
+      $display("Time: %0t, Q: %b, QN: %b", $time, Q, QN);#20;// display and wait one clock cycle
+      assert(Q == 0) else $error("Q should be 0. ClrN is asserted!");
+
+   // test when En is high
+      $display("\nTest En high");
+      En = 1; // Enable En
+      for (int i = 0; i < num_count; i++) begin // for loop which will run a number of times based on the num_count localparam defined above
+         // wait a clock cycle and then display information about the counter 
+         $display("Time: %0t, Q: %b, QN: %b", $time, Q, QN); #20;// wait one clock cycle, then display information about the counter.
+      end
+
+   // test ClrN ability
+      $display("\nTest ClrN");
+      ClrN = 0; #20; // clear and wait a clock cycle 
+      $display("Time: %0t, Q: %b, QN: %b", $time, Q, QN);#20;// display and wait one clock cycle
+      assert(Q == 0) else $error("Q should be 0. ClrN is asserted!");
+      $display("Time: %0t, Q: %b, QN: %b", $time, Q, QN);#20;// display and wait one clock cycle
+      assert(Q == 0) else $error("Q should be 0. ClrN is asserted!");
+      $display("Time: %0t, Q: %b, QN: %b", $time, Q, QN);#20;// display and wait one clock cycle
+      assert(Q == 0) else $error("Q should be 0. ClrN is asserted!");
+
+   // stop
+      $stop;
+   end
+
+   // monitor
+// // logic used for DUT and testbench
+//    logic En, Clk, ClrN;
+//    logic [15:0] Q, QN;
+// // DUT instantiation
+//    CounterSixteen DUT(En, Clk, ClrN, Q, QN);
+
+//    // Clock generation (20 time unit clock cycle)
+//  always begin
+//    Clk = 1'b0; #10;
+//    Clk = 1'b1; #10;
+//  end
+
+//    // tb logic
+//    initial begin
+//       En = 1;        // enable the counter
+//       ClrN = 0;   // initialize the system to clearn being active
+//       #20;
+//       ClrN = 1; // deactivate clear
+
+//       #1;   // offset the clock so we arent on the edge
+//       for (int i = 0; i <= num_count; i++) begin // use num_count to count only to the number specified by the localparam changeable in tb
+//          #20;$display("Time: %0t, Q: %b, QN: %b", $time, Q, QN); // wait one clock cycle, then display information about the counter.
+//       end
+
+
+//       // TODO have a portion of the tb test ClrN ability
+
+//       // TODO have a portion of the tb test En ability
+
+
+   //    $stop;
+   // end
+
+// // logic
+
+// // instantiate DUT
+
+// // logic
+//    initial begin
+
+//    end
+
+// // monitor for user verification
+//    initial $monitor($realtime,, "" );
+
+endmodule*/

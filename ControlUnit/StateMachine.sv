@@ -201,7 +201,7 @@ function string inst_to_string(inst instruction);
     case (instruction)
         _noop  : return "Noop";
         _store : return "Store";
-        _load  : return "Load";
+        _load  : return "Load_A";
         _add   : return "Add";
         _sub   : return "Sub";
         _halt  : return "Halt";
