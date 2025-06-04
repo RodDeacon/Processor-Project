@@ -20,7 +20,7 @@ RF_W_Addr, ALU_s0*/
 
 module ControlUnit (
    input Clk,
-   output D_Wr, RF_s, RF_W_en,
+   output D_wr, RF_s, RF_W_en,
    output [7:0] D_Addr,
    output [3:0]RF_W_addr, RF_Ra_addr, RF_Rb_addr,
    output [2:0] Alu_s0);
@@ -28,14 +28,34 @@ module ControlUnit (
 // localparams
 
 // wires / logic
+logic PC_Clr, PC_Up, IR_ld;
+logic [6:0] PC_Out;
+logic [15:0] ROM_Out, IR_Out;
 
 // assignments
+assign inst_in = ROM_Out;  // for readability (not necessary)
+assign mem_addr = PC_Out;
 
 // instantiations
+/*module StateMachine (
+   input Clk, 
+   input [15:0] IR,
+   output logic D_wr, RF_s, RF_W_en, PC_clr, IR_ld, PC_up, 
+   output logic [7:0] D_addr,
+   output logic [3:0] RF_W_addr, RF_Ra_addr, RF_Rb_addr,
+   output logic [2:0] Alu_s0
+   );*/
 
-// combinational logic
+PC unit_PC(Clk, PC_Clr, PC_Up, PC_Out);
 
-// proceedural logic
+InstMemory unit_ROM(mem_addr, Clk, ROM_Out);
+
+IR unit_IR(Clk, IR_ld, inst_in, inst_out);
+
+StateMachine unit_SM(Clk, inst_out, D_wr, RF_s,
+               RF_W_en, PC_Clr, IR_ld, PC_Up, 
+               D_Addr, RF_W_Addr, RF_Ra_Addr, RF_Rb_Addr,
+               Alu_s0);
 
 endmodule
 
@@ -45,12 +65,12 @@ module ControlUnit_tb;
 // localparams
 
 // wires / logic
-
    logic Clk;
    logic D_Wr, RF_s, RF_W_en;
    logic [7:0] D_Addr;
    logic [3:0]RF_W_addr, RF_Ra_addr, RF_Rb_addr;
    logic [2:0] Alu_s0;
+
 // instantiation
    ControlUnit DUT(
                   Clk,
@@ -68,6 +88,13 @@ module ControlUnit_tb;
 
    // testbench logic
    initial begin
+
+      @(posedge Clk);
+
+      // Test Load
+      repeat (4) @(posedge Clk); //from Load_A to Load_B
+      assert(DUT.RF_s == 1) $display ();
+      else $error();
 
    end
    // monitor
