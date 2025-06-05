@@ -39,7 +39,7 @@ module PC_IR_ROM_tb;
             Clk, PC_Clr, PC_Up, IR_ld,
             inst_out 
             );
-
+   // clock
 	always begin
 		Clk = 0; #10;
       Clk = 1; #10;
@@ -84,12 +84,10 @@ module PC_IR_ROM_tb;
       else   $error("Error! The mem_adress is: %d", DUT.unit_ROM.address);
 
    PC_Up = 0; 
-   repeat(2) @(posedge Clk) #1;
+   repeat(2) @(posedge Clk) #1;                                                           // must wait for two clock cycles 
    assert (inst_out == 'd10) 
       $display("Success. inst_out = %d", inst_out);  
       else   $error("inst_out should be 2, inst _out = %d", inst_out);
-
-
       $stop;
    end
 // ---- 

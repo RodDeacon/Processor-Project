@@ -11,73 +11,105 @@ IR.sv
 InstMemory.v
 FSM.sv
 Required input signals: Clock, ResetN
+
 (Notice here the ResetN signal is required 
 for FSM; it is active low!)
-Required output signals: PC_Out, IR_Out, 
+
+Required output signals: 7-bit PC_Out, 16-bit IR_Out, 
 OutState, NextState, D_Addr, D_Wr,RF_s, 
 RF_W_en, RF_Ra_Addr, RF_Rb_Addr, 
 RF_W_Addr, ALU_s0*/
 
-module ControlUnit (
-   input Clk,
-   output D_wr, RF_s, RF_W_en,
+import StateDefs::*; // import state definitions to use as output states
+module ControlUnit ( // 14 - 9 =5
+   input Clk, ResetN,      // active low reset
+   output D_Wr, RF_s, RF_W_en,                     
    output [7:0] D_Addr,
-   output [3:0]RF_W_addr, RF_Ra_addr, RF_Rb_addr,
-   output [2:0] Alu_s0);
+   output [3:0]RF_W_Addr, RF_Ra_Addr, RF_Rb_Addr,
+   output [2:0] ALU_s0,
+   output State OutState, NextState,         // these are outputs which are for viewing   // enumerated states to be output TODO TEST
+   output [15:0] IR_Out,
+   output [6:0] PC_Out);
 
 // localparams
 
-// wires / logic
-logic PC_Clr, PC_Up, IR_ld;
-logic [6:0] PC_Out;
-logic [15:0] ROM_Out, IR_Out;
+// // wires / logic
+logic clock, pc_clr, pc_up, ir_ld, resetN; 
+logic [6:0]  pc_out, rom_in;
+logic [15:0] rom_out, ir_in, ir_out; 
 
-// assignments
-assign inst_in = ROM_Out;  // for readability (not necessary)
-assign mem_addr = PC_Out;
+
+// input assignments
+assign resetN = ResetN; // assign input to wire
+assign clock = Clk;        // assign input to wire
+assign rom_in = pc_out // added for readability
 
 // instantiations
 /*module StateMachine (
    input Clk, 
    input [15:0] IR,
-   output logic D_wr, RF_s, RF_W_en, PC_clr, IR_ld, PC_up, 
-   output logic [7:0] D_addr,
-   output logic [3:0] RF_W_addr, RF_Ra_addr, RF_Rb_addr,
-   output logic [2:0] Alu_s0
+   output logic D_Wr, RF_s, RF_W_en, PC_clr, IR_ld, PC_up, 
+   output logic [7:0] D_Addr,
+   output logic [3:0] RF_W_Addr, RF_Ra_Addr, RF_Rb_Addr,
+   output logic [2:0] ALU_s0
    );*/
 
-PC unit_PC(Clk, PC_Clr, PC_Up, PC_Out);
+PC unit_PC(clock, pc_clr, pc_up, pc_out);
 
-InstMemory unit_ROM(mem_addr, Clk, ROM_Out);
+InstMemory unit_ROM(rom_in, clock, rom_out);
 
-IR unit_IR(Clk, IR_ld, inst_in, inst_out);
+IR unit_IR(clock, ir_ld, ir_in, ir_out);
 
-StateMachine unit_SM(Clk, inst_out, D_wr, RF_s,
-               RF_W_en, PC_Clr, IR_ld, PC_Up, 
-               D_Addr, RF_W_Addr, RF_Ra_Addr, RF_Rb_Addr,
-               Alu_s0);
+StateMachine unit_SM(clock, resetN,                               // input signal wires
+                     ir_out,                                      // input instruction from IR
+                     D_Wr, RF_s, RF_W_en,                         // output control signals
+                     pc_clr, ir_ld, pc_up,                        // control signal wires for PC and IR
+                     D_Addr, RF_W_Addr, RF_Ra_Addr, RF_Rb_Addr,   //
+                     ALU_s0, 
+                     OutState, NextState                 // output state signals for observation
+                     );
+
+// output assignments
+assign IR_Out = ir_out;
+assign PC_Out = pc_out;
 
 endmodule
 
 // test bench
 module ControlUnit_tb;
 
+/*module ControlUnit ( // 14 - 9 =5
+   input Clk, ResetN,      // active low reset
+   output D_Wr, RF_s, RF_W_en,                     
+   output [7:0] D_Addr,
+   output [3:0]RF_W_Addr, RF_Ra_Addr, RF_Rb_Addr,
+   output [2:0] ALU_s0,
+   output State OutState, NextState,         // these are outputs which are for viewing   // enumerated states to be output TODO TEST
+   output [15:0] IR_Out,
+   output [6:0] PC_Out);*/
+
 // localparams
 
 // wires / logic
-   logic Clk;
+   logic Clk, ResetN;
    logic D_Wr, RF_s, RF_W_en;
    logic [7:0] D_Addr;
-   logic [3:0]RF_W_addr, RF_Ra_addr, RF_Rb_addr;
-   logic [2:0] Alu_s0;
+   logic [3:0]RF_W_Addr, RF_Ra_Addr, RF_Rb_Addr;
+   logic [2:0] ALU_s0;
+   State OutState, NextState;
+   logic [15:0] IR_Out;
+   logic [6:0] PC_Out;
 
 // instantiation
    ControlUnit DUT(
-                  Clk,
+                  Clk,ResetN,
                   D_Wr, RF_s, RF_W_en,
                   D_Addr,
-                  RF_W_addr, RF_Ra_addr, RF_Rb_addr,
-                  Alu_s0
+                  RF_W_Addr, RF_Ra_Addr, RF_Rb_Addr,
+                  ALU_s0, 
+                  OutState, NextState,
+                  IR_Out,
+                  PC_Out
                );
 
    // clock

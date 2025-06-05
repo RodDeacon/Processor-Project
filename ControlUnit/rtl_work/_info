@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 dC:/Users/rod/Documents/2025_spring_classes/Processor-Project/ControlUnit
 vInstMemory
-Z1 !s110 1748817812
+Z1 !s110 1749139890
 !i10b 1
 !s100 z`OOQic4a>PSK:1VPgoz31
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -26,7 +26,7 @@ Z4 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z5 !s108 1748817812.000000
+Z5 !s108 1749139890.000000
 !s107 ./InstMemory.v|
 !s90 -reportprogress|300|-work|work|+acc|./InstMemory.v|
 !i113 1
@@ -35,7 +35,7 @@ Z7 tCvgOpt 0
 n@inst@memory
 vIR
 Z8 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-R1
+Z9 !s110 1749139891
 !i10b 1
 !s100 >ULk;[_YoZB04=fP3noiP1
 R2
@@ -43,9 +43,9 @@ IV3=lcTh]dI>Eh:GAI_>f@1
 R3
 S1
 R0
-Z9 w1748812302
-Z10 8./IR.sv
-Z11 F./IR.sv
+Z10 w1748820172
+Z11 8./IR.sv
+Z12 F./IR.sv
 !i122 2
 L0 14 14
 R4
@@ -53,15 +53,15 @@ r1
 !s85 0
 31
 R5
-Z12 !s107 ./IR.sv|
-Z13 !s90 -reportprogress|300|-work|work|+acc|./IR.sv|
+Z13 !s107 ./IR.sv|
+Z14 !s90 -reportprogress|300|-work|work|+acc|./IR.sv|
 !i113 1
 R6
 R7
 n@i@r
 vIR_tb
 R8
-R1
+R9
 !i10b 1
 !s100 <g6J@5hb^a=o`aEHIhfzU2
 R2
@@ -69,9 +69,9 @@ I9F_M1<UY_L0n5nOYK411j2
 R3
 S1
 R0
-R9
 R10
 R11
+R12
 !i122 2
 L0 30 44
 R4
@@ -79,8 +79,8 @@ r1
 !s85 0
 31
 R5
-R12
 R13
+R14
 !i113 1
 R6
 R7
@@ -95,9 +95,9 @@ I=mhfC6[T>lS03:;J9UEg22
 R3
 S1
 R0
-Z14 w1748811290
-Z15 8./PC.sv
-Z16 F./PC.sv
+Z15 w1748811290
+Z16 8./PC.sv
+Z17 F./PC.sv
 !i122 0
 L0 13 47
 R4
@@ -105,15 +105,15 @@ r1
 !s85 0
 31
 R5
-Z17 !s107 ./PC.sv|
-Z18 !s90 -reportprogress|300|-work|work|+acc|./PC.sv|
+Z18 !s107 ./PC.sv|
+Z19 !s90 -reportprogress|300|-work|work|+acc|./PC.sv|
 !i113 1
 R6
 R7
 n@p@c
 vPC_IR_ROM
 R8
-R1
+R9
 !i10b 1
 !s100 Ub==PPc`F`MWUGi>ZbK?c1
 R2
@@ -121,25 +121,25 @@ IE<Xh[WT]Dzm=SSLSDXOf32
 R3
 S1
 R0
-Z19 w1748817809
-Z20 8./PC_IR_ROM.sv
-Z21 F./PC_IR_ROM.sv
+Z20 w1748817809
+Z21 8./PC_IR_ROM.sv
+Z22 F./PC_IR_ROM.sv
 !i122 3
 L0 8 20
 R4
 r1
 !s85 0
 31
-R5
+Z23 !s108 1749139891.000000
 !s107 ./PC_IR_ROM.sv|
-Z22 !s90 -reportprogress|300|-work|work|+acc|./PC_IR_ROM.sv|
+Z24 !s90 -reportprogress|300|-work|work|+acc|./PC_IR_ROM.sv|
 !i113 1
 R6
 R7
 n@p@c_@i@r_@r@o@m
 vPC_IR_ROM_tb
 R8
-R1
+R9
 !i10b 1
 !s100 V0?2Fn1@CkME>H2Ad^LAZ0
 R2
@@ -147,18 +147,18 @@ I>ii6XDdCocSDF[PfHdk2P0
 R3
 S1
 R0
-R19
 R20
 R21
+R22
 !i122 3
 L0 31 71
 R4
 r1
 !s85 0
 31
-R5
-Z23 !s107 ./PC_IR_ROM.sv|
-R22
+R23
+Z25 !s107 ./PC_IR_ROM.sv|
+R24
 !i113 1
 R6
 R7
@@ -173,9 +173,9 @@ I68Y3TTB?S8BzO;@CAFIe<1
 R3
 S1
 R0
-R14
 R15
 R16
+R17
 !i122 0
 L0 62 64
 R4
@@ -183,8 +183,8 @@ r1
 !s85 0
 31
 R5
-R17
 R18
+R19
 !i113 1
 R6
 R7

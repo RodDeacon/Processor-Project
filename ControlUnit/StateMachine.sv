@@ -4,6 +4,8 @@
 // Week 9, Project Folder ControlUnit
 // // this module will implement Register and ALU operations
 
+// TODO NO STATE MACHINE RESETN CODE
+
 /*Variable Meaning
 PC_clr Program counter (PC) clear command
 IR_ld Instruction load command
@@ -14,7 +16,7 @@ RF_s Mux select line
 RF_Ra_addr Register file A-side read address (4 bits)
 RF_Rb_addr Register file B-side read address (4 bits)
 RF_W_en Register file write enable
-RF_W_Addr Register file write address (4 bits)
+RF_W_addr Register file write address (4 bits)
 ALU_s0 ALU function select (3 bits)
 */
 
@@ -25,12 +27,13 @@ import StateDefs::*; // import statedefs package in order to use enums. (wildcar
 // import StateDefs::inst;  // import instruction enumerator
 
 module StateMachine (
-   input Clk, 
+   input Clk, ResetN, // active low reset 
    input [15:0] IR,
    output logic D_wr, RF_s, RF_W_en, PC_clr, IR_ld, PC_up, 
    output logic [7:0] D_addr,
    output logic [3:0] RF_W_addr, RF_Ra_addr, RF_Rb_addr,
-   output logic [2:0] Alu_s0
+   output logic [2:0] Alu_s0,
+   output State CurrentState, NextState // for viewing purposes passed to control unit
    );
 
 // localparams
@@ -59,7 +62,7 @@ module StateMachine (
 // wires / logic
 // logic [3:0] CurrentState
 
-State CurrentState, NextState;
+// State CurrentState, NextState;
 inst _inst; 
 
 
@@ -168,47 +171,18 @@ module StateMachine_tb;
    logic Clk;
    logic [15:0] IR;
    logic D_Wr, RF_s, RF_W_en, PC_clr, IR_ld, PC_up;
-   logic [7:0] D_Addr;
+   logic [7:0] D_addr;
    logic [3:0]RF_W_addr, RF_Ra_addr, RF_Rb_addr;
    logic [2:0] Alu_s0;
+   State CurrentState, NextState;
 // instantiation
    StateMachine DUT ( Clk,
      IR,
     D_Wr, RF_s, RF_W_en, PC_clr, IR_ld, PC_up,
-     D_Addr,
+     D_addr,
     RF_W_addr, RF_Ra_addr, RF_Rb_addr,
-    Alu_s0);
-
-// functions
-   // make function for string 
-   function string state_to_string(State s);
-   case (s)
-      Noop:     return "Noop";
-      Store:    return "Store";
-      Load_A:   return "Load_A";
-      Load_B:   return "Load_B";
-      Add:      return "Add";
-      Sub:      return "Sub";
-      Halt:     return "Halt";
-      Init:     return "Init";
-      Fetch:    return "Fetch";
-      Decode:   return "Decode";
-      default:  return "Unknown";
-   endcase
-endfunction
-
-function string inst_to_string(inst instruction);
-    case (instruction)
-        _noop  : return "Noop";
-        _store : return "Store";
-        _load  : return "Load_A";
-        _add   : return "Add";
-        _sub   : return "Sub";
-        _halt  : return "Halt";
-        default: return "Unknown";
-    endcase
-endfunction
-
+    Alu_s0,
+    CurrentState, NextState);
 
    // clock
    always begin
