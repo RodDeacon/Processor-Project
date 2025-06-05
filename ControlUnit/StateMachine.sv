@@ -73,6 +73,7 @@ inst _inst;
 
 // combinational logic
    always_comb begin : state_logic
+   
       case(CurrentState)
       // noop
          Noop : NextState = Fetch;
@@ -98,7 +99,7 @@ inst _inst;
             RF_W_en = 1;
             RF_Ra_addr = IR[11:8];
             RF_Rb_addr = IR[7:4];
-            Alu_s0 = 1; // option 1 chosen from ALU (addition)
+            Alu_s0 = 'd1; // option 1 chosen from ALU (addition)
 
          end
 
@@ -110,7 +111,7 @@ inst _inst;
             RF_W_en = 1;                     // enable RF write
             RF_Ra_addr = IR[11:8];              // register a is assigned the address from IR
             RF_Rb_addr = IR[7:4];               // register b is assigned the address from IR
-            Alu_s0 = 2;                        // option 2 chosen from ALU (subtraction)
+            Alu_s0 = 'd2;                        // option 2 chosen from ALU (subtraction)
          end         
       // halt
          Halt     : NextState = Halt;
@@ -121,6 +122,7 @@ inst _inst;
          end 
       // fetch
          Fetch    : begin 
+            PC_clr = 0;
             PC_up = 1;
             IR_ld = 1;
             NextState = Decode;
@@ -133,16 +135,25 @@ inst _inst;
             _add     : NextState = Add;      // 3 ADD
             _sub     : NextState = Sub;      // 4 SUB
             _halt    : NextState = Halt;     // 5 HALT
-            default  : NextState = Noop;   // default instruction is noop
+            // default  : NextState = Noop;   // default instruction is noop
          endcase
 
-         default: NextState = Fetch; // default case is init i.e. NextState = Fetch
+         default: NextState = Init; // default case is init i.e. NextState = Fetch
       endcase
    end
 
 // proceedural logic
    always_ff @( posedge Clk ) begin : ff_logic
-         CurrentState <= NextState;   // go to the state we described above
+
+   // RESET LOGIC
+   // only do the following if there is a valid input of the IR
+      // if (_inst ) begin
+         if (!ResetN) begin // if reset is asserted
+            CurrentState <= Init;
+         end else begin
+            CurrentState <= NextState;   // go to the state we described above
+         end
+      // end
   end // end the always ff logic   
    
 /*

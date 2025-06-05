@@ -20,6 +20,7 @@ OutState, NextState, D_Addr, D_Wr,RF_s,
 RF_W_en, RF_Ra_Addr, RF_Rb_Addr, 
 RF_W_Addr, ALU_s0*/
 
+`timescale 1 ps / 1 ps
 import StateDefs::*; // import state definitions to use as output states
 module ControlUnit ( // 14 - 9 =5
    input Clk, ResetN,      // active low reset
@@ -42,7 +43,8 @@ logic [15:0] rom_out, ir_in, ir_out;
 // input assignments
 assign resetN = ResetN; // assign input to wire
 assign clock = Clk;        // assign input to wire
-assign rom_in = pc_out // added for readability
+assign rom_in = pc_out; // added for readability
+assign ir_in = rom_out;
 
 // instantiations
 /*module StateMachine (
@@ -120,18 +122,23 @@ module ControlUnit_tb;
 
    // testbench logic
    initial begin
-
+      @(negedge Clk) ResetN = 0; #1; // resets
+      @(posedge Clk);
+      @(negedge Clk) ResetN = 1; #1; // deassert
       @(posedge Clk);
 
       // Test Load
-      repeat (4) @(posedge Clk); //from Load_A to Load_B
-      assert(DUT.RF_s == 1) $display ();
-      else $error();
+      repeat (600) @(posedge Clk); #1; 
 
+   $stop;
    end
    // monitor
    initial begin
-      $monitor("");
+      #1; $monitor($realtime, " ResetN = %b, OutState = %s, NextState = %s, IR_Out = %h, PC_Out, %h", ResetN, state_to_string(OutState), state_to_string(NextState), IR_Out, PC_Out,
+                           "\nPC_UP = %b", DUT.pc_up,
+                           "\nunit_PC.Up = %b", DUT.unit_PC.Up, // monitor the OutState, NextState, IR_Out, PC_Out, ResetN
+                           "\nunit_PC.Clr = %b", DUT.unit_PC.Clr, // monitor the OutState, NextState, IR_Out, PC_Out, ResetN
+                           "\nunit_PC.mem_addr = %b", DUT.unit_PC.mem_addr); // monitor the OutState, NextState, IR_Out, PC_Out, ResetN
    end
-
+// mem_addr
 endmodule

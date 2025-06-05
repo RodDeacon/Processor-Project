@@ -1,7 +1,7 @@
 // PACKAGE FILE TO SUPPORT THE STATEMACHINE 
 
 package StateDefs;
-
+   // State enumeration for the control unit
    typedef enum logic [3:0] { 
       Noop = 0,   // 0  NOOP
       Store = 1,  // 1 STORE
@@ -9,12 +9,12 @@ package StateDefs;
       Add = 3,    // 3 ADD
       Sub = 4,    // 4 SUB
       Halt = 5,   // 5 HALT
-      Load_B,     // 2.1 LOAD
-      Init,       // 6 Init
-      Fetch,      // 7 Fetch
-      Decode      // 8 Decode
+      Load_B,     // 6 LOAD
+      Init,       // 7 Init
+      Fetch,      // 8 Fetch
+      Decode      // 9 Decode
    } State;
-
+// instruction enumeration for the control unit
    typedef enum logic [3:0] { 
       _noop = 0,  // 0  NOOP
       _store,     // 1 STORE
@@ -26,7 +26,7 @@ package StateDefs;
 
 
    // functions
-   // make function for string 
+// function to convert the State enumeration to a string 
    function string state_to_string(State s);
       case (s)
          Noop:     return "Noop";
@@ -43,6 +43,7 @@ package StateDefs;
       endcase
    endfunction
 
+// function to convert the instruction enumeration to a string
    function string inst_to_string(inst instruction);
       case (instruction)
          _noop  : return "Noop";
