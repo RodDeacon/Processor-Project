@@ -73,12 +73,20 @@ inst _inst;
 
 // combinational logic
    always_comb begin : state_logic
+
+      D_wr = 0; 
+      RF_s = 0;
+      RF_W_en = 0;
+      PC_clr = 0;
+      IR_ld = 0;
+      PC_up = 0;
    
       case(CurrentState)
       // noop
          Noop : NextState = Fetch;
       // store
          Store    : begin 
+            NextState = Fetch;
             D_addr = IR[7:0];
             D_wr = 1;
             RF_Ra_addr = IR[11:5];
@@ -99,7 +107,7 @@ inst _inst;
             RF_W_en = 1;
             RF_Ra_addr = IR[11:8];
             RF_Rb_addr = IR[7:4];
-            Alu_s0 = 'd1; // option 1 chosen from ALU (addition)
+            Alu_s0 = 3'd1; // option 1 chosen from ALU (addition)
 
          end
 
@@ -111,7 +119,7 @@ inst _inst;
             RF_W_en = 1;                     // enable RF write
             RF_Ra_addr = IR[11:8];              // register a is assigned the address from IR
             RF_Rb_addr = IR[7:4];               // register b is assigned the address from IR
-            Alu_s0 = 'd2;                        // option 2 chosen from ALU (subtraction)
+            Alu_s0 = 3'd2;                        // option 2 chosen from ALU (subtraction)
          end         
       // halt
          Halt     : NextState = Halt;
@@ -125,6 +133,8 @@ inst _inst;
             PC_clr = 0;
             PC_up = 1;
             IR_ld = 1;
+            D_wr = 0;
+            RF_s = 0;
             NextState = Decode;
          end 
       // decode
@@ -135,7 +145,7 @@ inst _inst;
             _add     : NextState = Add;      // 3 ADD
             _sub     : NextState = Sub;      // 4 SUB
             _halt    : NextState = Halt;     // 5 HALT
-            // default  : NextState = Noop;   // default instruction is noop
+            default  : NextState = Init;   // default instruction is noop
          endcase
 
          default: NextState = Init; // default case is init i.e. NextState = Fetch

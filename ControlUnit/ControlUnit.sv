@@ -128,7 +128,7 @@ module ControlUnit_tb;
       @(posedge Clk);
 
       // Test Load
-      repeat (600) @(posedge Clk); #1; 
+      repeat (1200) @(posedge Clk); #1; 
 
    $stop;
    end

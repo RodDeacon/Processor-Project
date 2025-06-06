@@ -1,0 +1,40 @@
+
+
+-- --
+-- Copyright (C) 2020  Intel Corporation. All rights reserved.
+-- Your use of Intel Corporation's design tools, logic functions 
+-- and other software and tools, and any partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Intel Program License 
+-- Subscription Agreement, the Intel Quartus Prime License Agreement,
+-- the Intel FPGA IP License Agreement, or other applicable license
+-- agreement, including, without limitation, that your use is for
+-- the sole purpose of programming logic devices manufactured by
+-- Intel and sold by Intel or its authorized distributors.  Please
+-- refer to the applicable agreement for further details, at
+-- https://fpgasoftware.intel.com/eula.
+
+-- Quartus Prime generated Memory Initialization File (.mif)
+
+WIDTH=16;
+DEPTH=128;
+
+ADDRESS_RADIX=HEX;
+DATA_RADIX=HEX;
+
+CONTENT BEGIN
+	00 : 7000; 	 -- init
+	01 : 21B1;   -- LOAD D[1B] → R[1]
+	02 : 22A1;   -- LOAD D[2A] → R[2]
+	03 : 23C2;   -- SUB R[2] - R[1] → R[0]
+	04 : 27E3;   -- LOAD D[3C] → R[1]
+	05 : 4014;   -- ADD R[0] + R[1] → R[0]
+	06 : 4235;   -- LOAD D[7E] → R[1]
+	07 : 345A;   -- SUB R[0] - R[1] → R[0]
+	08 : 1A6A;   -- STORE R[0] → RF[0A]
+	09 : 5000;   -- HALT
+	[0A..7F] : 0000;  -- Fill remaining with NOOPs
+END;
+-- -- 
