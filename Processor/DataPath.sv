@@ -16,6 +16,7 @@ module DataPath#(// params
 );
 // localparam
 logic [15:0] R_data, W_data_mux, A, B, W_data_D, Mux0, ALU_out;
+
 assign W_data_D = A;
 assign Mux0 = ALU_out;
 

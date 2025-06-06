@@ -16,6 +16,7 @@ module DataPath#(// params
 );
 // localparam
 logic [15:0] R_data, W_data_mux, A, B, W_data_D, Mux0, ALU_out;
+
 assign W_data_D = A;
 assign Mux0 = ALU_out;
 
@@ -144,25 +145,25 @@ module DataPath_tb();
          RF_W_en = 0; #1;
          Alu_s0 = 3'd1;
          
-         // wait some time
-         @(posedge Clk) #1;
-         // ensure that Q == alu out(internal output of alu) == W_data
-         assert(DUT.Mux0 == 64) $display("yay, it worked. Q should be 345. Q == %d", DUT.Mux0); /// expected value
-            else $error("waa waa not working Q should be 345 but it is %d", DUT.Mux0);
-         assert((DUT.Mux0 == DUT.unit_ALU.ALU_out) && (DUT.Mux0 == DUT.W_data_mux)) $display("The output q is eqaul to W_data, Q = %d, W_Data = %d ", DUT.Mux0, DUT.W_data_mux);
-            else $error("sadge.. it doesnt work :(");
+         // // wait some time
+         // @(posedge Clk) #1;
+         // // ensure that Q == alu out(internal output of alu) == W_data
+         // assert(Mux0 == 64) $display("yay, it worked. Q should be 345. Q == %d", Mux0); /// expected value
+         //    else $error("waa waa not working Q should be 345 but it is %d", Mux0);
+         // assert((Mux0 == DUT.unit_ALU.ALU_out) && (Mux0 == DUT.W_data_mux)) $display("The output q is eqaul to W_data, Q = %d, W_Data = %d ", Mux0, DUT.W_data);
+         //    else $error("sadge.. it doesnt work :(");
 
 
-      // test subtract R[1] - R[2] (222 - 123)
-         // set proper value for ALU for subtraction (4)
-         Alu_s0 = 3'd2;
-         // wait some time
-         @(posedge Clk) #1;
-         // ensure that Q == alu out(internal output of alu) == W_data
-         assert(DUT.Mux0 == 30) $display("yay, it worked Q should be 99. Q == %d", DUT.Mux0); /// expected value
-            else $error("waa waa not working Q should be 99 but it is %d", DUT.Mux0);
-         assert((DUT.Mux0 == DUT.unit_ALU.ALU_out) && (DUT.Mux0 == DUT.W_data_mux)) $display("The output q is eqaul to W_data, Q = %d, W_Data = %d ", DUT.Mux0, DUT.W_data_mux);
-            else $error("sadge.. it doesnt work :(");
+      // // test subtract R[1] - R[2] (222 - 123)
+      //    // set proper value for ALU for subtraction (4)
+      //    Alu_s0 = 3'd2;
+      //    // wait some time
+      //    @(posedge Clk) #1;
+      //    // ensure that Q == alu out(internal output of alu) == W_data
+      //    assert(Mux0 == 30) $display("yay, it worked Q should be 99. Q == %d", Mux0); /// expected value
+      //       else $error("waa waa not working Q should be 99 but it is %d", Mux0);
+      //    assert((Mux0 == DUT.unit_ALU.ALU_out) && (Mux0 == DUT.W_data_mux)) $display("The output q is eqaul to W_data, Q = %d, W_Data = %d ", Mux0, DUT.W_data);
+      //       else $error("sadge.. it doesnt work :(");
 
       $stop;
    end

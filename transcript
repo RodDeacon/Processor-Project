@@ -33077,3 +33077,915 @@ do runControlUnit.do
 # 25254 ps
 # 
 # End
+ls
+# A copy.mif
+# A.mif
+# A.ver
+# ControlUnit.sv
+# ControlUnit.sv.bak
+# ControlUnit_wave.do
+# DROM_tb.sv
+# DROM_wave.do
+# InstMemory.qip
+# InstMemory.v
+# InstMemory_bb.v
+# InstMemory_inst.v
+# IR.sv
+# IR.sv.bak
+# IR_wave.do
+# Launch_ModelSim.bat
+# modelsim.ini
+# PC.sv
+# PC.sv.bak
+# PC_IR_ROM.sv
+# PC_IR_ROM_wave.do
+# PC_wave.do
+# Processor2025_ControlUnit.pdf
+# rtl_work
+# runControlUnit.do
+# runIR.do
+# runPC.do
+# runPC_IR_ROM.do
+# runROM.do
+# runStateMachine.do
+# StateDefs.sv
+# StateMachine.sv
+# StateMachine.sv.bak
+# StateMachine_wave.do
+# transcript
+# vsim.wlf
+ls
+# A copy.mif
+# A.mif
+# A.ver
+# ControlUnit.sv
+# ControlUnit.sv.bak
+# ControlUnit_wave.do
+# DROM_tb.sv
+# DROM_wave.do
+# InstMemory.qip
+# InstMemory.v
+# InstMemory_bb.v
+# InstMemory_inst.v
+# IR.sv
+# IR.sv.bak
+# IR_wave.do
+# Launch_ModelSim.bat
+# modelsim.ini
+# PC.sv
+# PC.sv.bak
+# PC_IR_ROM.sv
+# PC_IR_ROM_wave.do
+# PC_wave.do
+# Processor2025_ControlUnit.pdf
+# rtl_work
+# runControlUnit.do
+# runIR.do
+# runPC.do
+# runPC_IR_ROM.do
+# runROM.do
+# runStateMachine.do
+# StateDefs.sv
+# StateMachine.sv
+# StateMachine.sv.bak
+# StateMachine_wave.do
+# transcript
+# vsim.wlf
+cd ..
+# Cannot change directory while a simulation is in progress.
+# Use the "quit -sim" command to unload the design first.
+ls
+# A copy.mif
+# A.mif
+# A.ver
+# ControlUnit.sv
+# ControlUnit.sv.bak
+# ControlUnit_wave.do
+# DROM_tb.sv
+# DROM_wave.do
+# InstMemory.qip
+# InstMemory.v
+# InstMemory_bb.v
+# InstMemory_inst.v
+# IR.sv
+# IR.sv.bak
+# IR_wave.do
+# Launch_ModelSim.bat
+# modelsim.ini
+# PC.sv
+# PC.sv.bak
+# PC_IR_ROM.sv
+# PC_IR_ROM_wave.do
+# PC_wave.do
+# Processor2025_ControlUnit.pdf
+# rtl_work
+# runControlUnit.do
+# runIR.do
+# runPC.do
+# runPC_IR_ROM.do
+# runROM.do
+# runStateMachine.do
+# StateDefs.sv
+# StateMachine.sv
+# StateMachine.sv.bak
+# StateMachine_wave.do
+# transcript
+# vsim.wlf
+cd ..
+# Cannot change directory while a simulation is in progress.
+# Use the "quit -sim" command to unload the design first.
+quit -sim
+# End time: 18:50:34 on Jun 05,2025, Elapsed time: 0:23:06
+# Errors: 0, Warnings: 0
+ls
+# A copy.mif
+# A.mif
+# A.ver
+# ControlUnit.sv
+# ControlUnit.sv.bak
+# ControlUnit_wave.do
+# DROM_tb.sv
+# DROM_wave.do
+# InstMemory.qip
+# InstMemory.v
+# InstMemory_bb.v
+# InstMemory_inst.v
+# IR.sv
+# IR.sv.bak
+# IR_wave.do
+# Launch_ModelSim.bat
+# modelsim.ini
+# PC.sv
+# PC.sv.bak
+# PC_IR_ROM.sv
+# PC_IR_ROM_wave.do
+# PC_wave.do
+# Processor2025_ControlUnit.pdf
+# rtl_work
+# runControlUnit.do
+# runIR.do
+# runPC.do
+# runPC_IR_ROM.do
+# runROM.do
+# runStateMachine.do
+# StateDefs.sv
+# StateMachine.sv
+# StateMachine.sv.bak
+# StateMachine_wave.do
+# transcript
+# vsim.wlf
+cd ..
+# reading C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini
+ls
+# 05-22-2025-notes.txt
+# ControlUnit
+# DATA_FROM_CHAT.odt
+# Datapath
+# enum_crash_course.odt
+# garbage
+# Launch_ModelSim.bat
+# Processor
+# Processor2025_Datapath.pdf
+# Project_template.docx
+# Project_timeline.pdf
+# ProjectAssignment_SimpleProcessor.pdf
+# README.md
+# testProcessor.sv
+# transcript
+cd Processor
+ls
+# A.mif
+# ALU.sv
+# ControlUnit.sv
+# D.mif
+# D.ver
+# DataMemory.qip
+# DataMemory.v
+# DataMemory_bb.v
+# DataPath.sv
+# InstMemory.qip
+# InstMemory.v
+# InstMemory_bb.v
+# InstMemory_inst.v
+# IR.sv
+# Mux_2_to_1.sv
+# PC.sv
+# Processor.sv
+# Processor_wave.do
+# RegAlu.sv
+# RegisterFile.sv
+# runProcessor.do
+# StateDefs.sv
+# StateMachine.sv
+# testProcessor.sv
+do runProcessor.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./StateDefs.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:50:53 on Jun 05,2025
+# vlog -reportprogress 300 -work work "+acc" ./StateDefs.sv 
+# -- Compiling package StateDefs
+# 
+# Top level modules:
+# 	--none--
+# End time: 18:50:53 on Jun 05,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+#vlog -work work +acc "./PC.sv"
+#vlog -work work +acc "./InstMemory.v"
+#vlog -work work +acc "./IR.sv"
+#vlog -work work +acc "./StateMachine.sv"
+# vlog -work work +acc "./ControlUnit.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:50:53 on Jun 05,2025
+# vlog -reportprogress 300 -work work "+acc" ./ControlUnit.sv 
+# -- Compiling package ControlUnit_sv_unit
+# -- Importing package StateDefs
+# -- Compiling module ControlUnit
+# -- Compiling module ControlUnit_tb
+# 
+# Top level modules:
+# 	ControlUnit_tb
+# End time: 18:50:53 on Jun 05,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+#vlog -work work +acc "./RegisterFile.sv"
+#vlog -work work +acc "./ALU.sv"
+#vlog -work work +acc "./DataMemory.v"
+#vlog -work work +acc "./Mux_2_to_1.sv"
+# vlog -work work +acc "./DataPath.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:50:53 on Jun 05,2025
+# vlog -reportprogress 300 -work work "+acc" ./DataPath.sv 
+# -- Compiling module DataPath
+# -- Compiling module DataPath_tb
+# ** Error: ./DataPath.sv(151): (vlog-2730) Undefined variable: 'Mux0'.
+# ./DataPath.sv(178): Verilog Compiler exiting
+# End time: 18:50:53 on Jun 05,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./runProcessor.do line 26
+# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -work work +acc "./DataPath.sv""
+do runProcessor.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./StateDefs.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:54:16 on Jun 05,2025
+# vlog -reportprogress 300 -work work "+acc" ./StateDefs.sv 
+# -- Compiling package StateDefs
+# 
+# Top level modules:
+# 	--none--
+# End time: 18:54:16 on Jun 05,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+#vlog -work work +acc "./PC.sv"
+#vlog -work work +acc "./InstMemory.v"
+#vlog -work work +acc "./IR.sv"
+#vlog -work work +acc "./StateMachine.sv"
+# vlog -work work +acc "./ControlUnit.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:54:16 on Jun 05,2025
+# vlog -reportprogress 300 -work work "+acc" ./ControlUnit.sv 
+# -- Compiling package ControlUnit_sv_unit
+# -- Importing package StateDefs
+# -- Compiling module ControlUnit
+# -- Compiling module ControlUnit_tb
+# 
+# Top level modules:
+# 	ControlUnit_tb
+# End time: 18:54:16 on Jun 05,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+#vlog -work work +acc "./RegisterFile.sv"
+#vlog -work work +acc "./ALU.sv"
+#vlog -work work +acc "./DataMemory.v"
+#vlog -work work +acc "./Mux_2_to_1.sv"
+# vlog -work work +acc "./DataPath.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:54:16 on Jun 05,2025
+# vlog -reportprogress 300 -work work "+acc" ./DataPath.sv 
+# -- Compiling module DataPath
+# -- Compiling module DataPath_tb
+# 
+# Top level modules:
+# 	DataPath_tb
+# End time: 18:54:17 on Jun 05,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./Processor.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:54:17 on Jun 05,2025
+# vlog -reportprogress 300 -work work "+acc" ./Processor.sv 
+# -- Compiling module Processor
+# ** Error: (vlog-13069) ./Processor.sv(9): near ";": syntax error, unexpected ';', expecting ')'.
+# End time: 18:54:17 on Jun 05,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./runProcessor.do line 27
+# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -work work +acc "./Processor.sv""
+do runProcessor.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./StateDefs.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:54:25 on Jun 05,2025
+# vlog -reportprogress 300 -work work "+acc" ./StateDefs.sv 
+# -- Compiling package StateDefs
+# 
+# Top level modules:
+# 	--none--
+# End time: 18:54:25 on Jun 05,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+#vlog -work work +acc "./PC.sv"
+#vlog -work work +acc "./InstMemory.v"
+#vlog -work work +acc "./IR.sv"
+#vlog -work work +acc "./StateMachine.sv"
+# vlog -work work +acc "./ControlUnit.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:54:25 on Jun 05,2025
+# vlog -reportprogress 300 -work work "+acc" ./ControlUnit.sv 
+# -- Compiling package ControlUnit_sv_unit
+# -- Importing package StateDefs
+# -- Compiling module ControlUnit
+# -- Compiling module ControlUnit_tb
+# 
+# Top level modules:
+# 	ControlUnit_tb
+# End time: 18:54:25 on Jun 05,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+#vlog -work work +acc "./RegisterFile.sv"
+#vlog -work work +acc "./ALU.sv"
+#vlog -work work +acc "./DataMemory.v"
+#vlog -work work +acc "./Mux_2_to_1.sv"
+# vlog -work work +acc "./DataPath.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:54:25 on Jun 05,2025
+# vlog -reportprogress 300 -work work "+acc" ./DataPath.sv 
+# -- Compiling module DataPath
+# -- Compiling module DataPath_tb
+# 
+# Top level modules:
+# 	DataPath_tb
+# End time: 18:54:25 on Jun 05,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./Processor.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:54:25 on Jun 05,2025
+# vlog -reportprogress 300 -work work "+acc" ./Processor.sv 
+# -- Compiling module Processor
+# ** Error: (vlog-13069) ./Processor.sv(11): near ";": syntax error, unexpected ';', expecting ')'.
+# End time: 18:54:25 on Jun 05,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./runProcessor.do line 27
+# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -work work +acc "./Processor.sv""
+do runProcessor.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./StateDefs.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:54:31 on Jun 05,2025
+# vlog -reportprogress 300 -work work "+acc" ./StateDefs.sv 
+# -- Compiling package StateDefs
+# 
+# Top level modules:
+# 	--none--
+# End time: 18:54:31 on Jun 05,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+#vlog -work work +acc "./PC.sv"
+#vlog -work work +acc "./InstMemory.v"
+#vlog -work work +acc "./IR.sv"
+#vlog -work work +acc "./StateMachine.sv"
+# vlog -work work +acc "./ControlUnit.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:54:31 on Jun 05,2025
+# vlog -reportprogress 300 -work work "+acc" ./ControlUnit.sv 
+# -- Compiling package ControlUnit_sv_unit
+# -- Importing package StateDefs
+# -- Compiling module ControlUnit
+# -- Compiling module ControlUnit_tb
+# 
+# Top level modules:
+# 	ControlUnit_tb
+# End time: 18:54:31 on Jun 05,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+#vlog -work work +acc "./RegisterFile.sv"
+#vlog -work work +acc "./ALU.sv"
+#vlog -work work +acc "./DataMemory.v"
+#vlog -work work +acc "./Mux_2_to_1.sv"
+# vlog -work work +acc "./DataPath.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:54:31 on Jun 05,2025
+# vlog -reportprogress 300 -work work "+acc" ./DataPath.sv 
+# -- Compiling module DataPath
+# -- Compiling module DataPath_tb
+# 
+# Top level modules:
+# 	DataPath_tb
+# End time: 18:54:31 on Jun 05,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./Processor.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:54:31 on Jun 05,2025
+# vlog -reportprogress 300 -work work "+acc" ./Processor.sv 
+# -- Compiling module Processor
+# -- Compiling module Processor_tb
+# 
+# Top level modules:
+# 	Processor
+# 	Processor_tb
+# End time: 18:54:31 on Jun 05,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# 
+# Call vsim to invoke simulator
+#     Make sure the last item on the line is the name of the
+#     testbench module you want to execute.
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc" -fsmdebug  testProcessor
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" -fsmdebug testProcessor 
+# Start time: 18:54:31 on Jun 05,2025
+# ** Error: (vsim-3170) Could not find 'testProcessor'.
+#         Searched libraries:
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/220model
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/sgate
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera_mf
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera_lnsim
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/cycloneive
+#             C:/Users/rod/Documents/2025_spring_classes/Processor-Project/Processor/rtl_work
+#             C:/Users/rod/Documents/2025_spring_classes/Processor-Project/Processor/rtl_work
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./runProcessor.do PAUSED at line 33
+do runProcessor.do
+# turn on verbage
+# transcript on
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./StateDefs.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:55:52 on Jun 05,2025
+# vlog -reportprogress 300 -work work "+acc" ./StateDefs.sv 
+# -- Compiling package StateDefs
+# 
+# Top level modules:
+# 	--none--
+# End time: 18:55:53 on Jun 05,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+#vlog -work work +acc "./PC.sv"
+#vlog -work work +acc "./InstMemory.v"
+#vlog -work work +acc "./IR.sv"
+#vlog -work work +acc "./StateMachine.sv"
+# vlog -work work +acc "./ControlUnit.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:55:53 on Jun 05,2025
+# vlog -reportprogress 300 -work work "+acc" ./ControlUnit.sv 
+# -- Compiling package ControlUnit_sv_unit
+# -- Importing package StateDefs
+# -- Compiling module ControlUnit
+# -- Compiling module ControlUnit_tb
+# 
+# Top level modules:
+# 	ControlUnit_tb
+# End time: 18:55:53 on Jun 05,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+#vlog -work work +acc "./RegisterFile.sv"
+#vlog -work work +acc "./ALU.sv"
+#vlog -work work +acc "./DataMemory.v"
+#vlog -work work +acc "./Mux_2_to_1.sv"
+# vlog -work work +acc "./DataPath.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:55:53 on Jun 05,2025
+# vlog -reportprogress 300 -work work "+acc" ./DataPath.sv 
+# -- Compiling module DataPath
+# -- Compiling module DataPath_tb
+# 
+# Top level modules:
+# 	DataPath_tb
+# End time: 18:55:53 on Jun 05,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./Processor.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:55:53 on Jun 05,2025
+# vlog -reportprogress 300 -work work "+acc" ./Processor.sv 
+# -- Compiling module Processor
+# -- Compiling module Processor_tb
+# 
+# Top level modules:
+# 	Processor
+# 	Processor_tb
+# End time: 18:55:53 on Jun 05,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./testProcessor.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:55:53 on Jun 05,2025
+# vlog -reportprogress 300 -work work "+acc" ./testProcessor.sv 
+# -- Compiling module testProcessor
+# 
+# Top level modules:
+# 	testProcessor
+# End time: 18:55:53 on Jun 05,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# 
+# Call vsim to invoke simulator
+#     Make sure the last item on the line is the name of the
+#     testbench module you want to execute.
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc" -fsmdebug  testProcessor
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" -fsmdebug testProcessor 
+# Start time: 18:54:31 on Jun 05,2025
+# Loading sv_std.std
+# Loading work.testProcessor
+# Loading work.Processor
+# Loading work.StateDefs
+# Loading work.ControlUnit_sv_unit
+# Loading work.ControlUnit
+# ** Error: (vsim-3033) Instantiation of 'PC' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT/unit_CU File: ./ControlUnit.sv Line: 59
+#         Searched libraries:
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/220model
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/sgate
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera_mf
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera_lnsim
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/cycloneive
+#             C:/Users/rod/Documents/2025_spring_classes/Processor-Project/Processor/rtl_work
+#             C:/Users/rod/Documents/2025_spring_classes/Processor-Project/Processor/rtl_work
+# ** Error: (vsim-3033) Instantiation of 'InstMemory' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT/unit_CU File: ./ControlUnit.sv Line: 61
+#         Searched libraries:
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/220model
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/sgate
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera_mf
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera_lnsim
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/cycloneive
+#             C:/Users/rod/Documents/2025_spring_classes/Processor-Project/Processor/rtl_work
+#             C:/Users/rod/Documents/2025_spring_classes/Processor-Project/Processor/rtl_work
+# ** Error: (vsim-3033) Instantiation of 'IR' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT/unit_CU File: ./ControlUnit.sv Line: 63
+#         Searched libraries:
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/220model
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/sgate
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera_mf
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera_lnsim
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/cycloneive
+#             C:/Users/rod/Documents/2025_spring_classes/Processor-Project/Processor/rtl_work
+#             C:/Users/rod/Documents/2025_spring_classes/Processor-Project/Processor/rtl_work
+# ** Error: (vsim-3033) Instantiation of 'StateMachine' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT/unit_CU File: ./ControlUnit.sv Line: 65
+#         Searched libraries:
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/220model
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/sgate
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera_mf
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera_lnsim
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/cycloneive
+#             C:/Users/rod/Documents/2025_spring_classes/Processor-Project/Processor/rtl_work
+#             C:/Users/rod/Documents/2025_spring_classes/Processor-Project/Processor/rtl_work
+# Loading work.DataPath
+# ** Error: (vsim-3033) Instantiation of 'DataMemory' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT/unit_DP File: ./DataPath.sv Line: 26
+#         Searched libraries:
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/220model
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/sgate
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera_mf
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera_lnsim
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/cycloneive
+#             C:/Users/rod/Documents/2025_spring_classes/Processor-Project/Processor/rtl_work
+#             C:/Users/rod/Documents/2025_spring_classes/Processor-Project/Processor/rtl_work
+# ** Error: (vsim-3033) Instantiation of 'Mux_2_to_1' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT/unit_DP File: ./DataPath.sv Line: 36
+#         Searched libraries:
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/220model
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/sgate
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera_mf
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera_lnsim
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/cycloneive
+#             C:/Users/rod/Documents/2025_spring_classes/Processor-Project/Processor/rtl_work
+#             C:/Users/rod/Documents/2025_spring_classes/Processor-Project/Processor/rtl_work
+# ** Error: (vsim-3033) Instantiation of 'RegisterFile' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT/unit_DP File: ./DataPath.sv Line: 40
+#         Searched libraries:
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/220model
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/sgate
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera_mf
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera_lnsim
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/cycloneive
+#             C:/Users/rod/Documents/2025_spring_classes/Processor-Project/Processor/rtl_work
+#             C:/Users/rod/Documents/2025_spring_classes/Processor-Project/Processor/rtl_work
+# ** Error: (vsim-3033) Instantiation of 'ALU' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT/unit_DP File: ./DataPath.sv Line: 47
+#         Searched libraries:
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/220model
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/sgate
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera_mf
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera_lnsim
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/cycloneive
+#             C:/Users/rod/Documents/2025_spring_classes/Processor-Project/Processor/rtl_work
+#             C:/Users/rod/Documents/2025_spring_classes/Processor-Project/Processor/rtl_work
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./runProcessor.do PAUSED at line 34
+ls
+# A.mif
+# ALU.sv
+# ControlUnit.sv
+# D.mif
+# D.ver
+# DataMemory.qip
+# DataMemory.v
+# DataMemory_bb.v
+# DataPath.sv
+# InstMemory.qip
+# InstMemory.v
+# InstMemory_bb.v
+# InstMemory_inst.v
+# IR.sv
+# modelsim.ini
+# Mux_2_to_1.sv
+# PC.sv
+# Processor.sv
+# Processor.sv.bak
+# Processor_wave.do
+# RegAlu.sv
+# RegisterFile.sv
+# rtl_work
+# runProcessor.do
+# StateDefs.sv
+# StateMachine.sv
+# testProcessor.sv
+do runProcessor.do
+# turn on verbage
+# transcript on
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./StateDefs.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:57:56 on Jun 05,2025
+# vlog -reportprogress 300 -work work "+acc" ./StateDefs.sv 
+# -- Compiling package StateDefs
+# 
+# Top level modules:
+# 	--none--
+# End time: 18:57:56 on Jun 05,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+#vlog -work work +acc "./PC.sv"
+#vlog -work work +acc "./InstMemory.v"
+#vlog -work work +acc "./IR.sv"
+#vlog -work work +acc "./StateMachine.sv"
+# vlog -work work +acc "./ControlUnit.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:57:56 on Jun 05,2025
+# vlog -reportprogress 300 -work work "+acc" ./ControlUnit.sv 
+# -- Compiling package ControlUnit_sv_unit
+# -- Importing package StateDefs
+# -- Compiling module ControlUnit
+# -- Compiling module ControlUnit_tb
+# 
+# Top level modules:
+# 	ControlUnit_tb
+# End time: 18:57:56 on Jun 05,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+#vlog -work work +acc "./DataMemory.v"
+#vlog -work work +acc "./Mux_2_to_1.sv"
+#vlog -work work +acc "./ALU.sv"
+#vlog -work work +acc "./RegisterFile.sv"
+# vlog -work work +acc "./DataPath.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:57:56 on Jun 05,2025
+# vlog -reportprogress 300 -work work "+acc" ./DataPath.sv 
+# -- Compiling module DataPath
+# -- Compiling module DataPath_tb
+# 
+# Top level modules:
+# 	DataPath_tb
+# End time: 18:57:56 on Jun 05,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./testProcessor.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:57:56 on Jun 05,2025
+# vlog -reportprogress 300 -work work "+acc" ./testProcessor.sv 
+# -- Compiling module testProcessor
+# 
+# Top level modules:
+# 	testProcessor
+# End time: 18:57:56 on Jun 05,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./Processor.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 18:57:56 on Jun 05,2025
+# vlog -reportprogress 300 -work work "+acc" ./Processor.sv 
+# -- Compiling module Processor
+# -- Compiling module Processor_tb
+# 
+# Top level modules:
+# 	Processor
+# 	Processor_tb
+# End time: 18:57:56 on Jun 05,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# 
+# Call vsim to invoke simulator
+#     Make sure the last item on the line is the name of the
+#     testbench module you want to execute.
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc" -fsmdebug  testProcessor
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" -fsmdebug testProcessor 
+# Start time: 18:54:31 on Jun 05,2025
+# Loading sv_std.std
+# Loading work.testProcessor
+# Loading work.Processor
+# Loading work.StateDefs
+# Loading work.ControlUnit_sv_unit
+# Loading work.ControlUnit
+# ** Error: (vsim-3033) Instantiation of 'PC' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT/unit_CU File: ./ControlUnit.sv Line: 59
+#         Searched libraries:
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/220model
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/sgate
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera_mf
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera_lnsim
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/cycloneive
+#             C:/Users/rod/Documents/2025_spring_classes/Processor-Project/Processor/rtl_work
+#             C:/Users/rod/Documents/2025_spring_classes/Processor-Project/Processor/rtl_work
+# ** Error: (vsim-3033) Instantiation of 'InstMemory' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT/unit_CU File: ./ControlUnit.sv Line: 61
+#         Searched libraries:
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/220model
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/sgate
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera_mf
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera_lnsim
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/cycloneive
+#             C:/Users/rod/Documents/2025_spring_classes/Processor-Project/Processor/rtl_work
+#             C:/Users/rod/Documents/2025_spring_classes/Processor-Project/Processor/rtl_work
+# ** Error: (vsim-3033) Instantiation of 'IR' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT/unit_CU File: ./ControlUnit.sv Line: 63
+#         Searched libraries:
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/220model
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/sgate
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera_mf
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera_lnsim
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/cycloneive
+#             C:/Users/rod/Documents/2025_spring_classes/Processor-Project/Processor/rtl_work
+#             C:/Users/rod/Documents/2025_spring_classes/Processor-Project/Processor/rtl_work
+# ** Error: (vsim-3033) Instantiation of 'StateMachine' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT/unit_CU File: ./ControlUnit.sv Line: 65
+#         Searched libraries:
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/220model
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/sgate
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera_mf
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera_lnsim
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/cycloneive
+#             C:/Users/rod/Documents/2025_spring_classes/Processor-Project/Processor/rtl_work
+#             C:/Users/rod/Documents/2025_spring_classes/Processor-Project/Processor/rtl_work
+# Loading work.DataPath
+# ** Error: (vsim-3033) Instantiation of 'DataMemory' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT/unit_DP File: ./DataPath.sv Line: 26
+#         Searched libraries:
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/220model
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/sgate
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera_mf
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera_lnsim
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/cycloneive
+#             C:/Users/rod/Documents/2025_spring_classes/Processor-Project/Processor/rtl_work
+#             C:/Users/rod/Documents/2025_spring_classes/Processor-Project/Processor/rtl_work
+# ** Error: (vsim-3033) Instantiation of 'Mux_2_to_1' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT/unit_DP File: ./DataPath.sv Line: 36
+#         Searched libraries:
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/220model
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/sgate
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera_mf
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera_lnsim
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/cycloneive
+#             C:/Users/rod/Documents/2025_spring_classes/Processor-Project/Processor/rtl_work
+#             C:/Users/rod/Documents/2025_spring_classes/Processor-Project/Processor/rtl_work
+# ** Error: (vsim-3033) Instantiation of 'RegisterFile' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT/unit_DP File: ./DataPath.sv Line: 40
+#         Searched libraries:
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/220model
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/sgate
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera_mf
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera_lnsim
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/cycloneive
+#             C:/Users/rod/Documents/2025_spring_classes/Processor-Project/Processor/rtl_work
+#             C:/Users/rod/Documents/2025_spring_classes/Processor-Project/Processor/rtl_work
+# ** Error: (vsim-3033) Instantiation of 'ALU' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /testProcessor/DUT/unit_DP File: ./DataPath.sv Line: 47
+#         Searched libraries:
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/220model
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/sgate
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera_mf
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera_lnsim
+#             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/cycloneive
+#             C:/Users/rod/Documents/2025_spring_classes/Processor-Project/Processor/rtl_work
+#             C:/Users/rod/Documents/2025_spring_classes/Processor-Project/Processor/rtl_work
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./runProcessor.do PAUSED at line 34
+# End time: 18:58:39 on Jun 05,2025, Elapsed time: 0:04:08
+# Errors: 17, Warnings: 0

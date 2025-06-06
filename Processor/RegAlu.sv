@@ -101,6 +101,28 @@ module RegAlu_tb();
             else $error("FAILED: got %d, expected 17", DUT.unit_RF.B_Data);
 
 
+      
+
+/*
+      case (Sel)
+//   if Sel == 0 the output is 0
+         0 : Q = 16'd0;
+//   if Sel == 1 the output is A + B
+         1 : Q = A + B;
+//   if Sel == 2 the output is A – B
+         2 : Q = A - B;
+//   if Sel == 3 the output is A (pass-through)
+         3 : Q = A;
+//   if Sel == 4 the output is A ^ B
+         4 : Q = A ^ B;
+//   if Sel == 5 the output is A | B
+         5 : Q = A | B;
+//   if Sel == 6 the output is A & B
+         6 : Q = A & B;
+//   if Sel == 7 the output is A + 1;
+         7 : Q = A + 16'd1;
+      endcase
+*/
 
 
       // test add R[1] + R[2] (47 + 17)
@@ -112,8 +134,6 @@ module RegAlu_tb();
          // wait some time
          @(posedge Clk) #1;
          // ensure that Q == alu out(internal output of alu) == W_data
-         
-      $strobe("True A = %d", DUT.unit_RF.A_Data);
          assert(Q == 64) $display("yay, it worked. Q should be 64. Q == %d", Q); /// expected value
             else $error("waa waa not working Q should be 64 but it is %d", Q);
          assert((Q == DUT.unit_ALU.Q) && (Q == DUT.W_data)) $display("The output q is eqaul to W_data, Q = %d, W_Data = %d ", Q, DUT.W_data);
@@ -132,8 +152,7 @@ module RegAlu_tb();
             else $error("sadge.. it doesnt work :(");
 
          // ensure that Q == alu out(internal output of alu) == W_data
-   
-      $strobe("True A = %d", DUT.unit_RF.A_Data);
+
    $stop;
 
    
