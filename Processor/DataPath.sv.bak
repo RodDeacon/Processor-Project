@@ -4,20 +4,21 @@ RF_Ra_Addr, RF_Rb_Addr, ALU_s0
 Required output signals: ALU_inA, 
 ALU_inB, ALU_out*/
 
+// synopsys translate_off
 `timescale 1 ps / 1 ps
-module DataPath
+module DataPath#(// params
+   )
    ( // input  
    input Clk, D_wr, RF_W_en, RF_s,
    input [7:0] D_Addr, 
    input [3:0] RF_W_addr, RF_Ra_addr, RF_Rb_addr,
-   input [2:0] Alu_s0,
-   output logic [15:0] A, B, ALU_Out
+   input [2:0] Alu_s0
 );
 // localparam
-logic [15:0] R_data, W_data_mux, W_data_D, Mux0;
+logic [15:0] R_data, W_data_mux, A, B, W_data_D, Mux0, ALU_out;
 
 assign W_data_D = A;
-assign Mux0 = ALU_Out;
+assign Mux0 = ALU_out;
 
 // assignments
 // instantiate modules
@@ -43,7 +44,7 @@ assign Mux0 = ALU_Out;
 
     // instantiate alu
 
-    ALU unit_ALU (A, B, Alu_s0, ALU_Out); // also include params in the future
+    ALU unit_ALU (A, B, Alu_s0, ALU_out); // also include params in the future
 
    
 
@@ -64,10 +65,9 @@ module DataPath_tb();
    logic [7:0] D_Addr; 
    logic [3:0] RF_W_addr, RF_Ra_addr, RF_Rb_addr;
    logic [2:0] Alu_s0;
-   logic [15:0] A, B, ALU_Out; // outputs from the datapath
 
    DataPath DUT (Clk, D_wr, RF_W_en, RF_s, D_Addr, 
-      RF_W_addr, RF_Ra_addr, RF_Rb_addr, Alu_s0,A,B, ALU_Out);
+      RF_W_addr, RF_Ra_addr, RF_Rb_addr, Alu_s0);
 
    
    always begin

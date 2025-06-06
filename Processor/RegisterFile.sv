@@ -116,7 +116,7 @@ module RegisterFile_tb;
 	
 	logic [4:0] counter;
 	
-	RegisterFile DUT (clk, write, wrAddr, wrData, rdAddrA, rdDataA, rdAddrB, rdDataB);
+	RegisterFile DUT (Clk, write, wrAddr, wrData, rdAddrA, rdDataA, rdAddrB, rdDataB);
 	
 	always begin
 		Clk = 0; #10;

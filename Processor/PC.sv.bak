@@ -20,7 +20,7 @@ module PC (input Clk, Clr, Up, // up is enable
       end else if (Up == 1) begin // else if , enabled, count up 
          // Q WILL BE A VALUE BETWEEN 0 AND 9 BY DEFAULT (0 and mod_num-1)
          //mem_addr <= (mem_addr+1)%7;     // non-blocking assignments between 0 and mod_num-1
-         mem_addr <= mem_addr + 1'b1;
+         mem_addr <= mem_addr + 1;
 
 
       end else begin // else; clearn is not asserted, en is not high, Q remains the same as it was before.

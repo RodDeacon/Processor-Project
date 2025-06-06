@@ -3,12 +3,12 @@
 package StateDefs;
    // State enumeration for the control unit
    typedef enum logic [3:0] { 
-      Noop = 4'd0,   // 0  NOOP
-      Store = 4'd1,  // 1 STORE
-      Load_A = 4'd2, // 2.1 LOAD
-      Add = 4'd3,    // 3 ADD
-      Sub = 4'd4,    // 4 SUB
-      Halt = 4'd5,   // 5 HALT
+      Noop = 0,   // 0  NOOP
+      Store = 1,  // 1 STORE
+      Load_A = 2, // 2.1 LOAD
+      Add = 3,    // 3 ADD
+      Sub = 4,    // 4 SUB
+      Halt = 5,   // 5 HALT
       Load_B,     // 6 LOAD
       Init,       // 7 Init
       Fetch,      // 8 Fetch
@@ -16,7 +16,7 @@ package StateDefs;
    } State;
 // instruction enumeration for the control unit
    typedef enum logic [3:0] { 
-      _noop = 4'd0,  // 0  NOOP
+      _noop = 0,  // 0  NOOP
       _store,     // 1 STORE
       _load,      // 2 LOAD
       _add,       // 3 ADD

@@ -1,0 +1,3 @@
+Info (10281): Verilog HDL Declaration information at ControlUnit.sv(26): object "ResetN" differs only in case from object "resetN" in the same scope File: C:/Users/mahri/Processor-Project/Processor/ControlUnit.sv Line: 26
+Info (10281): Verilog HDL Declaration information at ControlUnit.sv(33): object "PC_Out" differs only in case from object "pc_out" in the same scope File: C:/Users/mahri/Processor-Project/Processor/ControlUnit.sv Line: 33
+Info (10281): Verilog HDL Declaration information at ControlUnit.sv(32): object "IR_Out" differs only in case from object "ir_out" in the same scope File: C:/Users/mahri/Processor-Project/Processor/ControlUnit.sv Line: 32

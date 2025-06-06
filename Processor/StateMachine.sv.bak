@@ -63,7 +63,6 @@ module StateMachine (
 // logic [3:0] CurrentState
 
 // State CurrentState, NextState;
-
 inst _inst; 
 
 
@@ -75,19 +74,13 @@ inst _inst;
 // combinational logic
    always_comb begin : state_logic
 
-      D_wr = 0;
-		RF_s = 0;
-		RF_W_en = 0;
-		PC_clr = 0;
-		IR_ld = 0;
-		PC_up = 0;
-		D_addr = 8'd0;
-		RF_W_addr = 4'd0;
-		RF_Ra_addr = 4'd0;
-		RF_Rb_addr = 4'd0;
-		Alu_s0 = 3'd0;
-		NextState = Init;
-		
+      D_wr = 0; 
+      RF_s = 0;
+      RF_W_en = 0;
+      PC_clr = 0;
+      IR_ld = 0;
+      PC_up = 0;
+   
       case(CurrentState)
       // noop
          Noop : NextState = Fetch;
