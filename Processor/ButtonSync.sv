@@ -3,7 +3,7 @@
 
 module ButtonSync(
 		input Bi, Clk, ResetN,
-		output Bo
+		output logic Bo
 );
 
 	localparam 	A  = 2'd0, 
@@ -27,7 +27,7 @@ module ButtonSync(
       B: begin
 			Bo = 1;
 			if (Bi) begin
-				NextState = C:
+				NextState = C;
 			end 
 			else NextState = A;
         

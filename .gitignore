@@ -1,0 +1,54 @@
+
+# Quartus database and temporary files
+db/
+incremental_db/
+output_files/
+simulation/
+*.rpt
+*.smsg
+*.qmsg
+*.summary
+*.bak
+*.hdb
+*.hcb
+*.log
+*.sci
+*.ddb
+*.hif
+*.txt
+
+# Quartus project and backup files
+*.qws
+*.qpf.bak
+*.qsf.bak
+*.bak
+*.qdf
+
+# Unwanted generated HDL files or test data
+*.tdf
+*.cmp.rdb
+*.map.rdb
+*.map.qmsg
+*.cnf.cdb
+*.cnf.hdb
+*.cbx.xml
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE/editor stuff
+.vscode/
+.idea/
+*.swp
+*.swo
+*.~*
+
+# Build outputs (if using custom Makefiles or scripts)
+build/
+*.elf
+*.hex
+*.bin
+*.out
+
