@@ -54,7 +54,49 @@ module ButtonSync(
 		else
 			State <= NextState;
   end 
-
-  
-
 endmodule 
+
+module ButtonSync_tb;
+
+// logic
+
+		logic Bi, Clk, ResetN;
+		logic Bo;
+//initalize
+ButtonSync DUT(
+		Bi, Clk, ResetN,
+		 Bo);
+// clock
+
+always begin
+	Clk = 1'b0; #10;
+	Clk = 1'b1; #10;
+end
+
+// logic
+initial begin
+	// initialize inputs
+	ResetN = 1'b0;
+	Bi = 1'b0;
+	@(negedge Clk); #1;
+
+	@(posedge Clk);
+	@(negedge Clk); #1;
+	// after the negative edge, input bi goes high
+	ResetN = 1'b1;
+	Bi = 1'b1;
+	// stays 1 for 3 cycles
+	repeat(3) @(posedge Clk);
+	
+	@(negedge Clk); #1;
+	Bi = 1'b0;
+
+	repeat(2) @(posedge Clk);
+
+	$stop;
+end
+// monitor
+initial begin
+	$display($realtime, " Bi = %b, Bo = %b", Bi, Bo);
+end
+endmodule
