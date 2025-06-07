@@ -20,17 +20,19 @@ module Project(
    assign LEDG[2] = ~KEY[2];
    assign LEDG[3] = ~KEY[3];
 
-   logic ResetN, Bo, Out;
+   logic ResetN, Bo;
    logic [15:0] IR_Out, ALU_A, ALU_B, ALU_Out, M;
    logic [6:0] PC_Out;
    logic [3:0] State, NextState;
    logic [0:6] HEX_internal [7:0]; // internal hex array
 
+   (*keep*) logic Out; // what does (*keep*) do? 
+
    // button instantiation
    ButtonSync unit_BS(KEY[2], CLOCK_50, ResetN, Bo);
 
    // key filter
-   KeyFilter unit_KF(CLOCK_50, Bo, Out);
+   KeyFilter Filter(CLOCK_50, Bo, Out);
 
    // processor
    Processor unit_P(Out, KEY[0], IR_Out, PC_Out, State, NextState, ALU_A, ALU_B, ALU_Out);
@@ -44,14 +46,15 @@ module Project(
       for ( i = 0; i < 8; i++) begin : decoders
          if (i < 4) begin// for the first four (0 to 3), will work with the IR_OUT
             Decoder decoder_inst(
-                  .V(IR_Out[((i*4)+3):(i*4)]), // index is from  
+                  .V(IR_Out[((i*4)+3):(i*4)]), // index is from i * 4 to i * 4 + 3
                   .Hex(HEX_internal[i])
             );
          
          end
          else begin// the next four (4 to 7), will work with the output of the 8_to_1_mux
+            // j = (i - 4);
             Decoder decoder_inst(
-                .V(M[((i*4)+3):(i*4)]), 
+                .V(M[(((i - 4)*4)+3):((i - 4)*4)]), // index is from (i - 4) * 4 to (i - 4) * 4 + 3
                   .Hex(HEX_internal[i])
             );
          end
