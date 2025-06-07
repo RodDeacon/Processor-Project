@@ -9,39 +9,39 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Users/rod/Documents/2025_spring_classes/Processor-Project/Processor
-vButtonSync
+vMux_8_to_1
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1749314748
+Z2 !s110 1749315565
 !i10b 1
-!s100 lm1R8f5QJ_N;?Zd0Z]`1K2
+!s100 fjDfXLIIYZ>62a;hd^A2L0
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
-I?>3]ImzJSbB12[fhS;a3T1
+IPhilIClKzL:1lK3j8]XmQ2
 Z4 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
-Z5 w1749314745
-Z6 8./ButtonSync.sv
-Z7 F./ButtonSync.sv
+Z5 w1749315560
+Z6 8./Mux_8_to_1.sv
+Z7 F./Mux_8_to_1.sv
 !i122 0
-L0 4 54
+L0 9 22
 Z8 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z9 !s108 1749314748.000000
-!s107 ./ButtonSync.sv|
-Z10 !s90 -reportprogress|300|-work|work|+acc|./ButtonSync.sv|
+Z9 !s108 1749315565.000000
+!s107 ./Mux_8_to_1.sv|
+Z10 !s90 -reportprogress|300|-work|work|+acc|./Mux_8_to_1.sv|
 !i113 1
 Z11 o-work work +acc
 Z12 tCvgOpt 0
-n@button@sync
-vButtonSync_tb
+n@mux_8_to_1
+vMux_8_to_1_tb
 R1
 R2
 !i10b 1
-!s100 gjT@TLT[Koe]jnHOmJED83
+!s100 >k1ZkB=V;k;XfGWKe594h1
 R3
-ID_YEo:@Ed]1?f4]2jOiPI2
+I;2aBHBGK3<Lolg9_C0nS@0
 R4
 S1
 R0
@@ -49,15 +49,15 @@ R5
 R6
 R7
 !i122 0
-L0 59 44
+L0 33 37
 R8
 r1
 !s85 0
 31
 R9
-Z13 !s107 ./ButtonSync.sv|
+Z13 !s107 ./Mux_8_to_1.sv|
 R10
 !i113 1
 R11
 R12
-n@button@sync_tb
+n@mux_8_to_1_tb

@@ -8,9 +8,9 @@ Describing 8-to-1 mux
 
 module Mux_8_to_1(A, B, C, D, E, F, G, H, S, M);
 
-	input A, B, C, D, E, F, G, H;	//mux inputs
+	input[15:0] A, B, C, D, E, F, G, H;	//mux inputs
 	input [2:0] S;						//3-bit select line
-	output logic M;							//mux output
+	output logic [15:0] M;							//mux output
 	
 	always_comb begin
 		case (S)
@@ -32,9 +32,9 @@ endmodule
 //testbench for 8-1 mux
 module Mux_8_to_1_tb;
 
-	logic A, B, C, D, E, F, G, H;
+	logic [15:0]A, B, C, D, E, F, G, H;
 	logic [2:0] SE;
-	logic MO;
+	logic [15:0]MO;
 	
 	Mux_8_to_1 DUT (.A(A), .B(B), .C(C), .D(D), .E(E), .F(F), .G(G), .H(H), .S(SE), .M(MO));
 	
@@ -52,8 +52,8 @@ module Mux_8_to_1_tb;
 					
 		//randomize test cases
 		for (int i=0; i<50; i++) begin
-			{A, B, C, D, E, F, G, H} = $random;
-			SE = i%3; #50;
+			{A, B, C, D, E, F, G, H} = {$random,$random,$random,$random};
+			SE = i%8; #50;
 		end
 		$stop;
 	end
