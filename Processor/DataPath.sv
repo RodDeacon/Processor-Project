@@ -34,6 +34,17 @@ assign Mux0 = ALU_Out;
 
    Mux_2_to_1 unit_MUX (W_data_mux, Mux0, RF_s, R_data);
 
+/*module RegisterFile #
+   (// params
+      parameter int data_bits = 16,                      // width of data in bits
+      parameter int reg_count = 16,                      // how many registers are in the register file
+      parameter int reg_addr_width = $clog2(reg_count))  // the bit length of register memory addresses
+   (// input / output portlist                      // write data default 16 bits 
+      input                         Clk, Write_En,   
+      input [reg_addr_width-1:0]    Write_Addr, Read_A_Addr, Read_B_Addr,   // read reg a, b, and write addresses default 4 bits
+      input [data_bits-1:0]         Write_Data,                            // write en and clk both 1 bit (pos edge clk)
+      output [data_bits-1:0]        A_Data, B_Data);                       // a and b data output both default 16 bits
+*/
 
     // instantiate reg
     RegisterFile unit_RF (Clk, RF_W_en,

@@ -28,6 +28,7 @@ import StateDefs::*; // import statedefs package in order to use enums. (wildcar
 
 
 
+
 module StateMachine (
    input Clk, ResetN, // active low reset 
    input [15:0] IR,
@@ -38,29 +39,6 @@ module StateMachine (
    output State CurrentState, NextState // for viewing purposes passed to control unit
    );
 
-// localparams
-// typedef enum logic [3:0] { 
-//    Noop = 0,    // 0  NOOP
-//    Store,   // 1 STORE
-//    Load_A,    // 2.1 LOAD
-//    Load_B,    // 2.1 LOAD
-//    Add,     // 3 ADD
-//    Sub, // 4 SUB
-//    Halt, // 5 HALT
-//    Init, // 6 Init
-//    Fetch, // 7 Fetch
-//    Decode // 8 Decode
-//  } State;
-
-//  typedef enum logic [3:0] { 
-//    _noop = 0,    // 0  NOOP
-//    _store,   // 1 STORE
-//    _load,    // 2 LOAD
-//    _add,     // 3 ADD
-//    _sub, // 4 SUB
-//    _halt // 5 HALT
-//  } inst;
-
 // wires / logic
 // logic [3:0] CurrentState
 
@@ -70,6 +48,9 @@ inst _inst;
 
 
 // assignments
+   // DEBUG
+   // logic [3:0] CurrentState_reg;
+
    assign _inst = inst'(IR[15:12]); // cast as instruction enum inst
    // assign StateOut = CurrentState;
    // only for monitoring but we can monitor in the testbench by using DUT. ..
@@ -78,6 +59,10 @@ inst _inst;
    always_comb begin : state_logic
 /*input Clk, ResetN, // active low reset 
    input [15:0] IR,*/
+   // DEBUG
+   // CurrentState_reg = CurrentState; // register for current state
+   // CurrentState = CurrentState_reg; // register for current state
+
       D_wr = 0;
 		RF_s = 0;
 		RF_W_en = 0;
@@ -102,7 +87,12 @@ inst _inst;
             RF_Ra_addr = IR[11:8];
             end 
       // load
-         Load_A   : NextState = Load_B;
+         Load_A   : begin 
+            NextState = Load_B;
+            D_addr = IR[11:4];
+            RF_s = 1;
+            RF_W_addr = IR[3:0];            
+            end
          Load_B   : begin 
             NextState = Fetch;
             D_addr = IR[11:4];
@@ -118,6 +108,7 @@ inst _inst;
             RF_Ra_addr = IR[11:8];
             RF_Rb_addr = IR[7:4];
             Alu_s0 = 3'd1; // option 1 chosen from ALU (addition)
+            RF_s = 0;
 
          end
 
@@ -130,6 +121,7 @@ inst _inst;
             RF_Ra_addr = IR[11:8];              // register a is assigned the address from IR
             RF_Rb_addr = IR[7:4];               // register b is assigned the address from IR
             Alu_s0 = 3'd2;                        // option 2 chosen from ALU (subtraction)
+            RF_s = 0;
          end         
       // halt
          Halt     : NextState = Halt;
@@ -199,7 +191,7 @@ module StateMachine_tb;
 
 // wires / logic
 
-   logic Clk;
+   logic Clk, ResetN;
    logic [15:0] IR;
    logic D_Wr, RF_s, RF_W_en, PC_clr, IR_ld, PC_up;
    logic [7:0] D_addr;
@@ -207,7 +199,7 @@ module StateMachine_tb;
    logic [2:0] Alu_s0;
    State CurrentState, NextState;
 // instantiation
-   StateMachine DUT ( Clk,
+   StateMachine DUT ( Clk,ResetN,
      IR,
     D_Wr, RF_s, RF_W_en, PC_clr, IR_ld, PC_up,
      D_addr,
@@ -217,17 +209,24 @@ module StateMachine_tb;
 
    // clock
    always begin
-      Clk = 0; #10;
-      Clk = 1; #10;
+      Clk = 0; #100;
+      Clk = 1; #100;
    end
    
     
    // testbench logic
-   initial begin
+   always begin
       inst _counter;  
       State _state;
+
       Clk = 0; // clk 0
+      ResetN = 0; // reset
+      IR = 16'h0000; // instruction register
+      @(negedge Clk) #1;
+      @(posedge Clk) #1;
       
+      ResetN = 1; // reset off
+
       // test all instructions except for load
      
       for (int i = 0; i < 6; i ++) begin
@@ -256,7 +255,6 @@ module StateMachine_tb;
       end
 
 
-      $stop;
    end
    // monitor
    initial begin

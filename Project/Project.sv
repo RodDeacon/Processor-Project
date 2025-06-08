@@ -26,7 +26,7 @@ module Project(
    logic [3:0] State, NextState;
    logic [0:6] HEX_internal [7:0]; // internal hex array
 
-   (*keep*) logic Out; // what does (*keep*) do? 
+   (*keep*) logic Out; // Keep prevents logic out from being optimized out
 
    // button instantiation
    ButtonSync unit_BS(KEY[2], CLOCK_50, ResetN, Bo);

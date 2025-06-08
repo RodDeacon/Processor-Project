@@ -22,16 +22,28 @@ ADDRESS_RADIX=HEX;
 DATA_RADIX=HEX;
 
 CONTENT BEGIN
-	00 : 7000; 	 -- init
-	01 : 21B1;   -- LOAD D[1B] → R[1]
-	02 : 22A2;   -- LOAD D[2A] → R[2]
-	03 : 4210;   -- SUB R[2] - R[1] → R[0]
-	04 : 23C1;   -- LOAD D[3C] → R[1]
-	05 : 3010;   -- ADD R[0] + R[1] → R[0]
-	06 : 27E1;   -- LOAD D[7E] → R[1]
-	07 : 4010;   -- SUB R[0] - R[1] → R[0]
-	08 : 100A;   -- STORE R[0] → RF[0A]
-	09 : 1A6A;   -- STORE RF[0A] → D[6A]
-	0A : 5000;   -- HALT
+	--00 : 7000; 	 -- init
+	01 : 21B0;   -- LOAD D[1B] → R[1]
+	02 : 22A1;   -- LOAD D[2A] → R[2]
+	03 : 23C2;   -- SUB R[2] - R[1] → R[0]
+	04 : 27E3;   -- LOAD D[3C] → R[1]
+	05 : 401A;   -- ADD R[0] + R[1] → R[0]
+	06 : 3A2A;   -- SUB R[0] - R[1] → R[0]
+	07 : 4A3A;   -- STORE R[0] → RF[0A]
+	08 : 1A6A;   -- STORE RF[0A] → D[6A]
+	09 : 5000;   -- HALT
 	[0B..7F] : 0000;  -- Fill remaining with NOOPs
 END;
+--00 : 7000; 	 -- init
+	--01 : 21B1;   -- LOAD D[1B] → R[1]
+	--02 : 22A2;   -- LOAD D[2A] → R[2]
+	--03 : 4210;   -- SUB R[2] - R[1] → R[0]
+	--04 : 23C1;   -- LOAD D[3C] → R[1]
+	--05 : 3010;   -- ADD R[0] + R[1] → R[0]
+--	06 : 27E1;   -- LOAD D[7E] → R[1]
+--	07 : 4010;   -- SUB R[0] - R[1] → R[0]
+	--08 : 100A;   -- STORE R[0] → RF[0A]
+	--09 : 1A6A;   -- STORE RF[0A] → D[6A]
+	--0A : 5000;   -- HALT
+--	[0B..7F] : 0000;  -- Fill remaining with NOOPs
+

@@ -102,7 +102,7 @@ inst _inst;
 
 // assignments
    // DEBUG
-   logic [3:0] CurrentState_reg;
+   // logic [3:0] CurrentState_reg;
 
    assign _inst = inst'(IR[15:12]); // cast as instruction enum inst
    // assign StateOut = CurrentState;
@@ -113,8 +113,8 @@ inst _inst;
 /*input Clk, ResetN, // active low reset 
    input [15:0] IR,*/
    // DEBUG
-   CurrentState_reg = CurrentState; // register for current state
-   CurrentState = CurrentState_reg; // register for current state
+   // CurrentState_reg = CurrentState; // register for current state
+   // CurrentState = CurrentState_reg; // register for current state
 
       D_wr = 0;
 		RF_s = 0;
@@ -255,13 +255,13 @@ module StateMachine_tb;
 
    // clock
    always begin
-      Clk = 0; #10;
-      Clk = 1; #10;
+      Clk = 0; #100000;
+      Clk = 1; #100000;
    end
    
     
    // testbench logic
-   initial begin
+   always begin
       inst _counter;  
       State _state;
 
