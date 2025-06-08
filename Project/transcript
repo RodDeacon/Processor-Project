@@ -18,49 +18,49 @@ do runProcessor.do
 #     their own "vlog" line below.
 # vlog -work work +acc "./StateDefs.sv"
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:33:25 on Jun 08,2025
+# Start time: 15:39:19 on Jun 08,2025
 # vlog -reportprogress 300 -work work "+acc" ./StateDefs.sv 
 # -- Compiling package StateDefs
 # 
 # Top level modules:
 # 	--none--
-# End time: 09:33:25 on Jun 08,2025, Elapsed time: 0:00:00
+# End time: 15:39:19 on Jun 08,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -work work +acc "./PC.sv"
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:33:25 on Jun 08,2025
+# Start time: 15:39:19 on Jun 08,2025
 # vlog -reportprogress 300 -work work "+acc" ./PC.sv 
 # -- Compiling module PC
 # -- Compiling module PC_tb
 # 
 # Top level modules:
 # 	PC_tb
-# End time: 09:33:25 on Jun 08,2025, Elapsed time: 0:00:00
+# End time: 15:39:19 on Jun 08,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -work work +acc "./InstMemory.v"
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:33:25 on Jun 08,2025
+# Start time: 15:39:19 on Jun 08,2025
 # vlog -reportprogress 300 -work work "+acc" ./InstMemory.v 
 # -- Compiling module InstMemory
 # 
 # Top level modules:
 # 	InstMemory
-# End time: 09:33:25 on Jun 08,2025, Elapsed time: 0:00:00
+# End time: 15:39:19 on Jun 08,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -work work +acc "./IR.sv"
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:33:25 on Jun 08,2025
+# Start time: 15:39:19 on Jun 08,2025
 # vlog -reportprogress 300 -work work "+acc" ./IR.sv 
 # -- Compiling module IR
 # -- Compiling module IR_tb
 # 
 # Top level modules:
 # 	IR_tb
-# End time: 09:33:25 on Jun 08,2025, Elapsed time: 0:00:00
+# End time: 15:39:19 on Jun 08,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -work work +acc "./StateMachine.sv"
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:33:25 on Jun 08,2025
+# Start time: 15:39:19 on Jun 08,2025
 # vlog -reportprogress 300 -work work "+acc" ./StateMachine.sv 
 # -- Compiling package StateMachine_sv_unit
 # -- Importing package StateDefs
@@ -69,11 +69,11 @@ do runProcessor.do
 # 
 # Top level modules:
 # 	StateMachine_tb
-# End time: 09:33:25 on Jun 08,2025, Elapsed time: 0:00:00
+# End time: 15:39:19 on Jun 08,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -work work +acc "./ControlUnit.sv"
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:33:26 on Jun 08,2025
+# Start time: 15:39:19 on Jun 08,2025
 # vlog -reportprogress 300 -work work "+acc" ./ControlUnit.sv 
 # -- Compiling package ControlUnit_sv_unit
 # -- Importing package StateDefs
@@ -82,21 +82,21 @@ do runProcessor.do
 # 
 # Top level modules:
 # 	ControlUnit_tb
-# End time: 09:33:26 on Jun 08,2025, Elapsed time: 0:00:00
+# End time: 15:39:19 on Jun 08,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -work work +acc "./DataMemory.v"
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:33:26 on Jun 08,2025
+# Start time: 15:39:19 on Jun 08,2025
 # vlog -reportprogress 300 -work work "+acc" ./DataMemory.v 
 # -- Compiling module DataMemory
 # 
 # Top level modules:
 # 	DataMemory
-# End time: 09:33:26 on Jun 08,2025, Elapsed time: 0:00:00
+# End time: 15:39:19 on Jun 08,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -work work +acc "./Mux_2_to_1.sv"
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:33:26 on Jun 08,2025
+# Start time: 15:39:19 on Jun 08,2025
 # vlog -reportprogress 300 -work work "+acc" ./Mux_2_to_1.sv 
 # -- Compiling module Mux_2_to_1
 # -- Compiling module Mux_2_to_1_tb
@@ -104,54 +104,183 @@ do runProcessor.do
 # Top level modules:
 # 	Mux_2_to_1
 # 	Mux_2_to_1_tb
-# End time: 09:33:26 on Jun 08,2025, Elapsed time: 0:00:00
+# End time: 15:39:19 on Jun 08,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -work work +acc "./ALU.sv"
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:33:26 on Jun 08,2025
+# Start time: 15:39:19 on Jun 08,2025
 # vlog -reportprogress 300 -work work "+acc" ./ALU.sv 
 # -- Compiling module ALU
 # -- Compiling module ALU_tb
 # 
 # Top level modules:
 # 	ALU_tb
-# End time: 09:33:26 on Jun 08,2025, Elapsed time: 0:00:00
+# ** Error: (vlog-7) Failed to open  file "C:/Users/rod/Documents/2025_spring_classes/Processor-Project/Project/rtl_work/_info" in read/write mode.
+# Invalid argument. (errno = EINVAL)
+# ** Error: (vlog-7) Failed to open info file "C:/Users/rod/Documents/2025_spring_classes/Processor-Project/Project/rtl_work/_info" in write mode.
+# Invalid argument. (errno = EINVAL)
+# End time: 15:39:19 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# ** Error: C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./runProcessor.do line 24
+# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -work work +acc "./ALU.sv""
+do runProcessor.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./StateDefs.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:40:10 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./StateDefs.sv 
+# -- Compiling package StateDefs
+# 
+# Top level modules:
+# 	--none--
+# End time: 15:40:11 on Jun 08,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./PC.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:40:11 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./PC.sv 
+# -- Compiling module PC
+# -- Compiling module PC_tb
+# 
+# Top level modules:
+# 	PC_tb
+# End time: 15:40:11 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./InstMemory.v"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:40:11 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./InstMemory.v 
+# -- Compiling module InstMemory
+# 
+# Top level modules:
+# 	InstMemory
+# End time: 15:40:11 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./IR.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:40:11 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./IR.sv 
+# -- Compiling module IR
+# -- Compiling module IR_tb
+# 
+# Top level modules:
+# 	IR_tb
+# End time: 15:40:11 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./StateMachine.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:40:11 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./StateMachine.sv 
+# -- Compiling package StateMachine_sv_unit
+# -- Importing package StateDefs
+# -- Compiling module StateMachine
+# -- Compiling module StateMachine_tb
+# 
+# Top level modules:
+# 	StateMachine_tb
+# End time: 15:40:11 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./ControlUnit.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:40:11 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./ControlUnit.sv 
+# -- Compiling package ControlUnit_sv_unit
+# -- Importing package StateDefs
+# -- Compiling module ControlUnit
+# -- Compiling module ControlUnit_tb
+# 
+# Top level modules:
+# 	ControlUnit_tb
+# End time: 15:40:11 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DataMemory.v"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:40:11 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./DataMemory.v 
+# -- Compiling module DataMemory
+# 
+# Top level modules:
+# 	DataMemory
+# End time: 15:40:11 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./Mux_2_to_1.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:40:11 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./Mux_2_to_1.sv 
+# -- Compiling module Mux_2_to_1
+# -- Compiling module Mux_2_to_1_tb
+# 
+# Top level modules:
+# 	Mux_2_to_1
+# 	Mux_2_to_1_tb
+# End time: 15:40:11 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./ALU.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:40:11 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./ALU.sv 
+# -- Compiling module ALU
+# -- Compiling module ALU_tb
+# 
+# Top level modules:
+# 	ALU_tb
+# End time: 15:40:11 on Jun 08,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -work work +acc "./RegisterFile.sv"
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:33:26 on Jun 08,2025
+# Start time: 15:40:11 on Jun 08,2025
 # vlog -reportprogress 300 -work work "+acc" ./RegisterFile.sv 
 # -- Compiling module RegisterFile
 # -- Compiling module RegisterFile_tb
 # 
 # Top level modules:
 # 	RegisterFile_tb
-# End time: 09:33:26 on Jun 08,2025, Elapsed time: 0:00:00
+# End time: 15:40:11 on Jun 08,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -work work +acc "./DataPath.sv"
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:33:26 on Jun 08,2025
+# Start time: 15:40:11 on Jun 08,2025
 # vlog -reportprogress 300 -work work "+acc" ./DataPath.sv 
 # -- Compiling module DataPath
 # -- Compiling module DataPath_tb
 # 
 # Top level modules:
 # 	DataPath_tb
-# End time: 09:33:26 on Jun 08,2025, Elapsed time: 0:00:00
+# End time: 15:40:11 on Jun 08,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -work work +acc "./testProcessor.sv"
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:33:26 on Jun 08,2025
+# Start time: 15:40:11 on Jun 08,2025
 # vlog -reportprogress 300 -work work "+acc" ./testProcessor.sv 
+# -- Compiling package testProcessor_sv_unit
+# -- Importing package StateDefs
 # -- Compiling module testProcessor
 # 
 # Top level modules:
 # 	testProcessor
-# End time: 09:33:26 on Jun 08,2025, Elapsed time: 0:00:00
+# End time: 15:40:12 on Jun 08,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -work work +acc "./Processor.sv"
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 09:33:26 on Jun 08,2025
+# Start time: 15:40:12 on Jun 08,2025
 # vlog -reportprogress 300 -work work "+acc" ./Processor.sv 
 # -- Compiling module Processor
 # -- Compiling module Processor_tb
@@ -159,7 +288,7 @@ do runProcessor.do
 # Top level modules:
 # 	Processor
 # 	Processor_tb
-# End time: 09:33:26 on Jun 08,2025, Elapsed time: 0:00:00
+# End time: 15:40:12 on Jun 08,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # 
@@ -168,7 +297,657 @@ do runProcessor.do
 #     testbench module you want to execute.
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc" -fsmdebug  testProcessor
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" -fsmdebug testProcessor 
-# Start time: 09:33:27 on Jun 08,2025
+# Start time: 15:40:12 on Jun 08,2025
+# Loading sv_std.std
+# Loading work.StateDefs
+# Loading work.testProcessor_sv_unit
+# Loading work.testProcessor
+# Loading work.Processor
+# Loading work.ControlUnit_sv_unit
+# Loading work.ControlUnit
+# Loading work.PC
+# Loading work.InstMemory
+# Loading altera_mf_ver.altsyncram
+# Loading work.IR
+# Loading work.StateMachine_sv_unit
+# Loading work.StateMachine
+# Loading work.DataPath
+# Loading work.DataMemory
+# Loading work.Mux_2_to_1
+# Loading work.RegisterFile
+# Loading work.ALU
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# WARNING: No extended dataflow license exists
+# 
+# Source the wave do file
+#     This should be the file that sets up the signal window for
+#     the module you are testing.
+# do Processor_wave.do
+# onerror {resume}
+# quietly WaveActivateNextPane {} 0
+# add wave -noupdate /testProcessor/Clk
+# add wave -noupdate /testProcessor/Reset
+# add wave -noupdate /testProcessor/Statee
+# add wave -noupdate /testProcessor/NextState
+# add wave -noupdate /testProcessor/PC_Out
+# add wave -noupdate /testProcessor/IR_Out
+# add wave -noupdate /testProcessor/DUT.unit_DP.D_Addr
+# add wave -noupdate /testProcessor/DUT.unit_DP.D_wr
+# add wave -noupdate /testProcessor/DUT.unit_DP.RF_s
+# add wave -noupdate /testProcessor/DUT.unit_DP.unit_RF.Write_Addr
+# add wave -noupdate /testProcessor/DUT.unit_DP.RF_W_en
+# add wave -noupdate /testProcessor/DUT.unit_DP.unit_RF.Read_A_Addr
+# add wave -noupdate /testProcessor/DUT.unit_DP.unit_RF.Read_B_Addr
+# add wave -noupdate /testProcessor/DUT.unit_CU.pc_up
+# add wave -noupdate /testProcessor/ALU_A
+# add wave -noupdate /testProcessor/ALU_B
+# add wave -noupdate /testProcessor/ALU_Out
+# add wave -noupdate /testProcessor/DUT.unit_DP.W_data_mux
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {0 ps} 0}
+# quietly wave cursor active 0
+# configure wave -namecolwidth 150
+# configure wave -valuecolwidth 100
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 0
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# configure wave -gridoffset 0
+# configure wave -gridperiod 1
+# configure wave -griddelta 40
+# configure wave -timeline 0
+# configure wave -timelineunits ps
+# update
+# WaveRestoreZoom {0 ps} {1 ns}
+# 
+# Set the window types
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# 
+# Run the simulation
+# run -all
+# 
+# Begin Simulation.
+# T=0 | Reset=0 | PC=xx | IR=xxxx | State=x | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=10000 | Reset=0 | PC=xx | IR=xxxx | State=7 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=30000 | Reset=0 | PC=00 | IR=xxxx | State=7 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=40000 | Reset=1 | PC=00 | IR=xxxx | State=7 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=50000 | Reset=1 | PC=00 | IR=xxxx | State=8 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=70000 | Reset=1 | PC=01 | IR=7000 | State=9 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=90000 | Reset=1 | PC=01 | IR=7000 | State=7 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=110000 | Reset=1 | PC=00 | IR=7000 | State=8 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=130000 | Reset=1 | PC=01 | IR=21b1 | State=9 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=150000 | Reset=1 | PC=01 | IR=21b1 | State=2 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=170000 | Reset=1 | PC=01 | IR=21b1 | State=6 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=190000 | Reset=1 | PC=01 | IR=21b1 | State=8 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=210000 | Reset=1 | PC=02 | IR=21b1 | State=9 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=230000 | Reset=1 | PC=02 | IR=21b1 | State=2 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=250000 | Reset=1 | PC=02 | IR=21b1 | State=6 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=270000 | Reset=1 | PC=02 | IR=21b1 | State=8 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=290000 | Reset=1 | PC=03 | IR=22a2 | State=9 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=310000 | Reset=1 | PC=03 | IR=22a2 | State=2 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=330000 | Reset=1 | PC=03 | IR=22a2 | State=6 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=350000 | Reset=1 | PC=03 | IR=22a2 | State=8 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=370000 | Reset=1 | PC=04 | IR=4210 | State=9 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=390000 | Reset=1 | PC=04 | IR=4210 | State=4 | ALU A=a04e | ALU B=21ba | ALU Out=7e94 | RF_Ra_Addr=0010 | A_Data=a04e | Read_A_Addr=2
+# T=410000 | Reset=1 | PC=04 | IR=4210 | State=8 | ALU A=7e94 | ALU B=7e94 | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=7e94 | Read_A_Addr=0
+# T=430000 | Reset=1 | PC=05 | IR=23c1 | State=9 | ALU A=7e94 | ALU B=7e94 | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=7e94 | Read_A_Addr=0
+# T=450000 | Reset=1 | PC=05 | IR=23c1 | State=2 | ALU A=7e94 | ALU B=7e94 | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=7e94 | Read_A_Addr=0
+# T=470000 | Reset=1 | PC=05 | IR=23c1 | State=6 | ALU A=7e94 | ALU B=7e94 | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=7e94 | Read_A_Addr=0
+# T=490000 | Reset=1 | PC=05 | IR=23c1 | State=8 | ALU A=7e94 | ALU B=7e94 | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=7e94 | Read_A_Addr=0
+# T=510000 | Reset=1 | PC=06 | IR=3010 | State=9 | ALU A=7e94 | ALU B=7e94 | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=7e94 | Read_A_Addr=0
+# T=530000 | Reset=1 | PC=06 | IR=3010 | State=3 | ALU A=7e94 | ALU B=71ac | ALU Out=f040 | RF_Ra_Addr=0000 | A_Data=7e94 | Read_A_Addr=0
+# T=550000 | Reset=1 | PC=06 | IR=3010 | State=8 | ALU A=f040 | ALU B=f040 | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=f040 | Read_A_Addr=0
+# T=570000 | Reset=1 | PC=07 | IR=27e1 | State=9 | ALU A=f040 | ALU B=f040 | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=f040 | Read_A_Addr=0
+# T=590000 | Reset=1 | PC=07 | IR=27e1 | State=2 | ALU A=f040 | ALU B=f040 | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=f040 | Read_A_Addr=0
+# T=610000 | Reset=1 | PC=07 | IR=27e1 | State=6 | ALU A=f040 | ALU B=f040 | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=f040 | Read_A_Addr=0
+# T=630000 | Reset=1 | PC=07 | IR=27e1 | State=8 | ALU A=f040 | ALU B=f040 | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=f040 | Read_A_Addr=0
+# T=650000 | Reset=1 | PC=08 | IR=4010 | State=9 | ALU A=f040 | ALU B=f040 | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=f040 | Read_A_Addr=0
+# T=670000 | Reset=1 | PC=08 | IR=4010 | State=4 | ALU A=f040 | ALU B=b17f | ALU Out=3ec1 | RF_Ra_Addr=0000 | A_Data=f040 | Read_A_Addr=0
+# T=690000 | Reset=1 | PC=08 | IR=4010 | State=8 | ALU A=3ec1 | ALU B=3ec1 | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=3ec1 | Read_A_Addr=0
+# T=710000 | Reset=1 | PC=09 | IR=100a | State=9 | ALU A=3ec1 | ALU B=3ec1 | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=3ec1 | Read_A_Addr=0
+# T=730000 | Reset=1 | PC=09 | IR=100a | State=1 | ALU A=3ec1 | ALU B=3ec1 | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=3ec1 | Read_A_Addr=0
+# T=750000 | Reset=1 | PC=09 | IR=100a | State=8 | ALU A=3ec1 | ALU B=3ec1 | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=3ec1 | Read_A_Addr=0
+# T=770000 | Reset=1 | PC=0a | IR=1a6a | State=9 | ALU A=3ec1 | ALU B=3ec1 | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=3ec1 | Read_A_Addr=0
+# T=790000 | Reset=1 | PC=0a | IR=1a6a | State=1 | ALU A=xxxx | ALU B=3ec1 | ALU Out=0000 | RF_Ra_Addr=1010 | A_Data=xxxx | Read_A_Addr=a
+# T=810000 | Reset=1 | PC=0a | IR=1a6a | State=8 | ALU A=3ec1 | ALU B=3ec1 | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=3ec1 | Read_A_Addr=0
+# 
+# End of Simulation.
+# 
+# True ALU A = 3ec1
+# ** Note: $stop    : ./testProcessor.sv(39)
+#    Time: 830 ns  Iteration: 2  Instance: /testProcessor
+# Break in Module testProcessor at ./testProcessor.sv line 39
+# 
+# View the entire wave display
+# wave zoomfull
+# 0 ps
+# 871500 ps
+# 
+# End
+do runProcessor.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# Error 31: Unable to unlink file "C:/Users/rod/Documents/2025_spring_classes/Processor-Project/Project/rtl_work/_lib.qdb".
+# Error 133: Unable to remove directory "C:/Users/rod/Documents/2025_spring_classes/Processor-Project/Project/rtl_work".
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./StateDefs.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:47:32 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./StateDefs.sv 
+# -- Compiling package StateDefs
+# 
+# Top level modules:
+# 	--none--
+# End time: 15:47:32 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./PC.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:47:32 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./PC.sv 
+# -- Compiling module PC
+# -- Compiling module PC_tb
+# 
+# Top level modules:
+# 	PC_tb
+# End time: 15:47:33 on Jun 08,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./InstMemory.v"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:47:33 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./InstMemory.v 
+# -- Compiling module InstMemory
+# 
+# Top level modules:
+# 	InstMemory
+# End time: 15:47:33 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./IR.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:47:33 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./IR.sv 
+# -- Compiling module IR
+# -- Compiling module IR_tb
+# 
+# Top level modules:
+# 	IR_tb
+# End time: 15:47:33 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./StateMachine.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:47:33 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./StateMachine.sv 
+# -- Compiling package StateMachine_sv_unit
+# -- Importing package StateDefs
+# -- Compiling module StateMachine
+# -- Compiling module StateMachine_tb
+# 
+# Top level modules:
+# 	StateMachine_tb
+# End time: 15:47:33 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./ControlUnit.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:47:33 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./ControlUnit.sv 
+# -- Compiling package ControlUnit_sv_unit
+# -- Importing package StateDefs
+# -- Compiling module ControlUnit
+# -- Compiling module ControlUnit_tb
+# 
+# Top level modules:
+# 	ControlUnit_tb
+# End time: 15:47:33 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DataMemory.v"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:47:33 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./DataMemory.v 
+# -- Compiling module DataMemory
+# 
+# Top level modules:
+# 	DataMemory
+# End time: 15:47:33 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./Mux_2_to_1.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:47:33 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./Mux_2_to_1.sv 
+# -- Compiling module Mux_2_to_1
+# -- Compiling module Mux_2_to_1_tb
+# 
+# Top level modules:
+# 	Mux_2_to_1
+# 	Mux_2_to_1_tb
+# End time: 15:47:33 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./ALU.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:47:33 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./ALU.sv 
+# -- Compiling module ALU
+# -- Compiling module ALU_tb
+# 
+# Top level modules:
+# 	ALU_tb
+# End time: 15:47:33 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./RegisterFile.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:47:34 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegisterFile.sv 
+# -- Compiling module RegisterFile
+# -- Compiling module RegisterFile_tb
+# 
+# Top level modules:
+# 	RegisterFile_tb
+# End time: 15:47:34 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DataPath.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:47:34 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./DataPath.sv 
+# -- Compiling module DataPath
+# -- Compiling module DataPath_tb
+# 
+# Top level modules:
+# 	DataPath_tb
+# End time: 15:47:34 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./testProcessor.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:47:34 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./testProcessor.sv 
+# -- Compiling package testProcessor_sv_unit
+# -- Importing package StateDefs
+# -- Compiling module testProcessor
+# 
+# Top level modules:
+# 	testProcessor
+# End time: 15:47:34 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./Processor.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:47:34 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./Processor.sv 
+# -- Compiling module Processor
+# -- Compiling module Processor_tb
+# 
+# Top level modules:
+# 	Processor
+# 	Processor_tb
+# End time: 15:47:34 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# 
+# Call vsim to invoke simulator
+#     Make sure the last item on the line is the name of the
+#     testbench module you want to execute.
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc" -fsmdebug  testProcessor
+# End time: 15:47:36 on Jun 08,2025, Elapsed time: 0:07:24
+# Errors: 0, Warnings: 0
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" -fsmdebug testProcessor 
+# Start time: 15:47:36 on Jun 08,2025
+# Loading sv_std.std
+# Loading work.StateDefs
+# Loading work.testProcessor_sv_unit
+# Loading work.testProcessor
+# Loading work.Processor
+# Loading work.ControlUnit_sv_unit
+# Loading work.ControlUnit
+# Loading work.PC
+# Loading work.InstMemory
+# Loading altera_mf_ver.altsyncram
+# Loading work.IR
+# Loading work.StateMachine_sv_unit
+# Loading work.StateMachine
+# Loading work.DataPath
+# Loading work.DataMemory
+# Loading work.Mux_2_to_1
+# Loading work.RegisterFile
+# Loading work.ALU
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# WARNING: No extended dataflow license exists
+# 
+# Source the wave do file
+#     This should be the file that sets up the signal window for
+#     the module you are testing.
+# do Processor_wave.do
+# onerror {resume}
+# quietly WaveActivateNextPane {} 0
+# add wave -noupdate /testProcessor/Clk
+# add wave -noupdate /testProcessor/Reset
+# add wave -noupdate /testProcessor/Statee
+# add wave -noupdate /testProcessor/NextState
+# add wave -noupdate /testProcessor/PC_Out
+# add wave -noupdate /testProcessor/IR_Out
+# add wave -noupdate /testProcessor/DUT.unit_DP.D_Addr
+# add wave -noupdate /testProcessor/DUT.unit_DP.D_wr
+# add wave -noupdate /testProcessor/DUT.unit_DP.RF_s
+# add wave -noupdate /testProcessor/DUT.unit_DP.unit_RF.Write_Addr
+# add wave -noupdate /testProcessor/DUT.unit_DP.RF_W_en
+# add wave -noupdate /testProcessor/DUT.unit_DP.unit_RF.Read_A_Addr
+# add wave -noupdate /testProcessor/DUT.unit_DP.unit_RF.Read_B_Addr
+# add wave -noupdate /testProcessor/DUT.unit_CU.pc_up
+# add wave -noupdate /testProcessor/ALU_A
+# add wave -noupdate /testProcessor/ALU_B
+# add wave -noupdate /testProcessor/ALU_Out
+# add wave -noupdate /testProcessor/DUT.unit_DP.W_data_mux
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {0 ps} 0}
+# quietly wave cursor active 0
+# configure wave -namecolwidth 150
+# configure wave -valuecolwidth 100
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 0
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# configure wave -gridoffset 0
+# configure wave -gridperiod 1
+# configure wave -griddelta 40
+# configure wave -timeline 0
+# configure wave -timelineunits ps
+# update
+# WaveRestoreZoom {0 ps} {1 ns}
+# 
+# Set the window types
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# 
+# Run the simulation
+# run -all
+# 
+# Begin Simulation.
+# T=0 | Reset=0 | PC=xx | IR=xxxx | State=x | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=xxxx | A_Data=xxxx | Read_A_Addr=x
+# T=10000 | Reset=0 | PC=xx | IR=xxxx | State=7 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=xxxx | A_Data=xxxx | Read_A_Addr=x
+# T=30000 | Reset=0 | PC=00 | IR=xxxx | State=7 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=xxxx | A_Data=xxxx | Read_A_Addr=x
+# T=40000 | Reset=1 | PC=00 | IR=xxxx | State=7 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=xxxx | A_Data=xxxx | Read_A_Addr=x
+# T=50000 | Reset=1 | PC=00 | IR=xxxx | State=8 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=xxxx | A_Data=xxxx | Read_A_Addr=x
+# T=70000 | Reset=1 | PC=01 | IR=7000 | State=9 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=xxxx | A_Data=xxxx | Read_A_Addr=x
+# T=90000 | Reset=1 | PC=01 | IR=7000 | State=7 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=xxxx | A_Data=xxxx | Read_A_Addr=x
+# T=110000 | Reset=1 | PC=00 | IR=21b1 | State=8 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=xxxx | A_Data=xxxx | Read_A_Addr=x
+# T=130000 | Reset=1 | PC=01 | IR=21b1 | State=9 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=xxxx | A_Data=xxxx | Read_A_Addr=x
+# T=150000 | Reset=1 | PC=01 | IR=7000 | State=2 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=xxxx | A_Data=xxxx | Read_A_Addr=x
+# T=170000 | Reset=1 | PC=01 | IR=21b1 | State=6 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=xxxx | A_Data=xxxx | Read_A_Addr=x
+# T=190000 | Reset=1 | PC=01 | IR=21b1 | State=8 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=xxxx | A_Data=xxxx | Read_A_Addr=x
+# T=210000 | Reset=1 | PC=02 | IR=21b1 | State=9 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=xxxx | A_Data=xxxx | Read_A_Addr=x
+# T=230000 | Reset=1 | PC=02 | IR=21b1 | State=2 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=xxxx | A_Data=xxxx | Read_A_Addr=x
+# T=250000 | Reset=1 | PC=02 | IR=22a2 | State=6 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=xxxx | A_Data=xxxx | Read_A_Addr=x
+# T=270000 | Reset=1 | PC=02 | IR=22a2 | State=8 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=xxxx | A_Data=xxxx | Read_A_Addr=x
+# T=290000 | Reset=1 | PC=03 | IR=22a2 | State=9 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=xxxx | A_Data=xxxx | Read_A_Addr=x
+# T=310000 | Reset=1 | PC=03 | IR=22a2 | State=2 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=xxxx | A_Data=xxxx | Read_A_Addr=x
+# T=330000 | Reset=1 | PC=03 | IR=4210 | State=6 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=xxxx | A_Data=xxxx | Read_A_Addr=x
+# T=350000 | Reset=1 | PC=03 | IR=4210 | State=8 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=xxxx | A_Data=xxxx | Read_A_Addr=x
+# T=370000 | Reset=1 | PC=04 | IR=4210 | State=9 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=xxxx | A_Data=xxxx | Read_A_Addr=x
+# T=390000 | Reset=1 | PC=04 | IR=4210 | State=4 | ALU A=21ba | ALU B=xxxx | ALU Out=xxxx | RF_Ra_Addr=0010 | A_Data=21ba | Read_A_Addr=2
+# T=410000 | Reset=1 | PC=04 | IR=23c1 | State=8 | ALU A=21ba | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0010 | A_Data=21ba | Read_A_Addr=2
+# T=430000 | Reset=1 | PC=05 | IR=23c1 | State=9 | ALU A=21ba | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0010 | A_Data=21ba | Read_A_Addr=2
+# T=450000 | Reset=1 | PC=05 | IR=23c1 | State=2 | ALU A=21ba | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0010 | A_Data=21ba | Read_A_Addr=2
+# T=470000 | Reset=1 | PC=05 | IR=3010 | State=6 | ALU A=21ba | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0010 | A_Data=21ba | Read_A_Addr=2
+# T=490000 | Reset=1 | PC=05 | IR=3010 | State=8 | ALU A=21ba | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0010 | A_Data=21ba | Read_A_Addr=2
+# T=510000 | Reset=1 | PC=06 | IR=3010 | State=9 | ALU A=21ba | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0010 | A_Data=21ba | Read_A_Addr=2
+# T=530000 | Reset=1 | PC=06 | IR=3010 | State=3 | ALU A=0001 | ALU B=xxxx | ALU Out=xxxx | RF_Ra_Addr=0000 | A_Data=0001 | Read_A_Addr=0
+# T=550000 | Reset=1 | PC=06 | IR=27e1 | State=8 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=570000 | Reset=1 | PC=07 | IR=27e1 | State=9 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=590000 | Reset=1 | PC=07 | IR=27e1 | State=2 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=610000 | Reset=1 | PC=07 | IR=4010 | State=6 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=630000 | Reset=1 | PC=07 | IR=4010 | State=8 | ALU A=0000 | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=0000 | Read_A_Addr=0
+# T=650000 | Reset=1 | PC=08 | IR=4010 | State=9 | ALU A=0000 | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=0000 | Read_A_Addr=0
+# T=670000 | Reset=1 | PC=08 | IR=4010 | State=4 | ALU A=0000 | ALU B=xxxx | ALU Out=xxxx | RF_Ra_Addr=0000 | A_Data=0000 | Read_A_Addr=0
+# T=690000 | Reset=1 | PC=08 | IR=100a | State=8 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=710000 | Reset=1 | PC=09 | IR=100a | State=9 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=730000 | Reset=1 | PC=09 | IR=100a | State=1 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=750000 | Reset=1 | PC=09 | IR=1a6a | State=8 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=770000 | Reset=1 | PC=0a | IR=1a6a | State=9 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=790000 | Reset=1 | PC=0a | IR=1a6a | State=1 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0011 | A_Data=xxxx | Read_A_Addr=3
+# 
+# End of Simulation.
+# 
+# True ALU A = xxxx
+# ** Note: $stop    : ./testProcessor.sv(39)
+#    Time: 810 ns  Iteration: 2  Instance: /testProcessor
+# Break in Module testProcessor at ./testProcessor.sv line 39
+# 
+# View the entire wave display
+# wave zoomfull
+# 0 ps
+# 850500 ps
+# 
+# End
+cd ..
+# Cannot change directory while a simulation is in progress.
+# Use the "quit -sim" command to unload the design first.
+quit -sim
+# End time: 15:48:14 on Jun 08,2025, Elapsed time: 0:00:38
+# Errors: 0, Warnings: 0
+cd ..
+# reading C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini
+ls
+# .git                        Project                                
+# .gitignore                  ProjectAssignment_SimpleProcessor.pdf  
+# 05-22-2025-notes.txt        Project_template.docx                  
+# ControlUnit                 Project_timeline.pdf                   
+# DATA_FROM_CHAT.odt          README.md                              
+# Datapath                    enum_crash_course.odt                  
+# Launch_ModelSim.bat         garbage                                
+# Processor                   testProcessor.sv                       
+# Processor2025_Datapath.pdf  transcript                             
+cd Processor
+# reading modelsim.ini
+ls
+# A.mif            InstMemory.v         StateMachine.sv             
+# A.ver            InstMemory_bb.v      StateMachine.sv.bak         
+# ALU.sv           InstMemory_inst.v    StateMachine_working.sv     
+# ControlUnit.sv   Launch_ModelSim.bat  db                          
+# D.mif            Mux_2_to_1.sv        incremental_db              
+# D.ver            PC.sv                modelsim.ini                
+# DataMemory.qip   Processor.qpf        output_files                
+# DataMemory.v     Processor.qsf        rtl_work                    
+# DataMemory_bb.v  Processor.qws        runProcessor.do             
+# DataPath.sv      Processor.sv         simulation                  
+# DataPath_old.sv  Processor_wave.do    testProcessor.sv            
+# Decoder.sv       Project.sv           testProcessor_corrupted.sv  
+# IR.sv            RegisterFile.sv      transcript                  
+# InstMemory.qip   StateDefs.sv         vsim.wlf                    
+do runProcessor.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./StateDefs.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:48:28 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./StateDefs.sv 
+# -- Compiling package StateDefs
+# 
+# Top level modules:
+# 	--none--
+# End time: 15:48:28 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./PC.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:48:28 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./PC.sv 
+# -- Compiling module PC
+# -- Compiling module PC_tb
+# 
+# Top level modules:
+# 	PC_tb
+# End time: 15:48:28 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./InstMemory.v"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:48:28 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./InstMemory.v 
+# -- Compiling module InstMemory
+# 
+# Top level modules:
+# 	InstMemory
+# End time: 15:48:28 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./IR.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:48:28 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./IR.sv 
+# -- Compiling module IR
+# -- Compiling module IR_tb
+# 
+# Top level modules:
+# 	IR_tb
+# End time: 15:48:28 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./StateMachine.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:48:29 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./StateMachine.sv 
+# -- Compiling package StateMachine_sv_unit
+# -- Importing package StateDefs
+# -- Compiling module StateMachine
+# -- Compiling module StateMachine_tb
+# 
+# Top level modules:
+# 	StateMachine_tb
+# End time: 15:48:29 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./ControlUnit.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:48:29 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./ControlUnit.sv 
+# -- Compiling package ControlUnit_sv_unit
+# -- Importing package StateDefs
+# -- Compiling module ControlUnit
+# -- Compiling module ControlUnit_tb
+# 
+# Top level modules:
+# 	ControlUnit_tb
+# End time: 15:48:29 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DataMemory.v"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:48:29 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./DataMemory.v 
+# -- Compiling module DataMemory
+# 
+# Top level modules:
+# 	DataMemory
+# End time: 15:48:29 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./Mux_2_to_1.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:48:29 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./Mux_2_to_1.sv 
+# -- Compiling module Mux_2_to_1
+# -- Compiling module Mux_2_to_1_tb
+# 
+# Top level modules:
+# 	Mux_2_to_1
+# 	Mux_2_to_1_tb
+# End time: 15:48:29 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./ALU.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:48:29 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./ALU.sv 
+# -- Compiling module ALU
+# -- Compiling module ALU_tb
+# 
+# Top level modules:
+# 	ALU_tb
+# End time: 15:48:29 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./RegisterFile.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:48:29 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegisterFile.sv 
+# -- Compiling module RegisterFile
+# -- Compiling module RegisterFile_tb
+# 
+# Top level modules:
+# 	RegisterFile_tb
+# End time: 15:48:29 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DataPath.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:48:29 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./DataPath.sv 
+# -- Compiling module DataPath
+# -- Compiling module DataPath_tb
+# 
+# Top level modules:
+# 	DataPath_tb
+# End time: 15:48:29 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./testProcessor.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:48:29 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./testProcessor.sv 
+# -- Compiling module testProcessor
+# 
+# Top level modules:
+# 	testProcessor
+# End time: 15:48:29 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./Processor.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:48:29 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./Processor.sv 
+# -- Compiling module Processor
+# -- Compiling module Processor_tb
+# 
+# Top level modules:
+# 	Processor
+# 	Processor_tb
+# End time: 15:48:29 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# 
+# Call vsim to invoke simulator
+#     Make sure the last item on the line is the name of the
+#     testbench module you want to execute.
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc" -fsmdebug  testProcessor
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" -fsmdebug testProcessor 
+# Start time: 15:48:29 on Jun 08,2025
 # Loading sv_std.std
 # Loading work.testProcessor
 # Loading work.Processor
@@ -198,14 +977,30 @@ do runProcessor.do
 # onerror {resume}
 # quietly WaveActivateNextPane {} 0
 # add wave -noupdate /testProcessor/Clk
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: rod  Hostname: DESKTOP-36B72F5  ProcessID: 8932
+#           Attempting to use alternate WLF file "./wlft2ni3ze".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft2ni3ze
 # add wave -noupdate /testProcessor/Reset
-# add wave -noupdate /testProcessor/State
+# add wave -noupdate /testProcessor/Statee
+# ** UI-Msg: (vish-4014) No objects found matching '/testProcessor/Statee'.
+# Executing ONERROR command at macro ./Processor_wave.do line 5
 # add wave -noupdate /testProcessor/NextState
-# add wave -noupdate /testProcessor/IR_Out
 # add wave -noupdate /testProcessor/PC_Out
+# add wave -noupdate /testProcessor/IR_Out
+# add wave -noupdate /testProcessor/DUT.unit_DP.D_Addr
+# add wave -noupdate /testProcessor/DUT.unit_DP.D_wr
+# add wave -noupdate /testProcessor/DUT.unit_DP.RF_s
+# add wave -noupdate /testProcessor/DUT.unit_DP.unit_RF.Write_Addr
+# add wave -noupdate /testProcessor/DUT.unit_DP.RF_W_en
+# add wave -noupdate /testProcessor/DUT.unit_DP.unit_RF.Read_A_Addr
+# add wave -noupdate /testProcessor/DUT.unit_DP.unit_RF.Read_B_Addr
+# add wave -noupdate /testProcessor/DUT.unit_CU.pc_up
 # add wave -noupdate /testProcessor/ALU_A
 # add wave -noupdate /testProcessor/ALU_B
 # add wave -noupdate /testProcessor/ALU_Out
+# add wave -noupdate /testProcessor/DUT.unit_DP.W_data_mux
 # TreeUpdate [SetDefaultTree]
 # WaveRestoreCursors {{Cursor 1} {0 ps} 0}
 # quietly wave cursor active 0
@@ -242,50 +1037,665 @@ do runProcessor.do
 # Time is 30000 : Reset = 0   PC_Out = 00   IR_Out = xxxx  State = 7  ALU A = xxxx  ALU B = xxxx ALU Out = 0000  RA Address = 0000
 # Time is 40000 : Reset = 1   PC_Out = 00   IR_Out = xxxx  State = 7  ALU A = xxxx  ALU B = xxxx ALU Out = 0000  RA Address = 0000
 # Time is 50000 : Reset = 1   PC_Out = 00   IR_Out = xxxx  State = 8  ALU A = xxxx  ALU B = xxxx ALU Out = 0000  RA Address = 0000
-# Time is 70000 : Reset = 1   PC_Out = 01   IR_Out = 7000  State = 9  ALU A = xxxx  ALU B = xxxx ALU Out = 0000  RA Address = 0000
-# Time is 90000 : Reset = 1   PC_Out = 01   IR_Out = 7000  State = 7  ALU A = xxxx  ALU B = xxxx ALU Out = 0000  RA Address = 0000
-# Time is 110000 : Reset = 1   PC_Out = 00   IR_Out = 7000  State = 8  ALU A = xxxx  ALU B = xxxx ALU Out = 0000  RA Address = 0000
-# Time is 130000 : Reset = 1   PC_Out = 01   IR_Out = 21b1  State = 9  ALU A = xxxx  ALU B = xxxx ALU Out = 0000  RA Address = 0000
-# Time is 150000 : Reset = 1   PC_Out = 01   IR_Out = 21b1  State = 2  ALU A = xxxx  ALU B = xxxx ALU Out = 0000  RA Address = 0000
-# Time is 170000 : Reset = 1   PC_Out = 01   IR_Out = 21b1  State = 6  ALU A = xxxx  ALU B = xxxx ALU Out = 0000  RA Address = 0000
-# Time is 190000 : Reset = 1   PC_Out = 01   IR_Out = 21b1  State = 8  ALU A = xxxx  ALU B = xxxx ALU Out = 0000  RA Address = 0000
-# Time is 210000 : Reset = 1   PC_Out = 02   IR_Out = 21b1  State = 9  ALU A = xxxx  ALU B = xxxx ALU Out = 0000  RA Address = 0000
-# Time is 230000 : Reset = 1   PC_Out = 02   IR_Out = 21b1  State = 2  ALU A = xxxx  ALU B = xxxx ALU Out = 0000  RA Address = 0000
-# Time is 250000 : Reset = 1   PC_Out = 02   IR_Out = 21b1  State = 6  ALU A = xxxx  ALU B = xxxx ALU Out = 0000  RA Address = 0000
-# Time is 270000 : Reset = 1   PC_Out = 02   IR_Out = 21b1  State = 8  ALU A = xxxx  ALU B = xxxx ALU Out = 0000  RA Address = 0000
-# Time is 290000 : Reset = 1   PC_Out = 03   IR_Out = 22a2  State = 9  ALU A = xxxx  ALU B = xxxx ALU Out = 0000  RA Address = 0000
-# Time is 310000 : Reset = 1   PC_Out = 03   IR_Out = 22a2  State = 2  ALU A = xxxx  ALU B = xxxx ALU Out = 0000  RA Address = 0000
-# Time is 330000 : Reset = 1   PC_Out = 03   IR_Out = 22a2  State = 6  ALU A = xxxx  ALU B = xxxx ALU Out = 0000  RA Address = 0000
-# Time is 350000 : Reset = 1   PC_Out = 03   IR_Out = 22a2  State = 8  ALU A = xxxx  ALU B = xxxx ALU Out = 0000  RA Address = 0000
-# Time is 370000 : Reset = 1   PC_Out = 04   IR_Out = 4210  State = 9  ALU A = xxxx  ALU B = xxxx ALU Out = 0000  RA Address = 0000
-# Time is 390000 : Reset = 1   PC_Out = 04   IR_Out = 4210  State = 4  ALU A = 0000  ALU B = 0000 ALU Out = 0000  RA Address = 0010
-# Time is 410000 : Reset = 1   PC_Out = 04   IR_Out = 4210  State = 8  ALU A = 0000  ALU B = 0000 ALU Out = 0000  RA Address = 0000
-# Time is 430000 : Reset = 1   PC_Out = 05   IR_Out = 23c1  State = 9  ALU A = 0000  ALU B = 0000 ALU Out = 0000  RA Address = 0000
-# Time is 450000 : Reset = 1   PC_Out = 05   IR_Out = 23c1  State = 2  ALU A = 0000  ALU B = 0000 ALU Out = 0000  RA Address = 0000
-# Time is 470000 : Reset = 1   PC_Out = 05   IR_Out = 23c1  State = 6  ALU A = 0000  ALU B = 0000 ALU Out = 0000  RA Address = 0000
-# Time is 490000 : Reset = 1   PC_Out = 05   IR_Out = 23c1  State = 8  ALU A = 0000  ALU B = 0000 ALU Out = 0000  RA Address = 0000
-# Time is 510000 : Reset = 1   PC_Out = 06   IR_Out = 3010  State = 9  ALU A = 0000  ALU B = 0000 ALU Out = 0000  RA Address = 0000
-# Time is 530000 : Reset = 1   PC_Out = 06   IR_Out = 3010  State = 3  ALU A = 0000  ALU B = 0000 ALU Out = 0000  RA Address = 0000
-# Time is 550000 : Reset = 1   PC_Out = 06   IR_Out = 3010  State = 8  ALU A = 0000  ALU B = 0000 ALU Out = 0000  RA Address = 0000
-# Time is 570000 : Reset = 1   PC_Out = 07   IR_Out = 27e1  State = 9  ALU A = 0000  ALU B = 0000 ALU Out = 0000  RA Address = 0000
-# Time is 590000 : Reset = 1   PC_Out = 07   IR_Out = 27e1  State = 2  ALU A = 0000  ALU B = 0000 ALU Out = 0000  RA Address = 0000
-# Time is 610000 : Reset = 1   PC_Out = 07   IR_Out = 27e1  State = 6  ALU A = 0000  ALU B = 0000 ALU Out = 0000  RA Address = 0000
-# Time is 630000 : Reset = 1   PC_Out = 07   IR_Out = 27e1  State = 8  ALU A = 0000  ALU B = 0000 ALU Out = 0000  RA Address = 0000
-# Time is 650000 : Reset = 1   PC_Out = 08   IR_Out = 4010  State = 9  ALU A = 0000  ALU B = 0000 ALU Out = 0000  RA Address = 0000
-# Time is 670000 : Reset = 1   PC_Out = 08   IR_Out = 4010  State = 4  ALU A = 0000  ALU B = 0000 ALU Out = 0000  RA Address = 0000
-# Time is 690000 : Reset = 1   PC_Out = 08   IR_Out = 4010  State = 8  ALU A = 0000  ALU B = 0000 ALU Out = 0000  RA Address = 0000
-# Time is 710000 : Reset = 1   PC_Out = 09   IR_Out = 100a  State = 9  ALU A = 0000  ALU B = 0000 ALU Out = 0000  RA Address = 0000
-# Time is 730000 : Reset = 1   PC_Out = 09   IR_Out = 100a  State = 1  ALU A = 0000  ALU B = 0000 ALU Out = 0000  RA Address = 0000
-# Time is 750000 : Reset = 1   PC_Out = 09   IR_Out = 100a  State = 8  ALU A = 0000  ALU B = 0000 ALU Out = 0000  RA Address = 0000
-# Time is 770000 : Reset = 1   PC_Out = 0a   IR_Out = 1a6a  State = 9  ALU A = 0000  ALU B = 0000 ALU Out = 0000  RA Address = 0000
-# Time is 790000 : Reset = 1   PC_Out = 0a   IR_Out = 1a6a  State = 1  ALU A = xxxx  ALU B = 0000 ALU Out = 0000  RA Address = 1010
-# Time is 810000 : Reset = 1   PC_Out = 0a   IR_Out = 1a6a  State = 8  ALU A = 0000  ALU B = 0000 ALU Out = 0000  RA Address = 0000
+# Time is 70000 : Reset = 1   PC_Out = 01   IR_Out = 0000  State = 9  ALU A = xxxx  ALU B = xxxx ALU Out = 0000  RA Address = 0000
+# Time is 90000 : Reset = 1   PC_Out = 01   IR_Out = 0000  State = 0  ALU A = xxxx  ALU B = xxxx ALU Out = 0000  RA Address = 0000
+# Time is 110000 : Reset = 1   PC_Out = 01   IR_Out = 0000  State = 8  ALU A = xxxx  ALU B = xxxx ALU Out = 0000  RA Address = 0000
+# Time is 130000 : Reset = 1   PC_Out = 02   IR_Out = 21b0  State = 9  ALU A = xxxx  ALU B = xxxx ALU Out = 0000  RA Address = 0000
+# Time is 150000 : Reset = 1   PC_Out = 02   IR_Out = 21b0  State = 2  ALU A = xxxx  ALU B = xxxx ALU Out = 0000  RA Address = 0000
+# Time is 170000 : Reset = 1   PC_Out = 02   IR_Out = 21b0  State = 6  ALU A = xxxx  ALU B = xxxx ALU Out = 0000  RA Address = 0000
+# Time is 190000 : Reset = 1   PC_Out = 02   IR_Out = 21b0  State = 8  ALU A = 21ba  ALU B = 21ba ALU Out = 0000  RA Address = 0000
+# Time is 210000 : Reset = 1   PC_Out = 03   IR_Out = 22a1  State = 9  ALU A = 21ba  ALU B = 21ba ALU Out = 0000  RA Address = 0000
+# Time is 230000 : Reset = 1   PC_Out = 03   IR_Out = 22a1  State = 2  ALU A = 21ba  ALU B = 21ba ALU Out = 0000  RA Address = 0000
+# Time is 250000 : Reset = 1   PC_Out = 03   IR_Out = 22a1  State = 6  ALU A = 21ba  ALU B = 21ba ALU Out = 0000  RA Address = 0000
+# Time is 270000 : Reset = 1   PC_Out = 03   IR_Out = 22a1  State = 8  ALU A = 21ba  ALU B = 21ba ALU Out = 0000  RA Address = 0000
+# Time is 290000 : Reset = 1   PC_Out = 04   IR_Out = 23c2  State = 9  ALU A = 21ba  ALU B = 21ba ALU Out = 0000  RA Address = 0000
+# Time is 310000 : Reset = 1   PC_Out = 04   IR_Out = 23c2  State = 2  ALU A = 21ba  ALU B = 21ba ALU Out = 0000  RA Address = 0000
+# Time is 330000 : Reset = 1   PC_Out = 04   IR_Out = 23c2  State = 6  ALU A = 21ba  ALU B = 21ba ALU Out = 0000  RA Address = 0000
+# Time is 350000 : Reset = 1   PC_Out = 04   IR_Out = 23c2  State = 8  ALU A = 21ba  ALU B = 21ba ALU Out = 0000  RA Address = 0000
+# Time is 370000 : Reset = 1   PC_Out = 05   IR_Out = 27e3  State = 9  ALU A = 21ba  ALU B = 21ba ALU Out = 0000  RA Address = 0000
+# Time is 390000 : Reset = 1   PC_Out = 05   IR_Out = 27e3  State = 2  ALU A = 21ba  ALU B = 21ba ALU Out = 0000  RA Address = 0000
+# Time is 410000 : Reset = 1   PC_Out = 05   IR_Out = 27e3  State = 6  ALU A = 21ba  ALU B = 21ba ALU Out = 0000  RA Address = 0000
+# Time is 430000 : Reset = 1   PC_Out = 05   IR_Out = 27e3  State = 8  ALU A = 21ba  ALU B = 21ba ALU Out = 0000  RA Address = 0000
+# Time is 450000 : Reset = 1   PC_Out = 06   IR_Out = 401a  State = 9  ALU A = 21ba  ALU B = 21ba ALU Out = 0000  RA Address = 0000
+# Time is 470000 : Reset = 1   PC_Out = 06   IR_Out = 401a  State = 4  ALU A = 21ba  ALU B = a04e ALU Out = 816c  RA Address = 0000
+# Time is 490000 : Reset = 1   PC_Out = 06   IR_Out = 401a  State = 8  ALU A = 21ba  ALU B = 21ba ALU Out = 0000  RA Address = 0000
+# Time is 510000 : Reset = 1   PC_Out = 07   IR_Out = 3a2a  State = 9  ALU A = 21ba  ALU B = 21ba ALU Out = 0000  RA Address = 0000
+# Time is 530000 : Reset = 1   PC_Out = 07   IR_Out = 3a2a  State = 3  ALU A = 816c  ALU B = 71ac ALU Out = f318  RA Address = 1010
+# Time is 550000 : Reset = 1   PC_Out = 07   IR_Out = 3a2a  State = 8  ALU A = 21ba  ALU B = 21ba ALU Out = 0000  RA Address = 0000
+# Time is 570000 : Reset = 1   PC_Out = 08   IR_Out = 4a3a  State = 9  ALU A = 21ba  ALU B = 21ba ALU Out = 0000  RA Address = 0000
+# Time is 590000 : Reset = 1   PC_Out = 08   IR_Out = 4a3a  State = 4  ALU A = f318  ALU B = b17f ALU Out = 4199  RA Address = 1010
+# Time is 610000 : Reset = 1   PC_Out = 08   IR_Out = 4a3a  State = 8  ALU A = 21ba  ALU B = 21ba ALU Out = 0000  RA Address = 0000
+# Time is 630000 : Reset = 1   PC_Out = 09   IR_Out = 1a6a  State = 9  ALU A = 21ba  ALU B = 21ba ALU Out = 0000  RA Address = 0000
+# Time is 650000 : Reset = 1   PC_Out = 09   IR_Out = 1a6a  State = 1  ALU A = 4199  ALU B = 21ba ALU Out = 0000  RA Address = 1010
+# Time is 670000 : Reset = 1   PC_Out = 09   IR_Out = 1a6a  State = 8  ALU A = 21ba  ALU B = 21ba ALU Out = 0000  RA Address = 0000
 # 
 # End of Simulation.
 # 
 # ** Note: $stop    : ./testProcessor.sv(32)
-#    Time: 830 ns  Iteration: 2  Instance: /testProcessor
+#    Time: 690 ns  Iteration: 2  Instance: /testProcessor
 # Break in Module testProcessor at ./testProcessor.sv line 32
+# 
+# View the entire wave display
+# wave zoomfull
+# 0 ps
+# 724500 ps
+# 
+# End
+run -step
+# Error opening C:/Users/rod/Documents/2025_spring_classes/Processor-Project/Processor/altera/verilog/src/altera_mf.v
+# Path name 'C:/Users/rod/Documents/2025_spring_classes/Processor-Project/Processor/altera/verilog/src/altera_mf.v' doesn't exist.
+do runProcessor.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./StateDefs.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:51:38 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./StateDefs.sv 
+# -- Compiling package StateDefs
+# 
+# Top level modules:
+# 	--none--
+# End time: 15:51:38 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./PC.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:51:38 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./PC.sv 
+# -- Compiling module PC
+# -- Compiling module PC_tb
+# 
+# Top level modules:
+# 	PC_tb
+# End time: 15:51:38 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./InstMemory.v"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:51:38 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./InstMemory.v 
+# -- Compiling module InstMemory
+# 
+# Top level modules:
+# 	InstMemory
+# End time: 15:51:38 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./IR.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:51:38 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./IR.sv 
+# -- Compiling module IR
+# -- Compiling module IR_tb
+# 
+# Top level modules:
+# 	IR_tb
+# End time: 15:51:38 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./StateMachine.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:51:38 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./StateMachine.sv 
+# -- Compiling package StateMachine_sv_unit
+# -- Importing package StateDefs
+# -- Compiling module StateMachine
+# -- Compiling module StateMachine_tb
+# 
+# Top level modules:
+# 	StateMachine_tb
+# End time: 15:51:38 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./ControlUnit.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:51:38 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./ControlUnit.sv 
+# -- Compiling package ControlUnit_sv_unit
+# -- Importing package StateDefs
+# -- Compiling module ControlUnit
+# -- Compiling module ControlUnit_tb
+# 
+# Top level modules:
+# 	ControlUnit_tb
+# End time: 15:51:38 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DataMemory.v"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:51:38 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./DataMemory.v 
+# -- Compiling module DataMemory
+# 
+# Top level modules:
+# 	DataMemory
+# End time: 15:51:38 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./Mux_2_to_1.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:51:38 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./Mux_2_to_1.sv 
+# -- Compiling module Mux_2_to_1
+# -- Compiling module Mux_2_to_1_tb
+# 
+# Top level modules:
+# 	Mux_2_to_1
+# 	Mux_2_to_1_tb
+# End time: 15:51:38 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./ALU.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:51:39 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./ALU.sv 
+# -- Compiling module ALU
+# -- Compiling module ALU_tb
+# 
+# Top level modules:
+# 	ALU_tb
+# End time: 15:51:39 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./RegisterFile.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:51:39 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegisterFile.sv 
+# -- Compiling module RegisterFile
+# -- Compiling module RegisterFile_tb
+# 
+# Top level modules:
+# 	RegisterFile_tb
+# End time: 15:51:39 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DataPath.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:51:39 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./DataPath.sv 
+# -- Compiling module DataPath
+# -- Compiling module DataPath_tb
+# 
+# Top level modules:
+# 	DataPath_tb
+# End time: 15:51:39 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./testProcessor.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:51:39 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./testProcessor.sv 
+# -- Compiling module testProcessor
+# 
+# Top level modules:
+# 	testProcessor
+# End time: 15:51:39 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./Processor.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:51:39 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./Processor.sv 
+# -- Compiling module Processor
+# -- Compiling module Processor_tb
+# 
+# Top level modules:
+# 	Processor
+# 	Processor_tb
+# End time: 15:51:39 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# 
+# Call vsim to invoke simulator
+#     Make sure the last item on the line is the name of the
+#     testbench module you want to execute.
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc" -fsmdebug  testProcessor
+# End time: 15:51:41 on Jun 08,2025, Elapsed time: 0:03:12
+# Errors: 0, Warnings: 2
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" -fsmdebug testProcessor 
+# Start time: 15:51:41 on Jun 08,2025
+# Loading sv_std.std
+# Loading work.testProcessor
+# Loading work.Processor
+# Loading work.StateDefs
+# Loading work.ControlUnit_sv_unit
+# Loading work.ControlUnit
+# Loading work.PC
+# Loading work.InstMemory
+# Loading altera_mf_ver.altsyncram
+# Loading work.IR
+# Loading work.StateMachine_sv_unit
+# Loading work.StateMachine
+# Loading work.DataPath
+# Loading work.DataMemory
+# Loading work.Mux_2_to_1
+# Loading work.RegisterFile
+# Loading work.ALU
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# WARNING: No extended dataflow license exists
+# 
+# Source the wave do file
+#     This should be the file that sets up the signal window for
+#     the module you are testing.
+# do Processor_wave.do
+# onerror {resume}
+# quietly WaveActivateNextPane {} 0
+# add wave -noupdate /testProcessor/Clk
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: rod  Hostname: DESKTOP-36B72F5  ProcessID: 8932
+#           Attempting to use alternate WLF file "./wlftzjakj8".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftzjakj8
+# add wave -noupdate /testProcessor/Reset
+# add wave -noupdate /testProcessor/Statee
+# ** UI-Msg: (vish-4014) No objects found matching '/testProcessor/Statee'.
+# Executing ONERROR command at macro ./Processor_wave.do line 5
+# add wave -noupdate /testProcessor/NextState
+# add wave -noupdate /testProcessor/PC_Out
+# add wave -noupdate /testProcessor/IR_Out
+# add wave -noupdate /testProcessor/DUT.unit_DP.D_Addr
+# add wave -noupdate /testProcessor/DUT.unit_DP.D_wr
+# add wave -noupdate /testProcessor/DUT.unit_DP.RF_s
+# add wave -noupdate /testProcessor/DUT.unit_DP.unit_RF.Write_Addr
+# add wave -noupdate /testProcessor/DUT.unit_DP.RF_W_en
+# add wave -noupdate /testProcessor/DUT.unit_DP.unit_RF.Read_A_Addr
+# add wave -noupdate /testProcessor/DUT.unit_DP.unit_RF.Read_B_Addr
+# add wave -noupdate /testProcessor/DUT.unit_CU.pc_up
+# add wave -noupdate /testProcessor/ALU_A
+# add wave -noupdate /testProcessor/ALU_B
+# add wave -noupdate /testProcessor/ALU_Out
+# add wave -noupdate /testProcessor/DUT.unit_DP.W_data_mux
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {0 ps} 0}
+# quietly wave cursor active 0
+# configure wave -namecolwidth 150
+# configure wave -valuecolwidth 100
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 0
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# configure wave -gridoffset 0
+# configure wave -gridperiod 1
+# configure wave -griddelta 40
+# configure wave -timeline 0
+# configure wave -timelineunits ps
+# update
+# WaveRestoreZoom {0 ps} {1 ns}
+# 
+# Set the window types
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# 
+# Run the simulation
+# run -all
+# 
+# Begin Simulation.
+# Time is 0 : Reset = 0   PC_Out = xx   IR_Out = xxxx  State = x  ALU A = xxxx  ALU B = xxxx ALU Out = 0000  RA Address = 0000
+# Time is 10000 : Reset = 0   PC_Out = xx   IR_Out = xxxx  State = 7  ALU A = xxxx  ALU B = xxxx ALU Out = 0000  RA Address = 0000
+# Time is 30000 : Reset = 0   PC_Out = 00   IR_Out = xxxx  State = 7  ALU A = xxxx  ALU B = xxxx ALU Out = 0000  RA Address = 0000
+# Time is 40000 : Reset = 1   PC_Out = 00   IR_Out = xxxx  State = 7  ALU A = xxxx  ALU B = xxxx ALU Out = 0000  RA Address = 0000
+# Time is 50000 : Reset = 1   PC_Out = 00   IR_Out = xxxx  State = 8  ALU A = xxxx  ALU B = xxxx ALU Out = 0000  RA Address = 0000
+# Time is 70000 : Reset = 1   PC_Out = 01   IR_Out = 0000  State = 9  ALU A = xxxx  ALU B = xxxx ALU Out = 0000  RA Address = 0000
+# Time is 90000 : Reset = 1   PC_Out = 01   IR_Out = 0000  State = 0  ALU A = xxxx  ALU B = xxxx ALU Out = 0000  RA Address = 0000
+# Time is 110000 : Reset = 1   PC_Out = 01   IR_Out = 0000  State = 8  ALU A = xxxx  ALU B = xxxx ALU Out = 0000  RA Address = 0000
+# Time is 130000 : Reset = 1   PC_Out = 02   IR_Out = 21b0  State = 9  ALU A = xxxx  ALU B = xxxx ALU Out = 0000  RA Address = 0000
+# Time is 150000 : Reset = 1   PC_Out = 02   IR_Out = 21b0  State = 2  ALU A = xxxx  ALU B = xxxx ALU Out = 0000  RA Address = 0000
+# Time is 170000 : Reset = 1   PC_Out = 02   IR_Out = 21b0  State = 6  ALU A = xxxx  ALU B = xxxx ALU Out = 0000  RA Address = 0000
+# Time is 190000 : Reset = 1   PC_Out = 02   IR_Out = 21b0  State = 8  ALU A = 21ba  ALU B = 21ba ALU Out = 0000  RA Address = 0000
+# Time is 210000 : Reset = 1   PC_Out = 03   IR_Out = 22a1  State = 9  ALU A = 21ba  ALU B = 21ba ALU Out = 0000  RA Address = 0000
+# Time is 230000 : Reset = 1   PC_Out = 03   IR_Out = 22a1  State = 2  ALU A = 21ba  ALU B = 21ba ALU Out = 0000  RA Address = 0000
+# Time is 250000 : Reset = 1   PC_Out = 03   IR_Out = 22a1  State = 6  ALU A = 21ba  ALU B = 21ba ALU Out = 0000  RA Address = 0000
+# Time is 270000 : Reset = 1   PC_Out = 03   IR_Out = 22a1  State = 8  ALU A = 21ba  ALU B = 21ba ALU Out = 0000  RA Address = 0000
+# Time is 290000 : Reset = 1   PC_Out = 04   IR_Out = 23c2  State = 9  ALU A = 21ba  ALU B = 21ba ALU Out = 0000  RA Address = 0000
+# Time is 310000 : Reset = 1   PC_Out = 04   IR_Out = 23c2  State = 2  ALU A = 21ba  ALU B = 21ba ALU Out = 0000  RA Address = 0000
+# Time is 330000 : Reset = 1   PC_Out = 04   IR_Out = 23c2  State = 6  ALU A = 21ba  ALU B = 21ba ALU Out = 0000  RA Address = 0000
+# Time is 350000 : Reset = 1   PC_Out = 04   IR_Out = 23c2  State = 8  ALU A = 21ba  ALU B = 21ba ALU Out = 0000  RA Address = 0000
+# Time is 370000 : Reset = 1   PC_Out = 05   IR_Out = 27e3  State = 9  ALU A = 21ba  ALU B = 21ba ALU Out = 0000  RA Address = 0000
+# Time is 390000 : Reset = 1   PC_Out = 05   IR_Out = 27e3  State = 2  ALU A = 21ba  ALU B = 21ba ALU Out = 0000  RA Address = 0000
+# Time is 410000 : Reset = 1   PC_Out = 05   IR_Out = 27e3  State = 6  ALU A = 21ba  ALU B = 21ba ALU Out = 0000  RA Address = 0000
+# Time is 430000 : Reset = 1   PC_Out = 05   IR_Out = 27e3  State = 8  ALU A = 21ba  ALU B = 21ba ALU Out = 0000  RA Address = 0000
+# Time is 450000 : Reset = 1   PC_Out = 06   IR_Out = 401a  State = 9  ALU A = 21ba  ALU B = 21ba ALU Out = 0000  RA Address = 0000
+# Time is 470000 : Reset = 1   PC_Out = 06   IR_Out = 401a  State = 4  ALU A = 21ba  ALU B = a04e ALU Out = 816c  RA Address = 0000
+# Time is 490000 : Reset = 1   PC_Out = 06   IR_Out = 401a  State = 8  ALU A = 21ba  ALU B = 21ba ALU Out = 0000  RA Address = 0000
+# Time is 510000 : Reset = 1   PC_Out = 07   IR_Out = 3a2a  State = 9  ALU A = 21ba  ALU B = 21ba ALU Out = 0000  RA Address = 0000
+# Time is 530000 : Reset = 1   PC_Out = 07   IR_Out = 3a2a  State = 3  ALU A = 816c  ALU B = 71ac ALU Out = f318  RA Address = 1010
+# Time is 550000 : Reset = 1   PC_Out = 07   IR_Out = 3a2a  State = 8  ALU A = 21ba  ALU B = 21ba ALU Out = 0000  RA Address = 0000
+# Time is 570000 : Reset = 1   PC_Out = 08   IR_Out = 4a3a  State = 9  ALU A = 21ba  ALU B = 21ba ALU Out = 0000  RA Address = 0000
+# Time is 590000 : Reset = 1   PC_Out = 08   IR_Out = 4a3a  State = 4  ALU A = f318  ALU B = b17f ALU Out = 4199  RA Address = 1010
+# Time is 610000 : Reset = 1   PC_Out = 08   IR_Out = 4a3a  State = 8  ALU A = 21ba  ALU B = 21ba ALU Out = 0000  RA Address = 0000
+# Time is 630000 : Reset = 1   PC_Out = 09   IR_Out = 1a6a  State = 9  ALU A = 21ba  ALU B = 21ba ALU Out = 0000  RA Address = 0000
+# Time is 650000 : Reset = 1   PC_Out = 09   IR_Out = 1a6a  State = 1  ALU A = 4199  ALU B = 21ba ALU Out = 0000  RA Address = 1010
+# Time is 670000 : Reset = 1   PC_Out = 09   IR_Out = 1a6a  State = 8  ALU A = 21ba  ALU B = 21ba ALU Out = 0000  RA Address = 0000
+# 
+# End of Simulation.
+# 
+# ** Note: $stop    : ./testProcessor.sv(32)
+#    Time: 690 ns  Iteration: 2  Instance: /testProcessor
+# Break in Module testProcessor at ./testProcessor.sv line 32
+# 
+# View the entire wave display
+# wave zoomfull
+# 0 ps
+# 724500 ps
+# 
+# End
+quit -sim
+# End time: 15:51:49 on Jun 08,2025, Elapsed time: 0:00:08
+# Errors: 0, Warnings: 2
+cd ..
+# reading C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini
+cd Project
+# reading modelsim.ini
+do runProcessor.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./StateDefs.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:51:56 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./StateDefs.sv 
+# -- Compiling package StateDefs
+# 
+# Top level modules:
+# 	--none--
+# End time: 15:51:56 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./PC.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:51:57 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./PC.sv 
+# -- Compiling module PC
+# -- Compiling module PC_tb
+# 
+# Top level modules:
+# 	PC_tb
+# End time: 15:51:57 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./InstMemory.v"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:51:57 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./InstMemory.v 
+# -- Compiling module InstMemory
+# 
+# Top level modules:
+# 	InstMemory
+# End time: 15:51:57 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./IR.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:51:57 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./IR.sv 
+# -- Compiling module IR
+# -- Compiling module IR_tb
+# 
+# Top level modules:
+# 	IR_tb
+# End time: 15:51:57 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./StateMachine.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:51:57 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./StateMachine.sv 
+# -- Compiling package StateMachine_sv_unit
+# -- Importing package StateDefs
+# -- Compiling module StateMachine
+# -- Compiling module StateMachine_tb
+# 
+# Top level modules:
+# 	StateMachine_tb
+# End time: 15:51:57 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./ControlUnit.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:51:57 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./ControlUnit.sv 
+# -- Compiling package ControlUnit_sv_unit
+# -- Importing package StateDefs
+# -- Compiling module ControlUnit
+# -- Compiling module ControlUnit_tb
+# 
+# Top level modules:
+# 	ControlUnit_tb
+# End time: 15:51:57 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DataMemory.v"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:51:57 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./DataMemory.v 
+# -- Compiling module DataMemory
+# 
+# Top level modules:
+# 	DataMemory
+# End time: 15:51:57 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./Mux_2_to_1.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:51:57 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./Mux_2_to_1.sv 
+# -- Compiling module Mux_2_to_1
+# -- Compiling module Mux_2_to_1_tb
+# 
+# Top level modules:
+# 	Mux_2_to_1
+# 	Mux_2_to_1_tb
+# End time: 15:51:57 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./ALU.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:51:57 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./ALU.sv 
+# -- Compiling module ALU
+# -- Compiling module ALU_tb
+# 
+# Top level modules:
+# 	ALU_tb
+# End time: 15:51:57 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./RegisterFile.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:51:57 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegisterFile.sv 
+# -- Compiling module RegisterFile
+# -- Compiling module RegisterFile_tb
+# 
+# Top level modules:
+# 	RegisterFile_tb
+# End time: 15:51:57 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DataPath.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:51:57 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./DataPath.sv 
+# -- Compiling module DataPath
+# -- Compiling module DataPath_tb
+# 
+# Top level modules:
+# 	DataPath_tb
+# End time: 15:51:57 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./testProcessor.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:51:58 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./testProcessor.sv 
+# -- Compiling package testProcessor_sv_unit
+# -- Importing package StateDefs
+# -- Compiling module testProcessor
+# 
+# Top level modules:
+# 	testProcessor
+# End time: 15:51:58 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./Processor.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:51:58 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./Processor.sv 
+# -- Compiling module Processor
+# -- Compiling module Processor_tb
+# 
+# Top level modules:
+# 	Processor
+# 	Processor_tb
+# End time: 15:51:58 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# 
+# Call vsim to invoke simulator
+#     Make sure the last item on the line is the name of the
+#     testbench module you want to execute.
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc" -fsmdebug  testProcessor
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" -fsmdebug testProcessor 
+# Start time: 15:51:58 on Jun 08,2025
+# Loading sv_std.std
+# Loading work.StateDefs
+# Loading work.testProcessor_sv_unit
+# Loading work.testProcessor
+# Loading work.Processor
+# Loading work.ControlUnit_sv_unit
+# Loading work.ControlUnit
+# Loading work.PC
+# Loading work.InstMemory
+# Loading altera_mf_ver.altsyncram
+# Loading work.IR
+# Loading work.StateMachine_sv_unit
+# Loading work.StateMachine
+# Loading work.DataPath
+# Loading work.DataMemory
+# Loading work.Mux_2_to_1
+# Loading work.RegisterFile
+# Loading work.ALU
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# WARNING: No extended dataflow license exists
+# 
+# Source the wave do file
+#     This should be the file that sets up the signal window for
+#     the module you are testing.
+# do Processor_wave.do
+# onerror {resume}
+# quietly WaveActivateNextPane {} 0
+# add wave -noupdate /testProcessor/Clk
+# add wave -noupdate /testProcessor/Reset
+# add wave -noupdate /testProcessor/Statee
+# add wave -noupdate /testProcessor/NextState
+# add wave -noupdate /testProcessor/PC_Out
+# add wave -noupdate /testProcessor/IR_Out
+# add wave -noupdate /testProcessor/DUT.unit_DP.D_Addr
+# add wave -noupdate /testProcessor/DUT.unit_DP.D_wr
+# add wave -noupdate /testProcessor/DUT.unit_DP.RF_s
+# add wave -noupdate /testProcessor/DUT.unit_DP.unit_RF.Write_Addr
+# add wave -noupdate /testProcessor/DUT.unit_DP.RF_W_en
+# add wave -noupdate /testProcessor/DUT.unit_DP.unit_RF.Read_A_Addr
+# add wave -noupdate /testProcessor/DUT.unit_DP.unit_RF.Read_B_Addr
+# add wave -noupdate /testProcessor/DUT.unit_CU.pc_up
+# add wave -noupdate /testProcessor/ALU_A
+# add wave -noupdate /testProcessor/ALU_B
+# add wave -noupdate /testProcessor/ALU_Out
+# add wave -noupdate /testProcessor/DUT.unit_DP.W_data_mux
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {0 ps} 0}
+# quietly wave cursor active 0
+# configure wave -namecolwidth 150
+# configure wave -valuecolwidth 100
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 0
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# configure wave -gridoffset 0
+# configure wave -gridperiod 1
+# configure wave -griddelta 40
+# configure wave -timeline 0
+# configure wave -timelineunits ps
+# update
+# WaveRestoreZoom {0 ps} {1 ns}
+# 
+# Set the window types
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# 
+# Run the simulation
+# run -all
+# 
+# Begin Simulation.
+# T=0 | Reset=0 | PC=xx | IR=xxxx | State=x | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=10000 | Reset=0 | PC=xx | IR=xxxx | State=7 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=30000 | Reset=0 | PC=00 | IR=xxxx | State=7 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=40000 | Reset=1 | PC=00 | IR=xxxx | State=7 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=50000 | Reset=1 | PC=00 | IR=xxxx | State=8 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=70000 | Reset=1 | PC=01 | IR=7000 | State=9 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=90000 | Reset=1 | PC=01 | IR=7000 | State=7 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=110000 | Reset=1 | PC=00 | IR=7000 | State=8 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=130000 | Reset=1 | PC=01 | IR=21b1 | State=9 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=150000 | Reset=1 | PC=01 | IR=21b1 | State=2 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=170000 | Reset=1 | PC=01 | IR=21b1 | State=6 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=190000 | Reset=1 | PC=01 | IR=21b1 | State=8 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=210000 | Reset=1 | PC=02 | IR=21b1 | State=9 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=230000 | Reset=1 | PC=02 | IR=21b1 | State=2 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=250000 | Reset=1 | PC=02 | IR=21b1 | State=6 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=270000 | Reset=1 | PC=02 | IR=21b1 | State=8 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=290000 | Reset=1 | PC=03 | IR=22a2 | State=9 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=310000 | Reset=1 | PC=03 | IR=22a2 | State=2 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=330000 | Reset=1 | PC=03 | IR=22a2 | State=6 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=350000 | Reset=1 | PC=03 | IR=22a2 | State=8 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=370000 | Reset=1 | PC=04 | IR=4210 | State=9 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=390000 | Reset=1 | PC=04 | IR=4210 | State=4 | ALU A=a04e | ALU B=21ba | ALU Out=7e94 | RF_Ra_Addr=0010 | A_Data=a04e | Read_A_Addr=2
+# T=410000 | Reset=1 | PC=04 | IR=4210 | State=8 | ALU A=7e94 | ALU B=7e94 | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=7e94 | Read_A_Addr=0
+# T=430000 | Reset=1 | PC=05 | IR=23c1 | State=9 | ALU A=7e94 | ALU B=7e94 | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=7e94 | Read_A_Addr=0
+# T=450000 | Reset=1 | PC=05 | IR=23c1 | State=2 | ALU A=7e94 | ALU B=7e94 | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=7e94 | Read_A_Addr=0
+# T=470000 | Reset=1 | PC=05 | IR=23c1 | State=6 | ALU A=7e94 | ALU B=7e94 | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=7e94 | Read_A_Addr=0
+# T=490000 | Reset=1 | PC=05 | IR=23c1 | State=8 | ALU A=7e94 | ALU B=7e94 | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=7e94 | Read_A_Addr=0
+# T=510000 | Reset=1 | PC=06 | IR=3010 | State=9 | ALU A=7e94 | ALU B=7e94 | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=7e94 | Read_A_Addr=0
+# T=530000 | Reset=1 | PC=06 | IR=3010 | State=3 | ALU A=7e94 | ALU B=71ac | ALU Out=f040 | RF_Ra_Addr=0000 | A_Data=7e94 | Read_A_Addr=0
+# T=550000 | Reset=1 | PC=06 | IR=3010 | State=8 | ALU A=f040 | ALU B=f040 | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=f040 | Read_A_Addr=0
+# T=570000 | Reset=1 | PC=07 | IR=27e1 | State=9 | ALU A=f040 | ALU B=f040 | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=f040 | Read_A_Addr=0
+# T=590000 | Reset=1 | PC=07 | IR=27e1 | State=2 | ALU A=f040 | ALU B=f040 | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=f040 | Read_A_Addr=0
+# T=610000 | Reset=1 | PC=07 | IR=27e1 | State=6 | ALU A=f040 | ALU B=f040 | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=f040 | Read_A_Addr=0
+# T=630000 | Reset=1 | PC=07 | IR=27e1 | State=8 | ALU A=f040 | ALU B=f040 | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=f040 | Read_A_Addr=0
+# T=650000 | Reset=1 | PC=08 | IR=4010 | State=9 | ALU A=f040 | ALU B=f040 | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=f040 | Read_A_Addr=0
+# T=670000 | Reset=1 | PC=08 | IR=4010 | State=4 | ALU A=f040 | ALU B=b17f | ALU Out=3ec1 | RF_Ra_Addr=0000 | A_Data=f040 | Read_A_Addr=0
+# T=690000 | Reset=1 | PC=08 | IR=4010 | State=8 | ALU A=3ec1 | ALU B=3ec1 | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=3ec1 | Read_A_Addr=0
+# T=710000 | Reset=1 | PC=09 | IR=100a | State=9 | ALU A=3ec1 | ALU B=3ec1 | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=3ec1 | Read_A_Addr=0
+# T=730000 | Reset=1 | PC=09 | IR=100a | State=1 | ALU A=3ec1 | ALU B=3ec1 | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=3ec1 | Read_A_Addr=0
+# T=750000 | Reset=1 | PC=09 | IR=100a | State=8 | ALU A=3ec1 | ALU B=3ec1 | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=3ec1 | Read_A_Addr=0
+# T=770000 | Reset=1 | PC=0a | IR=1a6a | State=9 | ALU A=3ec1 | ALU B=3ec1 | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=3ec1 | Read_A_Addr=0
+# T=790000 | Reset=1 | PC=0a | IR=1a6a | State=1 | ALU A=xxxx | ALU B=3ec1 | ALU Out=0000 | RF_Ra_Addr=1010 | A_Data=xxxx | Read_A_Addr=a
+# T=810000 | Reset=1 | PC=0a | IR=1a6a | State=8 | ALU A=3ec1 | ALU B=3ec1 | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=3ec1 | Read_A_Addr=0
+# 
+# End of Simulation.
+# 
+# True ALU A = 3ec1
+# ** Note: $stop    : ./testProcessor.sv(39)
+#    Time: 830 ns  Iteration: 2  Instance: /testProcessor
+# Break in Module testProcessor at ./testProcessor.sv line 39
 # 
 # View the entire wave display
 # wave zoomfull
@@ -293,5 +1703,615 @@ do runProcessor.do
 # 871500 ps
 # 
 # End
-# End time: 09:33:50 on Jun 08,2025, Elapsed time: 0:00:23
+cd ..
+# Cannot change directory while a simulation is in progress.
+# Use the "quit -sim" command to unload the design first.
+quit -sim
+# End time: 15:55:22 on Jun 08,2025, Elapsed time: 0:03:24
 # Errors: 0, Warnings: 0
+cd ..
+# reading C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini
+cd Project
+# reading modelsim.ini
+do runProcessor.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./StateDefs.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:55:32 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./StateDefs.sv 
+# -- Compiling package StateDefs
+# 
+# Top level modules:
+# 	--none--
+# End time: 15:55:32 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./PC.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:55:32 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./PC.sv 
+# -- Compiling module PC
+# -- Compiling module PC_tb
+# 
+# Top level modules:
+# 	PC_tb
+# End time: 15:55:32 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./InstMemory.v"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:55:32 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./InstMemory.v 
+# -- Compiling module InstMemory
+# 
+# Top level modules:
+# 	InstMemory
+# End time: 15:55:32 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./IR.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:55:32 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./IR.sv 
+# -- Compiling module IR
+# -- Compiling module IR_tb
+# 
+# Top level modules:
+# 	IR_tb
+# End time: 15:55:32 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./StateMachine.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:55:32 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./StateMachine.sv 
+# -- Compiling package StateMachine_sv_unit
+# -- Importing package StateDefs
+# -- Compiling module StateMachine
+# -- Compiling module StateMachine_tb
+# 
+# Top level modules:
+# 	StateMachine_tb
+# End time: 15:55:33 on Jun 08,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./ControlUnit.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:55:33 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./ControlUnit.sv 
+# -- Compiling package ControlUnit_sv_unit
+# -- Importing package StateDefs
+# -- Compiling module ControlUnit
+# -- Compiling module ControlUnit_tb
+# 
+# Top level modules:
+# 	ControlUnit_tb
+# End time: 15:55:33 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DataMemory.v"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:55:33 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./DataMemory.v 
+# -- Compiling module DataMemory
+# 
+# Top level modules:
+# 	DataMemory
+# End time: 15:55:33 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./Mux_2_to_1.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:55:33 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./Mux_2_to_1.sv 
+# -- Compiling module Mux_2_to_1
+# -- Compiling module Mux_2_to_1_tb
+# 
+# Top level modules:
+# 	Mux_2_to_1
+# 	Mux_2_to_1_tb
+# End time: 15:55:33 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./ALU.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:55:33 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./ALU.sv 
+# -- Compiling module ALU
+# -- Compiling module ALU_tb
+# 
+# Top level modules:
+# 	ALU_tb
+# End time: 15:55:33 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./RegisterFile.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:55:33 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegisterFile.sv 
+# -- Compiling module RegisterFile
+# -- Compiling module RegisterFile_tb
+# 
+# Top level modules:
+# 	RegisterFile_tb
+# End time: 15:55:33 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DataPath.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:55:33 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./DataPath.sv 
+# -- Compiling module DataPath
+# -- Compiling module DataPath_tb
+# 
+# Top level modules:
+# 	DataPath_tb
+# End time: 15:55:33 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./testProcessor.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:55:33 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./testProcessor.sv 
+# -- Compiling package testProcessor_sv_unit
+# -- Importing package StateDefs
+# -- Compiling module testProcessor
+# 
+# Top level modules:
+# 	testProcessor
+# End time: 15:55:33 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./Processor.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:55:33 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./Processor.sv 
+# -- Compiling module Processor
+# -- Compiling module Processor_tb
+# 
+# Top level modules:
+# 	Processor
+# 	Processor_tb
+# End time: 15:55:33 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# 
+# Call vsim to invoke simulator
+#     Make sure the last item on the line is the name of the
+#     testbench module you want to execute.
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc" -fsmdebug  testProcessor
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" -fsmdebug testProcessor 
+# Start time: 15:55:34 on Jun 08,2025
+# Loading sv_std.std
+# Loading work.StateDefs
+# Loading work.testProcessor_sv_unit
+# Loading work.testProcessor
+# Loading work.Processor
+# Loading work.ControlUnit_sv_unit
+# Loading work.ControlUnit
+# Loading work.PC
+# Loading work.InstMemory
+# Loading altera_mf_ver.altsyncram
+# Loading work.IR
+# Loading work.StateMachine_sv_unit
+# Loading work.StateMachine
+# Loading work.DataPath
+# Loading work.DataMemory
+# Loading work.Mux_2_to_1
+# Loading work.RegisterFile
+# Loading work.ALU
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# WARNING: No extended dataflow license exists
+# 
+# Source the wave do file
+#     This should be the file that sets up the signal window for
+#     the module you are testing.
+# do Processor_wave.do
+# onerror {resume}
+# quietly WaveActivateNextPane {} 0
+# add wave -noupdate /testProcessor/Clk
+# add wave -noupdate /testProcessor/Reset
+# add wave -noupdate /testProcessor/Statee
+# add wave -noupdate /testProcessor/NextState
+# add wave -noupdate /testProcessor/PC_Out
+# add wave -noupdate /testProcessor/IR_Out
+# add wave -noupdate /testProcessor/DUT.unit_DP.D_Addr
+# add wave -noupdate /testProcessor/DUT.unit_DP.D_wr
+# add wave -noupdate /testProcessor/DUT.unit_DP.RF_s
+# add wave -noupdate /testProcessor/DUT.unit_DP.unit_RF.Write_Addr
+# add wave -noupdate /testProcessor/DUT.unit_DP.RF_W_en
+# add wave -noupdate /testProcessor/DUT.unit_DP.unit_RF.Read_A_Addr
+# add wave -noupdate /testProcessor/DUT.unit_DP.unit_RF.Read_B_Addr
+# add wave -noupdate /testProcessor/DUT.unit_CU.pc_up
+# add wave -noupdate /testProcessor/ALU_A
+# add wave -noupdate /testProcessor/ALU_B
+# add wave -noupdate /testProcessor/ALU_Out
+# add wave -noupdate /testProcessor/DUT.unit_DP.W_data_mux
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {0 ps} 0}
+# quietly wave cursor active 0
+# configure wave -namecolwidth 150
+# configure wave -valuecolwidth 100
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 0
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# configure wave -gridoffset 0
+# configure wave -gridperiod 1
+# configure wave -griddelta 40
+# configure wave -timeline 0
+# configure wave -timelineunits ps
+# update
+# WaveRestoreZoom {0 ps} {1 ns}
+# 
+# Set the window types
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# 
+# Run the simulation
+# run -all
+# 
+# Begin Simulation.
+# T=0 | Reset=0 | PC=xx | IR=xxxx | State=x | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=10000 | Reset=0 | PC=xx | IR=xxxx | State=7 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=30000 | Reset=0 | PC=00 | IR=xxxx | State=7 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=40000 | Reset=1 | PC=00 | IR=xxxx | State=7 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=50000 | Reset=1 | PC=00 | IR=xxxx | State=8 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=70000 | Reset=1 | PC=01 | IR=0000 | State=9 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=90000 | Reset=1 | PC=01 | IR=0000 | State=0 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=110000 | Reset=1 | PC=01 | IR=0000 | State=8 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=130000 | Reset=1 | PC=02 | IR=21b0 | State=9 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=150000 | Reset=1 | PC=02 | IR=21b0 | State=2 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=170000 | Reset=1 | PC=02 | IR=21b0 | State=6 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=190000 | Reset=1 | PC=02 | IR=21b0 | State=8 | ALU A=21ba | ALU B=21ba | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=21ba | Read_A_Addr=0
+# T=210000 | Reset=1 | PC=03 | IR=22a1 | State=9 | ALU A=21ba | ALU B=21ba | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=21ba | Read_A_Addr=0
+# T=230000 | Reset=1 | PC=03 | IR=22a1 | State=2 | ALU A=21ba | ALU B=21ba | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=21ba | Read_A_Addr=0
+# T=250000 | Reset=1 | PC=03 | IR=22a1 | State=6 | ALU A=21ba | ALU B=21ba | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=21ba | Read_A_Addr=0
+# T=270000 | Reset=1 | PC=03 | IR=22a1 | State=8 | ALU A=21ba | ALU B=21ba | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=21ba | Read_A_Addr=0
+# T=290000 | Reset=1 | PC=04 | IR=23c2 | State=9 | ALU A=21ba | ALU B=21ba | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=21ba | Read_A_Addr=0
+# T=310000 | Reset=1 | PC=04 | IR=23c2 | State=2 | ALU A=21ba | ALU B=21ba | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=21ba | Read_A_Addr=0
+# T=330000 | Reset=1 | PC=04 | IR=23c2 | State=6 | ALU A=21ba | ALU B=21ba | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=21ba | Read_A_Addr=0
+# T=350000 | Reset=1 | PC=04 | IR=23c2 | State=8 | ALU A=21ba | ALU B=21ba | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=21ba | Read_A_Addr=0
+# T=370000 | Reset=1 | PC=05 | IR=27e3 | State=9 | ALU A=21ba | ALU B=21ba | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=21ba | Read_A_Addr=0
+# T=390000 | Reset=1 | PC=05 | IR=27e3 | State=2 | ALU A=21ba | ALU B=21ba | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=21ba | Read_A_Addr=0
+# T=410000 | Reset=1 | PC=05 | IR=27e3 | State=6 | ALU A=21ba | ALU B=21ba | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=21ba | Read_A_Addr=0
+# T=430000 | Reset=1 | PC=05 | IR=27e3 | State=8 | ALU A=21ba | ALU B=21ba | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=21ba | Read_A_Addr=0
+# T=450000 | Reset=1 | PC=06 | IR=401a | State=9 | ALU A=21ba | ALU B=21ba | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=21ba | Read_A_Addr=0
+# T=470000 | Reset=1 | PC=06 | IR=401a | State=4 | ALU A=21ba | ALU B=a04e | ALU Out=816c | RF_Ra_Addr=0000 | A_Data=21ba | Read_A_Addr=0
+# T=490000 | Reset=1 | PC=06 | IR=401a | State=8 | ALU A=21ba | ALU B=21ba | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=21ba | Read_A_Addr=0
+# T=510000 | Reset=1 | PC=07 | IR=3a2a | State=9 | ALU A=21ba | ALU B=21ba | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=21ba | Read_A_Addr=0
+# T=530000 | Reset=1 | PC=07 | IR=3a2a | State=3 | ALU A=816c | ALU B=71ac | ALU Out=f318 | RF_Ra_Addr=1010 | A_Data=816c | Read_A_Addr=a
+# T=550000 | Reset=1 | PC=07 | IR=3a2a | State=8 | ALU A=21ba | ALU B=21ba | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=21ba | Read_A_Addr=0
+# T=570000 | Reset=1 | PC=08 | IR=4a3a | State=9 | ALU A=21ba | ALU B=21ba | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=21ba | Read_A_Addr=0
+# T=590000 | Reset=1 | PC=08 | IR=4a3a | State=4 | ALU A=f318 | ALU B=b17f | ALU Out=4199 | RF_Ra_Addr=1010 | A_Data=f318 | Read_A_Addr=a
+# T=610000 | Reset=1 | PC=08 | IR=4a3a | State=8 | ALU A=21ba | ALU B=21ba | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=21ba | Read_A_Addr=0
+# T=630000 | Reset=1 | PC=09 | IR=1a6a | State=9 | ALU A=21ba | ALU B=21ba | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=21ba | Read_A_Addr=0
+# T=650000 | Reset=1 | PC=09 | IR=1a6a | State=1 | ALU A=4199 | ALU B=21ba | ALU Out=0000 | RF_Ra_Addr=1010 | A_Data=4199 | Read_A_Addr=a
+# T=670000 | Reset=1 | PC=09 | IR=1a6a | State=8 | ALU A=21ba | ALU B=21ba | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=21ba | Read_A_Addr=0
+# 
+# End of Simulation.
+# 
+# True ALU A = 21ba
+# ** Note: $stop    : ./testProcessor.sv(39)
+#    Time: 690 ns  Iteration: 2  Instance: /testProcessor
+# Break in Module testProcessor at ./testProcessor.sv line 39
+# 
+# View the entire wave display
+# wave zoomfull
+# 0 ps
+# 724500 ps
+# 
+# End
+# A time value could not be extracted from the current line
+do runPro
+# Cannot open macro file: runPro
+do runprocessor.do
+# 
+# Get rid of current work lib
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# 
+# Create work library and map it to 'work'
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Modifying modelsim.ini
+# 
+# Compile Verilog
+#     All Verilog files that are part of this design should have
+#     their own "vlog" line below.
+# vlog -work work +acc "./StateDefs.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:59:03 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./StateDefs.sv 
+# -- Compiling package StateDefs
+# 
+# Top level modules:
+# 	--none--
+# End time: 15:59:03 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./PC.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:59:03 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./PC.sv 
+# -- Compiling module PC
+# -- Compiling module PC_tb
+# 
+# Top level modules:
+# 	PC_tb
+# End time: 15:59:03 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./InstMemory.v"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:59:03 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./InstMemory.v 
+# -- Compiling module InstMemory
+# 
+# Top level modules:
+# 	InstMemory
+# End time: 15:59:03 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./IR.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:59:03 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./IR.sv 
+# -- Compiling module IR
+# -- Compiling module IR_tb
+# 
+# Top level modules:
+# 	IR_tb
+# End time: 15:59:03 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./StateMachine.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:59:03 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./StateMachine.sv 
+# -- Compiling package StateMachine_sv_unit
+# -- Importing package StateDefs
+# -- Compiling module StateMachine
+# -- Compiling module StateMachine_tb
+# 
+# Top level modules:
+# 	StateMachine_tb
+# End time: 15:59:03 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./ControlUnit.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:59:03 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./ControlUnit.sv 
+# -- Compiling package ControlUnit_sv_unit
+# -- Importing package StateDefs
+# -- Compiling module ControlUnit
+# -- Compiling module ControlUnit_tb
+# 
+# Top level modules:
+# 	ControlUnit_tb
+# End time: 15:59:04 on Jun 08,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DataMemory.v"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:59:04 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./DataMemory.v 
+# -- Compiling module DataMemory
+# 
+# Top level modules:
+# 	DataMemory
+# End time: 15:59:04 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./Mux_2_to_1.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:59:04 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./Mux_2_to_1.sv 
+# -- Compiling module Mux_2_to_1
+# -- Compiling module Mux_2_to_1_tb
+# 
+# Top level modules:
+# 	Mux_2_to_1
+# 	Mux_2_to_1_tb
+# End time: 15:59:04 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./ALU.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:59:04 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./ALU.sv 
+# -- Compiling module ALU
+# -- Compiling module ALU_tb
+# 
+# Top level modules:
+# 	ALU_tb
+# End time: 15:59:04 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./RegisterFile.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:59:04 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./RegisterFile.sv 
+# -- Compiling module RegisterFile
+# -- Compiling module RegisterFile_tb
+# 
+# Top level modules:
+# 	RegisterFile_tb
+# End time: 15:59:04 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./DataPath.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:59:04 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./DataPath.sv 
+# -- Compiling module DataPath
+# -- Compiling module DataPath_tb
+# 
+# Top level modules:
+# 	DataPath_tb
+# End time: 15:59:04 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./testProcessor.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:59:04 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./testProcessor.sv 
+# -- Compiling package testProcessor_sv_unit
+# -- Importing package StateDefs
+# -- Compiling module testProcessor
+# 
+# Top level modules:
+# 	testProcessor
+# End time: 15:59:04 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work +acc "./Processor.sv"
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 15:59:04 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./Processor.sv 
+# -- Compiling module Processor
+# -- Compiling module Processor_tb
+# 
+# Top level modules:
+# 	Processor
+# 	Processor_tb
+# End time: 15:59:04 on Jun 08,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# 
+# Call vsim to invoke simulator
+#     Make sure the last item on the line is the name of the
+#     testbench module you want to execute.
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc" -fsmdebug  testProcessor
+# End time: 15:59:09 on Jun 08,2025, Elapsed time: 0:03:35
+# Errors: 0, Warnings: 0
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" -fsmdebug testProcessor 
+# Start time: 15:59:09 on Jun 08,2025
+# Loading sv_std.std
+# Loading work.StateDefs
+# Loading work.testProcessor_sv_unit
+# Loading work.testProcessor
+# Loading work.Processor
+# Loading work.ControlUnit_sv_unit
+# Loading work.ControlUnit
+# Loading work.PC
+# Loading work.InstMemory
+# Loading altera_mf_ver.altsyncram
+# Loading work.IR
+# Loading work.StateMachine_sv_unit
+# Loading work.StateMachine
+# Loading work.DataPath
+# Loading work.DataMemory
+# Loading work.Mux_2_to_1
+# Loading work.RegisterFile
+# Loading work.ALU
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# WARNING: No extended dataflow license exists
+# 
+# Source the wave do file
+#     This should be the file that sets up the signal window for
+#     the module you are testing.
+# do Processor_wave.do
+# onerror {resume}
+# quietly WaveActivateNextPane {} 0
+# add wave -noupdate /testProcessor/Clk
+# add wave -noupdate /testProcessor/Reset
+# add wave -noupdate /testProcessor/Statee
+# add wave -noupdate /testProcessor/NextState
+# add wave -noupdate /testProcessor/PC_Out
+# add wave -noupdate /testProcessor/IR_Out
+# add wave -noupdate /testProcessor/DUT.unit_DP.D_Addr
+# add wave -noupdate /testProcessor/DUT.unit_DP.D_wr
+# add wave -noupdate /testProcessor/DUT.unit_DP.RF_s
+# add wave -noupdate /testProcessor/DUT.unit_DP.unit_RF.Write_Addr
+# add wave -noupdate /testProcessor/DUT.unit_DP.RF_W_en
+# add wave -noupdate /testProcessor/DUT.unit_DP.unit_RF.Read_A_Addr
+# add wave -noupdate /testProcessor/DUT.unit_DP.unit_RF.Read_B_Addr
+# add wave -noupdate /testProcessor/DUT.unit_CU.pc_up
+# add wave -noupdate /testProcessor/ALU_A
+# add wave -noupdate /testProcessor/ALU_B
+# add wave -noupdate /testProcessor/ALU_Out
+# add wave -noupdate /testProcessor/DUT.unit_DP.W_data_mux
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {0 ps} 0}
+# quietly wave cursor active 0
+# configure wave -namecolwidth 150
+# configure wave -valuecolwidth 100
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 0
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# configure wave -gridoffset 0
+# configure wave -gridperiod 1
+# configure wave -griddelta 40
+# configure wave -timeline 0
+# configure wave -timelineunits ps
+# update
+# WaveRestoreZoom {0 ps} {1 ns}
+# 
+# Set the window types
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# 
+# Run the simulation
+# run -all
+# 
+# Begin Simulation.
+# T=0 | Reset=0 | PC=xx | IR=xxxx | State=x | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=10000 | Reset=0 | PC=xx | IR=xxxx | State=7 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=30000 | Reset=0 | PC=00 | IR=xxxx | State=7 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=40000 | Reset=1 | PC=00 | IR=xxxx | State=7 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=50000 | Reset=1 | PC=00 | IR=xxxx | State=8 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=70000 | Reset=1 | PC=01 | IR=21b0 | State=9 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=90000 | Reset=1 | PC=01 | IR=21b0 | State=2 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=110000 | Reset=1 | PC=01 | IR=21b0 | State=6 | ALU A=xxxx | ALU B=xxxx | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=xxxx | Read_A_Addr=0
+# T=130000 | Reset=1 | PC=01 | IR=21b0 | State=8 | ALU A=21ba | ALU B=21ba | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=21ba | Read_A_Addr=0
+# T=150000 | Reset=1 | PC=02 | IR=22a1 | State=9 | ALU A=21ba | ALU B=21ba | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=21ba | Read_A_Addr=0
+# T=170000 | Reset=1 | PC=02 | IR=22a1 | State=2 | ALU A=21ba | ALU B=21ba | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=21ba | Read_A_Addr=0
+# T=190000 | Reset=1 | PC=02 | IR=22a1 | State=6 | ALU A=21ba | ALU B=21ba | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=21ba | Read_A_Addr=0
+# T=210000 | Reset=1 | PC=02 | IR=22a1 | State=8 | ALU A=21ba | ALU B=21ba | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=21ba | Read_A_Addr=0
+# T=230000 | Reset=1 | PC=03 | IR=23c2 | State=9 | ALU A=21ba | ALU B=21ba | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=21ba | Read_A_Addr=0
+# T=250000 | Reset=1 | PC=03 | IR=23c2 | State=2 | ALU A=21ba | ALU B=21ba | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=21ba | Read_A_Addr=0
+# T=270000 | Reset=1 | PC=03 | IR=23c2 | State=6 | ALU A=21ba | ALU B=21ba | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=21ba | Read_A_Addr=0
+# T=290000 | Reset=1 | PC=03 | IR=23c2 | State=8 | ALU A=21ba | ALU B=21ba | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=21ba | Read_A_Addr=0
+# T=310000 | Reset=1 | PC=04 | IR=27e3 | State=9 | ALU A=21ba | ALU B=21ba | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=21ba | Read_A_Addr=0
+# T=330000 | Reset=1 | PC=04 | IR=27e3 | State=2 | ALU A=21ba | ALU B=21ba | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=21ba | Read_A_Addr=0
+# T=350000 | Reset=1 | PC=04 | IR=27e3 | State=6 | ALU A=21ba | ALU B=21ba | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=21ba | Read_A_Addr=0
+# T=370000 | Reset=1 | PC=04 | IR=27e3 | State=8 | ALU A=21ba | ALU B=21ba | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=21ba | Read_A_Addr=0
+# T=390000 | Reset=1 | PC=05 | IR=401a | State=9 | ALU A=21ba | ALU B=21ba | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=21ba | Read_A_Addr=0
+# T=410000 | Reset=1 | PC=05 | IR=401a | State=4 | ALU A=21ba | ALU B=a04e | ALU Out=816c | RF_Ra_Addr=0000 | A_Data=21ba | Read_A_Addr=0
+# T=430000 | Reset=1 | PC=05 | IR=401a | State=8 | ALU A=21ba | ALU B=21ba | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=21ba | Read_A_Addr=0
+# T=450000 | Reset=1 | PC=06 | IR=3a2a | State=9 | ALU A=21ba | ALU B=21ba | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=21ba | Read_A_Addr=0
+# T=470000 | Reset=1 | PC=06 | IR=3a2a | State=3 | ALU A=816c | ALU B=71ac | ALU Out=f318 | RF_Ra_Addr=1010 | A_Data=816c | Read_A_Addr=a
+# T=490000 | Reset=1 | PC=06 | IR=3a2a | State=8 | ALU A=21ba | ALU B=21ba | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=21ba | Read_A_Addr=0
+# T=510000 | Reset=1 | PC=07 | IR=4a3a | State=9 | ALU A=21ba | ALU B=21ba | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=21ba | Read_A_Addr=0
+# T=530000 | Reset=1 | PC=07 | IR=4a3a | State=4 | ALU A=f318 | ALU B=b17f | ALU Out=4199 | RF_Ra_Addr=1010 | A_Data=f318 | Read_A_Addr=a
+# T=550000 | Reset=1 | PC=07 | IR=4a3a | State=8 | ALU A=21ba | ALU B=21ba | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=21ba | Read_A_Addr=0
+# T=570000 | Reset=1 | PC=08 | IR=1a6a | State=9 | ALU A=21ba | ALU B=21ba | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=21ba | Read_A_Addr=0
+# T=590000 | Reset=1 | PC=08 | IR=1a6a | State=1 | ALU A=4199 | ALU B=21ba | ALU Out=0000 | RF_Ra_Addr=1010 | A_Data=4199 | Read_A_Addr=a
+# T=610000 | Reset=1 | PC=08 | IR=1a6a | State=8 | ALU A=21ba | ALU B=21ba | ALU Out=0000 | RF_Ra_Addr=0000 | A_Data=21ba | Read_A_Addr=0
+# 
+# End of Simulation.
+# 
+# True ALU A = 21ba
+# ** Note: $stop    : ./testProcessor.sv(39)
+#    Time: 630 ns  Iteration: 2  Instance: /testProcessor
+# Break in Module testProcessor at ./testProcessor.sv line 39
+# 
+# View the entire wave display
+# wave zoomfull
+# 0 ps
+# 661500 ps
+# 
+# End

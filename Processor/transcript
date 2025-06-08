@@ -1,5 +1,5 @@
 # Reading pref.tcl
-do runProject.do
+do runProcessor.do
 # 
 # Get rid of current work lib
 # if {[file exists rtl_work]} {
@@ -16,107 +16,51 @@ do runProject.do
 # Compile Verilog
 #     All Verilog files that are part of this design should have
 #     their own "vlog" line below.
-# vlog -work work +acc "./ButtonSync.sv"
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:26:30 on Jun 07,2025
-# vlog -reportprogress 300 -work work "+acc" ./ButtonSync.sv 
-# -- Compiling module ButtonSync
-# -- Compiling module ButtonSync_tb
-# 
-# Top level modules:
-# 	ButtonSync_tb
-# End time: 11:26:30 on Jun 07,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -work work +acc "./KeyFilter.sv"
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:26:30 on Jun 07,2025
-# vlog -reportprogress 300 -work work "+acc" ./KeyFilter.sv 
-# -- Compiling module KeyFilter
-# 
-# Top level modules:
-# 	KeyFilter
-# End time: 11:26:30 on Jun 07,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -work work +acc "./Mux_8_to_1.sv"
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:26:30 on Jun 07,2025
-# vlog -reportprogress 300 -work work "+acc" ./Mux_8_to_1.sv 
-# -- Compiling module Mux_8_to_1
-# -- Compiling module Mux_8_to_1_tb
-# 
-# Top level modules:
-# 	Mux_8_to_1_tb
-# End time: 11:26:30 on Jun 07,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -work work +acc "./Decoder.sv"
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:26:30 on Jun 07,2025
-# vlog -reportprogress 300 -work work "+acc" ./Decoder.sv 
-# -- Compiling module Decoder
-# -- Compiling module Decoder_tb
-# 
-# Top level modules:
-# 	Decoder_tb
-# End time: 11:26:30 on Jun 07,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -work work +acc "./Processor.sv"
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:26:30 on Jun 07,2025
-# vlog -reportprogress 300 -work work "+acc" ./Processor.sv 
-# -- Compiling module Processor
-# -- Compiling module Processor_tb
-# 
-# Top level modules:
-# 	Processor
-# 	Processor_tb
-# End time: 11:26:30 on Jun 07,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# 
 # vlog -work work +acc "./StateDefs.sv"
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:26:30 on Jun 07,2025
+# Start time: 15:33:53 on Jun 08,2025
 # vlog -reportprogress 300 -work work "+acc" ./StateDefs.sv 
 # -- Compiling package StateDefs
 # 
 # Top level modules:
 # 	--none--
-# End time: 11:26:30 on Jun 07,2025, Elapsed time: 0:00:00
+# End time: 15:33:53 on Jun 08,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -work work +acc "./PC.sv"
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:26:30 on Jun 07,2025
+# Start time: 15:33:53 on Jun 08,2025
 # vlog -reportprogress 300 -work work "+acc" ./PC.sv 
 # -- Compiling module PC
 # -- Compiling module PC_tb
 # 
 # Top level modules:
 # 	PC_tb
-# End time: 11:26:30 on Jun 07,2025, Elapsed time: 0:00:00
+# End time: 15:33:53 on Jun 08,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -work work +acc "./InstMemory.v"
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:26:30 on Jun 07,2025
+# Start time: 15:33:53 on Jun 08,2025
 # vlog -reportprogress 300 -work work "+acc" ./InstMemory.v 
 # -- Compiling module InstMemory
 # 
 # Top level modules:
 # 	InstMemory
-# End time: 11:26:30 on Jun 07,2025, Elapsed time: 0:00:00
+# End time: 15:33:54 on Jun 08,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -work work +acc "./IR.sv"
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:26:30 on Jun 07,2025
+# Start time: 15:33:54 on Jun 08,2025
 # vlog -reportprogress 300 -work work "+acc" ./IR.sv 
 # -- Compiling module IR
 # -- Compiling module IR_tb
 # 
 # Top level modules:
 # 	IR_tb
-# End time: 11:26:31 on Jun 07,2025, Elapsed time: 0:00:01
+# End time: 15:33:54 on Jun 08,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -work work +acc "./StateMachine.sv"
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:26:31 on Jun 07,2025
+# Start time: 15:33:54 on Jun 08,2025
 # vlog -reportprogress 300 -work work "+acc" ./StateMachine.sv 
 # -- Compiling package StateMachine_sv_unit
 # -- Importing package StateDefs
@@ -125,11 +69,11 @@ do runProject.do
 # 
 # Top level modules:
 # 	StateMachine_tb
-# End time: 11:26:31 on Jun 07,2025, Elapsed time: 0:00:00
+# End time: 15:33:54 on Jun 08,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -work work +acc "./ControlUnit.sv"
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:26:31 on Jun 07,2025
+# Start time: 15:33:54 on Jun 08,2025
 # vlog -reportprogress 300 -work work "+acc" ./ControlUnit.sv 
 # -- Compiling package ControlUnit_sv_unit
 # -- Importing package StateDefs
@@ -138,21 +82,21 @@ do runProject.do
 # 
 # Top level modules:
 # 	ControlUnit_tb
-# End time: 11:26:31 on Jun 07,2025, Elapsed time: 0:00:00
+# End time: 15:33:54 on Jun 08,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -work work +acc "./DataMemory.v"
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:26:31 on Jun 07,2025
+# Start time: 15:33:54 on Jun 08,2025
 # vlog -reportprogress 300 -work work "+acc" ./DataMemory.v 
 # -- Compiling module DataMemory
 # 
 # Top level modules:
 # 	DataMemory
-# End time: 11:26:31 on Jun 07,2025, Elapsed time: 0:00:00
+# End time: 15:33:54 on Jun 08,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -work work +acc "./Mux_2_to_1.sv"
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:26:31 on Jun 07,2025
+# Start time: 15:33:54 on Jun 08,2025
 # vlog -reportprogress 300 -work work "+acc" ./Mux_2_to_1.sv 
 # -- Compiling module Mux_2_to_1
 # -- Compiling module Mux_2_to_1_tb
@@ -160,118 +104,54 @@ do runProject.do
 # Top level modules:
 # 	Mux_2_to_1
 # 	Mux_2_to_1_tb
-# End time: 11:26:31 on Jun 07,2025, Elapsed time: 0:00:00
+# End time: 15:33:54 on Jun 08,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -work work +acc "./ALU.sv"
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:26:31 on Jun 07,2025
+# Start time: 15:33:54 on Jun 08,2025
 # vlog -reportprogress 300 -work work "+acc" ./ALU.sv 
 # -- Compiling module ALU
 # -- Compiling module ALU_tb
 # 
 # Top level modules:
 # 	ALU_tb
-# End time: 11:26:31 on Jun 07,2025, Elapsed time: 0:00:00
+# End time: 15:33:54 on Jun 08,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -work work +acc "./RegisterFile.sv"
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:26:31 on Jun 07,2025
+# Start time: 15:33:54 on Jun 08,2025
 # vlog -reportprogress 300 -work work "+acc" ./RegisterFile.sv 
 # -- Compiling module RegisterFile
 # -- Compiling module RegisterFile_tb
 # 
 # Top level modules:
 # 	RegisterFile_tb
-# End time: 11:26:31 on Jun 07,2025, Elapsed time: 0:00:00
+# End time: 15:33:54 on Jun 08,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -work work +acc "./DataPath.sv"
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:26:31 on Jun 07,2025
+# Start time: 15:33:54 on Jun 08,2025
 # vlog -reportprogress 300 -work work "+acc" ./DataPath.sv 
 # -- Compiling module DataPath
 # -- Compiling module DataPath_tb
 # 
 # Top level modules:
 # 	DataPath_tb
-# End time: 11:26:31 on Jun 07,2025, Elapsed time: 0:00:00
+# End time: 15:33:54 on Jun 08,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -work work +acc "./Project.sv"  
+# vlog -work work +acc "./testProcessor.sv"
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:26:31 on Jun 07,2025
-# vlog -reportprogress 300 -work work "+acc" ./Project.sv 
-# -- Compiling module Project
-# ** Error: (vlog-13069) ./Project.sv(39): near "b": syntax error, unexpected IDENTIFIER, expecting ',' or '}'.
-# -- Compiling module Project_tb
-# End time: 11:26:31 on Jun 07,2025, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# ** Error: C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./runProject.do line 33
-# C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vlog failed.
-#     while executing
-# "vlog -work work +acc "./Project.sv"  "
-do runProject.do
-# 
-# Get rid of current work lib
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# 
-# Create work library and map it to 'work'
-# vlib rtl_work
-# vmap work rtl_work
-# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
-# vmap work rtl_work 
-# Modifying modelsim.ini
-# 
-# Compile Verilog
-#     All Verilog files that are part of this design should have
-#     their own "vlog" line below.
-# vlog -work work +acc "./ButtonSync.sv"
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:27:09 on Jun 07,2025
-# vlog -reportprogress 300 -work work "+acc" ./ButtonSync.sv 
-# -- Compiling module ButtonSync
-# -- Compiling module ButtonSync_tb
+# Start time: 15:33:54 on Jun 08,2025
+# vlog -reportprogress 300 -work work "+acc" ./testProcessor.sv 
+# -- Compiling module testProcessor
 # 
 # Top level modules:
-# 	ButtonSync_tb
-# End time: 11:27:09 on Jun 07,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -work work +acc "./KeyFilter.sv"
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:27:09 on Jun 07,2025
-# vlog -reportprogress 300 -work work "+acc" ./KeyFilter.sv 
-# -- Compiling module KeyFilter
-# 
-# Top level modules:
-# 	KeyFilter
-# End time: 11:27:09 on Jun 07,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -work work +acc "./Mux_8_to_1.sv"
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:27:09 on Jun 07,2025
-# vlog -reportprogress 300 -work work "+acc" ./Mux_8_to_1.sv 
-# -- Compiling module Mux_8_to_1
-# -- Compiling module Mux_8_to_1_tb
-# 
-# Top level modules:
-# 	Mux_8_to_1_tb
-# End time: 11:27:09 on Jun 07,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -work work +acc "./Decoder.sv"
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:27:09 on Jun 07,2025
-# vlog -reportprogress 300 -work work "+acc" ./Decoder.sv 
-# -- Compiling module Decoder
-# -- Compiling module Decoder_tb
-# 
-# Top level modules:
-# 	Decoder_tb
-# End time: 11:27:09 on Jun 07,2025, Elapsed time: 0:00:00
+# 	testProcessor
+# End time: 15:33:54 on Jun 08,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -work work +acc "./Processor.sv"
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:27:09 on Jun 07,2025
+# Start time: 15:33:55 on Jun 08,2025
 # vlog -reportprogress 300 -work work "+acc" ./Processor.sv 
 # -- Compiling module Processor
 # -- Compiling module Processor_tb
@@ -279,155 +159,18 @@ do runProject.do
 # Top level modules:
 # 	Processor
 # 	Processor_tb
-# End time: 11:27:09 on Jun 07,2025, Elapsed time: 0:00:00
+# End time: 15:33:55 on Jun 08,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vlog -work work +acc "./StateDefs.sv"
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:27:09 on Jun 07,2025
-# vlog -reportprogress 300 -work work "+acc" ./StateDefs.sv 
-# -- Compiling package StateDefs
-# 
-# Top level modules:
-# 	--none--
-# End time: 11:27:09 on Jun 07,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -work work +acc "./PC.sv"
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:27:09 on Jun 07,2025
-# vlog -reportprogress 300 -work work "+acc" ./PC.sv 
-# -- Compiling module PC
-# -- Compiling module PC_tb
-# 
-# Top level modules:
-# 	PC_tb
-# End time: 11:27:09 on Jun 07,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -work work +acc "./InstMemory.v"
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:27:09 on Jun 07,2025
-# vlog -reportprogress 300 -work work "+acc" ./InstMemory.v 
-# -- Compiling module InstMemory
-# 
-# Top level modules:
-# 	InstMemory
-# End time: 11:27:10 on Jun 07,2025, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vlog -work work +acc "./IR.sv"
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:27:10 on Jun 07,2025
-# vlog -reportprogress 300 -work work "+acc" ./IR.sv 
-# -- Compiling module IR
-# -- Compiling module IR_tb
-# 
-# Top level modules:
-# 	IR_tb
-# End time: 11:27:10 on Jun 07,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -work work +acc "./StateMachine.sv"
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:27:10 on Jun 07,2025
-# vlog -reportprogress 300 -work work "+acc" ./StateMachine.sv 
-# -- Compiling package StateMachine_sv_unit
-# -- Importing package StateDefs
-# -- Compiling module StateMachine
-# -- Compiling module StateMachine_tb
-# 
-# Top level modules:
-# 	StateMachine_tb
-# End time: 11:27:10 on Jun 07,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -work work +acc "./ControlUnit.sv"
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:27:10 on Jun 07,2025
-# vlog -reportprogress 300 -work work "+acc" ./ControlUnit.sv 
-# -- Compiling package ControlUnit_sv_unit
-# -- Importing package StateDefs
-# -- Compiling module ControlUnit
-# -- Compiling module ControlUnit_tb
-# 
-# Top level modules:
-# 	ControlUnit_tb
-# End time: 11:27:10 on Jun 07,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -work work +acc "./DataMemory.v"
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:27:10 on Jun 07,2025
-# vlog -reportprogress 300 -work work "+acc" ./DataMemory.v 
-# -- Compiling module DataMemory
-# 
-# Top level modules:
-# 	DataMemory
-# End time: 11:27:10 on Jun 07,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -work work +acc "./Mux_2_to_1.sv"
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:27:10 on Jun 07,2025
-# vlog -reportprogress 300 -work work "+acc" ./Mux_2_to_1.sv 
-# -- Compiling module Mux_2_to_1
-# -- Compiling module Mux_2_to_1_tb
-# 
-# Top level modules:
-# 	Mux_2_to_1
-# 	Mux_2_to_1_tb
-# End time: 11:27:10 on Jun 07,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -work work +acc "./ALU.sv"
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:27:10 on Jun 07,2025
-# vlog -reportprogress 300 -work work "+acc" ./ALU.sv 
-# -- Compiling module ALU
-# -- Compiling module ALU_tb
-# 
-# Top level modules:
-# 	ALU_tb
-# End time: 11:27:10 on Jun 07,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -work work +acc "./RegisterFile.sv"
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:27:10 on Jun 07,2025
-# vlog -reportprogress 300 -work work "+acc" ./RegisterFile.sv 
-# -- Compiling module RegisterFile
-# -- Compiling module RegisterFile_tb
-# 
-# Top level modules:
-# 	RegisterFile_tb
-# End time: 11:27:10 on Jun 07,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -work work +acc "./DataPath.sv"
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:27:10 on Jun 07,2025
-# vlog -reportprogress 300 -work work "+acc" ./DataPath.sv 
-# -- Compiling module DataPath
-# -- Compiling module DataPath_tb
-# 
-# Top level modules:
-# 	DataPath_tb
-# End time: 11:27:10 on Jun 07,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -work work +acc "./Project.sv"  
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:27:10 on Jun 07,2025
-# vlog -reportprogress 300 -work work "+acc" ./Project.sv 
-# -- Compiling module Project
-# -- Compiling module Project_tb
-# 
-# Top level modules:
-# 	Project_tb
-# End time: 11:27:10 on Jun 07,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
 # 
 # Call vsim to invoke simulator
 #     Make sure the last item on the line is the name of the
 #     testbench module you want to execute.
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc" -fsmdebug  Project_tb
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" -fsmdebug Project_tb 
-# Start time: 11:27:10 on Jun 07,2025
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc" -fsmdebug  testProcessor
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" -fsmdebug testProcessor 
+# Start time: 15:33:55 on Jun 08,2025
 # Loading sv_std.std
-# Loading work.Project_tb
-# Loading work.Project
-# Loading work.ButtonSync
-# Loading work.KeyFilter
+# Loading work.testProcessor
 # Loading work.Processor
 # Loading work.StateDefs
 # Loading work.ControlUnit_sv_unit
@@ -443,286 +186,42 @@ do runProject.do
 # Loading work.Mux_2_to_1
 # Loading work.RegisterFile
 # Loading work.ALU
-# Loading work.Mux_8_to_1
 # Loading altera_mf_ver.altsyncram_body
 # Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
 # Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
-# Loading work.Decoder
-# ** Warning: (vsim-3008) [CNNODP] - Component name (Mux_8_to_1) is not on a downward path.
-#    Time: 0 ps  Iteration: 0  Instance: /Project_tb File: ./Project.sv Line: 103
-# ** Error: (vsim-3043) Unresolved reference to 'Mux_8_to_1' in DUT.Mux_8_to_1.
-#    Time: 0 ps  Iteration: 0  Instance: /Project_tb File: ./Project.sv Line: 103
-# Error loading design
-# Error: Error loading design
-#        Pausing macro execution
-# MACRO ./runProject.do PAUSED at line 38
-do runProject.do
-# turn on verbage
-# transcript on
-# 
-# Get rid of current work lib
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# 
-# Create work library and map it to 'work'
-# vlib rtl_work
-# vmap work rtl_work
-# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
-# vmap work rtl_work 
-# Modifying modelsim.ini
-# 
-# Compile Verilog
-#     All Verilog files that are part of this design should have
-#     their own "vlog" line below.
-# vlog -work work +acc "./ButtonSync.sv"
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:27:59 on Jun 07,2025
-# vlog -reportprogress 300 -work work "+acc" ./ButtonSync.sv 
-# -- Compiling module ButtonSync
-# -- Compiling module ButtonSync_tb
-# 
-# Top level modules:
-# 	ButtonSync_tb
-# End time: 11:27:59 on Jun 07,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -work work +acc "./KeyFilter.sv"
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:27:59 on Jun 07,2025
-# vlog -reportprogress 300 -work work "+acc" ./KeyFilter.sv 
-# -- Compiling module KeyFilter
-# 
-# Top level modules:
-# 	KeyFilter
-# End time: 11:27:59 on Jun 07,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -work work +acc "./Mux_8_to_1.sv"
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:27:59 on Jun 07,2025
-# vlog -reportprogress 300 -work work "+acc" ./Mux_8_to_1.sv 
-# -- Compiling module Mux_8_to_1
-# -- Compiling module Mux_8_to_1_tb
-# 
-# Top level modules:
-# 	Mux_8_to_1_tb
-# End time: 11:27:59 on Jun 07,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -work work +acc "./Decoder.sv"
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:27:59 on Jun 07,2025
-# vlog -reportprogress 300 -work work "+acc" ./Decoder.sv 
-# -- Compiling module Decoder
-# -- Compiling module Decoder_tb
-# 
-# Top level modules:
-# 	Decoder_tb
-# End time: 11:27:59 on Jun 07,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -work work +acc "./Processor.sv"
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:27:59 on Jun 07,2025
-# vlog -reportprogress 300 -work work "+acc" ./Processor.sv 
-# -- Compiling module Processor
-# -- Compiling module Processor_tb
-# 
-# Top level modules:
-# 	Processor
-# 	Processor_tb
-# End time: 11:27:59 on Jun 07,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# 
-# vlog -work work +acc "./StateDefs.sv"
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:27:59 on Jun 07,2025
-# vlog -reportprogress 300 -work work "+acc" ./StateDefs.sv 
-# -- Compiling package StateDefs
-# 
-# Top level modules:
-# 	--none--
-# End time: 11:27:59 on Jun 07,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -work work +acc "./PC.sv"
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:27:59 on Jun 07,2025
-# vlog -reportprogress 300 -work work "+acc" ./PC.sv 
-# -- Compiling module PC
-# -- Compiling module PC_tb
-# 
-# Top level modules:
-# 	PC_tb
-# End time: 11:27:59 on Jun 07,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -work work +acc "./InstMemory.v"
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:27:59 on Jun 07,2025
-# vlog -reportprogress 300 -work work "+acc" ./InstMemory.v 
-# -- Compiling module InstMemory
-# 
-# Top level modules:
-# 	InstMemory
-# End time: 11:27:59 on Jun 07,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -work work +acc "./IR.sv"
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:27:59 on Jun 07,2025
-# vlog -reportprogress 300 -work work "+acc" ./IR.sv 
-# -- Compiling module IR
-# -- Compiling module IR_tb
-# 
-# Top level modules:
-# 	IR_tb
-# End time: 11:27:59 on Jun 07,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -work work +acc "./StateMachine.sv"
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:27:59 on Jun 07,2025
-# vlog -reportprogress 300 -work work "+acc" ./StateMachine.sv 
-# -- Compiling package StateMachine_sv_unit
-# -- Importing package StateDefs
-# -- Compiling module StateMachine
-# -- Compiling module StateMachine_tb
-# 
-# Top level modules:
-# 	StateMachine_tb
-# End time: 11:27:59 on Jun 07,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -work work +acc "./ControlUnit.sv"
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:27:59 on Jun 07,2025
-# vlog -reportprogress 300 -work work "+acc" ./ControlUnit.sv 
-# -- Compiling package ControlUnit_sv_unit
-# -- Importing package StateDefs
-# -- Compiling module ControlUnit
-# -- Compiling module ControlUnit_tb
-# 
-# Top level modules:
-# 	ControlUnit_tb
-# End time: 11:27:59 on Jun 07,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -work work +acc "./DataMemory.v"
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:27:59 on Jun 07,2025
-# vlog -reportprogress 300 -work work "+acc" ./DataMemory.v 
-# -- Compiling module DataMemory
-# 
-# Top level modules:
-# 	DataMemory
-# End time: 11:27:59 on Jun 07,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -work work +acc "./Mux_2_to_1.sv"
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:27:59 on Jun 07,2025
-# vlog -reportprogress 300 -work work "+acc" ./Mux_2_to_1.sv 
-# -- Compiling module Mux_2_to_1
-# -- Compiling module Mux_2_to_1_tb
-# 
-# Top level modules:
-# 	Mux_2_to_1
-# 	Mux_2_to_1_tb
-# End time: 11:28:00 on Jun 07,2025, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vlog -work work +acc "./ALU.sv"
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:28:00 on Jun 07,2025
-# vlog -reportprogress 300 -work work "+acc" ./ALU.sv 
-# -- Compiling module ALU
-# -- Compiling module ALU_tb
-# 
-# Top level modules:
-# 	ALU_tb
-# End time: 11:28:00 on Jun 07,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -work work +acc "./RegisterFile.sv"
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:28:00 on Jun 07,2025
-# vlog -reportprogress 300 -work work "+acc" ./RegisterFile.sv 
-# -- Compiling module RegisterFile
-# -- Compiling module RegisterFile_tb
-# 
-# Top level modules:
-# 	RegisterFile_tb
-# End time: 11:28:00 on Jun 07,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -work work +acc "./DataPath.sv"
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:28:00 on Jun 07,2025
-# vlog -reportprogress 300 -work work "+acc" ./DataPath.sv 
-# -- Compiling module DataPath
-# -- Compiling module DataPath_tb
-# 
-# Top level modules:
-# 	DataPath_tb
-# End time: 11:28:00 on Jun 07,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -work work +acc "./Project.sv"  
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 11:28:00 on Jun 07,2025
-# vlog -reportprogress 300 -work work "+acc" ./Project.sv 
-# -- Compiling module Project
-# -- Compiling module Project_tb
-# 
-# Top level modules:
-# 	Project_tb
-# End time: 11:28:00 on Jun 07,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# 
-# Call vsim to invoke simulator
-#     Make sure the last item on the line is the name of the
-#     testbench module you want to execute.
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc" -fsmdebug  Project_tb
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" -fsmdebug Project_tb 
-# Start time: 11:27:10 on Jun 07,2025
-# Loading sv_std.std
-# Loading work.Project_tb
-# Loading work.Project
-# Loading work.ButtonSync
-# Loading work.KeyFilter
-# Loading work.Processor
-# Loading work.StateDefs
-# Loading work.ControlUnit_sv_unit
-# Loading work.ControlUnit
-# Loading work.PC
-# Loading work.InstMemory
-# Loading altera_mf_ver.altsyncram
-# Loading work.IR
-# Loading work.StateMachine_sv_unit
-# Loading work.StateMachine
-# Loading work.DataPath
-# Loading work.DataMemory
-# Loading work.Mux_2_to_1
-# Loading work.RegisterFile
-# Loading work.ALU
-# Loading work.Mux_8_to_1
-# Loading altera_mf_ver.altsyncram_body
-# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
-# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
-# Loading work.Decoder
 # WARNING: No extended dataflow license exists
 # 
 # Source the wave do file
 #     This should be the file that sets up the signal window for
 #     the module you are testing.
-# do Project_wave.do
+# do Processor_wave.do
 # onerror {resume}
 # quietly WaveActivateNextPane {} 0
-# add wave -noupdate /Project_tb/SW
+# add wave -noupdate /testProcessor/Clk
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: rod  Hostname: DESKTOP-36B72F5  ProcessID: 8932
-#           Attempting to use alternate WLF file "./wlft5dqjdx".
+#           Attempting to use alternate WLF file "./wlftzqizw2".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft5dqjdx
-# add wave -noupdate /Project_tb/KEY
-# add wave -noupdate /Project_tb/CLOCK_50
-# add wave -noupdate /Project_tb/LEDR
-# add wave -noupdate /Project_tb/LEDG
-# add wave -noupdate /Project_tb/HEX0
-# add wave -noupdate /Project_tb/HEX1
-# add wave -noupdate /Project_tb/HEX2
-# add wave -noupdate /Project_tb/HEX3
-# add wave -noupdate /Project_tb/HEX4
-# add wave -noupdate /Project_tb/HEX5
-# add wave -noupdate /Project_tb/HEX6
-# add wave -noupdate /Project_tb/HEX7
+#           Using alternate file: ./wlftzqizw2
+# add wave -noupdate /testProcessor/Reset
+# add wave -noupdate /testProcessor/Statee
+# ** UI-Msg: (vish-4014) No objects found matching '/testProcessor/Statee'.
+# Executing ONERROR command at macro ./Processor_wave.do line 5
+# add wave -noupdate /testProcessor/NextState
+# add wave -noupdate /testProcessor/PC_Out
+# add wave -noupdate /testProcessor/IR_Out
+# add wave -noupdate /testProcessor/DUT.unit_DP.D_Addr
+# add wave -noupdate /testProcessor/DUT.unit_DP.D_wr
+# add wave -noupdate /testProcessor/DUT.unit_DP.RF_s
+# add wave -noupdate /testProcessor/DUT.unit_DP.unit_RF.Write_Addr
+# add wave -noupdate /testProcessor/DUT.unit_DP.RF_W_en
+# add wave -noupdate /testProcessor/DUT.unit_DP.unit_RF.Read_A_Addr
+# add wave -noupdate /testProcessor/DUT.unit_DP.unit_RF.Read_B_Addr
+# add wave -noupdate /testProcessor/DUT.unit_CU.pc_up
+# add wave -noupdate /testProcessor/ALU_A
+# add wave -noupdate /testProcessor/ALU_B
+# add wave -noupdate /testProcessor/ALU_Out
+# add wave -noupdate /testProcessor/DUT.unit_DP.W_data_mux
 # TreeUpdate [SetDefaultTree]
 # WaveRestoreCursors {{Cursor 1} {0 ps} 0}
 # quietly wave cursor active 0
@@ -752,7 +251,15 @@ do runProject.do
 # 
 # Run the simulation
 # run -all
+# 
+# Begin Simulation.
+# Time is 0 : Reset = 0   PC_Out = xx   IR_Out = xxxx  State = x  ALU A = xxxx  ALU B = xxxx ALU Out = 0000  RA Address = 0000
+# Time is 10000 : Reset = 0   PC_Out = xx   IR_Out = xxxx  State = 7  ALU A = xxxx  ALU B = xxxx ALU Out = 0000  RA Address = 0000
+# Time is 30000 : Reset = 0   PC_Out = 00   IR_Out = xxxx  State = 8  ALU A = xxxx  ALU B = xxxx ALU Out = 0000  RA Address = 0000
+# Time is 40000 : Reset = 1   PC_Out = 00   IR_Out = xxxx  State = 8  ALU A = xxxx  ALU B = xxxx ALU Out = 0000  RA Address = 0000
+# Time is 50000 : Reset = 1   PC_Out = 01   IR_Out = xxxx  State = 7  ALU A = xxxx  ALU B = xxxx ALU Out = 0000  RA Address = 0000
+# Time is 70000 : Reset = 1   PC_Out = 00   IR_Out = xxxx  State = 7  ALU A = xxxx  ALU B = xxxx ALU Out = 0000  RA Address = 0000
 # Break key hit
-# Break in Module Project_tb in file ./Project.sv
-# End time: 11:30:22 on Jun 07,2025, Elapsed time: 0:03:12
-# Errors: 1, Warnings: 3
+# Break in Module altsyncram_body at $MODEL_TECH/../altera/verilog/src/altera_mf.v line 49230
+# End time: 15:38:48 on Jun 08,2025, Elapsed time: 0:04:53
+# Errors: 0, Warnings: 2

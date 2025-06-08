@@ -7,7 +7,7 @@ module Processor(
     input Clk, Reset,
     output [15:0] IR_Out,
     output logic [6:0] PC_Out,
-    output [3:0] State, NextState,
+    output logic [3:0] State, NextState,
     output logic [15:0] ALU_A, ALU_B, ALU_Out
 );
 // MEOW

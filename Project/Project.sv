@@ -8,9 +8,9 @@ module Project(
    input [17:0] SW,
    input [3:0] KEY,
    input CLOCK_50,
-   output [17:0] LEDR,
-   output [3:0] LEDG,
-   output [0:6] HEX7, HEX6, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0 
+   output logic [17:0] LEDR,
+   output logic [3:0] LEDG,
+   output logic [0:6] HEX7, HEX6, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0 
 );
    
    // MEOW
@@ -26,16 +26,18 @@ module Project(
    logic [3:0] State, NextState;
    logic [0:6] HEX_internal [7:0]; // internal hex array
 
-   (*keep*) logic Out; // Keep prevents logic out from being optimized out
+   (*keep*) logic Out; // Keep prevents logic out from being optimized
 
    // button instantiation
-   ButtonSync unit_BS(KEY[2], CLOCK_50, ResetN, Bo);
+   ButtonSync unit_BS(KEY[2], CLOCK_50, Bo);
+   // ButtonSync unit_BS(KEY[2], CLOCK_50, ResetN, Bo);
+   // ButtonSync unit_BS(KEY[2], CLOCK_50, Bo);
 
    // key filter
    KeyFilter Filter(CLOCK_50, Bo, Out);
 
    // processor
-   Processor unit_P(Out, KEY[0], IR_Out, PC_Out, State, NextState, ALU_A, ALU_B, ALU_Out);
+   Processor unit_P(Out, KEY[1], IR_Out, PC_Out, State, NextState, ALU_A, ALU_B, ALU_Out);
 
    // mux8_to_1
    Mux_8_to_1 unit_Mux({{1'b0, PC_Out}, {4'b0, State}}, ALU_A, ALU_B, ALU_Out, {12'b0,NextState}, 16'b0, 16'b0, 16'b0, SW[17:15], M);
