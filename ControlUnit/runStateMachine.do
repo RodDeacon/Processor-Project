@@ -13,9 +13,8 @@ vmap work rtl_work
 # Compile Verilog
 #     All Verilog files that are part of this design should have
 #     their own "vlog" line below.
-vlog -work work +acc "./StateDefs.sv"
-vlog -work work +acc "./StateMachine.sv"
-
+vlog -work work +acc +cover "./StateDefs.sv"
+vlog -work work +acc +cover "./StateMachine.sv"
 
 # Call vsim to invoke simulator
 #     Make sure the last item on the line is the name of the

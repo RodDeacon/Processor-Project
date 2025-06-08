@@ -26,6 +26,8 @@ import StateDefs::*; // import statedefs package in order to use enums. (wildcar
 // import StateDefs::State; // import State enumerator
 // import StateDefs::inst;  // import instruction enumerator
 
+
+
 module StateMachine (
    input Clk, ResetN, // active low reset 
    input [15:0] IR,
@@ -87,7 +89,7 @@ inst _inst;
 		RF_Ra_addr = 4'd0;
 		RF_Rb_addr = 4'd0;
 		Alu_s0 = 3'd0;
-		NextState = Init;
+		// NextState = Init;
 		
       case(CurrentState)
       // noop

@@ -22,9 +22,65 @@ ALU_s0 ALU function select (3 bits)
 
 
 
-import StateDefs::*; // import statedefs package in order to use enums. (wildcard)
+// import StateDefs::*; // import statedefs package in order to use enums. (wildcard)
 // import StateDefs::State; // import State enumerator
 // import StateDefs::inst;  // import instruction enumerator
+
+
+   // State enumeration for the control unit
+   typedef enum logic [3:0] { 
+      Noop = 4'd0,   // 0  NOOP
+      Store = 4'd1,  // 1 STORE
+      Load_A = 4'd2, // 2.1 LOAD
+      Add = 4'd3,    // 3 ADD
+      Sub = 4'd4,    // 4 SUB
+      Halt = 4'd5,   // 5 HALT
+      Load_B,     // 6 LOAD
+      Init,       // 7 Init
+      Fetch,      // 8 Fetch
+      Decode      // 9 Decode
+   } State;
+// instruction enumeration for the control unit
+   typedef enum logic [3:0] { 
+      _noop = 4'd0,  // 0  NOOP
+      _store,     // 1 STORE
+      _load,      // 2 LOAD
+      _add,       // 3 ADD
+      _sub,       // 4 SUB
+      _halt       // 5 HALT
+   } inst;
+
+
+   // functions
+// function to convert the State enumeration to a string 
+   function string state_to_string(State s);
+      case (s)
+         Noop:     return "Noop";
+         Store:    return "Store";
+         Load_A:   return "Load_A";
+         Load_B:   return "Load_B";
+         Add:      return "Add";
+         Sub:      return "Sub";
+         Halt:     return "Halt";
+         Init:     return "Init";
+         Fetch:    return "Fetch";
+         Decode:   return "Decode";
+         default:  return "Unknown";
+      endcase
+   endfunction
+
+// function to convert the instruction enumeration to a string
+   function string inst_to_string(inst instruction);
+      case (instruction)
+         _noop  : return "Noop";
+         _store : return "Store";
+         _load  : return "Load_A";
+         _add   : return "Add";
+         _sub   : return "Sub";
+         _halt  : return "Halt";
+         default: return "Unknown";
+      endcase
+   endfunction
 
 module StateMachine (
    input Clk, ResetN, // active low reset 
@@ -36,51 +92,43 @@ module StateMachine (
    output State CurrentState, NextState // for viewing purposes passed to control unit
    );
 
-// localparams
-// typedef enum logic [3:0] { 
-//    Noop = 0,    // 0  NOOP
-//    Store,   // 1 STORE
-//    Load_A,    // 2.1 LOAD
-//    Load_B,    // 2.1 LOAD
-//    Add,     // 3 ADD
-//    Sub, // 4 SUB
-//    Halt, // 5 HALT
-//    Init, // 6 Init
-//    Fetch, // 7 Fetch
-//    Decode // 8 Decode
-//  } State;
-
-//  typedef enum logic [3:0] { 
-//    _noop = 0,    // 0  NOOP
-//    _store,   // 1 STORE
-//    _load,    // 2 LOAD
-//    _add,     // 3 ADD
-//    _sub, // 4 SUB
-//    _halt // 5 HALT
-//  } inst;
-
 // wires / logic
 // logic [3:0] CurrentState
 
 // State CurrentState, NextState;
+
 inst _inst; 
 
 
 // assignments
+   // DEBUG
+   logic [3:0] CurrentState_reg;
+
    assign _inst = inst'(IR[15:12]); // cast as instruction enum inst
    // assign StateOut = CurrentState;
    // only for monitoring but we can monitor in the testbench by using DUT. ..
 
 // combinational logic
    always_comb begin : state_logic
+/*input Clk, ResetN, // active low reset 
+   input [15:0] IR,*/
+   // DEBUG
+   CurrentState_reg = CurrentState; // register for current state
+   CurrentState = CurrentState_reg; // register for current state
 
-      D_wr = 0; 
-      RF_s = 0;
-      RF_W_en = 0;
-      PC_clr = 0;
-      IR_ld = 0;
-      PC_up = 0;
-   
+      D_wr = 0;
+		RF_s = 0;
+		RF_W_en = 0;
+		PC_clr = 0;
+		IR_ld = 0;
+		PC_up = 0;
+		D_addr = 8'd0;
+		RF_W_addr = 4'd0;
+		RF_Ra_addr = 4'd0;
+		RF_Rb_addr = 4'd0;
+		Alu_s0 = 3'd0;
+		// NextState = Init;
+		
       case(CurrentState)
       // noop
          Noop : NextState = Fetch;
@@ -89,7 +137,7 @@ inst _inst;
             NextState = Fetch;
             D_addr = IR[7:0];
             D_wr = 1;
-            RF_Ra_addr = IR[11:5];
+            RF_Ra_addr = IR[11:8];
             end 
       // load
          Load_A   : NextState = Load_B;
@@ -189,7 +237,7 @@ module StateMachine_tb;
 
 // wires / logic
 
-   logic Clk;
+   logic Clk, ResetN;
    logic [15:0] IR;
    logic D_Wr, RF_s, RF_W_en, PC_clr, IR_ld, PC_up;
    logic [7:0] D_addr;
@@ -197,7 +245,7 @@ module StateMachine_tb;
    logic [2:0] Alu_s0;
    State CurrentState, NextState;
 // instantiation
-   StateMachine DUT ( Clk,
+   StateMachine DUT ( Clk,ResetN,
      IR,
     D_Wr, RF_s, RF_W_en, PC_clr, IR_ld, PC_up,
      D_addr,
@@ -216,8 +264,15 @@ module StateMachine_tb;
    initial begin
       inst _counter;  
       State _state;
+
       Clk = 0; // clk 0
+      ResetN = 0; // reset
+      IR = 16'h0000; // instruction register
+      @(negedge Clk) #1;
+      @(posedge Clk) #1;
       
+      ResetN = 1; // reset off
+
       // test all instructions except for load
      
       for (int i = 0; i < 6; i ++) begin
@@ -225,7 +280,7 @@ module StateMachine_tb;
          _state   = State'(i);   // state variable. This will track the expected State by using i
          // reset the FSM: 
          @(negedge Clk) #1;
-         DUT.CurrentState = State'(Init); // 
+         DUT.CurrentState = State'(Init); // cast the init 
          DUT._inst = inst'(i); 
 
          $display("Resetting to Init to test %s.\nCurrentState = %s",inst_to_string(_counter), state_to_string(DUT.CurrentState)); 
@@ -246,7 +301,6 @@ module StateMachine_tb;
       end
 
 
-      $stop;
    end
    // monitor
    initial begin

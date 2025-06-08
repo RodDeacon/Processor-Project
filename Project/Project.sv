@@ -72,46 +72,109 @@ module Project(
    assign HEX7 = HEX_internal[7];
 
 endmodule
+`timescale 1ns/1ps
 
 module Project_tb;
 
-   // initialize logic wires
- logic [17:0] SW;
-  logic  [3:0] KEY;
-  logic  CLOCK_50;
-  logic  [17:0] LEDR;
-    logic [3:0] LEDG;
-   logic [0:6] HEX7, HEX6, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0; 
+  // Inputs
+  logic [17:0] SW;
+  logic [3:0] KEY;
+  logic CLOCK_50;
 
-   // initialize the DUT
-   Project DUT(   SW,
-    KEY,
-    CLOCK_50,
-     LEDR,
-     LEDG,
-    HEX7, HEX6, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0 
-);
+  // Outputs
+  logic [17:0] LEDR;
+  logic [3:0] LEDG;
+  logic [0:6] HEX7, HEX6, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0;
 
-   // clock
-   always begin
-      
-   end
-   // tb logic
-   initial begin
-      $stop;
-   end
-   // monitor
+  // Instantiate the Unit Under Test (UUT)
+  Project dut (
+    .SW(SW),
+    .KEY(KEY),
+    .CLOCK_50(CLOCK_50),
+    .LEDR(LEDR),
+    .LEDG(LEDG),
+    .HEX7(HEX7), .HEX6(HEX6), .HEX5(HEX5), .HEX4(HEX4),
+    .HEX3(HEX3), .HEX2(HEX2), .HEX1(HEX1), .HEX0(HEX0)
+  );
 
-   initial begin
-      $monitor($realtime, " NextState = %b, A = %b", DUT.NextState, DUT.unit_Mux.A);
-   end
+  // Clock generation
+  initial begin
+    CLOCK_50 = 0;
+    forever #10 CLOCK_50 = ~CLOCK_50;  // 50 MHz clock => 20ns period
+  end
 
-/*
-   logic ResetN, Bo, Out;
-   logic [15:0] IR_Out, ALU_A, ALU_B, ALU_Out, M;
-   logic [6:0] PC_Out;
-   logic [3:0] State, NextState;
-   logic [0:6] HEX_internal [7:0]; // internal hex array
-*/
+  // Stimulus
+  initial begin
+    // Initialize inputs
+    SW = 18'd0;
+    KEY = 4'b1111;
+
+    // Wait for reset stabilization
+    #50;
+
+    // Simulate button press on KEY[2] for reset
+    KEY[2] = 0; #20; KEY[2] = 1; #100;
+
+    // Simulate KEY[0] (e.g., processor step or input)
+    KEY[0] = 0; #20; KEY[0] = 1; #100;
+
+    // Change switches to simulate input
+    SW = 18'b000_0000_0000_0000_0001; #100;
+    SW = 18'b001_0000_0000_0000_0010; #100;
+
+    // Repeat as needed
+    $display("Simulation running...");
+    #1000;
+
+    // Stop the simulation
+    $stop;
+  end
+
+  // Optional: Monitor outputs
+  initial begin
+    $monitor("Time=%0t | LEDR=%b | LEDG=%b | HEX0=%b", $time, LEDR, LEDG, HEX0);
+  end
 
 endmodule
+// module Project_tb;
+
+//    // initialize logic wires
+//    logic    [17:0]   SW;
+//    logic    [3:0]    KEY;
+//    logic             CLOCK_50;
+//    logic    [17:0]   LEDR;
+//    logic    [3:0]    LEDG;
+//    logic    [0:6]    HEX7, HEX6, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0; 
+
+//    // initialize the DUT
+//    Project DUT(   SW,
+//     KEY,
+//     CLOCK_50,
+//      LEDR,
+//      LEDG,
+//     HEX7, HEX6, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0 
+// );
+
+//    // clock
+//    always begin
+//       C
+//    end
+//    // tb logic
+//    initial begin
+//       $stop;
+//    end
+//    // monitor
+
+//    initial begin
+//       $monitor($realtime, " NextState = %b, A = %b", DUT.NextState, DUT.unit_Mux.A);
+//    end
+
+// /*
+//    logic ResetN, Bo, Out;
+//    logic [15:0] IR_Out, ALU_A, ALU_B, ALU_Out, M;
+//    logic [6:0] PC_Out;
+//    logic [3:0] State, NextState;
+//    logic [0:6] HEX_internal [7:0]; // internal hex array
+// */
+
+// endmodule
