@@ -1,55 +1,60 @@
-// TCES330 Spring 2025 University of Washington Tacoma Dr. Jie Sheng
-// Rodney Deacon & Mahri Yalkapova
-// 06-01-2025
-// Week 9, Project Folder DataPath
-// this module will connect all necessary components of the processor together 
-// to form the Data Path of the CPU
+/*Required input signals: Clock, D_Addr, 
+D_Wr, RF_s, RF_W_Addr, RF_W_en, 
+RF_Ra_Addr, RF_Rb_Addr, ALU_s0
+Required output signals: ALU_inA, 
+ALU_inB, ALU_out*/
 
 `timescale 1 ps / 1 ps
 module DataPath
-   ( // input / output portlist
+   ( // input  
    input Clk, D_wr, RF_W_en, RF_s,
    input [7:0] D_Addr, 
    input [3:0] RF_W_addr, RF_Ra_addr, RF_Rb_addr,
    input [2:0] Alu_s0,
    output logic [15:0] A, B, ALU_Out
-   );
+);
+// localparam
+logic [15:0] R_data, W_data_mux, W_data_D, Mux0;
 
-// logic
-   logic [15:0] 
-   wire_A_Data    // 16-bit
-   ,wire_B_Data    // 16-bit
-   ,wire_ALU_MUX0  // 16-bit
-   ,wire_RAM_MUX1  // 16-bit
-   ,wire_MUX_RF;    // 16-bit
+assign W_data_D = A;
+assign Mux0 = ALU_Out;
 
 // assignments
-   assign A = wire_A_Data;
-   assign B = wire_B_Data;
-	assign ALU_Out = wire_ALU_MUX0;
-
 // instantiate modules
 
-   // intantiate DataMemory
    DataMemory unit_DM (D_Addr, 
-                        Clk, 
-                        wire_A_Data, 
-                        D_wr, 
-                        wire_RAM_MUX1
-                        );
+                     Clk, 
+                     W_data_D, 
+                     D_wr, 
+                     R_data
+   );
    
-// instantiate Mux_2_to_1(m, x,s,y); non-standard mux  output first, then x, then select, then y
-   Mux_2_to_1 unit_MUX (wire_MUX_RF, wire_ALU_MUX0, RF_s, wire_RAM_MUX1);
+
+// module Mux_2_to_1(m, x,s,y);
+
+   Mux_2_to_1 unit_MUX (W_data_mux, Mux0, RF_s, R_data);
+
 
     // instantiate reg
     RegisterFile unit_RF (Clk, RF_W_en,
-                           RF_W_addr, RF_Ra_addr, 
-                           RF_Rb_addr, wire_MUX_RF,
-                           wire_A_Data, wire_B_Data);
+                            RF_W_addr, RF_Ra_addr, RF_Rb_addr, W_data_mux,
+                            A, B);
 
 
     // instantiate alu
-    ALU unit_ALU (wire_A_Data, wire_B_Data, Alu_s0, ALU_Out);
+
+    ALU unit_ALU (A, B, Alu_s0, ALU_Out); // also include params in the future
+
+   
+
+   
+// combinational logic
+
+// sequential logic
+
+// generate block
+
+// additional logic
 
 endmodule
 
@@ -61,11 +66,10 @@ module DataPath_tb();
    logic [2:0] Alu_s0;
    logic [15:0] A, B, ALU_Out; // outputs from the datapath
 
-// initialize DUT
    DataPath DUT (Clk, D_wr, RF_W_en, RF_s, D_Addr, 
       RF_W_addr, RF_Ra_addr, RF_Rb_addr, Alu_s0,A,B, ALU_Out);
 
-// clock generation
+   
    always begin
       Clk = 0; #10;
       Clk = 1; #10;
@@ -99,11 +103,11 @@ module DataPath_tb();
       @(posedge Clk) #1; // Wait for register file to latch data + delay
       RF_W_en = 1'b0; // Disable write after latching
       @(posedge Clk) #1; // Wait for data to propagate + delay
-      $display("Register B (should be 123): %d", DUT.wire_B_Data);
-      assert(DUT.wire_B_Data == 16'd123) else $error("LOAD failed: got %d, expected 123", DUT.wire_B_Data);
+      $display("Register B (should be 123): %d", DUT.B);
+      assert(DUT.B == 16'd123) else $error("LOAD failed: got %d, expected 123", DUT.B);
 
 
-      $display("wire_A_Data = %d, wire_RAM_MUX1 = %d",DUT.wire_A_Data, DUT.wire_RAM_MUX1);
+      $display("W_data_D = %d, R_data = %d",DUT.W_data_D, DUT.R_data);
       $display("Mux input is x = %d, s = %d, y = %d\noutput m = %d", DUT.unit_MUX.x,DUT.unit_MUX.s,DUT.unit_MUX.y,DUT.unit_MUX.m);
       $display("w_in_rf = %d",DUT.unit_RF.Write_Data);       
 
@@ -118,7 +122,7 @@ module DataPath_tb();
       // R[2], data in the address is 222
       RF_Ra_addr = 4'd2;
       RF_W_addr = 4'd2;
-      DUT.wire_A_Data = 16'd222; 
+      DUT.W_data_D = 16'd222; 
       // R = 16'd222; 
       // use dot operator to store value at the Ra_data so that we can test if it passes to the W-data input of the RAM (DataMemory)
       D_Addr = 8'd9; // Address to store data
@@ -126,7 +130,7 @@ module DataPath_tb();
       @(negedge Clk) #1; // Wait for clock edge to store data
       @(posedge Clk) #1; // Wait for data to propagate
       $display("Data stored at address %d (should be 222): %d", D_Addr, DUT.unit_DM.data);
-      $display("The input of the Ram is : %d", DUT.wire_A_Data);
+      $display("The input of the Ram is : %d", DUT.W_data_D);
       $display("Ra_data is : ", DUT.unit_RF.A_Data);
 
 
@@ -144,9 +148,9 @@ module DataPath_tb();
          // wait some time
          @(posedge Clk) #1;
          // ensure that Q == alu out(internal output of alu) == W_data
-         assert(DUT.wire_ALU_MUX0 == 64) $display("yay, it worked. Q should be 345. Q == %d", DUT.wire_ALU_MUX0); /// expected value
-            else $error("waa waa not working Q should be 345 but it is %d", DUT.wire_ALU_MUX0);
-         assert((DUT.wire_ALU_MUX0 == DUT.unit_ALU.ALU_out) && (DUT.wire_ALU_MUX0 == DUT.wire_MUX_RF)) $display("The output q is eqaul to W_data, Q = %d, W_Data = %d ", DUT.wire_ALU_MUX0, DUT.wire_MUX_RF);
+         assert(DUT.Mux0 == 64) $display("yay, it worked. Q should be 345. Q == %d", DUT.Mux0); /// expected value
+            else $error("waa waa not working Q should be 345 but it is %d", DUT.Mux0);
+         assert((DUT.Mux0 == DUT.unit_ALU.ALU_out) && (DUT.Mux0 == DUT.W_data_mux)) $display("The output q is eqaul to W_data, Q = %d, W_Data = %d ", DUT.Mux0, DUT.W_data_mux);
             else $error("sadge.. it doesnt work :(");
 
 
@@ -156,13 +160,15 @@ module DataPath_tb();
          // wait some time
          @(posedge Clk) #1;
          // ensure that Q == alu out(internal output of alu) == W_data
-         assert(DUT.wire_ALU_MUX0 == 30) $display("yay, it worked Q should be 99. Q == %d", DUT.wire_ALU_MUX0); /// expected value
-            else $error("waa waa not working Q should be 99 but it is %d", DUT.wire_ALU_MUX0);
-         assert((DUT.wire_ALU_MUX0 == DUT.unit_ALU.ALU_out) && (DUT.wire_ALU_MUX0 == DUT.wire_MUX_RF)) $display("The output q is eqaul to W_data, Q = %d, W_Data = %d ", DUT.wire_ALU_MUX0, DUT.wire_MUX_RF);
+         assert(DUT.Mux0 == 30) $display("yay, it worked Q should be 99. Q == %d", DUT.Mux0); /// expected value
+            else $error("waa waa not working Q should be 99 but it is %d", DUT.Mux0);
+         assert((DUT.Mux0 == DUT.unit_ALU.ALU_out) && (DUT.Mux0 == DUT.W_data_mux)) $display("The output q is eqaul to W_data, Q = %d, W_Data = %d ", DUT.Mux0, DUT.W_data_mux);
             else $error("sadge.. it doesnt work :(");
 
       $stop;
    end
+
+   
 
 // monitor
    initial begin

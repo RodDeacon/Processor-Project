@@ -24,9 +24,9 @@ module DataPath
    ,wire_MUX_RF;    // 16-bit
 
 // assignments
-   assign wire_A_Data = A;
-   assign wire_B_Data = B;
-
+   assign A = wire_A_Data;
+   assign B = wire_B_Data;
+	assign ALU_Out = wire_ALU_MUX0;
 
 // instantiate modules
 
