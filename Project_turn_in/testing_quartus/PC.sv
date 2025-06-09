@@ -80,7 +80,9 @@ logic [6:0] mem_addr;
    end
    // monitor
    initial begin
-      $monitor($realtime, " mem_addr = %d",mem_addr);
+      $monitor($realtime, " Clr = %b, Up = %b, mem_addr = %h", Clr, Up, mem_addr);
    end
-
 endmodule
+/*module PC (input , , , // up is enable
+            output logic[6:0] ); // output memory location which next instruction can be found
+*/

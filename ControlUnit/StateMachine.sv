@@ -1,86 +1,13 @@
 // TCES330 Spring 2025 University of Washington Tacoma Dr. Jie Sheng
 // Rodney Deacon & Mahri Yalkapova
 // 06-01-2025
-// Week 9, Project Folder ControlUnit
-// // this module will implement Register and ALU operations
-
-// TODO NO STATE MACHINE RESETN CODE
-
-/*Variable Meaning
-PC_clr Program counter (PC) clear command
-IR_ld Instruction load command
-PC_up PC increment command
-D_addr Data memory address (8 bits)
-D_wr Data memory write enable
-RF_s Mux select line
-RF_Ra_addr Register file A-side read address (4 bits)
-RF_Rb_addr Register file B-side read address (4 bits)
-RF_W_en Register file write enable
-RF_W_addr Register file write address (4 bits)
-ALU_s0 ALU function select (3 bits)
-*/
+// Week 9, Project Folder
+// This module is a Finite State Machine for the CPU project.
+// It has 10 total states
 
 
-
-// import StateDefs::*; // import statedefs package in order to use enums. (wildcard)
-// import StateDefs::State; // import State enumerator
-// import StateDefs::inst;  // import instruction enumerator
-
-
-   // State enumeration for the control unit
-   typedef enum logic [3:0] { 
-      Noop = 4'd0,   // 0  NOOP
-      Store = 4'd1,  // 1 STORE
-      Load_A = 4'd2, // 2.1 LOAD
-      Add = 4'd3,    // 3 ADD
-      Sub = 4'd4,    // 4 SUB
-      Halt = 4'd5,   // 5 HALT
-      Load_B,     // 6 LOAD
-      Init,       // 7 Init
-      Fetch,      // 8 Fetch
-      Decode      // 9 Decode
-   } State;
-// instruction enumeration for the control unit
-   typedef enum logic [3:0] { 
-      _noop = 4'd0,  // 0  NOOP
-      _store,     // 1 STORE
-      _load,      // 2 LOAD
-      _add,       // 3 ADD
-      _sub,       // 4 SUB
-      _halt       // 5 HALT
-   } inst;
-
-
-   // functions
-// function to convert the State enumeration to a string 
-   function string state_to_string(State s);
-      case (s)
-         Noop:     return "Noop";
-         Store:    return "Store";
-         Load_A:   return "Load_A";
-         Load_B:   return "Load_B";
-         Add:      return "Add";
-         Sub:      return "Sub";
-         Halt:     return "Halt";
-         Init:     return "Init";
-         Fetch:    return "Fetch";
-         Decode:   return "Decode";
-         default:  return "Unknown";
-      endcase
-   endfunction
-
-// function to convert the instruction enumeration to a string
-   function string inst_to_string(inst instruction);
-      case (instruction)
-         _noop  : return "Noop";
-         _store : return "Store";
-         _load  : return "Load_A";
-         _add   : return "Add";
-         _sub   : return "Sub";
-         _halt  : return "Halt";
-         default: return "Unknown";
-      endcase
-   endfunction
+import StateDefs::*; // import StateDefs package in order to use enums.
+// using a wildcard allows us to import enumerated types and all functions
 
 module StateMachine (
    input Clk, ResetN, // active low reset 
@@ -92,30 +19,15 @@ module StateMachine (
    output State CurrentState, NextState // for viewing purposes passed to control unit
    );
 
-// wires / logic
-// logic [3:0] CurrentState
-
-// State CurrentState, NextState;
-
-inst _inst; 
-
+// logic / parameters
+   inst _inst; // instantiate and inst (instruction enum) _inst
 
 // assignments
-   // DEBUG
-   // logic [3:0] CurrentState_reg;
-
-   assign _inst = inst'(IR[15:12]); // cast as instruction enum inst
-   // assign StateOut = CurrentState;
-   // only for monitoring but we can monitor in the testbench by using DUT. ..
+   assign _inst = inst'(IR[15:12]); // cast IR as instruction enum
 
 // combinational logic
    always_comb begin : state_logic
-/*input Clk, ResetN, // active low reset 
-   input [15:0] IR,*/
-   // DEBUG
-   // CurrentState_reg = CurrentState; // register for current state
-   // CurrentState = CurrentState_reg; // register for current state
-
+   // define all variables used in the state machine as 0
       D_wr = 0;
 		RF_s = 0;
 		RF_W_en = 0;
@@ -127,9 +39,9 @@ inst _inst;
 		RF_Ra_addr = 4'd0;
 		RF_Rb_addr = 4'd0;
 		Alu_s0 = 3'd0;
-		// NextState = Init;
-		
-      case(CurrentState)
+
+	// case statement	
+      case(CurrentState)   // Depending on CurrentState
       // noop
          Noop : NextState = Fetch;
       // store
@@ -139,23 +51,29 @@ inst _inst;
             D_wr = 1;
             RF_Ra_addr = IR[11:8];
             end 
-      // load
-         Load_A   : NextState = Load_B;
-         Load_B   : begin 
+      
+         Load_A   : begin           // load A
+            NextState = Load_B;
+            D_addr = IR[11:4];
+            RF_s = 1;
+            RF_W_addr = IR[3:0];            
+            end
+         Load_B   : begin            // load B
             NextState = Fetch;
             D_addr = IR[11:4];
             RF_s = 1;
             RF_W_addr = IR[3:0];
             RF_W_en = 1;
          end
-      // add
-         Add      : begin
+
+         Add      : begin                    // add
             NextState = Fetch;
             RF_W_addr = IR[3:0];
             RF_W_en = 1;
             RF_Ra_addr = IR[11:8];
             RF_Rb_addr = IR[7:4];
             Alu_s0 = 3'd1; // option 1 chosen from ALU (addition)
+            RF_s = 0;
 
          end
 
@@ -168,16 +86,17 @@ inst _inst;
             RF_Ra_addr = IR[11:8];              // register a is assigned the address from IR
             RF_Rb_addr = IR[7:4];               // register b is assigned the address from IR
             Alu_s0 = 3'd2;                        // option 2 chosen from ALU (subtraction)
+            RF_s = 0;
          end         
       // halt
-         Halt     : NextState = Halt;
+         Halt     : NextState = Halt;        // Halt
       // init
-         Init     : begin 
+         Init     : begin                    // Init (initial) 
             PC_clr = 1;
             NextState = Fetch;
          end 
       // fetch
-         Fetch    : begin 
+         Fetch    : begin                    // Fetch
             PC_clr = 0;
             PC_up = 1;
             IR_ld = 1;
@@ -186,17 +105,17 @@ inst _inst;
             NextState = Decode;
          end 
       // decode
-         Decode:  case(_inst) // check the first four bits of the instruction register addrress 
-            _noop    : NextState = Noop;     // 0 noop
-            _store   : NextState = Store;    // 1 store
-            _load    : NextState = Load_A;     // 2 load
-            _add     : NextState = Add;      // 3 ADD
-            _sub     : NextState = Sub;      // 4 SUB
-            _halt    : NextState = Halt;     // 5 HALT
-            default  : NextState = Init;   // default instruction is noop
+         Decode:  case(_inst)                // Decode the first four bits of the instruction register addrress 
+            _noop    : NextState = Noop;        // 0 noop
+            _store   : NextState = Store;       // 1 store
+            _load    : NextState = Load_A;      // 2 load
+            _add     : NextState = Add;         // 3 ADD
+            _sub     : NextState = Sub;         // 4 SUB
+            _halt    : NextState = Halt;        // 5 HALT
+            default  : NextState = Init;        // default instruction is noop
          endcase
-
-         default: NextState = Init; // default case is init i.e. NextState = Fetch
+      // default
+         default: NextState = Init;          // default case is init i.e. NextState = Fetch
       endcase
    end
 
@@ -204,37 +123,16 @@ inst _inst;
    always_ff @( posedge Clk ) begin : ff_logic
 
    // RESET LOGIC
-   // only do the following if there is a valid input of the IR
-      // if (_inst ) begin
          if (!ResetN) begin // if reset is asserted
             CurrentState <= Init;
-         end else begin
-            CurrentState <= NextState;   // go to the state we described above
+         end else begin                  // else, no reset
+            CurrentState <= NextState;    // go to the state we described above
          end
-      // end
-  end // end the always ff logic   
-   
-/*
-State Machine State OutputsState Non-Zero Outputs
-Init PC_clr = 1
-Fetch IR_ld = 1, PC_up =1
-Decode Check the opcode
-LoadA D_addr = IR[11:4], RF_s = 1, RF_W_addr = IR[3:0]
-LoadB D_addr = IR[11:4], RF_s = 1, RF_W_addr = IR[3:0], RF_W_en = 1
-Store D_addr = IR[7:0], D_wr = 1, RF_Ra_addr = IR[11:8]
-Add, Sub RF_Ra_addr = IR[11:8], RF_Rb_addr = IR[7:4], RF_W_addr = IR[3:0], RF_W_en = 1, 
-ALU_s0 = alu function  (1 for Add  or 2 for Sub), RF_s = 0
-Halt
-*/
-// proceedural logic
-
+  end 
 endmodule
 
 // test bench
 module StateMachine_tb;
-
-// localparams
-
 // wires / logic
 
    logic Clk, ResetN;
@@ -244,6 +142,7 @@ module StateMachine_tb;
    logic [3:0]RF_W_addr, RF_Ra_addr, RF_Rb_addr;
    logic [2:0] Alu_s0;
    State CurrentState, NextState;
+
 // instantiation
    StateMachine DUT ( Clk,ResetN,
      IR,
@@ -253,27 +152,27 @@ module StateMachine_tb;
     Alu_s0,
     CurrentState, NextState);
 
-   // clock
+// clock
    always begin
-      Clk = 0; #100000;
-      Clk = 1; #100000;
+      Clk = 0; #100;
+      Clk = 1; #100;
    end
    
     
-   // testbench logic
+// testbench logic
    always begin
       inst _counter;  
       State _state;
 
       Clk = 0; // clk 0
-      ResetN = 0; // reset
+      ResetN = 1'b0; // reset
       IR = 16'h0000; // instruction register
       @(negedge Clk) #1;
       @(posedge Clk) #1;
       
-      ResetN = 1; // reset off
+      ResetN = 1'b1; // reset off
 
-      // test all instructions except for load
+   // test all instructions except for load
      
       for (int i = 0; i < 6; i ++) begin
          _counter = inst'(i); // instruction variable. this will track expected instruction by using i
@@ -299,129 +198,16 @@ module StateMachine_tb;
                // TODO: assert for all variables which are being changed..
          end
       end
-
-
    end
-   // monitor
+
    initial begin
-      $monitor("");
+      $monitor("\n",$realtime," ResetN  = %b | PC_clr = %b | PC_up = %b | IR_ld = %d | IR= %h\n",
+                              ResetN, PC_clr, PC_up, IR_ld, IR,
+                              "\t RF_W_en = %b | RF_W_addr = %h | RF_Ra_addr = %h | RF_Rb_addr = %h\n",
+                                 RF_W_en, RF_W_addr, RF_Ra_addr, RF_Rb_addr,
+                              "\t D_wr = %b | D_addr = %h | RF_s = %b | Alu_s0 = %b\n",
+                                 DUT.D_wr, D_addr, RF_s, Alu_s0, 
+                              "\t  CurrentState = %s   |   NextState = %s\n", state_to_string(CurrentState), state_to_string(NextState)
+                                    );
    end
-
 endmodule
-
-
-
-      // // test load
-      //    // reset the FSM: 
-      // @(negedge Clk) #1;
-      // DUT.CurrentState = State'(Init); // 
-      // DUT._inst = inst'('d2); 
-      //    $display("Resetting to Init to test load.\nCurrentState = %s",state_to_string(DUT.CurrentState)); 
-      // // wait 3 to get to load A
-      //    repeat (3) @(posedge Clk) #1;
-      //    assert (DUT.CurrentState == Load_A)
-      //       $display("Success! The Expected state was Load_A and was %s!", state_to_string(DUT.CurrentState)); 
-      //       else   $error("The expected state was Load_A. It was actually %s.", state_to_string(DUT.CurrentState));
-      //  // wait 1 to get to load B
-      //    @(posedge Clk) #1;
-      //    // assert for current state
-      //    assert (DUT.CurrentState == Load_B)
-      //       $display("Success! The Expected state was Load_B and was %s!", state_to_string(DUT.CurrentState)); 
-      //       else   $error("The expected state was Load_B. It was actually %s.", state_to_string(DUT.CurrentState));
-         
-
-         
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      // DUT.CurrentState = State'(Init);
-      // DUT._inst = inst'('d0);       //
-      
-      // // $display("CurrentState = %s",state_to_string(DUT.CurrentState)); 
-      // // reset high
-      // // wait
-
-      // // reset low
-
-      // // test noop
-      //    // // init values
-      //    // @(negedge Clk) #1;  
-         
-         
-         
-      //    $display("CurrentState = %s",state_to_string(DUT.CurrentState)); 
-      //    repeat (3) @(posedge Clk) #1; // wait the required amount of time
-      //    assert (DUT.CurrentState == Noop) 
-      //       $display("Success! The Expected state was Noop and was %s!", state_to_string(DUT.CurrentState)); 
-      //       else   $error("The expected state was Noop. It was actually %s.", state_to_string(DUT.CurrentState));
-      //    // $display("CurrentState = %s",state_to_string(DUT.CurrentState)); 
-
-         
-
-      // // test store
-      
-      //    // reset the FSM: 
-      // @(negedge Clk) #1;
-      // DUT.CurrentState = State'(Init);
-      // // change the instruction
-      // DUT._inst = inst'('d2); 
-      //    $display("Resetting to Init to test load.\nCurrentState = %s",state_to_string(DUT.CurrentState)); 
-      // // wait 3 to get to load A
-      //    repeat (3) @(posedge Clk) #1;
-      //    assert (DUT.CurrentState == Load_A)
-      //       $display("Success! The Expected state was Load_A and was %s!", state_to_string(DUT.CurrentState)); 
-      //       else   $error("The expected state was Load_A. It was actually %s.", state_to_string(DUT.CurrentState));
-      //  // wait 1 to get to load B
-      //    @(posedge Clk) #1;
-      //    // assert for current state
-      //    assert (DUT.CurrentState == Load_B)
-      //       $display("Success! The Expected state was Load_B and was %s!", state_to_string(DUT.CurrentState)); 
-      //       else   $error("The expected state was Load_B. It was actually %s.", state_to_string(DUT.CurrentState));
-         
-
-      // // test add
-      // @(negedge Clk) #1;
-      // DUT.CurrentState = State'(Init);
-      // DUT._inst = inst'(d4);
-      // $display("Success! The Expected state was Add and was %s!", state_to_string(DUT.CurrentState))
-      // repeat (3) @(posedge Clk) #1;
-      
-      
-
-      // // test sub
-
-      // // test halt

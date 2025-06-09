@@ -23,12 +23,12 @@ DATA_RADIX=HEX;
 
 CONTENT BEGIN
 	[00..1A]  	:   	0000; -- initial are assigned all 0
-	[1B]			: 		21BA; -- D[1B] = 0x21BA
+	1B				: 		21BA; -- D[1B] = 0x21BA
 	[1C..29] 	:   	0001; -- range assigned 1 for debugging
-	[2A]  		:   	A04E; -- D[2A] = 0xA04E
+	2A  			:   	A04E; -- D[2A] = 0xA04E
 	[2B..3B]  	:   	0002; -- range assigned 2 for debugging
-	[3C]  		:   	71AC; -- D[3C] = 71AC
+	3C  			:   	71AC; -- D[3C] = 71AC
 	[3D..7D]  	:   	0003; -- range assigned 3 for debugging
-	[7E]  		:   	B17F; -- D[7E] = B17F
+	7E  			:   	B17F; -- D[7E] = B17F
 	[7F..FF]  	:   	0004; -- range assigned 4 for debugging
 END;

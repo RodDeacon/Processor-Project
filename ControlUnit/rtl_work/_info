@@ -11,7 +11,7 @@ cModel Technology
 Z0 dC:/Users/rod/Documents/2025_spring_classes/Processor-Project/ControlUnit
 XStateDefs
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1749400705
+Z2 !s110 1749438657
 !i10b 1
 !s100 [cZ6nadNg;j9[L?22TJYR2
 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -28,7 +28,7 @@ Z3 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z4 !s108 1749400705.000000
+Z4 !s108 1749438657.000000
 !s107 ./StateDefs.sv|
 !s90 -reportprogress|300|-work|work|+acc|+cover|./StateDefs.sv|
 !i113 1
@@ -38,27 +38,28 @@ Z7 tCvgOpt 0
 n@state@defs
 vStateMachine
 R1
-Z8 DXx4 work 20 StateMachine_sv_unit 0 22 [c1_D_[Be=W1KlQLL[4LF2
+Z8 DXx4 work 9 StateDefs 0 22 NN8cP2fn7TQ:`_oPeNL7U3
+Z9 DXx4 work 20 StateMachine_sv_unit 0 22 88`F]mBT0oiTA:^L`S6V@1
 R2
-Z9 VDg1SIo80bB@j0V0VzS_@n1
+Z10 VDg1SIo80bB@j0V0VzS_@n1
 r1
 !s85 0
 !i10b 1
-!s100 YRe?gTaD2=KdZ45YGdV>23
-IALcZ=RgIaD6nkV<hPROi;1
-Z10 !s105 StateMachine_sv_unit
+!s100 YfEP^cCl;ZTROLnKRhjo93
+IMRgR9DiFF;o5lJ<bfkhhb1
+Z11 !s105 StateMachine_sv_unit
 S1
 R0
-Z11 w1749400646
-Z12 8./StateMachine.sv
-Z13 F./StateMachine.sv
+Z12 w1749438654
+Z13 8./StateMachine.sv
+Z14 F./StateMachine.sv
 !i122 1
-L0 85 147
+L0 12 121
 R3
 31
 R4
 !s107 ./StateMachine.sv|
-Z14 !s90 -reportprogress|300|-work|work|+acc|+cover|./StateMachine.sv|
+Z15 !s90 -reportprogress|300|-work|work|+acc|+cover|./StateMachine.sv|
 !i113 1
 R5
 R6
@@ -66,26 +67,27 @@ R7
 n@state@machine
 XStateMachine_sv_unit
 R1
+R8
 R2
-V[c1_D_[Be=W1KlQLL[4LF2
+V88`F]mBT0oiTA:^L`S6V@1
 r1
 !s85 0
 !i10b 1
-!s100 IYjDhaBAlXd@8A3;M1Vf`2
-I[c1_D_[Be=W1KlQLL[4LF2
+!s100 KkMHLnJe3NO1E3EYOJV021
+I88`F]mBT0oiTA:^L`S6V@1
 !i103 1
 S1
 R0
-R11
 R12
 R13
+R14
 !i122 1
-L0 31 0
+L0 9 0
 R3
 31
 R4
-Z15 !s107 ./StateMachine.sv|
-R14
+Z16 !s107 ./StateMachine.sv|
+R15
 !i113 1
 R5
 R6
@@ -94,26 +96,27 @@ n@state@machine_sv_unit
 vStateMachine_tb
 R1
 R8
-R2
 R9
+R2
+R10
 r1
 !s85 0
 !i10b 1
-!s100 W1S6GC5RSE_0_0C6;kj2U3
-Ib5`SdHZ^OYP51kJT`f09D1
-R10
+!s100 HMjKA>?QJmja4F:KRVUQn0
+InQcnWm4W>>d=Oh_;_NMCc2
+R11
 S1
 R0
-R11
 R12
 R13
+R14
 !i122 1
-L0 234 77
+L0 135 79
 R3
 31
 R4
+R16
 R15
-R14
 !i113 1
 R5
 R6

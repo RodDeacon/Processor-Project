@@ -165,12 +165,12 @@ module StateMachine_tb;
       State _state;
 
       Clk = 0; // clk 0
-      ResetN = 0; // reset
+      ResetN = 1'b0; // reset
       IR = 16'h0000; // instruction register
       @(negedge Clk) #1;
       @(posedge Clk) #1;
       
-      ResetN = 1; // reset off
+      ResetN = 1'b1; // reset off
 
    // test all instructions except for load
      
@@ -200,9 +200,14 @@ module StateMachine_tb;
       end
    end
 
-// monitor
    initial begin
-      $monitor("");
+      $monitor("\n",$realtime," ResetN  = %b | PC_clr = %b | PC_up = %b | IR_ld = %d | IR= %h\n",
+                              ResetN, PC_clr, PC_up, IR_ld, IR,
+                              "\t RF_W_en = %b | RF_W_addr = %h | RF_Ra_addr = %h | RF_Rb_addr = %h\n",
+                                 RF_W_en, RF_W_addr, RF_Ra_addr, RF_Rb_addr,
+                              "\t D_wr = %b | D_addr = %h | RF_s = %b | Alu_s0 = %b\n",
+                                 DUT.D_wr, D_addr, RF_s, Alu_s0, 
+                              "\t  CurrentState = %s   |   NextState = %s\n", state_to_string(CurrentState), state_to_string(NextState)
+                                    );
    end
-
 endmodule

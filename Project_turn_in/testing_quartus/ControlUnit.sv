@@ -99,8 +99,7 @@ module ControlUnit_tb;
    initial begin
       #1; $monitor($realtime, " ResetN = %b, OutState = %s, NextState = %s, IR_Out = %h, PC_Out, %h", ResetN, state_to_string(OutState), state_to_string(NextState), IR_Out, PC_Out,
                            "\nPC_UP = %b", DUT.pc_up,
-                           "\nunit_PC.Up = %b", DUT.unit_PC.Up, // monitor the OutState, NextState, IR_Out, PC_Out, ResetN
-                           "\nunit_PC.Clr = %b", DUT.unit_PC.Clr, // monitor the OutState, NextState, IR_Out, PC_Out, ResetN
+                           "\nunit_PC.Up = %b", DUT.unit_PC.Up, 
                            "\nunit_PC.mem_addr = %b", DUT.unit_PC.mem_addr); // monitor the OutState, NextState, IR_Out, PC_Out, ResetN
    end
 endmodule

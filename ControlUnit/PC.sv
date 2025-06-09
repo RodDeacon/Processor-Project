@@ -2,66 +2,28 @@
 // Rodney Deacon & Mahri Yalkapova
 // 06-01-2025
 // Week 9, Project Folder ControlUnit
-// // this module will implement Register and ALU operations
-
-/* PC is purely a counter 
-◦ Required input signals: Clock, Clr, Up
-◦ Required output signal: address (7-bit) to 
-access instruction memory  
-◦ Notice here Clr is active high – from FSM*/
+// This module implements the Program Counter, which 
+// counts to the next place in the instruction memory when recieving
+// PC_up high signal from StateMachine
 
 module PC (input Clk, Clr, Up, // up is enable
             output logic[6:0] mem_addr); // output memory location which next instruction can be found
 
- // always block logic for flipflip
+ // always block logic for flipflop
    always_ff @(posedge Clk) begin
       if (Clr == 1) begin // clear all 
          mem_addr <= 'd0;
       end else if (Up == 1) begin // else if , enabled, count up 
-         // Q WILL BE A VALUE BETWEEN 0 AND 9 BY DEFAULT (0 and mod_num-1)
-         //mem_addr <= (mem_addr+1)%7;     // non-blocking assignments between 0 and mod_num-1
-         mem_addr <= mem_addr + 1;
-
-
+         mem_addr <= mem_addr + 1'b1;
       end else begin // else; clearn is not asserted, en is not high, Q remains the same as it was before.
          mem_addr <= mem_addr;
       end
    end
-/*   // continuous assignments
-   assign QN = ~Q;
-
-   // always block logic for flipflip
-   always_ff @(posedge Clk) begin
-      if (ClrN == 0) begin // clear all 
-         Q <= 0;
-      end else if (En == 1) begin // else if , enabled, count up 
-         // Q WILL BE A VALUE BETWEEN 0 AND 9 BY DEFAULT (0 and mod_num-1)
-         Q <= (Q+1)%mod_num;     // non-blocking assignments between 0 and mod_num-1
-
-      end else begin // else; clearn is not asserted, en is not high, Q remains the same as it was before.
-         Q <= Q;
-      end
-   end
-*/
-
-// localparams
-
-// wires / logic
-
-// assignments
-
-// instantiations
-
-// combinational logic
-
-// procedural logic
 
 endmodule
 
 // test bench
 module PC_tb;
-
-// localparams
 
 // wires / logic
 logic Clk, Clr, Up;
@@ -70,20 +32,20 @@ logic [6:0] mem_addr;
 // instantiation
    PC DUT(Clk, Clr, Up, mem_addr);
 
-   // clock
+// clock
    always begin
       Clk = 0; #10;
       Clk = 1; #10;
    end
 
-   // testbench logic
+// testbench logic
    initial begin
       Up = 1;
       Clr = 1;
       // clear one
       // wait for a clock cycle to enable clear
       @(posedge Clk) #1;
-      // @(negedge Clk) #1;
+      @(negedge Clk) #1;
       Clr = 0;
       @(posedge Clk) #1; 
 
@@ -118,8 +80,9 @@ logic [6:0] mem_addr;
    end
    // monitor
    initial begin
-      $monitor($realtime, " mem_addr = %d",mem_addr);
+      $monitor($realtime, " Clr = %b, Up = %b, mem_addr = %h", Clr, Up, mem_addr);
    end
-
-
 endmodule
+/*module PC (input , , , // up is enable
+            output logic[6:0] ); // output memory location which next instruction can be found
+*/

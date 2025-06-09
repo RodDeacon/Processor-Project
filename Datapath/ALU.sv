@@ -1,16 +1,18 @@
 // TCES330 Spring 2025 University of Washington Tacoma Dr. Jie Sheng
-// Rodney Deacon
-// 04-29-2025
-// Week 5, Lab4 Folder Part2
-// this module will 16 bit input A and B Sel 3 bit, output Q 3-bit
+// Rodney Deacon and Mahri Yalkapova
+// 06-08-2025
+// this module will perfrom arithmetic or logical
+// operation on 16 bit input A and B based on 
+// the 3 bit selectring signal Sel, and output it 
+// in a 16-bit Q 
 
 module ALU (A,B,Sel, Q);
-   parameter bit_width = 16;
-   parameter n_op = 8; // number of operations 
+   parameter bit_width = 16;        // the bit-width
+   parameter n_op = 8;              // number of operations 
 
    input [ $clog2(n_op)-1 : 0 ]Sel; // the selecting bit will be ceiling log base 2 of number of operations - 1  
-   input [bit_width -1: 0]A,B;
-   output logic [bit_width -1: 0]Q;
+   input [bit_width -1: 0]A,B;      // 2 inputs A and B
+   output logic [bit_width -1: 0]Q; // output Q
    
 // Always comb for ALU logic
    always_comb begin : case_block
@@ -43,11 +45,12 @@ module ALU_tb();
    localparam n_op = 8; // number of operations 
 
    // logic
-   logic [ $clog2(n_op)-1 : 0 ]S; // the selecting bit will be ceiling log base 2 of number of operations - 1  
+   logic [ $clog2(n_op)-1 : 0 ]S;
    logic [bit_width -1: 0]A,B;
    logic [bit_width -1: 0]Q;
 
-// module ALU (A,B,Sel, Q);
+   // DUT instantiation 
+   //module ALU (A,B,Sel, Q);
    ALU  DUT(.A(A),.B(B),.Sel(S),.Q(Q));
 
    initial begin
